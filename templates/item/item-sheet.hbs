@@ -1,0 +1,100 @@
+<fieldset class="kt-form kt-item-form" {{#unless editable}}disabled{{/unless}}>
+
+  <header class="kt-item-head">
+    <img class="kt-item-img" src="{{item.img}}" alt="{{item.name}}" data-edit="img"/>
+    <div class="kt-item-title">
+      <input type="text" name="name" value="{{item.name}}" placeholder="{{localize 'KT.Name'}}"/>
+      <span class="kt-item-type">{{typeLabel}}</span>
+    </div>
+    {{#if isWeapon}}
+    <button type="button" class="kt-roll-button" data-action="rollWeapon">
+      <i class="fa-solid fa-dice-d6"></i> {{localize "KT.RollAttack"}}
+    </button>
+    {{/if}}
+  </header>
+
+  {{#if isWeapon}}
+  <div class="kt-bar">{{localize "KT.WeaponProfile"}}</div>
+  <div class="kt-item-grid">
+    <label class="kt-field"><span>{{localize "KT.Range"}}</span>
+      <input type="text" name="system.range" value="{{system.range}}" placeholder='24"'/></label>
+    <label class="kt-field"><span>{{localize "KT.Type"}}</span>
+      <select name="system.weaponType">
+        {{#each weaponTypeOptions as |option|}}
+        <option value="{{option.value}}" {{#if (ktEq option.value ../system.weaponType)}}selected{{/if}}>{{option.label}}</option>
+        {{/each}}
+      </select></label>
+    <label class="kt-field"><span>{{localize "KT.Attacks"}}</span>
+      <input type="text" name="system.attacks" value="{{system.attacks}}" placeholder="1"/></label>
+    <label class="kt-field"><span>{{localize "KT.Strength"}}</span>
+      <input type="text" name="system.strength" value="{{system.strength}}" placeholder="User"/></label>
+    <label class="kt-field"><span>{{localize "KT.ArmourPenetration"}}</span>
+      <input type="number" name="system.ap" value="{{system.ap}}" max="0" step="1"/></label>
+    <label class="kt-field"><span>{{localize "KT.Damage"}}</span>
+      <input type="text" name="system.damage" value="{{system.damage}}" placeholder="1"/></label>
+    <label class="kt-field"><span>{{localize "KT.Points"}}</span>
+      <input type="number" name="system.points" value="{{system.points}}" min="0"/></label>
+    <label class="kt-field kt-field-check"><span>{{localize "KT.Equipped"}}</span>
+      <input type="checkbox" name="system.equipped" {{checked system.equipped}}/></label>
+  </div>
+  <label class="kt-field kt-field-wide"><span>{{localize "KT.Abilities"}}</span>
+    <input type="text" name="system.abilities" value="{{system.abilities}}"
+           placeholder="{{localize 'KT.WeaponAbilitiesHint'}}"/></label>
+  <p class="kt-hint">{{localize "KT.StrengthHint"}}</p>
+  {{/if}}
+
+  {{#if isAbility}}
+  <div class="kt-item-grid">
+    <label class="kt-field"><span>{{localize "KT.Type"}}</span>
+      <select name="system.abilityType">
+        <option value="datasheet" {{#if (ktEq system.abilityType "datasheet")}}selected{{/if}}>{{localize "KT.AbilityType.Datasheet"}}</option>
+        <option value="specialism" {{#if (ktEq system.abilityType "specialism")}}selected{{/if}}>{{localize "KT.AbilityType.Specialism"}}</option>
+        <option value="faction" {{#if (ktEq system.abilityType "faction")}}selected{{/if}}>{{localize "KT.AbilityType.Faction"}}</option>
+        <option value="fireTeam" {{#if (ktEq system.abilityType "fireTeam")}}selected{{/if}}>{{localize "KT.AbilityType.FireTeam"}}</option>
+        <option value="tactic" {{#if (ktEq system.abilityType "tactic")}}selected{{/if}}>{{localize "KT.AbilityType.Tactic"}}</option>
+      </select></label>
+    <label class="kt-field"><span>{{localize "KT.CommandPointCost"}}</span>
+      <input type="number" name="system.cost" value="{{system.cost}}" min="0"/></label>
+    <label class="kt-field kt-field-check"><span>{{localize "KT.Active"}}</span>
+      <input type="checkbox" name="system.active" {{checked system.active}}/></label>
+  </div>
+  {{/if}}
+
+  {{#if isWargear}}
+  <div class="kt-item-grid">
+    <label class="kt-field"><span>{{localize "KT.Quantity"}}</span>
+      <input type="number" name="system.quantity" value="{{system.quantity}}" min="0"/></label>
+    <label class="kt-field"><span>{{localize "KT.Points"}}</span>
+      <input type="number" name="system.points" value="{{system.points}}" min="0"/></label>
+    <label class="kt-field kt-field-check"><span>{{localize "KT.Equipped"}}</span>
+      <input type="checkbox" name="system.equipped" {{checked system.equipped}}/></label>
+  </div>
+  {{/if}}
+
+  {{#if isSpecialism}}
+  <div class="kt-item-grid">
+    <label class="kt-field"><span>{{localize "KT.SpecialismLabel"}}</span>
+      <select name="system.specialismKey">
+        {{#each specialismOptions as |option|}}
+        <option value="{{option.value}}" {{#if (ktEq option.value ../system.specialismKey)}}selected{{/if}}>{{option.label}}</option>
+        {{/each}}
+      </select></label>
+    <label class="kt-field"><span>{{localize "KT.Level"}}</span>
+      <input type="number" name="system.level" value="{{system.level}}" min="1" max="4"/></label>
+  </div>
+  {{/if}}
+
+  <div class="kt-bar">{{localize "KT.Description"}}</div>
+  <div class="kt-item-description">
+    {{#if editable}}
+      {{formInput systemFields.description name="system.description" value=system.description
+                  enriched=enrichedDescription toggled=true}}
+    {{else}}
+      <div class="kt-readonly">{{{enrichedDescription}}}</div>
+    {{/if}}
+  </div>
+
+  <label class="kt-field kt-field-wide"><span>{{localize "KT.Source"}}</span>
+    <input type="text" name="system.source" value="{{system.source}}"
+           placeholder="{{localize 'KT.SourceHint'}}"/></label>
+</fieldset>

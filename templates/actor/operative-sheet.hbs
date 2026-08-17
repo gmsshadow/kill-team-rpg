@@ -1,0 +1,248 @@
+<fieldset class="kt-form" {{#unless editable}}disabled{{/unless}}>
+
+  {{!-- ------------------------------------------------------------------ --}}
+  {{!-- The datacard                                                        --}}
+  {{!-- ------------------------------------------------------------------ --}}
+  <section class="kt-card">
+
+    <header class="kt-card-top">
+      <div class="kt-portrait">
+        <img src="{{actor.img}}" alt="{{actor.name}}" data-edit="img"/>
+      </div>
+      <div class="kt-points">
+        <span class="kt-points-label">{{localize "KT.Points"}}</span>
+        <input type="number" name="system.points" value="{{system.points}}" min="0" step="1"/>
+        <span class="kt-force">{{localize "KT.ForceTotal"}} {{force}}</span>
+      </div>
+    </header>
+
+    {{!-- Profile: NAME M WS BS S T W A Ld Sv --}}
+    <div class="kt-bar kt-grid-profile">
+      <span>{{localize "KT.Name"}}</span>
+      <span>M</span><span>WS</span><span>BS</span><span>S</span><span>T</span>
+      <span>W</span><span>A</span><span>Ld</span><span>Sv</span>
+    </div>
+    <div class="kt-row kt-grid-profile">
+      <input class="kt-name" type="text" name="name" value="{{actor.name}}"
+             placeholder="{{localize 'KT.Name'}}"/>
+      <input type="text" name="system.profile.move" value="{{system.profile.move}}"/>
+      <span class="kt-stat"><input type="number" name="system.profile.ws" value="{{system.profile.ws}}" min="1" max="6"/><i>+</i></span>
+      <span class="kt-stat"><input type="number" name="system.profile.bs" value="{{system.profile.bs}}" min="1" max="6"/><i>+</i></span>
+      <input type="number" name="system.profile.strength" value="{{system.profile.strength}}" min="1"/>
+      <input type="number" name="system.profile.toughness" value="{{system.profile.toughness}}" min="1"/>
+      <input type="number" name="system.wounds.max" value="{{system.wounds.max}}" min="1"/>
+      <input type="number" name="system.profile.attacks" value="{{system.profile.attacks}}" min="0"/>
+      <input type="number" name="system.profile.ld" value="{{system.profile.ld}}" min="1"/>
+      <span class="kt-stat"><input type="number" name="system.profile.save" value="{{system.profile.save}}" min="1" max="7"/><i>+</i></span>
+    </div>
+
+    {{!-- Weapons: WEAPON RANGE TYPE S AP D ABILITIES --}}
+    <div class="kt-bar kt-grid-weapon">
+      <span>{{localize "KT.Weapon"}}</span>
+      <span>{{localize "KT.Range"}}</span>
+      <span>{{localize "KT.Type"}}</span>
+      <span>S</span><span>AP</span><span>D</span>
+      <span>{{localize "KT.Abilities"}}</span>
+      <span class="kt-controls-head">
+        <a data-action="createItem" data-type="weapon" data-tooltip="{{localize 'KT.AddWeapon'}}">
+          <i class="fa-solid fa-plus"></i></a>
+      </span>
+    </div>
+    <div class="kt-weapon-list">
+      {{#each items.weapon as |weapon|}}
+      <div class="kt-row kt-grid-weapon draggable" data-item-id="{{weapon.id}}" draggable="true">
+        <a class="kt-weapon-name" data-action="rollWeapon"
+           data-tooltip="{{localize 'KT.RollAttack'}}">{{weapon.name}}</a>
+        <span>{{weapon.system.range}}</span>
+        <span>{{weapon.system.typeLine}}</span>
+        <span>{{weapon.system.strength}}</span>
+        <span>{{weapon.system.apLabel}}</span>
+        <span>{{weapon.system.damage}}</span>
+        <span class="kt-weapon-abilities">{{weapon.system.abilities}}</span>
+        <span class="kt-controls">
+          <a data-action="editItem" data-tooltip="{{localize 'KT.Edit'}}"><i class="fa-solid fa-pen-to-square"></i></a>
+          <a data-action="deleteItem" data-tooltip="{{localize 'KT.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+        </span>
+      </div>
+      {{else}}
+      <div class="kt-row kt-empty">{{localize "KT.NoWeapons"}}</div>
+      {{/each}}
+    </div>
+
+    {{!-- Abilities box --}}
+    <section class="kt-abilities">
+      <div class="kt-label-inline">
+        {{localize "KT.AbilitiesColon"}}
+        <a data-action="createItem" data-type="ability" data-tooltip="{{localize 'KT.AddAbility'}}">
+          <i class="fa-solid fa-plus"></i></a>
+      </div>
+      <div class="kt-ability-chips">
+        {{#each items.ability as |ability|}}
+        <span class="kt-chip draggable" data-item-id="{{ability.id}}" draggable="true">
+          <a data-action="postItem" data-tooltip="{{localize 'KT.PostToChat'}}">{{ability.name}}</a>
+          <a data-action="editItem"><i class="fa-solid fa-pen-to-square"></i></a>
+          <a data-action="deleteItem"><i class="fa-solid fa-xmark"></i></a>
+        </span>
+        {{/each}}
+      </div>
+      <div class="kt-ability-text">
+        {{#if editable}}
+          {{formInput systemFields.abilities name="system.abilities" value=system.abilities
+                      enriched=enrichedAbilities toggled=true}}
+        {{else}}
+          <div class="kt-readonly">{{{enrichedAbilities}}}</div>
+        {{/if}}
+      </div>
+    </section>
+
+    {{!-- Specialism / Demeanour --}}
+    <div class="kt-split">
+      <label class="kt-field">
+        <span>{{localize "KT.SpecialismColon"}}</span>
+        <select name="system.specialism">
+          {{#each specialismOptions as |option|}}
+          <option value="{{option.value}}" {{#if (ktEq option.value ../system.specialism)}}selected{{/if}}>{{option.label}}</option>
+          {{/each}}
+        </select>
+        <input class="kt-level" type="number" name="system.level" value="{{system.level}}" min="1" max="4"
+               data-tooltip="{{localize 'KT.Level'}}"/>
+      </label>
+      <label class="kt-field">
+        <span>{{localize "KT.DemeanourColon"}}</span>
+        <input type="text" name="system.demeanour" value="{{system.demeanour}}"/>
+      </label>
+    </div>
+
+    {{!-- Experience / Flesh wounds / Convalescence / New recruit --}}
+    <div class="kt-tracks">
+      <div class="kt-track kt-track-exp">
+        <span class="kt-track-label">{{localize "KT.Experience"}}</span>
+        <div class="kt-boxes">
+          {{#each experienceBoxes as |box|}}
+          <a class="kt-box {{#if box.checked}}is-checked{{/if}} {{#if box.levelUp}}is-levelup{{/if}}"
+             data-action="setExperience" data-index="{{box.index}}"
+             data-tooltip="{{box.index}}"></a>
+          {{/each}}
+        </div>
+      </div>
+      <div class="kt-track">
+        <span class="kt-track-label">{{localize "KT.FleshWounds"}}</span>
+        <div class="kt-boxes">
+          {{#each fleshWoundBoxes as |box|}}
+          <a class="kt-box {{#if box.checked}}is-checked{{/if}}"
+             data-action="setFleshWounds" data-index="{{box.index}}"></a>
+          {{/each}}
+        </div>
+      </div>
+      <div class="kt-track">
+        <span class="kt-track-label">{{localize "KT.Convalescence"}}</span>
+        <div class="kt-boxes">
+          <label class="kt-box kt-box-checkbox">
+            <input type="checkbox" name="system.convalescence" {{checked system.convalescence}}/>
+          </label>
+        </div>
+      </div>
+      <div class="kt-track">
+        <span class="kt-track-label">{{localize "KT.NewRecruit"}}</span>
+        <div class="kt-boxes">
+          <label class="kt-box kt-box-checkbox">
+            <input type="checkbox" name="system.newRecruit" {{checked system.newRecruit}}/>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{!-- ------------------------------------------------------------------ --}}
+  {{!-- Play aids, kept off the card itself                                 --}}
+  {{!-- ------------------------------------------------------------------ --}}
+  <section class="kt-play">
+
+    <div class="kt-play-block kt-wounds">
+      <span class="kt-block-title">{{localize "KT.Wounds"}}</span>
+      <div class="kt-wound-track">
+        <input type="number" name="system.wounds.value" value="{{system.wounds.value}}" min="0"/>
+        <span class="kt-slash">/</span>
+        <span class="kt-wound-max">{{system.wounds.max}}</span>
+      </div>
+      <span class="kt-hit-mod" data-tooltip="{{localize 'KT.HitModifierHint'}}">
+        {{localize "KT.HitModifier"}} {{ktSigned hitModifier}}
+      </span>
+    </div>
+
+    <div class="kt-play-block kt-status">
+      <span class="kt-block-title">{{localize "KT.Status"}}</span>
+      <div class="kt-status-row">
+        <a class="kt-toggle {{#if system.status.readied}}is-on{{/if}}" data-action="toggleStatus" data-status="readied">{{localize "KT.Readied"}}</a>
+        <a class="kt-toggle {{#if system.status.advanced}}is-on{{/if}}" data-action="toggleStatus" data-status="advanced">{{localize "KT.Advanced"}}</a>
+        <a class="kt-toggle {{#if system.status.charged}}is-on{{/if}}" data-action="toggleStatus" data-status="charged">{{localize "KT.Charged"}}</a>
+        <a class="kt-toggle {{#if system.status.fellBack}}is-on{{/if}}" data-action="toggleStatus" data-status="fellBack">{{localize "KT.FellBack"}}</a>
+        <a class="kt-toggle {{#if system.status.shaken}}is-on{{/if}}" data-action="toggleStatus" data-status="shaken">{{localize "KT.Shaken"}}</a>
+        <a class="kt-toggle {{#if system.status.broken}}is-on{{/if}}" data-action="toggleStatus" data-status="broken">{{localize "KT.Broken"}}</a>
+        <a class="kt-toggle {{#if system.status.outOfAction}}is-on{{/if}}" data-action="toggleStatus" data-status="outOfAction">{{localize "KT.OutOfAction"}}</a>
+      </div>
+    </div>
+
+    <div class="kt-play-block kt-rolls">
+      <span class="kt-block-title">{{localize "KT.Rolls"}}</span>
+      <div class="kt-button-row">
+        <button type="button" data-action="rollAdvance"><i class="fa-solid fa-person-running"></i> {{localize "KT.Roll.Advance"}}</button>
+        <button type="button" data-action="rollCharge"><i class="fa-solid fa-bolt"></i> {{localize "KT.Roll.Charge"}}</button>
+        <button type="button" data-action="rollNerve"><i class="fa-solid fa-face-flushed"></i> {{localize "KT.Roll.NerveTest"}}</button>
+        <button type="button" data-action="rollInjury"><i class="fa-solid fa-skull"></i> {{localize "KT.Roll.InjuryRoll"}}</button>
+        <button type="button" data-action="resetRound"><i class="fa-solid fa-rotate-left"></i> {{localize "KT.NewBattleRound"}}</button>
+      </div>
+    </div>
+
+    <div class="kt-play-block">
+      <span class="kt-block-title">
+        {{localize "KT.Wargear"}}
+        <a data-action="createItem" data-type="wargear"><i class="fa-solid fa-plus"></i></a>
+      </span>
+      <ul class="kt-item-list">
+        {{#each items.wargear as |gear|}}
+        <li class="draggable" data-item-id="{{gear.id}}" draggable="true">
+          <a data-action="postItem">{{gear.name}}</a>
+          <span class="kt-item-meta">{{gear.system.points}} {{localize "KT.PtsAbbr"}}</span>
+          <span class="kt-controls">
+            <a data-action="editItem"><i class="fa-solid fa-pen-to-square"></i></a>
+            <a data-action="deleteItem"><i class="fa-solid fa-trash"></i></a>
+          </span>
+        </li>
+        {{else}}
+        <li class="kt-empty">{{localize "KT.NoWargear"}}</li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="kt-play-block kt-meta">
+      <label class="kt-field">
+        <span>{{localize "KT.Faction"}}</span>
+        <input type="text" name="system.faction" value="{{system.faction}}"/>
+      </label>
+      <label class="kt-field">
+        <span>{{localize "KT.Keywords"}}</span>
+        <input type="text" name="system.keywords" value="{{system.keywords}}"
+               placeholder="{{localize 'KT.KeywordsHint'}}"/>
+      </label>
+      <label class="kt-field">
+        <span>{{localize "KT.MaxNumber"}}</span>
+        <input type="text" name="system.maxNumber" value="{{system.maxNumber}}"/>
+      </label>
+      <label class="kt-field">
+        <span>{{localize "KT.Invulnerable"}}</span>
+        <input type="number" name="system.profile.invulnerable" value="{{system.profile.invulnerable}}" min="1" max="7"/>
+      </label>
+    </div>
+
+    <div class="kt-play-block">
+      <span class="kt-block-title">{{localize "KT.Notes"}}</span>
+      {{#if editable}}
+        {{formInput systemFields.notes name="system.notes" value=system.notes
+                    enriched=enrichedNotes toggled=true}}
+      {{else}}
+        <div class="kt-readonly">{{{enrichedNotes}}}</div>
+      {{/if}}
+    </div>
+  </section>
+</fieldset>

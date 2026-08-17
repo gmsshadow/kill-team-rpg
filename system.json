@@ -1,0 +1,64 @@
+{
+  "id": "kill-team-2018",
+  "title": "Kill Team 2018 (Lightweight RPG)",
+  "description": "A lightweight roleplaying system built on the Warhammer 40,000: Kill Team (2018) core rules. Operative datacards, weapon profiles, specialisms, experience tracks and the D6 attack sequence.",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "14"
+  },
+  "authors": [
+    {
+      "name": "GMsShadow",
+      "url": "https://github.com/GMsShadow"
+    }
+  ],
+  "esmodules": [
+    "module/kill-team.mjs"
+  ],
+  "styles": [
+    "styles/kill-team.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [],
+  "documentTypes": {
+    "Actor": {
+      "operative": {
+        "htmlFields": ["abilities", "notes"]
+      },
+      "killteam": {
+        "htmlFields": ["notes", "background"]
+      }
+    },
+    "Item": {
+      "weapon": {
+        "htmlFields": ["description"]
+      },
+      "ability": {
+        "htmlFields": ["description"]
+      },
+      "wargear": {
+        "htmlFields": ["description"]
+      },
+      "specialism": {
+        "htmlFields": ["description"]
+      }
+    }
+  },
+  "grid": {
+    "distance": 1,
+    "units": "in"
+  },
+  "primaryTokenAttribute": "wounds",
+  "url": "https://github.com/GMsShadow/kill-team-2018",
+  "manifest": "https://raw.githubusercontent.com/GMsShadow/kill-team-2018/main/system.json",
+  "download": "https://github.com/GMsShadow/kill-team-2018/releases/latest/download/kill-team-2018.zip",
+  "license": "LICENSE.md",
+  "readme": "README.md"
+}

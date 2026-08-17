@@ -1,0 +1,96 @@
+<fieldset class="kt-form" {{#unless editable}}disabled{{/unless}}>
+  <section class="kt-card kt-roster">
+
+    <header class="kt-roster-head">
+      <h1 class="kt-roster-title">
+        <input type="text" name="name" value="{{actor.name}}" placeholder="{{localize 'KT.KillTeamName'}}"/>
+      </h1>
+      <div class="kt-force-box {{#if overLimit}}is-over{{/if}}">
+        <span class="kt-force-value">{{force}}</span>
+        <span class="kt-force-label">/ {{system.forceLimit}} {{localize "KT.PtsAbbr"}}</span>
+      </div>
+    </header>
+
+    <div class="kt-roster-meta">
+      <label class="kt-field"><span>{{localize "KT.PlayerName"}}</span>
+        <input type="text" name="system.playerName" value="{{system.playerName}}"/></label>
+      <label class="kt-field"><span>{{localize "KT.Faction"}}</span>
+        <input type="text" name="system.faction" value="{{system.faction}}"/></label>
+      <label class="kt-field"><span>{{localize "KT.Mission"}}</span>
+        <input type="text" name="system.mission" value="{{system.mission}}"/></label>
+      <label class="kt-field"><span>{{localize "KT.SquadQuirk"}}</span>
+        <input type="text" name="system.squadQuirk" value="{{system.squadQuirk}}"/></label>
+      <label class="kt-field"><span>{{localize "KT.ForceLimit"}}</span>
+        <input type="number" name="system.forceLimit" value="{{system.forceLimit}}" min="0"/></label>
+      <label class="kt-field"><span>{{localize "KT.CommandPoints"}}</span>
+        <input type="number" name="system.commandPoints.value" value="{{system.commandPoints.value}}" min="0"/></label>
+    </div>
+
+    <div class="kt-bar">{{localize "KT.Resources"}}{{#if guerrilla}} — {{localize "KT.Guerrilla"}}{{/if}}</div>
+    <div class="kt-resources">
+      <label class="kt-resource"><span>{{localize "KT.Intelligence"}}</span>
+        <input type="number" name="system.resources.intelligence" value="{{system.resources.intelligence}}"/></label>
+      <label class="kt-resource"><span>{{localize "KT.Materiel"}}</span>
+        <input type="number" name="system.resources.materiel" value="{{system.resources.materiel}}"/></label>
+      <label class="kt-resource"><span>{{localize "KT.Morale"}}</span>
+        <input type="number" name="system.resources.morale" value="{{system.resources.morale}}"/></label>
+      <label class="kt-resource"><span>{{localize "KT.Territory"}}</span>
+        <input type="number" name="system.resources.territory" value="{{system.resources.territory}}"/></label>
+    </div>
+
+    <div class="kt-bar kt-grid-roster">
+      <span></span>
+      <span>{{localize "KT.Name"}}</span>
+      <span>{{localize "KT.SpecialismLabel"}}</span>
+      <span>{{localize "KT.Experience"}}</span>
+      <span>{{localize "KT.PtsAbbr"}}</span>
+      <span></span>
+    </div>
+    <div class="kt-roster-list">
+      {{#each members as |member|}}
+      <div class="kt-row kt-grid-roster {{#unless member.inKillTeam}}is-benched{{/unless}}"
+           data-index="{{member.index}}" data-uuid="{{member.uuid}}">
+        <img class="kt-roster-img" src="{{member.img}}" alt="{{member.name}}"/>
+        <a data-action="openMember">{{member.name}}</a>
+        <span>{{member.specialismLabel}}</span>
+        <span>{{member.experience}}</span>
+        <span>{{member.points}}</span>
+        <span class="kt-controls">
+          <a data-action="toggleMember" data-tooltip="{{localize 'KT.ToggleInKillTeam'}}">
+            <i class="fa-solid {{#if member.inKillTeam}}fa-square-check{{else}}fa-square{{/if}}"></i></a>
+          <a data-action="removeMember" data-tooltip="{{localize 'KT.RemoveFromRoster'}}">
+            <i class="fa-solid fa-trash"></i></a>
+        </span>
+      </div>
+      {{else}}
+      <div class="kt-row kt-empty">{{localize "KT.DropOperatives"}}</div>
+      {{/each}}
+    </div>
+
+    <div class="kt-button-row">
+      <button type="button" data-action="rollInitiative">
+        <i class="fa-solid fa-dice"></i> {{localize "KT.Roll.InitiativePhase"}}
+      </button>
+    </div>
+
+    <section class="kt-play-block">
+      <span class="kt-block-title">{{localize "KT.Background"}}</span>
+      {{#if editable}}
+        {{formInput systemFields.background name="system.background" value=system.background
+                    enriched=enrichedBackground toggled=true}}
+      {{else}}
+        <div class="kt-readonly">{{{enrichedBackground}}}</div>
+      {{/if}}
+    </section>
+
+    <section class="kt-play-block">
+      <span class="kt-block-title">{{localize "KT.Notes"}}</span>
+      {{#if editable}}
+        {{formInput systemFields.notes name="system.notes" value=system.notes
+                    enriched=enrichedNotes toggled=true}}
+      {{else}}
+        <div class="kt-readonly">{{{enrichedNotes}}}</div>
+      {{/if}}
+    </section>
+  </section>
+</fieldset>

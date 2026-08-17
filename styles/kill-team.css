@@ -1,0 +1,880 @@
+/* =========================================================================
+   Kill Team 2018 — datacard styling
+   The card reproduces the printed operative card: a pale pressed-paper panel
+   with hazard-orange header bars, banded rows and a clipped top-right corner.
+   ========================================================================= */
+
+.kill-team {
+  --kt-orange: #c8511e;
+  --kt-orange-dark: #9d3d14;
+  --kt-paper: #dcdcda;
+  --kt-paper-band: #cfcfcd;
+  --kt-paper-edge: #bdbdbb;
+  --kt-ink: #16181a;
+  --kt-ink-soft: #4a4d51;
+  --kt-dark: #26282b;
+  --kt-danger: #a41f1f;
+  --kt-success: #2f6d3a;
+
+  --kt-stencil: "Oswald", "Signika", "Arial Narrow", sans-serif;
+  --kt-body: "Signika", system-ui, sans-serif;
+}
+
+.kill-team .kt-sheet-content {
+  background: var(--kt-dark);
+  padding: 0.5rem;
+  overflow-y: auto;
+}
+
+.kill-team .kt-form {
+  border: none;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.kill-team .kt-form:disabled {
+  opacity: 0.92;
+}
+
+/* ---------- The card ---------- */
+
+.kill-team .kt-card {
+  background: var(--kt-paper);
+  border: 2px solid var(--kt-orange);
+  clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 0 100%);
+  padding: 0.75rem 0.9rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  color: var(--kt-ink);
+}
+
+.kill-team .kt-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.15rem;
+}
+
+.kill-team .kt-portrait img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border: 1px solid var(--kt-ink-soft);
+  background: var(--kt-paper-band);
+}
+
+.kill-team .kt-points {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.kill-team .kt-points-label,
+.kill-team .kt-force {
+  font-family: var(--kt-stencil);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.kill-team .kt-force {
+  color: var(--kt-ink-soft);
+  letter-spacing: 0.06em;
+}
+
+.kill-team .kt-points input {
+  width: 3.5rem;
+  text-align: center;
+}
+
+/* ---------- Header bars and banded rows ---------- */
+
+.kill-team .kt-bar {
+  background: var(--kt-orange);
+  color: #000;
+  font-family: var(--kt-stencil);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  padding: 0 0.4rem;
+}
+
+.kill-team .kt-bar > span {
+  text-align: center;
+}
+
+.kill-team .kt-bar > span:first-child {
+  text-align: left;
+}
+
+.kill-team .kt-row {
+  background: var(--kt-paper-band);
+  border-bottom: 1px solid var(--kt-paper-edge);
+  padding: 0 0.4rem;
+  min-height: 1.9rem;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.kill-team .kt-row > span,
+.kill-team .kt-row > a:not(.kt-weapon-name) {
+  text-align: center;
+}
+
+.kill-team .kt-row:nth-child(even) {
+  background: #d6d6d4;
+}
+
+.kill-team .kt-empty {
+  display: block;
+  text-align: center;
+  font-style: italic;
+  color: var(--kt-ink-soft);
+  padding: 0.4rem;
+}
+
+/* ---------- Grids: the bar and its rows share a template ---------- */
+
+.kill-team .kt-grid-profile {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) repeat(9, 3.1rem);
+  gap: 0.15rem;
+}
+
+.kill-team .kt-grid-weapon {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) 3.4rem 5.5rem 2.4rem 2.4rem 2.4rem minmax(0, 2fr) 3rem;
+  gap: 0.15rem;
+}
+
+.kill-team .kt-grid-roster {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1.6fr) minmax(0, 1fr) 4rem 3.5rem 3.5rem;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+/* ---------- Inputs inside the card ---------- */
+
+.kill-team .kt-card input[type="text"],
+.kill-team .kt-card input[type="number"],
+.kill-team .kt-card select {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid transparent;
+  color: var(--kt-ink);
+  font-family: var(--kt-body);
+  font-size: 0.85rem;
+  height: 1.6rem;
+  padding: 0 0.15rem;
+  text-align: center;
+  width: 100%;
+  min-width: 0;
+}
+
+.kill-team .kt-card input:hover:not(:disabled),
+.kill-team .kt-card select:hover:not(:disabled) {
+  border-bottom-color: var(--kt-orange);
+}
+
+.kill-team .kt-card input:focus,
+.kill-team .kt-card select:focus {
+  border-bottom-color: var(--kt-orange);
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.kill-team .kt-card input:focus-visible,
+.kill-team .kt-card a:focus-visible,
+.kill-team .kt-card button:focus-visible {
+  outline: 2px solid var(--kt-orange-dark);
+  outline-offset: 1px;
+}
+
+.kill-team .kt-name {
+  text-align: left !important;
+  font-family: var(--kt-stencil);
+  font-weight: 600;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.02em;
+}
+
+/* WS / BS / Sv are written "3+", so the input sits next to a fixed suffix. */
+.kill-team .kt-stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kill-team .kt-stat input {
+  width: 1.6rem !important;
+  padding-right: 0;
+}
+
+.kill-team .kt-stat i {
+  font-style: normal;
+  font-size: 0.85rem;
+  margin-left: -0.1rem;
+}
+
+/* ---------- Weapons ---------- */
+
+.kill-team .kt-weapon-name {
+  text-align: left;
+  font-weight: 600;
+  color: var(--kt-ink);
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kill-team .kt-weapon-name:hover {
+  color: var(--kt-orange-dark);
+  text-shadow: none;
+}
+
+.kill-team .kt-weapon-abilities {
+  text-align: left !important;
+  font-size: 0.76rem;
+  color: var(--kt-ink-soft);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kill-team .kt-controls,
+.kill-team .kt-controls-head {
+  display: flex;
+  gap: 0.35rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.kill-team .kt-controls a,
+.kill-team .kt-controls-head a {
+  color: var(--kt-ink-soft);
+  font-size: 0.75rem;
+}
+
+.kill-team .kt-controls-head a {
+  color: #000;
+}
+
+.kill-team .kt-controls a:hover {
+  color: var(--kt-orange-dark);
+  text-shadow: none;
+}
+
+/* ---------- Abilities box ---------- */
+
+.kill-team .kt-abilities {
+  border-top: 1px solid var(--kt-paper-edge);
+  padding-top: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+.kill-team .kt-label-inline,
+.kill-team .kt-field > span,
+.kill-team .kt-track-label,
+.kill-team .kt-block-title {
+  font-family: var(--kt-stencil);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+}
+
+.kill-team .kt-ability-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 0.3rem 0;
+}
+
+.kill-team .kt-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: var(--kt-paper-band);
+  border-left: 3px solid var(--kt-orange);
+  padding: 0.1rem 0.4rem;
+  font-size: 0.78rem;
+}
+
+.kill-team .kt-chip a {
+  color: var(--kt-ink);
+  text-decoration: none;
+}
+
+.kill-team .kt-chip a:hover {
+  color: var(--kt-orange-dark);
+  text-shadow: none;
+}
+
+.kill-team .kt-ability-text prose-mirror,
+.kill-team .kt-play-block prose-mirror {
+  display: block;
+  min-height: 4rem;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid var(--kt-paper-edge);
+}
+
+.kill-team .kt-readonly {
+  font-size: 0.85rem;
+}
+
+/* ---------- Specialism / demeanour ---------- */
+
+.kill-team .kt-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  border-top: 1px solid var(--kt-paper-edge);
+  border-bottom: 1px solid var(--kt-paper-edge);
+  padding: 0.35rem 0;
+  margin-top: 0.3rem;
+}
+
+.kill-team .kt-field {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+.kill-team .kt-field > span {
+  white-space: nowrap;
+}
+
+.kill-team .kt-field input,
+.kill-team .kt-field select {
+  text-align: left !important;
+}
+
+.kill-team .kt-level {
+  max-width: 2.5rem;
+  text-align: center !important;
+}
+
+/* ---------- Experience and wound tracks ---------- */
+
+.kill-team .kt-tracks {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) auto auto auto;
+  gap: 0.9rem;
+  align-items: start;
+  padding-top: 0.45rem;
+}
+
+.kill-team .kt-track {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.kill-team .kt-boxes {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.kill-team .kt-box {
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 2px solid var(--kt-ink-soft);
+  background: transparent;
+  display: block;
+  cursor: pointer;
+  transition: background-color 120ms ease;
+}
+
+.kill-team .kt-box.is-levelup {
+  border-color: var(--kt-orange);
+}
+
+.kill-team .kt-box.is-checked {
+  background: var(--kt-ink-soft);
+}
+
+.kill-team .kt-box.is-levelup.is-checked {
+  background: var(--kt-orange);
+}
+
+.kill-team .kt-box:hover {
+  border-color: var(--kt-orange);
+}
+
+.kill-team .kt-box-checkbox {
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+
+.kill-team .kt-box-checkbox input {
+  margin: 0;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+/* ---------- Play aids ---------- */
+
+.kill-team .kt-play {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.kill-team .kt-play-block {
+  background: rgba(220, 220, 218, 0.06);
+  border-left: 3px solid var(--kt-orange);
+  padding: 0.5rem 0.6rem;
+  color: var(--kt-paper);
+}
+
+.kill-team .kt-play-block .kt-block-title {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--kt-paper);
+  margin-bottom: 0.35rem;
+}
+
+.kill-team .kt-play-block .kt-block-title a {
+  color: var(--kt-orange);
+}
+
+.kill-team .kt-play-block input[type="text"],
+.kill-team .kt-play-block input[type="number"] {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(220, 220, 218, 0.2);
+  color: var(--kt-paper);
+}
+
+.kill-team .kt-wounds {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.kill-team .kt-wound-track {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--kt-stencil);
+  font-size: 1.1rem;
+}
+
+.kill-team .kt-wound-track input {
+  width: 3rem;
+  text-align: center;
+}
+
+.kill-team .kt-hit-mod {
+  margin-left: auto;
+  font-family: var(--kt-stencil);
+  letter-spacing: 0.06em;
+  font-size: 0.8rem;
+  color: var(--kt-orange);
+}
+
+.kill-team .kt-status-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.kill-team .kt-toggle {
+  font-family: var(--kt-stencil);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid rgba(220, 220, 218, 0.3);
+  color: var(--kt-paper);
+  cursor: pointer;
+}
+
+.kill-team .kt-toggle:hover {
+  border-color: var(--kt-orange);
+  text-shadow: none;
+}
+
+.kill-team .kt-toggle.is-on {
+  background: var(--kt-orange);
+  border-color: var(--kt-orange);
+  color: #000;
+}
+
+.kill-team .kt-button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.kill-team button {
+  font-family: var(--kt-stencil);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+  background: var(--kt-dark);
+  color: var(--kt-paper);
+  border: 1px solid var(--kt-orange);
+  padding: 0.25rem 0.6rem;
+  width: auto;
+  cursor: pointer;
+}
+
+.kill-team button:hover {
+  background: var(--kt-orange);
+  color: #000;
+  box-shadow: none;
+}
+
+.kill-team .kt-item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.kill-team .kt-item-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.15rem 0;
+  border-bottom: 1px solid rgba(220, 220, 218, 0.12);
+  font-size: 0.82rem;
+}
+
+.kill-team .kt-item-list a {
+  color: var(--kt-paper);
+  text-decoration: none;
+}
+
+.kill-team .kt-item-list a:hover {
+  color: var(--kt-orange);
+  text-shadow: none;
+}
+
+.kill-team .kt-item-meta {
+  margin-left: auto;
+  color: rgba(220, 220, 218, 0.6);
+  font-size: 0.75rem;
+}
+
+.kill-team .kt-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem 0.9rem;
+}
+
+.kill-team .kt-meta .kt-field > span {
+  min-width: 6.5rem;
+}
+
+/* ---------- Roster ---------- */
+
+.kill-team .kt-roster-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.kill-team .kt-roster-title {
+  flex: 1;
+  margin: 0;
+  border: none;
+}
+
+.kill-team .kt-roster-title input {
+  font-family: var(--kt-stencil);
+  font-size: 1.3rem !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: left !important;
+  height: 2.2rem;
+}
+
+.kill-team .kt-force-box {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  padding: 0.2rem 0.6rem;
+  border: 2px solid var(--kt-orange);
+}
+
+.kill-team .kt-force-box.is-over {
+  border-color: var(--kt-danger);
+  color: var(--kt-danger);
+}
+
+.kill-team .kt-force-value {
+  font-family: var(--kt-stencil);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.kill-team .kt-force-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.kill-team .kt-roster-meta,
+.kill-team .kt-resources {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 0.3rem 0.9rem;
+  padding: 0.3rem 0;
+}
+
+.kill-team .kt-resource {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--kt-stencil);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+}
+
+.kill-team .kt-resource input {
+  max-width: 3.5rem;
+}
+
+.kill-team .kt-roster-img {
+  width: 1.8rem;
+  height: 1.8rem;
+  object-fit: cover;
+  border: 1px solid var(--kt-paper-edge);
+}
+
+.kill-team .kt-row.is-benched {
+  opacity: 0.55;
+}
+
+.kill-team .kt-roster-list a {
+  color: var(--kt-ink);
+  text-decoration: none;
+}
+
+/* ---------- Item sheet ---------- */
+
+.kill-team.item .window-content {
+  background: var(--kt-paper);
+}
+
+.kill-team .kt-item-form {
+  background: var(--kt-paper);
+  color: var(--kt-ink);
+  padding: 0.6rem;
+  gap: 0.5rem;
+}
+
+.kill-team .kt-item-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.kill-team .kt-item-img {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border: 1px solid var(--kt-ink-soft);
+}
+
+.kill-team .kt-item-title {
+  flex: 1;
+  min-width: 0;
+}
+
+.kill-team .kt-item-title input {
+  font-family: var(--kt-stencil);
+  font-size: 1.05rem;
+  font-weight: 600;
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--kt-paper-edge);
+  color: var(--kt-ink);
+}
+
+.kill-team .kt-item-type {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--kt-ink-soft);
+}
+
+.kill-team .kt-item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 0.35rem 0.8rem;
+}
+
+.kill-team .kt-item-form input,
+.kill-team .kt-item-form select {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--kt-paper-edge);
+  color: var(--kt-ink);
+  height: 1.7rem;
+}
+
+.kill-team .kt-field-wide {
+  width: 100%;
+}
+
+.kill-team .kt-field-check {
+  justify-content: space-between;
+}
+
+.kill-team .kt-hint {
+  font-size: 0.72rem;
+  color: var(--kt-ink-soft);
+  margin: 0;
+}
+
+/* ---------- Chat cards ---------- */
+
+.kill-team.chat-card {
+  font-size: 0.85rem;
+}
+
+.kill-team.chat-card .kt-weapon-line {
+  border-left: 3px solid var(--kt-orange, #c8511e);
+  padding-left: 0.4rem;
+  margin: 0 0 0.35rem;
+}
+
+.kill-team.chat-card .kt-result-row {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr auto;
+  gap: 0.4rem;
+  align-items: center;
+  padding: 0.15rem 0;
+}
+
+.kill-team.chat-card .kt-result-label {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+}
+
+.kill-team.chat-card .kt-result-dice {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.kill-team.chat-card .kt-die {
+  display: inline-grid;
+  place-items: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 1px solid #888;
+  font-weight: 700;
+  background: #efefef;
+  color: #16181a;
+}
+
+.kill-team.chat-card .kt-die.is-success {
+  background: #c8511e;
+  border-color: #9d3d14;
+  color: #fff;
+}
+
+.kill-team.chat-card .kt-die.is-failure {
+  opacity: 0.5;
+}
+
+.kill-team.chat-card .kt-result-note {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.kill-team.chat-card .kt-summary {
+  margin: 0.4rem 0 0.2rem;
+  font-weight: 600;
+}
+
+.kill-team.chat-card .kt-summary.is-bad {
+  color: #a41f1f;
+}
+
+.kill-team.chat-card .kt-chat-button {
+  width: 100%;
+  margin-top: 0.3rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+
+/* ---------- Dialogs ---------- */
+
+.kill-team .kt-dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.kill-team .kt-dialog-weapon {
+  margin: 0;
+  font-weight: 600;
+}
+
+.kill-team .kt-dialog-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.35rem 0.8rem;
+}
+
+.kill-team .kt-dialog label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+}
+
+.kill-team .kt-dialog input[type="number"] {
+  max-width: 4rem;
+}
+
+.kill-team .kt-dialog-modifiers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  padding: 0.4rem 0.6rem;
+}
+
+.kill-team .kt-dialog-modifiers label {
+  justify-content: flex-start;
+}
+
+.kill-team .kt-dialog-note {
+  margin: 0;
+  font-size: 0.75rem;
+  opacity: 0.75;
+}
+
+/* ---------- Motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .kill-team * {
+    transition: none !important;
+  }
+}

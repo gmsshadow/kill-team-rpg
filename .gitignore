@@ -1,0 +1,8 @@
+# Never commit the rulebook or any other Games Workshop material
+docs/rulebook/
+*.pdf
+
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
