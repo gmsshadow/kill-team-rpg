@@ -55,6 +55,7 @@ export async function promptAttack(actor, weapon) {
   const target = game.user.targets.first()?.actor;
   const targetToughness = target?.system?.profile?.toughness ?? 3;
   const targetSave = target?.system?.profile?.save ?? 5;
+  const targetInvuln = target?.system?.profile?.invulnerable ?? 0;
 
   const content = `
     <div class="kt-dialog">
@@ -71,6 +72,10 @@ export async function promptAttack(actor, weapon) {
         </label>
         <label>${game.i18n.localize("KT.Dialog.TargetSave")}
           <input type="number" name="save" value="${targetSave}" min="1" max="7" step="1"/>
+        </label>
+        <label>${game.i18n.localize("KT.Dialog.TargetInvulnerable")}
+          <input type="number" name="invuln" value="${targetInvuln ?? 0}" min="0" max="7" step="1"
+                 data-tooltip="${game.i18n.localize("KT.Dialog.InvulnerableHint")}"/>
         </label>
       </div>
       <fieldset class="kt-dialog-modifiers">
@@ -167,7 +172,13 @@ export async function resolveAttack(actor, weapon, config) {
   }
 
   /* --- Saving throws --- */
+  // An invulnerable save is never modified by Armour Penetration, so the
+  // defender uses whichever of the two needs the lower roll (pg 33).
   const modifiedSave = saveTarget - system.ap; // AP is stored as a negative number
+  const invulnSave = Math.max(0, Number(config.invuln) || 0);
+  const usingInvulnerable = invulnSave > 0 && invulnSave < modifiedSave;
+  const effectiveSave = usingInvulnerable ? invulnSave : modifiedSave;
+
   let saveRoll = null;
   let saveDetail = [];
   let failedSaves = 0;
@@ -177,7 +188,7 @@ export async function resolveAttack(actor, weapon, config) {
     await saveRoll.evaluate();
     saveDetail = saveRoll.dice[0].results.map(r => {
       const die = r.result;
-      const success = die !== 1 && die >= modifiedSave; // Unmodified 1 always fails
+      const success = die !== 1 && die >= effectiveSave; // Unmodified 1 always fails
       return { die, success };
     });
     failedSaves = saveDetail.filter(d => !d.success).length;
@@ -202,8 +213,10 @@ export async function resolveAttack(actor, weapon, config) {
     parts.push(diceRow(game.i18n.localize("KT.Roll.Wounds"), woundDetail, `${woundTarget}+`));
   }
   if (wounds > 0) {
-    parts.push(diceRow(game.i18n.localize("KT.Roll.Saves"), saveDetail,
-      modifiedSave > 6 ? game.i18n.localize("KT.Roll.NoSave") : `${modifiedSave}+`));
+    const saveNote = effectiveSave > 6
+      ? game.i18n.localize("KT.Roll.NoSave")
+      : `${effectiveSave}+${usingInvulnerable ? ` ${game.i18n.localize("KT.Roll.InvulnerableTag")}` : ""}`;
+    parts.push(diceRow(game.i18n.localize("KT.Roll.Saves"), saveDetail, saveNote));
   }
 
   let summary;

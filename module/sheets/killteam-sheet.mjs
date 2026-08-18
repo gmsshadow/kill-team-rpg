@@ -1,4 +1,5 @@
 import { KT, SYSTEM_ID } from "../helpers/config.mjs";
+import { attachDragDrop, getDragData } from "../helpers/drag-drop.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
@@ -17,13 +18,24 @@ export default class KTKillTeamSheet extends HandlebarsApplicationMixin(ActorShe
       removeMember: KTKillTeamSheet.#onRemoveMember,
       toggleMember: KTKillTeamSheet.#onToggleMember,
       rollInitiative: KTKillTeamSheet.#onRollInitiative
-    },
-    dragDrop: [{ dragSelector: ".draggable", dropSelector: null }]
+    }
   };
 
   static PARTS = {
     roster: { template: `systems/${SYSTEM_ID}/templates/actor/killteam-sheet.hbs` }
   };
+
+  _onRender(context, options) {
+    super._onRender(context, options);
+    attachDragDrop(this);
+  }
+
+  /** Route drops to the roster handler. */
+  async _onDrop(event) {
+    const data = getDragData(event);
+    if (data?.type !== "Actor") return;
+    return this._onDropActor(event, data);
+  }
 
   async _prepareContext(options) {
     const context = await super._prepareContext(options);

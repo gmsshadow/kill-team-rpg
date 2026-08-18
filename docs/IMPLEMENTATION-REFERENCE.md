@@ -55,10 +55,25 @@ Weapon types affect the roll as follows: Rapid Fire doubles attacks within half 
 -1 after moving, Assault takes -1 after Advancing. Grenade (one per kill team per phase) and Pistol
 (fire into melee at the closest model) are recorded as types but are not enforced.
 
+### Saving throws and invulnerable saves (pg 31, 33)
+
+The die is modified by the weapon's Armour Penetration, which is stored as a negative number, so
+the required roll is `Save - AP`. An unmodified 1 always fails. Where the target has an
+invulnerable save, `resolveAttack` uses whichever of the two needs the lower roll and reports it
+on the chat card; an invulnerable save is never modified by Armour Penetration, and a model with
+more than one may only use one.
+
 ## Fight phase (pg 34–35)
 
 Close combat uses the same attack workflow with the Weapon Skill and an intervening terrain
 modifier. Pile in and consolidate moves are left to the table.
+
+### Reactions (pg 23)
+
+Both Reactions to a charge are tracked. Overwatch is a checkbox in the attack dialog that forces
+an unmodified 6 to hit regardless of Ballistic Skill or modifiers. Retreat is a status toggle;
+like Falling Back it prevents the model shooting later in the battle round, and both clear when a
+new battle round begins. The 3" Retreat move itself is made on the table.
 
 ## Morale phase (pg 36)
 

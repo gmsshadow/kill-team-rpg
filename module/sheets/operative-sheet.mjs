@@ -1,5 +1,6 @@
 import { KT, SYSTEM_ID } from "../helpers/config.mjs";
 import * as dice from "../helpers/dice.mjs";
+import { attachDragDrop, getDragData } from "../helpers/drag-drop.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
@@ -27,13 +28,31 @@ export default class KTOperativeSheet extends HandlebarsApplicationMixin(ActorSh
       rollAdvance: KTOperativeSheet.#onRollAdvance,
       rollCharge: KTOperativeSheet.#onRollCharge,
       resetRound: KTOperativeSheet.#onResetRound
-    },
-    dragDrop: [{ dragSelector: ".draggable", dropSelector: null }]
+    }
   };
 
   static PARTS = {
     card: { template: `systems/${SYSTEM_ID}/templates/actor/operative-sheet.hbs` }
   };
+
+  /* -------------------------------------------- */
+
+  _onRender(context, options) {
+    super._onRender(context, options);
+    attachDragDrop(this);
+  }
+
+  /** Accept weapons, abilities and wargear dropped onto the datacard. */
+  async _onDrop(event) {
+    if (!this.isEditable) return;
+    const data = getDragData(event);
+    if (data?.type !== "Item") return;
+    const item = await Item.implementation.fromDropData(data);
+    if (!item) return;
+    // Dropping an item the operative already owns is a no-op rather than a duplicate.
+    if (item.parent === this.document) return;
+    await this.document.createEmbeddedDocuments("Item", [item.toObject()]);
+  }
 
   /* -------------------------------------------- */
 

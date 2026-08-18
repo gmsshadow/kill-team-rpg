@@ -5,11 +5,11 @@ designed as the foundation for a fuller roleplaying system (character creation, 
 other Warhammer sources) that will be layered on later.
 
 - **System id:** `kill-team-2018`
-- **Version:** 0.1.0
+- **Version:** 0.2.0
 - **Foundry:** v14 (ApplicationV2 sheets, `TypeDataModel` schemas, `documentTypes` in `system.json`).
   Minimum v13.
 
-## What's in v0.1.0
+## What's in v0.2.0
 
 ### Documents
 
@@ -31,7 +31,7 @@ at positions 3, 7 and 12 are drawn with the orange level-up outline. Click a box
 to that value; click the box you're already on to step back one.
 
 Below the card sits a play area that isn't part of the printed card: current wounds, the round
-state toggles (Readied, Advanced, Charged, Fell Back, Shaken, Broken, Out of Action), roll buttons
+state toggles (Readied, Advanced, Charged, Fell Back, Retreated, Shaken, Broken, Out of Action), roll buttons
 and wargear.
 
 ### Implemented mechanics
@@ -45,6 +45,8 @@ and wargear.
 - **Rapid Fire** doubles the attacks when you tick "all targets within half range".
 - **Weapon Strength** accepts a flat number, `User`, `+1` or `x2` and resolves against the wielder.
 - **Wound table** as printed: 2+ at double Toughness, 3+ above, 4+ equal, 5+ below, 6+ at half or less.
+- **Saving throws** apply Armour Penetration to the die, and take an invulnerable save instead
+  when it needs a lower roll — invulnerable saves ignore AP. An unmodified 1 always fails.
 - **Injury rolls** roll one die per point of Damage and take the highest, add flesh wounds, and 4+
   takes the model out of action. The result is written back to the operative.
 - **Nerve tests** roll against Leadership, always pass on an unmodified 1, and mark the model shaken.

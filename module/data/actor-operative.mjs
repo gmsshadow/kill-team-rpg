@@ -88,6 +88,7 @@ export default class OperativeData extends foundry.abstract.TypeDataModel {
         advanced: new fields.BooleanField({ initial: false, label: "KT.Advanced" }),
         charged: new fields.BooleanField({ initial: false, label: "KT.Charged" }),
         fellBack: new fields.BooleanField({ initial: false, label: "KT.FellBack" }),
+        retreated: new fields.BooleanField({ initial: false, label: "KT.Retreated" }),
         outOfAction: new fields.BooleanField({ initial: false, label: "KT.OutOfAction" }),
         broken: new fields.BooleanField({ initial: false, label: "KT.Broken" })
       }),
@@ -116,7 +117,8 @@ export default class OperativeData extends foundry.abstract.TypeDataModel {
     // later in the battle round (Assault weapons and FLY aside).
     this.canShoot = this.canAct
       && !this.status.charged
-      && !this.status.fellBack;
+      && !this.status.fellBack
+      && !this.status.retreated;
 
     // Total force cost: the operative plus any wargear or weapon upgrades.
     let force = this.points;

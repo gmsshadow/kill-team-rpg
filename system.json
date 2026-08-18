@@ -2,7 +2,7 @@
   "id": "kill-team-2018",
   "title": "Kill Team 2018 (Lightweight RPG)",
   "description": "A lightweight roleplaying system built on the Warhammer 40,000: Kill Team (2018) core rules. Operative datacards, weapon profiles, specialisms, experience tracks and the D6 attack sequence.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "compatibility": {
     "minimum": "13",
     "verified": "14"
@@ -30,24 +30,38 @@
   "documentTypes": {
     "Actor": {
       "operative": {
-        "htmlFields": ["abilities", "notes"]
+        "htmlFields": [
+          "abilities",
+          "notes"
+        ]
       },
       "killteam": {
-        "htmlFields": ["notes", "background"]
+        "htmlFields": [
+          "notes",
+          "background"
+        ]
       }
     },
     "Item": {
       "weapon": {
-        "htmlFields": ["description"]
+        "htmlFields": [
+          "description"
+        ]
       },
       "ability": {
-        "htmlFields": ["description"]
+        "htmlFields": [
+          "description"
+        ]
       },
       "wargear": {
-        "htmlFields": ["description"]
+        "htmlFields": [
+          "description"
+        ]
       },
       "specialism": {
-        "htmlFields": ["description"]
+        "htmlFields": [
+          "description"
+        ]
       }
     }
   },

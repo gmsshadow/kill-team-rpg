@@ -7,7 +7,8 @@
 
     <header class="kt-card-top">
       <div class="kt-portrait">
-        <img src="{{actor.img}}" alt="{{actor.name}}" data-edit="img"/>
+        <img src="{{actor.img}}" alt="{{actor.name}}" data-action="editImage" data-edit="img"
+             data-tooltip="{{localize 'KT.ChangePortrait'}}"/>
       </div>
       <div class="kt-points">
         <span class="kt-points-label">{{localize "KT.Points"}}</span>
@@ -177,6 +178,7 @@
         <a class="kt-toggle {{#if system.status.advanced}}is-on{{/if}}" data-action="toggleStatus" data-status="advanced">{{localize "KT.Advanced"}}</a>
         <a class="kt-toggle {{#if system.status.charged}}is-on{{/if}}" data-action="toggleStatus" data-status="charged">{{localize "KT.Charged"}}</a>
         <a class="kt-toggle {{#if system.status.fellBack}}is-on{{/if}}" data-action="toggleStatus" data-status="fellBack">{{localize "KT.FellBack"}}</a>
+        <a class="kt-toggle {{#if system.status.retreated}}is-on{{/if}}" data-action="toggleStatus" data-status="retreated">{{localize "KT.Retreated"}}</a>
         <a class="kt-toggle {{#if system.status.shaken}}is-on{{/if}}" data-action="toggleStatus" data-status="shaken">{{localize "KT.Shaken"}}</a>
         <a class="kt-toggle {{#if system.status.broken}}is-on{{/if}}" data-action="toggleStatus" data-status="broken">{{localize "KT.Broken"}}</a>
         <a class="kt-toggle {{#if system.status.outOfAction}}is-on{{/if}}" data-action="toggleStatus" data-status="outOfAction">{{localize "KT.OutOfAction"}}</a>

@@ -3,6 +3,23 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.2.0
+
+### Added
+- Invulnerable saves in the attack sequence. The dialog pre-fills from the targeted operative;
+  the defender uses whichever of the armour or invulnerable save needs the lower roll, and the
+  invulnerable save is never modified by Armour Penetration (pg 33). The chat card names which
+  save was used.
+- `Retreated` as a tracked battle-round status, the second of the two Reactions to a charge.
+  Like Falling Back it blocks shooting later in the battle round, and it clears on a new round.
+
+### Fixed
+- Drag and drop on both actor sheets. The `dragDrop` sheet option is a v1 sheet feature that
+  ApplicationV2 does not implement, so dropping a weapon onto a datacard silently did nothing.
+  Handlers are now attached directly to the rendered element, with the root drop target bound
+  once rather than once per render.
+- The datacard portrait now opens the file picker (`data-action="editImage"`).
+
 ## 0.1.0
 
 Initial bare-bones release.

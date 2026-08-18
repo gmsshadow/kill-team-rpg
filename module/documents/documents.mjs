@@ -30,7 +30,8 @@ export class KTActor extends Actor {
       "system.status.readied": false,
       "system.status.advanced": false,
       "system.status.charged": false,
-      "system.status.fellBack": false
+      "system.status.fellBack": false,
+      "system.status.retreated": false
     });
   }
 

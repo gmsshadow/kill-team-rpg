@@ -5,11 +5,9 @@
   "TYPES.Item.ability": "Ability",
   "TYPES.Item.wargear": "Wargear",
   "TYPES.Item.specialism": "Specialism",
-
   "KT.Sheet.Operative": "Operative Datacard",
   "KT.Sheet.KillTeam": "Command Roster",
   "KT.Sheet.Item": "Kill Team Item",
-
   "KT.Operative": "Operative",
   "KT.Name": "Name",
   "KT.Points": "Points",
@@ -32,7 +30,6 @@
   "KT.Faction": "Faction",
   "KT.Keywords": "Keywords",
   "KT.KeywordsHint": "Imperium, Adeptus Astartes, Infantry…",
-
   "KT.Weapon": "Weapon",
   "KT.WeaponProfile": "Weapon profile",
   "KT.Range": "Range",
@@ -50,7 +47,6 @@
   "KT.CommandPointCost": "CP cost",
   "KT.WeaponAbilitiesHint": "Short rule shown on the card",
   "KT.StrengthHint": "Strength accepts a number, User, +1 or x2.",
-
   "KT.SpecialismLabel": "Specialism",
   "KT.SpecialismColon": "Specialism:",
   "KT.Demeanour": "Demeanour",
@@ -63,7 +59,6 @@
   "KT.Notes": "Notes",
   "KT.Background": "Background",
   "KT.Wargear": "Wargear",
-
   "KT.Status": "Status",
   "KT.Readied": "Readied",
   "KT.Advanced": "Advanced",
@@ -76,7 +71,6 @@
   "KT.HitModifier": "Hit modifier",
   "KT.HitModifierHint": "Cumulative penalty from flesh wounds and a broken kill team.",
   "KT.Rolls": "Rolls",
-
   "KT.AddWeapon": "Add a weapon",
   "KT.AddAbility": "Add an ability",
   "KT.NewItem": "New {type}",
@@ -88,7 +82,6 @@
   "KT.DeleteItemPrompt": "Delete {name}?",
   "KT.PostToChat": "Post to chat",
   "KT.RollAttack": "Roll attack",
-
   "KT.KillTeamName": "Kill team name",
   "KT.PlayerName": "Player",
   "KT.Mission": "Mission",
@@ -105,14 +98,12 @@
   "KT.MissingOperative": "Missing operative",
   "KT.ToggleInKillTeam": "Include in this kill team",
   "KT.RemoveFromRoster": "Remove from roster",
-
   "KT.WeaponType.Assault": "Assault",
   "KT.WeaponType.Heavy": "Heavy",
   "KT.WeaponType.RapidFire": "Rapid Fire",
   "KT.WeaponType.Grenade": "Grenade",
   "KT.WeaponType.Pistol": "Pistol",
   "KT.WeaponType.Melee": "Melee",
-
   "KT.Specialism.None": "None",
   "KT.Specialism.Leader": "Leader",
   "KT.Specialism.Combat": "Combat",
@@ -124,18 +115,15 @@
   "KT.Specialism.Sniper": "Sniper",
   "KT.Specialism.Veteran": "Veteran",
   "KT.Specialism.Zealot": "Zealot",
-
   "KT.AbilityType.Datasheet": "Datasheet ability",
   "KT.AbilityType.Specialism": "Specialism ability",
   "KT.AbilityType.Faction": "Faction ability",
   "KT.AbilityType.FireTeam": "Fire team advance",
   "KT.AbilityType.Tactic": "Tactic",
-
   "KT.Modifier.LongRange": "Long range",
   "KT.Modifier.Obscured": "Obscured",
   "KT.Modifier.Intervening": "Intervening terrain",
   "KT.Modifier.Broken": "Kill team broken",
-
   "KT.Dialog.AttackWith": "Attack with",
   "KT.Dialog.Attacks": "Attacks",
   "KT.Dialog.TargetToughness": "Target Toughness",
@@ -150,7 +138,6 @@
   "KT.Dialog.Roll": "Roll",
   "KT.Dialog.AutoModifiers": "Flesh wounds and broken status already apply {value} to hit.",
   "KT.Dialog.NerveHint": "+1 per friendly model shaken or out of action, -1 per friendly model within 2\".",
-
   "KT.Roll.ShootingAttack": "Shooting attack",
   "KT.Roll.CloseCombatAttack": "Close combat attack",
   "KT.Roll.Hits": "Hits",
@@ -176,8 +163,12 @@
   "KT.Roll.Manifested": "Manifested.",
   "KT.Roll.Failed": "Failed to manifest.",
   "KT.Roll.Perils": "Perils of the Warp!",
-
   "KT.Warning.NoActor": "No operative selected for that roll.",
   "KT.Warning.OperativesOnly": "Only operatives can be added to a kill team roster.",
-  "KT.Warning.AlreadyOnRoster": "{name} is already on this roster."
+  "KT.Warning.AlreadyOnRoster": "{name} is already on this roster.",
+  "KT.Retreated": "Retreated",
+  "KT.ChangePortrait": "Change portrait",
+  "KT.Dialog.TargetInvulnerable": "Target Invuln",
+  "KT.Dialog.InvulnerableHint": "The target's invulnerable save. Leave at 0 if it has none — an invulnerable save is never modified by Armour Penetration.",
+  "KT.Roll.InvulnerableTag": "(invulnerable)"
 }
