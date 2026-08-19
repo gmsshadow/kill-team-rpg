@@ -3,6 +3,15 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.5.2
+
+### Fixed
+- Window header controls rendered as empty boxes instead of their icons. Foundry puts the Font
+  Awesome classes directly on the header buttons, so an unscoped `.kill-team button` rule
+  outranked `.fa-solid` on specificity and replaced the icon font with the sheet's display face.
+  Button styling is now scoped to `.window-content`, and a guard rule keeps the icon font on any
+  element carrying an `fa-` class.
+
 ## 0.5.1
 
 ### Fixed

@@ -528,7 +528,13 @@
   gap: 0.35rem;
 }
 
-.kill-team button {
+/*
+ * Scoped to the window body on purpose. Foundry puts Font Awesome classes
+ * directly on the window header's control buttons, so an unscoped
+ * `.kill-team button` rule outranks `.fa-solid` and swaps the icon font out,
+ * leaving empty boxes where the controls should be.
+ */
+.kill-team .window-content button {
   font-family: var(--kt-stencil);
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -541,10 +547,22 @@
   cursor: pointer;
 }
 
-.kill-team button:hover {
+.kill-team .window-content button:hover {
   background: var(--kt-orange);
   color: #000;
   box-shadow: none;
+}
+
+/*
+ * Belt and braces: never let our typography reach an element that is carrying
+ * an icon class, wherever it appears.
+ */
+.kill-team [class*="fa-"]::before,
+.kill-team i[class*="fa-"],
+.kill-team button[class*="fa-"] {
+  font-family: var(--fa-style-family, "Font Awesome 6 Pro"), "Font Awesome 6 Free";
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 .kill-team .kt-item-list {
