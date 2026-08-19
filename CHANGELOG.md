@@ -3,6 +3,14 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.4.0
+
+### Changed
+- **Breaking:** the system id is now `kill-team-rpg`, matching the repository. The system must
+  live in `Data/systems/kill-team-rpg`. Rename any existing install folder before launching, or
+  Foundry will not find the system. Worlds created under the old id will need their `system` key
+  updated in `world.json`.
+
 ## 0.3.1
 
 ### Changed

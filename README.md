@@ -4,12 +4,12 @@ A bare-bones Foundry VTT game system built on the **Warhammer 40,000: Kill Team 
 designed as the foundation for a fuller roleplaying system (character creation, extra abilities from
 other Warhammer sources) that will be layered on later.
 
-- **System id:** `kill-team-2018`
-- **Version:** 0.3.1
+- **System id:** `kill-team-rpg`
+- **Version:** 0.4.0
 - **Foundry:** v14 (ApplicationV2 sheets, `TypeDataModel` schemas, `documentTypes` in `system.json`).
   Minimum v13.
 
-## What's in v0.3.1
+## What's in v0.4.0
 
 ### Documents
 
@@ -61,7 +61,7 @@ the natural next increments.
 
 ## Installation
 
-1. Copy this folder into `Data/systems/kill-team-2018` in your Foundry user data directory, or
+1. Copy this folder into `Data/systems/kill-team-rpg` in your Foundry user data directory, or
    install from the manifest URL.
 2. Create a world using the **Kill Team 2018** system.
 

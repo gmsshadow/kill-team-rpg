@@ -4,7 +4,7 @@
  * specialisms and abilities from other Warhammer sources).
  */
 
-export const SYSTEM_ID = "kill-team-2018";
+export const SYSTEM_ID = "kill-team-rpg";
 
 export const KT = {};
 
