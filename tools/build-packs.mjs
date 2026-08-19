@@ -23,6 +23,29 @@ import { FACTIONS } from "../module/helpers/factions.mjs";
 import { ASTARTES_ITEMS } from "../module/helpers/weapons-astartes.mjs";
 
 const SYSTEM_ID = "kill-team-rpg";
+
+/**
+ * Foundry compares `_stats.coreVersion` against the running core version to
+ * decide whether a pack predates the current release and needs migrating. A
+ * pack with no coreVersion is treated as legacy, which can leave the
+ * compendium listing empty until it is migrated. Stamp it from the manifest.
+ */
+const manifest = JSON.parse(
+  await fs.readFile(new URL("../system.json", import.meta.url), "utf8")
+);
+const CORE_VERSION = manifest.compatibility?.verified ?? "13";
+const SYSTEM_VERSION = manifest.version;
+
+function stats() {
+  return {
+    coreVersion: CORE_VERSION,
+    systemId: SYSTEM_ID,
+    systemVersion: SYSTEM_VERSION,
+    createdTime: null,
+    modifiedTime: null,
+    lastModifiedBy: null
+  };
+}
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const sourceRoot = path.join(root, "packs", "_source");
 const packRoot = path.join(root, "packs");
@@ -76,7 +99,7 @@ function factionDocument(faction) {
     sort: faction.page * 100,
     ownership: { default: 0 },
     flags: {},
-    _stats: { systemId: SYSTEM_ID }
+    _stats: stats()
   };
 }
 
@@ -125,7 +148,7 @@ function weaponDocument(entry, index) {
     sort: (index + 1) * 100,
     ownership: { default: 0 },
     flags: {},
-    _stats: { systemId: SYSTEM_ID }
+    _stats: stats()
   };
 }
 

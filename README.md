@@ -5,11 +5,11 @@ designed as the foundation for a fuller roleplaying system (character creation, 
 other Warhammer sources) that will be layered on later.
 
 - **System id:** `kill-team-rpg`
-- **Version:** 0.6.0
+- **Version:** 0.6.1
 - **Foundry:** v14 (ApplicationV2 sheets, `TypeDataModel` schemas, `documentTypes` in `system.json`).
   Minimum v13.
 
-## What's in v0.6.0
+## What's in v0.6.1
 
 ### Documents
 

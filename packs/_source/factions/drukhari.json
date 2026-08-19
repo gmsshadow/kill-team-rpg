@@ -20,6 +20,11 @@
   },
   "flags": {},
   "_stats": {
-    "systemId": "kill-team-rpg"
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.6.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
   }
 }

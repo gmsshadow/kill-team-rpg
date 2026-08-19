@@ -3,6 +3,14 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.6.1
+
+### Fixed
+- Pack documents now carry a full `_stats` block including `coreVersion` and `systemVersion`.
+  Foundry compares `coreVersion` against the running core to decide whether a pack predates the
+  current release; without it a pack is treated as legacy, which can leave the compendium
+  listing empty.
+
 ## 0.6.0
 
 Adds the Adeptus Astartes armoury, pg 86-87.
