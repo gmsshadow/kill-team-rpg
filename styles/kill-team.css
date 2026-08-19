@@ -34,6 +34,9 @@
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+  /* Establishes the container the layout queries below measure against, so
+     the sheet reflows on its own width rather than the browser viewport. */
+  container-type: inline-size;
 }
 
 .kill-team .kt-form:disabled {
@@ -355,11 +358,15 @@
 
 .kill-team .kt-field > span {
   white-space: nowrap;
+  /* Never shrink a label below its text; the input gives up the space instead. */
+  flex: 0 0 auto;
 }
 
 .kill-team .kt-field input,
 .kill-team .kt-field select {
   text-align: left !important;
+  /* Flex items default to min-width:auto, which stops inputs shrinking. */
+  min-width: 0;
 }
 
 .kill-team .kt-level {
@@ -571,14 +578,31 @@
   font-size: 0.75rem;
 }
 
+/*
+ * Four tracks rather than two, with the fields flattened into the parent grid
+ * so both label columns size to their widest label and stay aligned. Without
+ * this, a long label such as MAX PER KILL TEAM overruns its input.
+ */
 .kill-team .kt-meta {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: max-content minmax(0, 1fr) max-content minmax(0, 1fr);
   gap: 0.4rem 0.9rem;
+  align-items: center;
+}
+
+.kill-team .kt-meta .kt-field {
+  display: contents;
 }
 
 .kill-team .kt-meta .kt-field > span {
-  min-width: 6.5rem;
+  min-width: 0;
+}
+
+/* Narrow sheets: fall back to one field per row so labels keep their space. */
+@container (max-width: 34rem) {
+  .kill-team .kt-meta {
+    grid-template-columns: max-content minmax(0, 1fr);
+  }
 }
 
 /* ---------- Roster ---------- */
@@ -633,7 +657,8 @@
 .kill-team .kt-roster-meta,
 .kill-team .kt-resources {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  /* Wide enough for the longest label plus a usable input. */
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   gap: 0.3rem 0.9rem;
   padding: 0.3rem 0;
 }

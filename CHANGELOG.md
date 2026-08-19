@@ -3,6 +3,17 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.4.1
+
+### Fixed
+- Long field labels such as MAX PER KILL TEAM and INVULNERABLE SAVE overran their inputs. Label
+  spans had a `min-width` but no `flex-shrink: 0`, so flexbox squeezed them below their own text
+  while `white-space: nowrap` kept the text at full width. Labels no longer shrink, inputs get
+  `min-width: 0` and give up the space instead, and the datacard meta block is now a single
+  four-track grid so both label columns align and size to their widest label.
+- The roster and resources grids were widened to 14rem tracks, which had the same problem on
+  labels like COMMAND POINTS.
+
 ## 0.4.0
 
 ### Changed
