@@ -5,8 +5,10 @@ docs/rulebook/
 node_modules/
 .DS_Store
 Thumbs.db
-*.log
 
-# Pack build artifacts. packs/_source is the version-controlled truth;
-# packs/<name>/ is compiled by tools/build-packs.mjs and shipped in releases.
-node_modules/
+# Compiled compendium packs are build artifacts. packs/_source holds the
+# version-controlled JSON; run tools/build-packs.mjs to regenerate.
+# Note this must exclude the directory wholesale: LevelDB keeps recent writes
+# in .log files, so ignoring *.log alone would commit a pack missing entries.
+packs/*/
+!packs/_source/

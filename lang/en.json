@@ -201,7 +201,7 @@
   "KT.FactionKeywordHint": "The Faction keyword as printed on a datasheet. Every model in a kill team must share one (pg 62).",
   "KT.ParentKeyword": "Parent Keyword",
   "KT.ParentKeywordHint": "A broader Faction keyword these models also carry, e.g. Deathwatch models are also Adeptus Astartes. Leave blank if the faction stands alone.",
-  "KT.Allegiance": "Allegiance",
+  "KT.AllegianceLabel": "Allegiance",
   "KT.Allegiance.Imperium": "Imperium",
   "KT.Allegiance.Chaos": "Chaos",
   "KT.Allegiance.Xenos": "Xenos",

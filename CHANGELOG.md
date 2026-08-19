@@ -3,6 +3,21 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.5.1
+
+### Fixed
+- **Localisation was completely broken in 0.5.0.** Every label rendered as its raw key. Foundry
+  runs `expandObject` over the flat, dot-separated keys in a language file, so a key cannot be
+  both a value and a namespace. `KT.Allegiance` was a string while `KT.Allegiance.Imperium` and
+  its siblings needed it to be an object, expansion threw, and the entire file was discarded.
+  The label is now `KT.AllegianceLabel`, matching the existing `KT.SpecialismLabel` pattern.
+- `tools/check-lang.mjs` reproduces Foundry's expansion and fails the build on any collision,
+  duplicate key, non-string value or missing file. This class of error is total but easy to miss,
+  since the only symptom is an error in the console at startup.
+- `.gitignore` excluded `*.log`, which would have dropped LevelDB write-ahead files from a
+  committed pack and shipped one missing entries. Compiled packs are now excluded wholesale and
+  `packs/_source` is the tracked truth. Also removed a duplicated `node_modules/` line.
+
 ## 0.5.0
 
 Begins the Item-based structure, starting with factions.

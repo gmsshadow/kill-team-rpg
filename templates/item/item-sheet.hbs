@@ -92,7 +92,7 @@
     <label class="kt-field"><span>{{localize "KT.ParentKeyword"}}</span>
       <input type="text" name="system.parentKeyword" value="{{system.parentKeyword}}"
              data-tooltip="{{localize 'KT.ParentKeywordHint'}}"/></label>
-    <label class="kt-field"><span>{{localize "KT.Allegiance"}}</span>
+    <label class="kt-field"><span>{{localize "KT.AllegianceLabel"}}</span>
       <select name="system.allegiance">
         {{#each allegianceOptions as |option|}}
         <option value="{{option.value}}" {{#if (ktEq option.value ../system.allegiance)}}selected{{/if}}>{{option.label}}</option>

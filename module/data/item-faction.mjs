@@ -38,7 +38,7 @@ export default class FactionData extends foundry.abstract.TypeDataModel {
           chaos: "KT.Allegiance.Chaos",
           xenos: "KT.Allegiance.Xenos"
         },
-        label: "KT.Allegiance"
+        label: "KT.AllegianceLabel"
       }),
 
       /**
