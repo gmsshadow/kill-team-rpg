@@ -3,6 +3,15 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.6.2
+
+### Fixed
+- Compiled compendium packs are now committed rather than gitignored. Running the system from a
+  clone left `packs/factions/` and `packs/weapons/` absent, so Foundry registered both packs from
+  `system.json` and LevelDB created an empty database in their place. Each compendium opened and
+  listed nothing, with no error. Only the LevelDB `LOCK` and `LOG` runtime files stay ignored.
+- README documents the source-then-compile workflow and the symptom, since the failure is silent.
+
 ## 0.6.1
 
 ### Fixed

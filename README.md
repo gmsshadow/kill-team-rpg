@@ -5,11 +5,30 @@ designed as the foundation for a fuller roleplaying system (character creation, 
 other Warhammer sources) that will be layered on later.
 
 - **System id:** `kill-team-rpg`
-- **Version:** 0.6.1
+- **Version:** 0.6.2
 - **Foundry:** v14 (ApplicationV2 sheets, `TypeDataModel` schemas, `documentTypes` in `system.json`).
   Minimum v13.
 
-## What's in v0.6.1
+## Compendium packs
+
+`packs/_source/` holds readable JSON, one file per entry, and is the thing to edit.
+`packs/factions/` and `packs/weapons/` are the compiled LevelDB databases Foundry actually reads.
+
+Both are committed, because the usual way to run this is to clone the repo into
+`Data/systems/kill-team-rpg`. If the compiled packs are absent, Foundry still registers each pack
+from `system.json` and LevelDB quietly creates an empty database in its place: the compendium
+opens and lists nothing, with no error in the console. The giveaway is a pack directory with no
+`.ldb` file in it.
+
+After editing anything under `packs/_source/`, or the data files in `module/helpers/`, rebuild
+and commit both:
+
+```
+npm install --no-save @foundryvtt/foundryvtt-cli
+node tools/build-packs.mjs
+```
+
+## What's in v0.6.2
 
 ### Documents
 

@@ -6,9 +6,18 @@ node_modules/
 .DS_Store
 Thumbs.db
 
-# Compiled compendium packs are build artifacts. packs/_source holds the
-# version-controlled JSON; run tools/build-packs.mjs to regenerate.
-# Note this must exclude the directory wholesale: LevelDB keeps recent writes
-# in .log files, so ignoring *.log alone would commit a pack missing entries.
-packs/*/
-!packs/_source/
+# Compiled compendium packs ARE committed.
+#
+# The system is normally run by cloning this repo straight into
+# Data/systems/kill-team-rpg, so the packs have to be present in the working
+# tree. If they are missing, Foundry still registers each pack from
+# system.json, then LevelDB silently creates an empty database in its place --
+# the compendium opens and shows nothing, with no error.
+#
+# packs/_source/ holds the readable JSON and remains the thing to edit.
+# Run `node tools/build-packs.mjs` after changing it, and commit both.
+#
+# LevelDB runtime files are not build output:
+packs/*/LOCK
+packs/*/LOG
+packs/*/LOG.old
