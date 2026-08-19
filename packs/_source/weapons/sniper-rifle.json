@@ -1,0 +1,32 @@
+{
+  "_key": "!items!AdeptusA0u6i8m0m",
+  "_id": "AdeptusA0u6i8m0m",
+  "name": "Sniper rifle",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 1,
+    "source": "Adeptus Astartes, pg 86",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "36\"",
+    "weaponType": "heavy",
+    "attacks": "1",
+    "strength": "4",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "A model firing a sniper rifle does not suffer the penalty to hit rolls for the target being at long range. If you roll a wound roll of 6+ for this weapon, it inflicts a mortal wound in addition to its normal damage."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

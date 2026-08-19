@@ -1,0 +1,32 @@
+{
+  "_key": "!items!AdeptusAcAM4MOw4",
+  "_id": "AdeptusAcAM4MOw4",
+  "name": "Flamer",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 3,
+    "source": "Adeptus Astartes, pg 86",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "8\"",
+    "weaponType": "assault",
+    "attacks": "D6",
+    "strength": "4",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "This weapon automatically hits its target."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

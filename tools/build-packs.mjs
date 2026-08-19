@@ -20,10 +20,12 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { compilePack } from "@foundryvtt/foundryvtt-cli";
 import { FACTIONS } from "../module/helpers/factions.mjs";
+import { ASTARTES_ITEMS } from "../module/helpers/weapons-astartes.mjs";
 
+const SYSTEM_ID = "kill-team-rpg";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const sourceDir = path.join(root, "packs", "_source", "factions");
-const packDir = path.join(root, "packs", "factions");
+const sourceRoot = path.join(root, "packs", "_source");
+const packRoot = path.join(root, "packs");
 
 /**
  * Foundry document ids must be exactly 16 characters from a restricted
@@ -45,9 +47,13 @@ function stableId(key) {
   return id.slice(0, 16);
 }
 
-const ICON = "icons/svg/statue.svg";
+const ICONS = {
+  faction: "icons/svg/statue.svg",
+  weapon: "icons/svg/sword.svg",
+  wargear: "icons/svg/chest.svg"
+};
 
-function toDocument(faction) {
+function factionDocument(faction) {
   const id = stableId(faction.key);
   return {
     // compilePack silently skips any document without a _key, and the
@@ -56,7 +62,7 @@ function toDocument(faction) {
     _id: id,
     name: faction.name,
     type: "faction",
-    img: ICON,
+    img: ICONS.faction,
     system: {
       keyword: faction.keyword,
       parentKeyword: faction.parentKeyword ?? "",
@@ -70,24 +76,92 @@ function toDocument(faction) {
     sort: faction.page * 100,
     ownership: { default: 0 },
     flags: {},
-    _stats: { systemId: "kill-team-rpg" }
+    _stats: { systemId: SYSTEM_ID }
   };
 }
 
-async function main() {
+function weaponDocument(entry, index) {
+  const id = stableId(`${entry.faction}-${entry.key}`);
+  const source = `${entry.faction}, pg ${entry.page}`;
+
+  const system = entry.itemType === "wargear"
+    ? { points: entry.points, source, description: "", quantity: 1, equipped: true }
+    : {
+        points: entry.points,
+        source,
+        description: "",
+        equipped: true,
+        profileMode: entry.mode ?? "single",
+        profiles: (entry.profiles ?? []).map(profile => ({
+          name: profile.name,
+          range: profile.range,
+          weaponType: profile.weaponType,
+          attacks: profile.attacks,
+          strength: profile.strength,
+          ap: profile.ap,
+          damage: profile.damage,
+          abilities: profile.abilities ?? ""
+        })),
+        // Header rows of multi-profile weapons carry no statistics of their
+        // own; keep the schema defaults so nothing misleading is displayed.
+        range: entry.range ?? "",
+        weaponType: entry.weaponType ?? "assault",
+        attacks: entry.attacks ?? "1",
+        strength: entry.strength ?? "4",
+        ap: entry.ap ?? 0,
+        damage: entry.damage ?? "1",
+        abilities: entry.abilities ?? ""
+      };
+
+  return {
+    _key: `!items!${id}`,
+    _id: id,
+    name: entry.name,
+    type: entry.itemType,
+    img: ICONS[entry.itemType],
+    system,
+    effects: [],
+    folder: null,
+    sort: (index + 1) * 100,
+    ownership: { default: 0 },
+    flags: {},
+    _stats: { systemId: SYSTEM_ID }
+  };
+}
+
+/** Write source JSON then compile it into a LevelDB pack. */
+async function buildPack(name, documents) {
+  const sourceDir = path.join(sourceRoot, name);
+  const packDir = path.join(packRoot, name);
+
   await fs.rm(sourceDir, { recursive: true, force: true });
   await fs.mkdir(sourceDir, { recursive: true });
-
-  for (const faction of FACTIONS) {
-    const doc = toDocument(faction);
-    const file = path.join(sourceDir, `${faction.key}.json`);
-    await fs.writeFile(file, JSON.stringify(doc, null, 2) + "\n", "utf8");
+  for (const { file, doc } of documents) {
+    await fs.writeFile(path.join(sourceDir, `${file}.json`), JSON.stringify(doc, null, 2) + "\n", "utf8");
   }
-  console.log(`Wrote ${FACTIONS.length} source files to packs/_source/factions`);
 
   await fs.rm(packDir, { recursive: true, force: true });
-  await compilePack(sourceDir, packDir, { log: true });
-  console.log("Compiled packs/factions");
+  await compilePack(sourceDir, packDir, { log: false });
+
+  // LevelDB lock and log files are runtime state, not build output.
+  for (const stray of ["LOCK", "LOG", "LOG.old"]) {
+    await fs.rm(path.join(packDir, stray), { force: true });
+  }
+  console.log(`${name}: ${documents.length} documents`);
+}
+
+async function main() {
+  await buildPack("factions", FACTIONS.map(faction => ({
+    file: faction.key,
+    doc: factionDocument(faction)
+  })));
+
+  await buildPack("weapons", ASTARTES_ITEMS.map((entry, index) => ({
+    file: `${entry.key}`,
+    doc: weaponDocument(entry, index)
+  })));
+
+  console.log("Packs built.");
 }
 
 main().catch(err => {

@@ -1,0 +1,24 @@
+{
+  "_key": "!items!AdeptusAqOyYwosk",
+  "_id": "AdeptusAqOyYwosk",
+  "name": "Auspex",
+  "type": "wargear",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "points": 1,
+    "source": "Adeptus Astartes, pg 87",
+    "description": "",
+    "quantity": 1,
+    "equipped": true
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

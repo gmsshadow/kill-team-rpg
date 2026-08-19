@@ -3,6 +3,29 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.6.0
+
+Adds the Adeptus Astartes armoury, pg 86-87.
+
+### Added
+- **Multi-profile weapons.** A weapon may carry named sub-profiles with no statistics of its own,
+  matching the printed layout. `chooseOne` covers the missile launcher and the plasma weapons;
+  `chooseOneOrBoth` covers combi-weapons, where firing both applies -1 to every hit roll. Attacking
+  with such a weapon asks which profile first, and firing both resolves each in turn with the
+  penalty pre-applied.
+- **Weapons & Wargear compendium** with all 33 Adeptus Astartes entries: 24 ranged weapons, 4 melee
+  weapons and 5 pieces of wargear, with their points costs and printed abilities text.
+- The datacard renders sub-profiles indented beneath their parent, as the book prints them.
+
+### Changed
+- `resolveStrength` is now static so any profile can be resolved against its wielder. Verified
+  against the printed values: a power fist is x2, so S8 on a Marine; a chainsword is User, so S4.
+
+### Known deviation
+- The shock grenade prints `*` for Strength, AP and Damage. Strength keeps the asterisk, but AP is
+  numeric in the schema and shows 0, and Damage is stored as 0. The weapon inflicts no damage, and
+  its abilities text carries the actual rule.
+
 ## 0.5.2
 
 ### Fixed

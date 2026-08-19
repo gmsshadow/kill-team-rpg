@@ -1,0 +1,32 @@
+{
+  "_key": "!items!AdeptusAOoKqaMi6",
+  "_id": "AdeptusAOoKqaMi6",
+  "name": "Power fist",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 4,
+    "source": "Adeptus Astartes, pg 87",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "x2",
+    "ap": -3,
+    "damage": "D3",
+    "abilities": "When attacking with this weapon, you must subtract 1 from the hit roll."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

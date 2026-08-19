@@ -20,6 +20,38 @@ export class WeaponData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     return {
       ...commonFields(),
+
+      /**
+       * Multi-profile weapons. A combi-weapon or a missile launcher prints a
+       * header row with no statistics of its own, followed by named profiles.
+       * When this array is populated the top-level statistics are ignored and
+       * the bearer picks a profile when attacking.
+       */
+      profileMode: new fields.StringField({
+        required: true, initial: "single",
+        choices: {
+          single: "KT.ProfileMode.Single",
+          chooseOne: "KT.ProfileMode.ChooseOne",
+          chooseOneOrBoth: "KT.ProfileMode.ChooseOneOrBoth"
+        },
+        label: "KT.ProfileModeLabel"
+      }),
+      profiles: new fields.ArrayField(
+        new fields.SchemaField({
+          name: new fields.StringField({ required: true, initial: "", label: "KT.Name" }),
+          range: new fields.StringField({ required: true, initial: "12\"", label: "KT.Range" }),
+          weaponType: new fields.StringField({
+            required: true, initial: "assault", choices: KT.weaponTypes, label: "KT.Type"
+          }),
+          attacks: new fields.StringField({ required: true, initial: "1", label: "KT.Attacks" }),
+          strength: new fields.StringField({ required: true, initial: "4", label: "KT.Strength" }),
+          ap: new fields.NumberField({ required: true, integer: true, initial: 0, label: "KT.ArmourPenetration" }),
+          damage: new fields.StringField({ required: true, initial: "1", label: "KT.Damage" }),
+          abilities: new fields.StringField({ required: true, initial: "", label: "KT.Abilities" })
+        }),
+        { initial: [], label: "KT.Profiles" }
+      ),
+
       range: new fields.StringField({ required: true, initial: "12\"", label: "KT.Range" }),
       weaponType: new fields.StringField({
         required: true, initial: "assault", choices: KT.weaponTypes, label: "KT.Type"
@@ -36,9 +68,57 @@ export class WeaponData extends foundry.abstract.TypeDataModel {
   prepareDerivedData() {
     this.isMelee = KT.meleeTypes.includes(this.weaponType);
     // Type line as printed on the card, e.g. "Rapid Fire 1".
-    const typeLabel = game.i18n.localize(KT.weaponTypes[this.weaponType] ?? this.weaponType);
-    this.typeLine = this.isMelee ? typeLabel : `${typeLabel} ${this.attacks}`;
-    this.apLabel = this.ap === 0 ? "0" : `${this.ap}`;
+    this.typeLine = WeaponData.typeLine(this.weaponType, this.attacks);
+    this.apLabel = WeaponData.apLabel(this.ap);
+
+    this.hasProfiles = this.profiles.length > 0;
+
+    /**
+     * Every attack option this weapon offers, in a single shape, so callers do
+     * not have to branch on whether the weapon is multi-profile.
+     */
+    this.attackProfiles = this.hasProfiles
+      ? this.profiles.map((profile, index) => ({
+          index,
+          name: profile.name,
+          range: profile.range,
+          weaponType: profile.weaponType,
+          attacks: profile.attacks,
+          strength: profile.strength,
+          ap: profile.ap,
+          damage: profile.damage,
+          abilities: profile.abilities,
+          isMelee: KT.meleeTypes.includes(profile.weaponType),
+          typeLine: WeaponData.typeLine(profile.weaponType, profile.attacks),
+          apLabel: WeaponData.apLabel(profile.ap)
+        }))
+      : [{
+          index: 0,
+          name: this.parent?.name ?? "",
+          range: this.range,
+          weaponType: this.weaponType,
+          attacks: this.attacks,
+          strength: this.strength,
+          ap: this.ap,
+          damage: this.damage,
+          abilities: this.abilities,
+          isMelee: this.isMelee,
+          typeLine: this.typeLine,
+          apLabel: this.apLabel
+        }];
+
+    // Combi-weapons may fire both profiles at a cumulative -1 to hit.
+    this.allowsBothProfiles = this.profileMode === "chooseOneOrBoth";
+  }
+
+  /** "Rapid Fire 1", or just "Melee" for melee weapons. */
+  static typeLine(weaponType, attacks) {
+    const label = game.i18n.localize(KT.weaponTypes[weaponType] ?? weaponType);
+    return KT.meleeTypes.includes(weaponType) ? label : `${label} ${attacks}`;
+  }
+
+  static apLabel(ap) {
+    return ap === 0 ? "0" : `${ap}`;
   }
 
   /**
@@ -46,7 +126,15 @@ export class WeaponData extends foundry.abstract.TypeDataModel {
    * Handles "User", "+N", "-N" and "xN" notation.
    */
   resolveStrength(wielderStrength) {
-    const raw = String(this.strength).trim();
+    return WeaponData.resolveStrength(this.strength, wielderStrength);
+  }
+
+  /**
+   * Resolve a Strength value against a wielder.
+   * Handles "User", "+N", "-N" and "xN" notation.
+   */
+  static resolveStrength(value, wielderStrength) {
+    const raw = String(value).trim();
     if (/^user$/i.test(raw)) return wielderStrength;
     const multiplier = raw.match(/^x\s*(\d+)$/i);
     if (multiplier) return wielderStrength * Number(multiplier[1]);

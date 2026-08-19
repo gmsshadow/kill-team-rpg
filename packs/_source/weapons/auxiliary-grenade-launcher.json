@@ -1,0 +1,24 @@
+{
+  "_key": "!items!AdeptusA8Mc6gI0e",
+  "_id": "AdeptusA8Mc6gI0e",
+  "name": "Auxiliary grenade launcher",
+  "type": "wargear",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "points": 0,
+    "source": "Adeptus Astartes, pg 87",
+    "description": "",
+    "quantity": 1,
+    "equipped": true
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 3000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

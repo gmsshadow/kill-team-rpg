@@ -1,0 +1,32 @@
+{
+  "_key": "!items!AdeptusAo6IguOyk",
+  "_id": "AdeptusAo6IguOyk",
+  "name": "Bolt rifle",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adeptus Astartes, pg 86",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "30\"",
+    "weaponType": "rapidFire",
+    "attacks": "1",
+    "strength": "4",
+    "ap": -1,
+    "damage": "1",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

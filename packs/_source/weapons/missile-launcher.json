@@ -1,0 +1,53 @@
+{
+  "_key": "!items!AdeptusAS6qkgsui",
+  "_id": "AdeptusAS6qkgsui",
+  "name": "Missile launcher",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 5,
+    "source": "Adeptus Astartes, pg 86",
+    "description": "",
+    "equipped": true,
+    "profileMode": "chooseOne",
+    "profiles": [
+      {
+        "name": "Frag missile",
+        "range": "48\"",
+        "weaponType": "heavy",
+        "attacks": "D6",
+        "strength": "4",
+        "ap": 0,
+        "damage": "1",
+        "abilities": ""
+      },
+      {
+        "name": "Krak missile",
+        "range": "48\"",
+        "weaponType": "heavy",
+        "attacks": "1",
+        "strength": "8",
+        "ap": -2,
+        "damage": "D6",
+        "abilities": ""
+      }
+    ],
+    "range": "",
+    "weaponType": "assault",
+    "attacks": "1",
+    "strength": "4",
+    "ap": 0,
+    "damage": "1",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

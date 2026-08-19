@@ -1,0 +1,24 @@
+{
+  "_key": "!items!AdeptusA8822WQgW",
+  "_id": "AdeptusA8822WQgW",
+  "name": "Grav-chute",
+  "type": "wargear",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "points": 1,
+    "source": "Adeptus Astartes, pg 87",
+    "description": "",
+    "quantity": 1,
+    "equipped": true
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 3300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

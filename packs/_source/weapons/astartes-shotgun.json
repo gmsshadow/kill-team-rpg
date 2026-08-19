@@ -1,0 +1,32 @@
+{
+  "_key": "!items!AdeptusAIc2w4kCs",
+  "_id": "AdeptusAIc2w4kCs",
+  "name": "Astartes shotgun",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adeptus Astartes, pg 86",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "assault",
+    "attacks": "2",
+    "strength": "4",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "If the target is within half range, add 1 to this weapon's Strength."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

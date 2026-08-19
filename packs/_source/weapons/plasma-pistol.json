@@ -1,0 +1,53 @@
+{
+  "_key": "!items!AdeptusAaWoK0iQQ",
+  "_id": "AdeptusAaWoK0iQQ",
+  "name": "Plasma pistol",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 1,
+    "source": "Adeptus Astartes, pg 86",
+    "description": "",
+    "equipped": true,
+    "profileMode": "chooseOne",
+    "profiles": [
+      {
+        "name": "Standard",
+        "range": "12\"",
+        "weaponType": "pistol",
+        "attacks": "1",
+        "strength": "7",
+        "ap": -3,
+        "damage": "1",
+        "abilities": ""
+      },
+      {
+        "name": "Supercharge",
+        "range": "12\"",
+        "weaponType": "pistol",
+        "attacks": "1",
+        "strength": "8",
+        "ap": -3,
+        "damage": "2",
+        "abilities": "On an unmodified hit roll of 1, the bearer is taken out of action."
+      }
+    ],
+    "range": "",
+    "weaponType": "assault",
+    "attacks": "1",
+    "strength": "4",
+    "ap": 0,
+    "damage": "1",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

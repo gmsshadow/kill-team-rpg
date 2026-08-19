@@ -208,5 +208,16 @@
   "KT.CommonKeywords": "Common Keywords",
   "KT.Page": "Page",
   "KT.FactionApplyHint": "Drag this faction onto an operative or a kill team to set its Faction keyword. Dropping it on an operative also merges the keywords above.",
-  "KT.Info.FactionApplied": "Applied {faction} to {actor}."
+  "KT.Info.FactionApplied": "Applied {faction} to {actor}.",
+  "KT.Profiles": "Profiles",
+  "KT.ProfileModeLabel": "Profile Mode",
+  "KT.ProfileMode.Single": "Single profile",
+  "KT.ProfileMode.ChooseOne": "Choose one profile",
+  "KT.ProfileMode.ChooseOneOrBoth": "Choose one or both profiles",
+  "KT.ProfileNote.One": "Choose one of the profiles below.",
+  "KT.ProfileNote.OneOrBoth": "Choose one or both of the profiles below.",
+  "KT.Dialog.ChooseProfile": "Choose a profile",
+  "KT.Dialog.Profile": "Profile",
+  "KT.Dialog.BothProfiles": "Both profiles (-1 to all hit rolls)",
+  "KT.Dialog.Continue": "Continue"
 }

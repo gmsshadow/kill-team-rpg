@@ -1,4 +1,5 @@
 import { KT, SYSTEM_ID } from "./config.mjs";
+import { WeaponData } from "../data/items.mjs";
 
 const FormDataExtended = foundry.applications.ux?.FormDataExtended ?? globalThis.FormDataExtended;
 const DialogV2 = foundry.applications.api.DialogV2;
@@ -40,16 +41,65 @@ async function postCard({ actor, flavor, content, rolls = [] }) {
  * @param {Actor} actor    The attacking operative.
  * @param {Item} weapon    The weapon item being used.
  */
-export async function promptAttack(actor, weapon) {
+/**
+ * Ask which profile to attack with, where a weapon offers more than one.
+ * Combi-weapons may fire both, at a cumulative -1 to hit.
+ * @returns {object[]|null} the chosen profiles, or null if cancelled
+ */
+async function chooseProfiles(weapon) {
   const system = weapon.system;
-  const isMelee = system.isMelee;
+  if (!system.hasProfiles) return system.attackProfiles;
+
+  const options = system.attackProfiles.map(profile =>
+    `<option value="${profile.index}">${profile.name} &mdash; ${profile.typeLine}, S ${profile.strength}, AP ${profile.apLabel}, D ${profile.damage}</option>`
+  );
+  if (system.allowsBothProfiles) {
+    options.push(`<option value="both">${game.i18n.localize("KT.Dialog.BothProfiles")}</option>`);
+  }
+
+  const DialogV2 = foundry.applications.api.DialogV2;
+  const FormDataExtended = foundry.applications.ux?.FormDataExtended ?? globalThis.FormDataExtended;
+  const data = await DialogV2.prompt({
+    window: { title: `${weapon.name}: ${game.i18n.localize("KT.Dialog.ChooseProfile")}` },
+    content: `<div class="kt-dialog"><label>${game.i18n.localize("KT.Dialog.Profile")}
+        <select name="profile">${options.join("")}</select></label></div>`,
+    ok: {
+      label: game.i18n.localize("KT.Dialog.Continue"),
+      callback: (event, button) => new FormDataExtended(button.form).object
+    },
+    rejectClose: false
+  });
+  if (!data) return null;
+  if (data.profile === "both") return system.attackProfiles;
+  return [system.attackProfiles[Number(data.profile)]];
+}
+
+/**
+ * Prompt for and resolve an attack. Multi-profile weapons ask which profile
+ * first; firing both applies -1 to every hit roll made with the weapon.
+ */
+export async function promptAttack(actor, weapon) {
+  const chosen = await chooseProfiles(weapon);
+  if (!chosen?.length) return null;
+  const bothPenalty = chosen.length > 1 ? -1 : 0;
+
+  let result = null;
+  for (const profile of chosen) {
+    result = await promptProfileAttack(actor, weapon, profile, bothPenalty);
+  }
+  return result;
+}
+
+async function promptProfileAttack(actor, weapon, profile, extraModifier = 0) {
+  const system = weapon.system;
+  const isMelee = profile.isMelee;
   const skill = isMelee ? actor.system.profile.ws : actor.system.profile.bs;
 
   // Default number of attacks: the weapon's profile, or the operative's
   // Attacks characteristic for melee.
   const defaultAttacks = isMelee
     ? actor.system.profile.attacks
-    : (Number(system.attacks) || 1);
+    : (Number(profile.attacks) || 1);
 
   // Pick up a targeted token so Toughness and Save can be pre-filled.
   const target = game.user.targets.first()?.actor;
@@ -59,7 +109,7 @@ export async function promptAttack(actor, weapon) {
 
   const content = `
     <div class="kt-dialog">
-      <p class="kt-dialog-weapon">${weapon.name} &mdash; ${system.typeLine}, S ${system.strength}, AP ${system.apLabel}, D ${system.damage}</p>
+      <p class="kt-dialog-weapon">${profileLabel(weapon, profile)} &mdash; ${profile.typeLine}, S ${profile.strength}, AP ${profile.apLabel}, D ${profile.damage}</p>
       <div class="kt-dialog-grid">
         <label>${game.i18n.localize("KT.Dialog.Attacks")}
           <input type="number" name="attacks" value="${defaultAttacks}" min="1" step="1"/>
@@ -109,7 +159,14 @@ export async function promptAttack(actor, weapon) {
   });
 
   if (!data) return null;
+  data.other = (Number(data.other) || 0) + extraModifier;
+  data.profile = profile;
   return resolveAttack(actor, weapon, data);
+}
+
+/** "Combi-plasma (Plasma gun)" for multi-profile weapons, else the name. */
+function profileLabel(weapon, profile) {
+  return weapon.system.hasProfiles ? `${weapon.name} (${profile.name})` : weapon.name;
 }
 
 /**
@@ -117,7 +174,9 @@ export async function promptAttack(actor, weapon) {
  */
 export async function resolveAttack(actor, weapon, config) {
   const system = weapon.system;
-  const isMelee = system.isMelee;
+  // Single-profile weapons resolve against their own statistics.
+  const profile = config.profile ?? system.attackProfiles[0];
+  const isMelee = profile.isMelee;
   const overwatch = !!config.overwatch;
 
   let attacks = Math.max(1, Number(config.attacks) || 1);
@@ -151,7 +210,7 @@ export async function resolveAttack(actor, weapon, config) {
   const hits = hitDetail.filter(d => d.success).length;
 
   /* --- Wound rolls --- */
-  const strength = system.resolveStrength(actor.system.profile.strength);
+  const strength = WeaponData.resolveStrength(profile.strength, actor.system.profile.strength);
   const woundTarget = KT.woundRoll(strength, toughness);
   let woundRoll = null;
   let woundDetail = [];
@@ -174,7 +233,7 @@ export async function resolveAttack(actor, weapon, config) {
   /* --- Saving throws --- */
   // An invulnerable save is never modified by Armour Penetration, so the
   // defender uses whichever of the two needs the lower roll (pg 33).
-  const modifiedSave = saveTarget - system.ap; // AP is stored as a negative number
+  const modifiedSave = saveTarget - profile.ap; // AP is stored as a negative number
   const invulnSave = Math.max(0, Number(config.invuln) || 0);
   const usingInvulnerable = invulnSave > 0 && invulnSave < modifiedSave;
   const effectiveSave = usingInvulnerable ? invulnSave : modifiedSave;
@@ -205,7 +264,7 @@ export async function resolveAttack(actor, weapon, config) {
 
   const modifierText = modifier === 0 ? "" : ` (${modifier > 0 ? "+" : ""}${modifier})`;
   const parts = [
-    `<p class="kt-weapon-line"><strong>${weapon.name}</strong> &mdash; ${system.typeLine} &middot; S ${strength} &middot; AP ${system.apLabel} &middot; D ${system.damage}${overwatch ? ` &middot; ${game.i18n.localize("KT.Dialog.Overwatch")}` : ""}</p>`,
+    `<p class="kt-weapon-line"><strong>${profileLabel(weapon, profile)}</strong> &mdash; ${profile.typeLine} &middot; S ${strength} &middot; AP ${profile.apLabel} &middot; D ${profile.damage}${overwatch ? ` &middot; ${game.i18n.localize("KT.Dialog.Overwatch")}` : ""}</p>`,
     diceRow(game.i18n.localize("KT.Roll.Hits"), hitDetail,
       overwatch ? "6+" : `${skill}+${modifierText}`),
   ];
@@ -224,7 +283,7 @@ export async function resolveAttack(actor, weapon, config) {
   else if (wounds === 0) summary = game.i18n.localize("KT.Roll.NoWounds");
   else if (failedSaves === 0) summary = game.i18n.localize("KT.Roll.AllSaved");
   else summary = game.i18n.format("KT.Roll.DamageDealt", {
-    count: failedSaves, damage: system.damage
+    count: failedSaves, damage: profile.damage
   });
 
   parts.push(`<p class="kt-summary">${summary}</p>`);
@@ -233,7 +292,7 @@ export async function resolveAttack(actor, weapon, config) {
     // actor; otherwise the button falls back to whatever is targeted on click.
     const targetActor = game.user.targets.first()?.actor;
     parts.push(`<button type="button" class="kt-chat-button" data-kt-action="injury"
-      data-actor-uuid="${targetActor?.uuid ?? ""}" data-damage="${system.damage}">
+      data-actor-uuid="${targetActor?.uuid ?? ""}" data-damage="${profile.damage}">
       <i class="fa-solid fa-skull"></i> ${game.i18n.localize("KT.Roll.InjuryRoll")}</button>`);
   }
 

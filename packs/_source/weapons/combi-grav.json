@@ -1,0 +1,53 @@
+{
+  "_key": "!items!AdeptusA6AkQ0Cma",
+  "_id": "AdeptusA6AkQ0Cma",
+  "name": "Combi-grav",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 2,
+    "source": "Adeptus Astartes, pg 86",
+    "description": "",
+    "equipped": true,
+    "profileMode": "chooseOneOrBoth",
+    "profiles": [
+      {
+        "name": "Boltgun",
+        "range": "24\"",
+        "weaponType": "rapidFire",
+        "attacks": "1",
+        "strength": "4",
+        "ap": 0,
+        "damage": "1",
+        "abilities": ""
+      },
+      {
+        "name": "Grav-gun",
+        "range": "18\"",
+        "weaponType": "rapidFire",
+        "attacks": "1",
+        "strength": "5",
+        "ap": -3,
+        "damage": "1",
+        "abilities": "If the target has a Save characteristic of 3+ or better, this weapon has a Damage of D3."
+      }
+    ],
+    "range": "",
+    "weaponType": "assault",
+    "attacks": "1",
+    "strength": "4",
+    "ap": 0,
+    "damage": "1",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

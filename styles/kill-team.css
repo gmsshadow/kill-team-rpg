@@ -1018,3 +1018,30 @@
   border-bottom: 1px dotted var(--kt-line, #b0aca4);
   background: transparent;
 }
+
+/* ---------------------------------------------------------------------------
+   Multi-profile weapons
+   --------------------------------------------------------------------------- */
+
+/* Sub-profiles sit under their parent, indented, as the book prints them. */
+.kill-team .kt-subprofile {
+  background: rgba(0, 0, 0, 0.03);
+  font-size: 0.82rem;
+}
+
+.kill-team .kt-subprofile .kt-profile-name {
+  padding-left: 0.7rem;
+  font-style: italic;
+}
+
+/* The header row of a multi-profile weapon carries the choice note instead
+   of statistics, so let it run across the empty stat columns. */
+.kill-team .kt-profile-note {
+  grid-column: span 2;
+  font-size: 0.78rem;
+  font-style: italic;
+  color: #55504a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

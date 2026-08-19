@@ -1,0 +1,32 @@
+{
+  "_key": "!items!AdeptusAeCIOuCmK",
+  "_id": "AdeptusAeCIOuCmK",
+  "name": "Shock grenade",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adeptus Astartes, pg 86",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "6\"",
+    "weaponType": "grenade",
+    "attacks": "D3",
+    "strength": "*",
+    "ap": 0,
+    "damage": "0",
+    "abilities": "This weapon does not inflict any damage. If an enemy INFANTRY model is hit by any shock grenades, it is stunned; until the end of the next battle round that model cannot fire Overwatch or be Readied, and your opponent must subtract 1 from hit rolls made for the model."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

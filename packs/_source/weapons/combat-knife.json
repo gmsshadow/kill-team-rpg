@@ -1,0 +1,32 @@
+{
+  "_key": "!items!AdeptusAOkUuuiG8",
+  "_id": "AdeptusAOkUuuiG8",
+  "name": "Combat knife",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adeptus Astartes, pg 87",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "User",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "Each time the bearer fights, it can make 1 additional attack with this weapon."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

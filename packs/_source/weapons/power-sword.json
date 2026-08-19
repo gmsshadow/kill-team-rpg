@@ -1,0 +1,32 @@
+{
+  "_key": "!items!AdeptusA2A2kKOOO",
+  "_id": "AdeptusA2A2kKOOO",
+  "name": "Power sword",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 2,
+    "source": "Adeptus Astartes, pg 87",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "User",
+    "ap": -3,
+    "damage": "1",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

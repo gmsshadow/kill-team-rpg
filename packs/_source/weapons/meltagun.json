@@ -1,0 +1,32 @@
+{
+  "_key": "!items!AdeptusAuYeSCWgI",
+  "_id": "AdeptusAuYeSCWgI",
+  "name": "Meltagun",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 3,
+    "source": "Adeptus Astartes, pg 86",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "assault",
+    "attacks": "1",
+    "strength": "8",
+    "ap": -4,
+    "damage": "D6",
+    "abilities": "If the target is within half range of this weapon, roll two dice when inflicting damage with it and discard the lowest result."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

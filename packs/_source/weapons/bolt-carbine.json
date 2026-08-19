@@ -1,0 +1,32 @@
+{
+  "_key": "!items!AdeptusAcoEecGAa",
+  "_id": "AdeptusAcoEecGAa",
+  "name": "Bolt carbine",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adeptus Astartes, pg 86",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "24\"",
+    "weaponType": "assault",
+    "attacks": "2",
+    "strength": "4",
+    "ap": 0,
+    "damage": "1",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

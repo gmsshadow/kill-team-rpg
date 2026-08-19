@@ -59,17 +59,39 @@
       <div class="kt-row kt-grid-weapon draggable" data-item-id="{{weapon.id}}" draggable="true">
         <a class="kt-weapon-name" data-action="rollWeapon"
            data-tooltip="{{localize 'KT.RollAttack'}}">{{weapon.name}}</a>
+        {{#if weapon.system.hasProfiles}}
+        {{!-- Header row of a multi-profile weapon: blank statistics, as printed. --}}
+        <span></span>
+        <span class="kt-profile-note">{{#if weapon.system.allowsBothProfiles}}{{localize "KT.ProfileNote.OneOrBoth"}}{{else}}{{localize "KT.ProfileNote.One"}}{{/if}}</span>
+        <span></span><span></span><span></span>
+        <span class="kt-weapon-abilities">{{weapon.system.abilities}}</span>
+        {{else}}
         <span>{{weapon.system.range}}</span>
         <span>{{weapon.system.typeLine}}</span>
         <span>{{weapon.system.strength}}</span>
         <span>{{weapon.system.apLabel}}</span>
         <span>{{weapon.system.damage}}</span>
         <span class="kt-weapon-abilities">{{weapon.system.abilities}}</span>
+        {{/if}}
         <span class="kt-controls">
           <a data-action="editItem" data-tooltip="{{localize 'KT.Edit'}}"><i class="fa-solid fa-pen-to-square"></i></a>
           <a data-action="deleteItem" data-tooltip="{{localize 'KT.Delete'}}"><i class="fa-solid fa-trash"></i></a>
         </span>
       </div>
+      {{#if weapon.system.hasProfiles}}
+        {{#each weapon.system.attackProfiles as |profile|}}
+        <div class="kt-row kt-grid-weapon kt-subprofile">
+          <span class="kt-profile-name">- {{profile.name}}</span>
+          <span>{{profile.range}}</span>
+          <span>{{profile.typeLine}}</span>
+          <span>{{profile.strength}}</span>
+          <span>{{profile.apLabel}}</span>
+          <span>{{profile.damage}}</span>
+          <span class="kt-weapon-abilities">{{profile.abilities}}</span>
+          <span class="kt-controls"></span>
+        </div>
+        {{/each}}
+      {{/if}}
       {{else}}
       <div class="kt-row kt-empty">{{localize "KT.NoWeapons"}}</div>
       {{/each}}
