@@ -3,6 +3,36 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.8.0
+
+The specialism ability trees, transcribed from pg 66-77.
+
+### Added
+- **All ten ability trees**: 70 abilities in total. Every tree has one Level 1 ability the
+  specialist always has, two Level 2 abilities to choose between, and four Level 3 abilities, two
+  hanging off each Level 2 choice. Each Level 3 ability records which Level 2 ability it connects
+  to, because it may only be taken if that parent was chosen. Verified structurally: all ten trees
+  are 1/2/4 with two children per branch and no orphaned parent links.
+- **All 30 specialist Tactics**, three per specialism, with their levels and Command Point costs.
+- `availableAbilities(level, taken)` implements the choice rules: Level 2 offers both options,
+  Level 3 only those connected to the Level 2 already taken, Level 4 anything unchosen.
+- **Each specialism must be unique within a kill team** (pg 66), now checked by the Battle-forged
+  validator. Duplicates on the command roster remain fine.
+- **Specialist points surcharge** (pg 67): +0, +4, +8 and +12 at Levels 1 to 4, included in an
+  operative's Force.
+- A warning when a kill team contains specialists above Level 1, since normal matched play allows
+  Level 1 only.
+
+### Fixed
+- **The Level 1 ability assumption in 0.7.0 was wrong.** A specialist starts at Level 1 *with* the
+  ability in that band, granted automatically rather than chosen, so the counts are now 1, 2, 3 and
+  4 abilities at Levels 1 to 4 rather than 0, 1, 2 and 3.
+
+### Note
+- The connecting lines in the ability trees are drawn graphically and cannot be read from the PDF
+  text layer, so each tree was transcribed from the rendered page. The Sniper tree matches the
+  worked example on pg 66.
+
 ## 0.7.0
 
 Establishes the specialist progression machinery (pg 66, 204).

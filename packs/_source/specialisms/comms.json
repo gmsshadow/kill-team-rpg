@@ -10,8 +10,70 @@
     "description": "<p>Vox operators and signallers who keep a scattered team acting as one, relaying orders and coordinating fire.</p>",
     "specialismKey": "comms",
     "page": 70,
-    "abilities": [],
-    "tactics": []
+    "abilities": [
+      {
+        "name": "Scanner",
+        "level": 1,
+        "parent": null,
+        "description": "Once per Shooting phase, when you pick a model from your kill team to shoot that is within 6\" of this model, if this model is not shaken, you can add 1 to hit rolls for that model in this phase."
+      },
+      {
+        "name": "Expert",
+        "level": 2,
+        "parent": null,
+        "description": "Roll a D6 at the start of each battle round if this model is not shaken. On a 5+, you gain 1 additional Command Point. This additional Command Point is lost at the end of the battle round if not used."
+      },
+      {
+        "name": "Static Screech",
+        "level": 2,
+        "parent": null,
+        "description": "Once per battle at the start of the Fight phase, if this model is not shaken, subtract 1 from hit rolls for enemy models that make attacks while they are within 6\" of this model until the end of the phase."
+      },
+      {
+        "name": "Vox Ghost",
+        "level": 3,
+        "parent": "Expert",
+        "description": "Subtract 1 from the Leadership characteristic of enemy models while this model is on the battlefield, as long as it is not shaken."
+      },
+      {
+        "name": "Command Relay",
+        "level": 3,
+        "parent": "Expert",
+        "description": "Roll a D6 each time you use a Tactic while this model is on the battlefield and not shaken. On a 6 the Command Points spent on that Tactic are immediately refunded."
+      },
+      {
+        "name": "Triangulator",
+        "level": 3,
+        "parent": "Static Screech",
+        "description": "Once per Shooting phase, when you pick a model from your kill team to shoot a Heavy weapon, if this model is not shaken, you can re-roll the dice when determining the number of attacks that model can make."
+      },
+      {
+        "name": "Vox Hacker",
+        "level": 3,
+        "parent": "Static Screech",
+        "description": "After each battle in which this model was in your kill team, if this model is not in Convalescence (pg 204) or dead, roll a D6. On a 5+ you gain 1 Intelligence."
+      }
+    ],
+    "tactics": [
+      {
+        "name": "Rousing Transmission",
+        "level": 1,
+        "cost": 1,
+        "description": "Use this Tactic in the Morale phase before taking any Nerve tests. Until the end of the phase you can subtract 1 from Nerve tests for models from your kill team as though the Comms specialist was within 2\" of them."
+      },
+      {
+        "name": "Scanner Uplink",
+        "level": 2,
+        "cost": 2,
+        "description": "Use this Tactic when you pick a model from your kill team that is within 6\" of a friendly Comms specialist of Level 2 or higher to shoot in the Shooting phase."
+      },
+      {
+        "name": "New Intelligence",
+        "level": 3,
+        "cost": 1,
+        "description": "Use this Tactic at the end of the Movement phase. Pick a model from your kill team within 12\" of a friendly Comms specialist of Level 3 or higher. Ready that model."
+      }
+    ]
   },
   "effects": [],
   "folder": null,
@@ -23,7 +85,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.6.2",
+    "systemVersion": "0.7.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

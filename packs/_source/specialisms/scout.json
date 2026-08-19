@@ -7,11 +7,73 @@
   "system": {
     "points": 0,
     "source": "pg 74",
-    "description": "<p>Forward operatives who move ahead of the team, finding routes and reaching objectives first.</p>",
+    "description": "<p>Forward operatives who move ahead of the team, finding routes, gathering information and reaching objectives first.</p>",
     "specialismKey": "scout",
     "page": 74,
-    "abilities": [],
-    "tactics": []
+    "abilities": [
+      {
+        "name": "Swift",
+        "level": 1,
+        "parent": null,
+        "description": "You can re-roll Advance rolls for this model."
+      },
+      {
+        "name": "Forward Scout",
+        "level": 2,
+        "parent": null,
+        "description": "This model automatically passes dangerous terrain tests (pg 42)."
+      },
+      {
+        "name": "Pathfinder",
+        "level": 2,
+        "parent": null,
+        "description": "If this model is not in Convalescence (pg 204), you can add or subtract 1 from the result when you roll to determine a mission. If you do, this model must be included in your kill team."
+      },
+      {
+        "name": "Skirmisher",
+        "level": 3,
+        "parent": "Forward Scout",
+        "description": "Your opponent(s) must subtract 1 from hit rolls for shooting attacks that target this model if the firing model is more than 12\" from this model and this model is not shaken or obscured."
+      },
+      {
+        "name": "Vanguard",
+        "level": 3,
+        "parent": "Forward Scout",
+        "description": "You can re-roll hit rolls of 1 in the Shooting phase for attacks made by models from your kill team against enemy models that are within 6\" of this model, as long as this model is not shaken."
+      },
+      {
+        "name": "Observer",
+        "level": 3,
+        "parent": "Pathfinder",
+        "description": "If this model is in your kill team, you can roll a D6 at the start of the Scouting phase. On a 4+ you can pick an additional strategy."
+      },
+      {
+        "name": "Explorer",
+        "level": 3,
+        "parent": "Pathfinder",
+        "description": "After each battle in which this model was in your kill team, if this model is not in Convalescence (pg 204), you can roll a D6. On a 5+ you gain 1 Territory."
+      }
+    ],
+    "tactics": [
+      {
+        "name": "Quick March",
+        "level": 1,
+        "cost": 1,
+        "description": "Use this Tactic when you pick a Scout specialist from your kill team to move in the Movement phase. You can either increase the model's Move characteristic by 2\" this phase or you can re-roll the dice when this model Advances in this phase."
+      },
+      {
+        "name": "Marked Positions",
+        "level": 2,
+        "cost": 1,
+        "description": "Use this Tactic at the start of the Shooting phase. Pick an enemy model within 6\" of a Scout specialist of Level 2 or higher from your kill team."
+      },
+      {
+        "name": "Move Unseen",
+        "level": 3,
+        "cost": 2,
+        "description": "Use this Tactic at the start of your turn in the Movement phase. Pick a Scout specialist of Level 3 or higher from your kill team that is not shaken. Remove that model from the battlefield and set it up again anywhere within 18\" of its previous position and more than 3\" from any enemy models. It is considered to have Advanced."
+      }
+    ]
   },
   "effects": [],
   "folder": null,
@@ -23,7 +85,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.6.2",
+    "systemVersion": "0.7.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

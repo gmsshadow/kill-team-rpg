@@ -7,11 +7,73 @@
   "system": {
     "points": 0,
     "source": "pg 68",
-    "description": "<p>A kill team is built around its Leader, whose presence steadies the squad and directs its efforts. Every Battle-forged kill team must include one, and only one.</p>",
+    "description": "<p>A kill team's Leader is its brain and its heart both, trusted with command of a vital mission. Every Battle-forged kill team must include one, and only one.</p>",
     "specialismKey": "leader",
     "page": 68,
-    "abilities": [],
-    "tactics": []
+    "abilities": [
+      {
+        "name": "Resourceful",
+        "level": 1,
+        "parent": null,
+        "description": "As long as this model is on the battlefield and not shaken, you gain an additional Command Point at the beginning of the battle round."
+      },
+      {
+        "name": "Bold",
+        "level": 2,
+        "parent": null,
+        "description": "This model automatically passes Nerve tests."
+      },
+      {
+        "name": "Inspiring",
+        "level": 2,
+        "parent": null,
+        "description": "Friendly models within 3\" of this model - as long as it is not shaken - automatically pass Nerve tests."
+      },
+      {
+        "name": "Paragon",
+        "level": 3,
+        "parent": "Bold",
+        "description": "Re-roll hit rolls of 1 for friendly models within 3\" of this model, as long as it is not shaken."
+      },
+      {
+        "name": "Tyrant",
+        "level": 3,
+        "parent": "Bold",
+        "description": "Your opponent(s) must add 1 to Nerve tests for any enemy models within 6\" of this model, as long as it is not shaken."
+      },
+      {
+        "name": "Tactician",
+        "level": 3,
+        "parent": "Inspiring",
+        "description": "As long as this model is on the battlefield and not shaken, roll a D6 each time you use a Tactic. On a 5+ you gain a Command Point."
+      },
+      {
+        "name": "Mentor",
+        "level": 3,
+        "parent": "Inspiring",
+        "description": "Once per battle round, when you choose a friendly model within 3\" of this model to shoot in the Shooting phase - as long as this model is not shaken - you can re-roll failed hit rolls for that model until the end of the phase."
+      }
+    ],
+    "tactics": [
+      {
+        "name": "Lead by Example",
+        "level": 1,
+        "cost": 1,
+        "description": "Use this Tactic when you pick a Leader from your kill team to fight in the Fight phase. Choose another friendly model within 3\" of them that is eligible to fight. You can fight with each of these models, in an order of your choice, before the next player's turn."
+      },
+      {
+        "name": "Fire on my Target",
+        "level": 2,
+        "cost": 1,
+        "description": "Use this Tactic when you pick a Leader of Level 2 or higher from your kill team to shoot in the Shooting phase. Choose another friendly model within 3\" of them that is eligible to shoot. You can make a shooting attack with each of these models, in an order of your choice, before the next player's turn."
+      },
+      {
+        "name": "Force of Will",
+        "level": 3,
+        "cost": 1,
+        "description": "Use this Tactic at the start of the battle round, if a Leader of Level 3 or higher from your kill team is on the battlefield and not shaken. In this battle round, your kill team does not suffer the penalty for being broken."
+      }
+    ]
   },
   "effects": [],
   "folder": null,
@@ -23,7 +85,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.6.2",
+    "systemVersion": "0.7.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

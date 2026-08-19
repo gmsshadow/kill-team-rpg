@@ -10,8 +10,70 @@
     "description": "<p>The bearer of the squad's heaviest weapon, trained to set up, brace and lay down suppressing fire.</p>",
     "specialismKey": "heavy",
     "page": 72,
-    "abilities": [],
-    "tactics": []
+    "abilities": [
+      {
+        "name": "Relentless",
+        "level": 1,
+        "parent": null,
+        "description": "This model does not suffer the -1 penalty for shooting with a Heavy weapon after moving in the preceding Movement phase, or for shooting an Assault weapon after Advancing."
+      },
+      {
+        "name": "Suppressor",
+        "level": 2,
+        "parent": null,
+        "description": "Enemy models that are targeted by this model in the Shooting phase suffer a -1 penalty to their hit rolls until the end of the phase."
+      },
+      {
+        "name": "Extra Armour",
+        "level": 2,
+        "parent": null,
+        "description": "Ignore AP characteristics of -1 for attacks that target this model."
+      },
+      {
+        "name": "Devastator",
+        "level": 3,
+        "parent": "Suppressor",
+        "description": "You can re-roll the damage for this model's ranged weapons that have a random Damage characteristic (e.g. D3)."
+      },
+      {
+        "name": "Rigorous",
+        "level": 3,
+        "parent": "Suppressor",
+        "description": "You can re-roll hit rolls of 1 for this model in the Shooting phase."
+      },
+      {
+        "name": "Indomitable",
+        "level": 3,
+        "parent": "Extra Armour",
+        "description": "Once per battle round, you can make your opponent re-roll the Injury dice for this model."
+      },
+      {
+        "name": "Heavily Muscled",
+        "level": 3,
+        "parent": "Extra Armour",
+        "description": "You can re-roll wound rolls of 1 for this model in the Fight phase."
+      }
+    ],
+    "tactics": [
+      {
+        "name": "More Bullets",
+        "level": 1,
+        "cost": 1,
+        "description": "Use this Tactic when you pick a Heavy specialist from your kill team to shoot in the Shooting phase. You can add 1 to the number of shots fired by that model's ranged weapons, with the exception of weapons that would otherwise fire 1 shot (e.g. an Assault 2 weapon would fire 3 shots, but a Rapid Fire 1 weapon at long range would fire 1 shot) in this Shooting phase."
+      },
+      {
+        "name": "Overwhelming Firepower",
+        "level": 2,
+        "cost": 2,
+        "description": "Use this Tactic when you pick a Heavy specialist of Level 2 or higher from your kill team to shoot in the Shooting phase. That model can shoot twice in that phase."
+      },
+      {
+        "name": "Unkillable",
+        "level": 3,
+        "cost": 1,
+        "description": "Use this Tactic at the start of your turn in the Morale phase. Pick a Heavy specialist of Level 3 or higher from your kill team that has one or more flesh wounds. Remove one of that model's flesh wounds."
+      }
+    ]
   },
   "effects": [],
   "folder": null,
@@ -23,7 +85,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.6.2",
+    "systemVersion": "0.7.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

@@ -1,3 +1,5 @@
+import { KT } from "../helpers/config.mjs";
+
 const fields = foundry.data.fields;
 
 /**
@@ -92,8 +94,34 @@ export default class KillTeamData extends foundry.abstract.TypeDataModel {
     else if (leaders > 1) add("error", "KT.Validate.TooManyLeaders", { count: leaders });
 
     // Up to three specialists besides the Leader.
-    const specialists = team.filter(a => a.system.isSpecialist && !a.system.isLeader).length;
-    if (specialists > 3) add("error", "KT.Validate.TooManySpecialists", { count: specialists });
+    const specialists = team.filter(a => a.system.isSpecialist && !a.system.isLeader);
+    if (specialists.length > 3) {
+      add("error", "KT.Validate.TooManySpecialists", { count: specialists.length });
+    }
+
+    // Each specialism must be unique within the kill team (pg 66). More than
+    // one of a kind may sit on the command roster, just not in the same team.
+    const seen = new Map();
+    for (const actor of team.filter(a => a.system.isSpecialist)) {
+      const key = actor.system.specialism;
+      seen.set(key, (seen.get(key) ?? 0) + 1);
+    }
+    for (const [key, count] of seen) {
+      if (count > 1) {
+        add("error", "KT.Validate.DuplicateSpecialism", {
+          specialism: game.i18n.localize(KT.specialisms[key] ?? key), count
+        });
+      }
+    }
+
+    // Only Level 1 specialists belong in a normal matched play game (pg 67).
+    const advanced = team.filter(a => a.system.isSpecialist && a.system.level > 1);
+    if (advanced.length) {
+      add("warning", "KT.Validate.AdvancedSpecialists", {
+        count: advanced.length,
+        names: advanced.map(a => a.name).join(", ")
+      });
+    }
 
     // All models must share a Faction keyword.
     const factions = [...new Set(team.map(a => a.system.faction?.trim()).filter(Boolean))];

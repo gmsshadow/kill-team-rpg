@@ -130,10 +130,11 @@ export default class OperativeData extends foundry.abstract.TypeDataModel {
       && !this.status.fellBack
       && !this.status.retreated;
 
-    // Total force cost: the operative plus any wargear or weapon upgrades.
+    // Base cost: the operative plus any wargear or weapon upgrades. The
+    // specialist surcharge is added below, once the level is known.
     let force = this.points;
     for (const item of this.parent.items) force += item.system.points ?? 0;
-    this.force = force;
+    this.baseForce = force;
 
     // Battle-forged bookkeeping (pg 62).
     this.isLeader = this.specialism === "leader";
@@ -153,10 +154,17 @@ export default class OperativeData extends foundry.abstract.TypeDataModel {
       ? 0
       : this.nextLevelBox - this.experience;
 
-    // How many specialism abilities this operative should have chosen.
+    // Abilities this operative should hold in total. The Level 1 ability comes
+    // with the specialism; the rest are chosen on levelling up (pg 66).
     this.abilitiesAllowed = this.isSpecialist
       ? (KT.specialistAbilitiesByLevel[this.level] ?? 0)
       : 0;
+
+    // A specialist costs more the more experienced it is (pg 67).
+    this.specialistCost = this.isSpecialist
+      ? (KT.specialistCostByLevel[this.level] ?? 0)
+      : 0;
+    this.force = this.baseForce + this.specialistCost;
     // A Max of "-" means unlimited.
     const parsedMax = Number.parseInt(this.maxNumber, 10);
     this.maxCount = Number.isNaN(parsedMax) ? null : parsedMax;

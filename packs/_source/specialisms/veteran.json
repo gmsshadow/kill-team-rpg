@@ -7,11 +7,73 @@
   "system": {
     "points": 0,
     "source": "pg 76",
-    "description": "<p>Hardened survivors of a dozen campaigns, whose experience makes them steady where others falter.</p>",
+    "description": "<p>Hardened survivors of dozens of war zones, relied upon absolutely to do their duty no matter the circumstances.</p>",
     "specialismKey": "veteran",
     "page": 76,
-    "abilities": [],
-    "tactics": []
+    "abilities": [
+      {
+        "name": "Grizzled",
+        "level": 1,
+        "parent": null,
+        "description": "This model ignores penalties to its Leadership characteristic and Nerve tests."
+      },
+      {
+        "name": "Practised",
+        "level": 2,
+        "parent": null,
+        "description": "You can re-roll one hit roll or wound roll for this model in each battle round."
+      },
+      {
+        "name": "Seen It All",
+        "level": 2,
+        "parent": null,
+        "description": "You can subtract 1 from Nerve tests for models from your kill team within 3\" of this model, as long as it is not shaken."
+      },
+      {
+        "name": "Survivor",
+        "level": 3,
+        "parent": "Practised",
+        "description": "You can add 1 to saving throws for this model."
+      },
+      {
+        "name": "One-man Army",
+        "level": 3,
+        "parent": "Practised",
+        "description": "This model generates 1 Command Point at the beginning of each battle round, unless it is shaken or out of action. This Command Point can only be used for Veteran Tactics."
+      },
+      {
+        "name": "Battle Scarred",
+        "level": 3,
+        "parent": "Seen It All",
+        "description": "Enemy models suffer -1 Leadership whilst they are within 6\" of this model, as long as it is not shaken."
+      },
+      {
+        "name": "Nerves of Steel",
+        "level": 3,
+        "parent": "Seen It All",
+        "description": "You can re-roll failed hit rolls for this model when it fires Overwatch."
+      }
+    ],
+    "tactics": [
+      {
+        "name": "Adaptive Tactics",
+        "level": 1,
+        "cost": 1,
+        "description": "Use this Tactic at the start of the first battle round, but before the Initiative phase. Pick a Veteran specialist from your kill team. They can make a normal move or Advance. You can only use this Tactic once per battle."
+      },
+      {
+        "name": "Well Drilled",
+        "level": 2,
+        "cost": 2,
+        "description": "Use this Tactic at the start of your turn in the Shooting phase. Pick a Veteran specialist of Level 2 or higher from your kill team. Ready them unless they are within 1\" of an enemy. They can shoot in that phase as if they had not moved in the Movement phase."
+      },
+      {
+        "name": "Roll with the Hits",
+        "level": 3,
+        "cost": 1,
+        "description": "Use this Tactic during your opponent's turn in the Shooting phase. Pick a Veteran specialist of Level 3 or higher from your kill team that has been Injured, before your opponent makes the Injury roll. Your opponent can only roll a single dice for that Injury roll."
+      }
+    ]
   },
   "effects": [],
   "folder": null,
@@ -23,7 +85,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.6.2",
+    "systemVersion": "0.7.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

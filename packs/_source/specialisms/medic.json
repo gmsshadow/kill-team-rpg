@@ -7,11 +7,73 @@
   "system": {
     "points": 0,
     "source": "pg 73",
-    "description": "<p>Field medics who drag the wounded back from the brink and keep a depleted team fighting.</p>",
+    "description": "<p>Field surgeons, flesh-stitchers and stranger things, who keep their comrades in the fight and repair hurts that would otherwise be permanent.</p>",
     "specialismKey": "medic",
     "page": 73,
-    "abilities": [],
-    "tactics": []
+    "abilities": [
+      {
+        "name": "Reassuring",
+        "level": 1,
+        "parent": null,
+        "description": "This model is never treated as being shaken when taking Nerve tests for other models in your kill team."
+      },
+      {
+        "name": "Field Medic",
+        "level": 2,
+        "parent": null,
+        "description": "Roll a D6 when a friendly model within 3\" of this model suffers a wound, as long as this model is not shaken; on a 6 that wound is not lost."
+      },
+      {
+        "name": "Anatomist",
+        "level": 2,
+        "parent": null,
+        "description": "Re-roll wound rolls of 1 for this model in the Fight phase."
+      },
+      {
+        "name": "Trauma Specialist",
+        "level": 3,
+        "parent": "Field Medic",
+        "description": "When an Injury roll is made for a friendly model within 3\" of this model, as long as this model is not shaken, roll an additional dice and use the lowest result."
+      },
+      {
+        "name": "Triage Expert",
+        "level": 3,
+        "parent": "Field Medic",
+        "description": "If this model is in your kill team and not out of action at the end of a battle, and you roll a Dead result when making a Casualty roll (pg 204) for a model from your kill team, you can roll a D6. On a 4+ apply the Convalescence result for that model instead."
+      },
+      {
+        "name": "Interrogator",
+        "level": 3,
+        "parent": "Anatomist",
+        "description": "At the end of any battle in which you were victorious, if this model was in your kill team and not out of action, roll a D6. On a 5+ you gain 1 Intelligence."
+      },
+      {
+        "name": "Toxin Synthesiser",
+        "level": 3,
+        "parent": "Anatomist",
+        "description": "Before deployment, you can pick up to D3 models from your kill team. Until the end of the battle, add 1 to wound rolls for attacks made with melee weapons those models are armed with."
+      }
+    ],
+    "tactics": [
+      {
+        "name": "Stimm-shot",
+        "level": 1,
+        "cost": 1,
+        "description": "Use this Tactic at the start of the Movement phase. Pick a model from your kill team within 2\" of a friendly Medic specialist that is not shaken. You can add 1 to Advance rolls and charge rolls for that model, and add 1 to that model's Attacks characteristic until the end of the battle round."
+      },
+      {
+        "name": "Painkiller",
+        "level": 2,
+        "cost": 2,
+        "description": "Use this Tactic at the end of the Movement phase. Pick a model from your kill team within 2\" of a friendly Medic specialist of Level 2 or higher that is not shaken. Add 2 to that model's Toughness characteristic until the end of the battle round."
+      },
+      {
+        "name": "Emergency Resuscitation",
+        "level": 3,
+        "cost": 2,
+        "description": "Use this Tactic when a Medic specialist of Level 3 or higher from your kill team that is not shaken is within 2\" of another model from your kill team that suffers an Out of Action Injury roll result. That model suffers a Flesh Wound result instead."
+      }
+    ]
   },
   "effects": [],
   "folder": null,
@@ -23,7 +85,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.6.2",
+    "systemVersion": "0.7.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

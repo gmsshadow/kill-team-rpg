@@ -57,14 +57,18 @@ KT.experienceBoxes = 12;
 KT.levelUpBoxes = [3, 7, 12];
 
 /**
- * Abilities a specialist has chosen by the time it reaches each level.
- * Levelling up is what grants a new ability (pg 204), so a Level 1 specialist
- * has none and a Level 4 specialist has three.
- *
- * Isolated here because the exact progression is defined on pg 66, which is
- * not yet transcribed; correcting it later is a one-line change.
+ * Abilities a specialist holds at each level (pg 66). A specialist starts at
+ * Level 1 with the ability in that band, granted automatically rather than
+ * chosen, and gains one more at each subsequent level.
  */
-KT.specialistAbilitiesByLevel = { 1: 0, 2: 1, 3: 2, 4: 3 };
+KT.specialistAbilitiesByLevel = { 1: 1, 2: 2, 3: 3, 4: 4 };
+
+/**
+ * Extra points a Battle-forged kill team pays for a specialist, by level
+ * (pg 67). Only Level 1 specialists may be taken in a normal matched play
+ * game; the rest are for campaigns.
+ */
+KT.specialistCostByLevel = { 1: 0, 2: 4, 3: 8, 4: 12 };
 
 /** Flesh wound boxes on the datacard. */
 KT.fleshWoundBoxes = 3;

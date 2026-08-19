@@ -102,7 +102,8 @@
     {{#each system.abilities as |ability|}}
     <li class="kt-tree-entry">
       <span class="kt-tree-level">{{#if ability.level}}L{{ability.level}}{{else}}&mdash;{{/if}}</span>
-      <span class="kt-tree-name">{{ability.name}}</span>
+      <span class="kt-tree-name">{{ability.name}}{{#if ability.parent}}
+        <em class="kt-tree-parent">&larr; {{ability.parent}}</em>{{/if}}</span>
       <span class="kt-tree-text">{{ability.description}}</span>
     </li>
     {{/each}}

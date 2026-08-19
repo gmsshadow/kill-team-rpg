@@ -219,6 +219,11 @@ export class SpecialismData extends foundry.abstract.TypeDataModel {
         new fields.SchemaField({
           name: new fields.StringField({ required: true, initial: "", label: "KT.Name" }),
           level: new fields.NumberField({ required: true, integer: true, min: 0, max: 4, initial: 0, label: "KT.Level" }),
+          /**
+           * The Level 2 ability this one connects to. A Level 3 ability may
+           * only be taken if its parent was the Level 2 choice (pg 66).
+           */
+          parent: new fields.StringField({ required: false, nullable: true, initial: null, label: "KT.Parent" }),
           description: new fields.StringField({ required: true, initial: "", label: "KT.Description" })
         }),
         { initial: [], label: "KT.Abilities" }
@@ -246,9 +251,30 @@ export class SpecialismData extends foundry.abstract.TypeDataModel {
     this.isPopulated = this.abilityCount > 0;
   }
 
-  /** Abilities a specialist of the given level may choose from. */
-  availableAbilities(level) {
-    return this.abilities.filter(ability => ability.level === 0 || ability.level <= level);
+  /**
+   * Which abilities a specialist may choose on reaching a level (pg 66).
+   * Level 1 is granted automatically. Level 2 offers both Level 2 abilities.
+   * Level 3 offers only those connected to the Level 2 ability already taken.
+   * Level 4 offers anything from the tree not already chosen.
+   * @param {number} level   The level being advanced to.
+   * @param {string[]} taken Names of abilities the specialist already has.
+   */
+  availableAbilities(level, taken = []) {
+    const held = new Set(taken);
+    if (level <= 1) return this.abilities.filter(a => a.level === 1);
+    if (level === 4) return this.abilities.filter(a => !held.has(a.name));
+    if (level === 3) {
+      const chosenAtTwo = this.abilities.find(a => a.level === 2 && held.has(a.name));
+      return this.abilities.filter(a =>
+        a.level === 3 && !held.has(a.name)
+        && (!chosenAtTwo || a.parent === chosenAtTwo.name));
+    }
+    return this.abilities.filter(a => a.level === level && !held.has(a.name));
+  }
+
+  /** The ability every specialist of this specialism starts with. */
+  get baseAbility() {
+    return this.abilities.find(a => a.level === 1) ?? null;
   }
 
   /** Tactics unlocked at the given level. */

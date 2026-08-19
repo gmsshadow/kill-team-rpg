@@ -7,11 +7,73 @@
   "system": {
     "points": 0,
     "source": "pg 71",
-    "description": "<p>Experts with grenades and explosive charges, deployed to breach, sabotage and clear entrenched positions.</p>",
+    "description": "<p>Warriors who excel in the deployment of bombs, grenades and other pyrotechnic munitions, whether by booby trap, explosive launcher or roaring flamethrower.</p>",
     "specialismKey": "demolitions",
     "page": 71,
-    "abilities": [],
-    "tactics": []
+    "abilities": [
+      {
+        "name": "Breacher",
+        "level": 1,
+        "parent": null,
+        "description": "You can add 1 to this model's wound rolls against targets that are obscured."
+      },
+      {
+        "name": "Pyromaniac",
+        "level": 2,
+        "parent": null,
+        "description": "You can re-roll wound rolls of 1 for this model when it is attacking with a weapon that hits automatically."
+      },
+      {
+        "name": "Grenadier",
+        "level": 2,
+        "parent": null,
+        "description": "Add 3\" to the range of any Grenade weapon this model uses. You can re-roll hit rolls of 1 for Grenade weapons this model uses."
+      },
+      {
+        "name": "Saboteur",
+        "level": 3,
+        "parent": "Pyromaniac",
+        "description": "If this model is in your kill team and not out of action when you make your Casualty rolls, roll a D6. On a 5+ choose an opponent who played that mission to lose 1 Materiel."
+      },
+      {
+        "name": "Sapper",
+        "level": 3,
+        "parent": "Pyromaniac",
+        "description": "If this model is in your kill team and you choose the Plant Traps strategy (pg 49), you can add 1 to the number of pieces of terrain you can booby trap."
+      },
+      {
+        "name": "Siegemaster",
+        "level": 3,
+        "parent": "Grenadier",
+        "description": "You can add 1 to Injury rolls caused by this model's attacks in the Shooting phase if those Injury rolls are for models that are obscured."
+      },
+      {
+        "name": "Ammo Hound",
+        "level": 3,
+        "parent": "Grenadier",
+        "description": "If this model is in your kill team and not out of action when you make your Casualty rolls, roll a D6. On a 5+ you gain 1 Materiel."
+      }
+    ],
+    "tactics": [
+      {
+        "name": "Custom Ammo",
+        "level": 1,
+        "cost": 1,
+        "description": "Use this Tactic when you pick a Demolitions specialist from your kill team to shoot in the Shooting phase. You can add 1 to wound rolls for that model's ranged weapons in this phase."
+      },
+      {
+        "name": "Lucky Escape",
+        "level": 2,
+        "cost": 1,
+        "description": "Use this Tactic at the start of the Shooting phase. Pick a Demolitions specialist of Level 2 or higher from your kill team. Roll a D6 each time that model loses a wound in this phase; on a 5+ that wound is not lost."
+      },
+      {
+        "name": "High Explosive",
+        "level": 3,
+        "cost": 1,
+        "description": "Use this Tactic when you pick a Demolitions specialist of Level 3 or higher from your kill team to shoot in the Shooting phase. In this Shooting phase, they can only shoot a single weapon, and that weapon can only fire 1 shot (even if it would normally fire more). However, that weapon's Damage characteristic is increased by 2. You cannot use this Tactic in the same battle round as the Custom Ammo Tactic."
+      }
+    ]
   },
   "effects": [],
   "folder": null,
@@ -23,7 +85,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.6.2",
+    "systemVersion": "0.7.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

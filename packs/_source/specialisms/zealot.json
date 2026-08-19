@@ -10,8 +10,70 @@
     "description": "<p>Driven by faith or fury, zealots press on through wounds that would stop a lesser warrior.</p>",
     "specialismKey": "zealot",
     "page": 77,
-    "abilities": [],
-    "tactics": []
+    "abilities": [
+      {
+        "name": "Frenzied",
+        "level": 1,
+        "parent": null,
+        "description": "You can add 1 to this model's Attacks and Strength characteristics in a battle round in which they charged."
+      },
+      {
+        "name": "Exultant",
+        "level": 2,
+        "parent": null,
+        "description": "Opponents must re-roll unmodified hit rolls of 6 for models from their kill team within 3\" of this model, as long as it is not shaken."
+      },
+      {
+        "name": "Flagellant",
+        "level": 2,
+        "parent": null,
+        "description": "Roll a D6 each time this model loses a wound. On a 6 the wound is ignored."
+      },
+      {
+        "name": "Puritan",
+        "level": 3,
+        "parent": "Exultant",
+        "description": "You can re-roll hit rolls in the Fight phase for this model against enemy models that do not have a Faction keyword in common with it."
+      },
+      {
+        "name": "Rousing",
+        "level": 3,
+        "parent": "Exultant",
+        "description": "Add 1 to the Leadership characteristic of models from your kill team within 6\" of this model, as long as it is not shaken."
+      },
+      {
+        "name": "Fanatical",
+        "level": 3,
+        "parent": "Flagellant",
+        "description": "This model automatically passes Nerve tests."
+      },
+      {
+        "name": "Strength of Spirit",
+        "level": 3,
+        "parent": "Flagellant",
+        "description": "Subtract 1 for Injury rolls made for this model."
+      }
+    ],
+    "tactics": [
+      {
+        "name": "Killing Frenzy",
+        "level": 1,
+        "cost": 1,
+        "description": "Use this Tactic when you pick a Zealot specialist from your kill team to fight in the Fight phase. Until the end of the phase, each time you make a hit roll of 6+ for that model you can make an additional attack with the same weapon against the same target. These attacks cannot themselves generate any further attacks."
+      },
+      {
+        "name": "Martyr",
+        "level": 2,
+        "cost": 2,
+        "description": "Use this Tactic when a Zealot specialist of Level 2 or higher from your kill team loses their last wound, before any player rolls on the Injury table."
+      },
+      {
+        "name": "Terrifying Rampage",
+        "level": 3,
+        "cost": 2,
+        "description": "Use this Tactic at the start of the Morale phase. Pick a Zealot specialist of Level 3 or higher from your kill team that took an enemy model out of action in the preceding Fight phase. Each enemy model within 6\" of the Zealot must take a Nerve test. If the test is failed the model is shaken."
+      }
+    ]
   },
   "effects": [],
   "folder": null,
@@ -23,7 +85,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.6.2",
+    "systemVersion": "0.7.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

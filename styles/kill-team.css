@@ -1147,3 +1147,11 @@
 }
 
 .kill-team .kt-tree-name { font-weight: 700; }
+
+/* Which Level 2 ability a Level 3 ability hangs off. */
+.kill-team .kt-tree-parent {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #8a857e;
+}

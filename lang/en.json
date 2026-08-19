@@ -229,9 +229,13 @@
   "KT.ToNextLevel": "{xp} XP to next level",
   "KT.MaxLevel": "Maximum level",
   "KT.EmptyAbilitySlot": "Choose an ability",
-  "KT.NoAbilitiesYet": "This operative gains its first specialist ability at Level 2.",
+  "KT.NoAbilitiesYet": "No specialist abilities recorded. A specialist starts with the Level 1 ability from its tree.",
   "KT.Tactics": "Tactics",
   "KT.Info.SpecialismApplied": "Set {actor} to the {specialism} specialism.",
   "KT.SpecialismUnpopulated": "This specialism has no abilities recorded yet. Add them below, or from the core book.",
-  "KT.AddTactic": "Add tactic"
+  "KT.AddTactic": "Add tactic",
+  "KT.Parent": "Connects to",
+  "KT.Validate.DuplicateSpecialism": "Each specialism must be unique in a kill team ({count} × {specialism}).",
+  "KT.Validate.AdvancedSpecialists": "{count} specialist(s) above Level 1: {names}. Normal matched play allows Level 1 only.",
+  "KT.SpecialistCost": "Specialist surcharge"
 }

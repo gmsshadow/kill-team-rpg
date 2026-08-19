@@ -7,11 +7,73 @@
   "system": {
     "points": 0,
     "source": "pg 69",
-    "description": "<p>Specialists in the close-quarters kill, trained to close the distance and finish a fight with the blade.</p>",
+    "description": "<p>Warriors who excel in the close-quarters cut and thrust of battle, ideal for leading headlong charges or intercepting enemies that break through the line.</p>",
     "specialismKey": "combat",
     "page": 69,
-    "abilities": [],
-    "tactics": []
+    "abilities": [
+      {
+        "name": "Expert Fighter",
+        "level": 1,
+        "parent": null,
+        "description": "Add 1 to this model's Attacks characteristic."
+      },
+      {
+        "name": "Warrior Adept",
+        "level": 2,
+        "parent": null,
+        "description": "Add 1 to hit rolls for this model in the Fight phase."
+      },
+      {
+        "name": "Deadly Counter",
+        "level": 2,
+        "parent": null,
+        "description": "If any hit rolls of 1 or less are made for a model's attacks that target this model in the Fight phase, unless this model is shaken, roll a D6. On a 5+, the model that made the attack suffers 1 mortal wound after all of their attacks have been resolved."
+      },
+      {
+        "name": "Deathblow",
+        "level": 3,
+        "parent": "Warrior Adept",
+        "description": "Any wound rolls of 6 you make for this model in the Fight phase inflict 1 mortal wound on the target in addition to any other damage."
+      },
+      {
+        "name": "Combat Master",
+        "level": 3,
+        "parent": "Warrior Adept",
+        "description": "Add 1 to the Attacks characteristic of this model for each enemy model within 1\" of it at the start of the Fight phase, until the end of the phase."
+      },
+      {
+        "name": "Killer Instinct",
+        "level": 3,
+        "parent": "Deadly Counter",
+        "description": "You can re-roll any failed wound rolls you make for this model in the Fight phase."
+      },
+      {
+        "name": "Bloodlust",
+        "level": 3,
+        "parent": "Deadly Counter",
+        "description": "You can re-roll any failed charge rolls you make for this model."
+      }
+    ],
+    "tactics": [
+      {
+        "name": "Up and At 'Em!",
+        "level": 1,
+        "cost": 1,
+        "description": "Use this Tactic in the Fight phase, after attacking with a model from your kill team. Pick a Combat specialist from your kill team that has not yet attacked this phase: you can immediately fight with them."
+      },
+      {
+        "name": "Defensive Fighter",
+        "level": 2,
+        "cost": 1,
+        "description": "Use this Tactic at the start of the Fight phase. Pick a Combat specialist of Level 2 or higher from your kill team. Until the end of the phase, you must subtract 2 from that model's Attacks characteristic (to a minimum of 1), but your opponent(s) must re-roll successful hit rolls made against that model."
+      },
+      {
+        "name": "Deadly Charge",
+        "level": 3,
+        "cost": 1,
+        "description": "Use this Tactic when a Combat specialist of Level 3 or higher from your kill team finishes a charge move within 1\" of an enemy model. Roll a D6; on a 5+ that enemy model suffers 1 mortal wound."
+      }
+    ]
   },
   "effects": [],
   "folder": null,
@@ -23,7 +85,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.6.2",
+    "systemVersion": "0.7.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null
