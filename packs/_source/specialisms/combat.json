@@ -1,0 +1,31 @@
+{
+  "_key": "!items!specialiGakOGMkA",
+  "_id": "specialiGakOGMkA",
+  "name": "Combat",
+  "type": "specialism",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "points": 0,
+    "source": "pg 69",
+    "description": "<p>Specialists in the close-quarters kill, trained to close the distance and finish a fight with the blade.</p>",
+    "specialismKey": "combat",
+    "page": 69,
+    "abilities": [],
+    "tactics": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 6900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.6.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

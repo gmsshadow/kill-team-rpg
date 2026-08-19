@@ -1,0 +1,31 @@
+{
+  "_key": "!items!specialiuSseQ04m",
+  "_id": "specialiuSseQ04m",
+  "name": "Medic",
+  "type": "specialism",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "points": 0,
+    "source": "pg 73",
+    "description": "<p>Field medics who drag the wounded back from the brink and keep a depleted team fighting.</p>",
+    "specialismKey": "medic",
+    "page": 73,
+    "abilities": [],
+    "tactics": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 7300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.6.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

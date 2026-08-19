@@ -81,6 +81,7 @@ function registerHandlebarsHelpers() {
   });
 
   Handlebars.registerHelper("ktEq", (a, b) => a === b);
+  Handlebars.registerHelper("ktGt", (a, b) => Number(a) > Number(b));
 }
 
 /* -------------------------------------------- */

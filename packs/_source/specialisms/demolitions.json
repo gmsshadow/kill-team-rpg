@@ -1,0 +1,31 @@
+{
+  "_key": "!items!specialioYgwKUsE",
+  "_id": "specialioYgwKUsE",
+  "name": "Demolitions",
+  "type": "specialism",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "points": 0,
+    "source": "pg 71",
+    "description": "<p>Experts with grenades and explosive charges, deployed to breach, sabotage and clear entrenched positions.</p>",
+    "specialismKey": "demolitions",
+    "page": 71,
+    "abilities": [],
+    "tactics": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 7100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.6.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

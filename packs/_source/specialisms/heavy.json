@@ -1,0 +1,31 @@
+{
+  "_key": "!items!specialiS8wogKAS",
+  "_id": "specialiS8wogKAS",
+  "name": "Heavy",
+  "type": "specialism",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "points": 0,
+    "source": "pg 72",
+    "description": "<p>The bearer of the squad's heaviest weapon, trained to set up, brace and lay down suppressing fire.</p>",
+    "specialismKey": "heavy",
+    "page": 72,
+    "abilities": [],
+    "tactics": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 7200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.6.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

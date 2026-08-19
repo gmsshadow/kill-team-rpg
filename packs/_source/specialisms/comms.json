@@ -1,0 +1,31 @@
+{
+  "_key": "!items!specialissMkqQAu",
+  "_id": "specialissMkqQAu",
+  "name": "Comms",
+  "type": "specialism",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "points": 0,
+    "source": "pg 70",
+    "description": "<p>Vox operators and signallers who keep a scattered team acting as one, relaying orders and coordinating fire.</p>",
+    "specialismKey": "comms",
+    "page": 70,
+    "abilities": [],
+    "tactics": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 7000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.6.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

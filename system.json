@@ -2,7 +2,7 @@
   "id": "kill-team-rpg",
   "title": "Kill Team 2018 (Lightweight RPG)",
   "description": "A lightweight roleplaying system built on the Warhammer 40,000: Kill Team (2018) core rules. Operative datacards, weapon profiles, specialisms, experience tracks and the D6 attack sequence.",
-  "version": "0.6.2",
+  "version": "0.7.0",
   "compatibility": {
     "minimum": "13",
     "verified": "14"
@@ -42,6 +42,17 @@
       "name": "weapons",
       "label": "Kill Team Weapons & Wargear",
       "path": "packs/weapons",
+      "type": "Item",
+      "system": "kill-team-rpg",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "specialisms",
+      "label": "Kill Team Specialisms",
+      "path": "packs/specialisms",
       "type": "Item",
       "system": "kill-team-rpg",
       "ownership": {
@@ -111,6 +122,7 @@
       "color": "#c8501e",
       "packs": [
         "factions",
+        "specialisms",
         "weapons"
       ]
     }

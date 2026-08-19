@@ -1,0 +1,31 @@
+{
+  "_key": "!items!specialium8sGsoU",
+  "_id": "specialium8sGsoU",
+  "name": "Zealot",
+  "type": "specialism",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "points": 0,
+    "source": "pg 77",
+    "description": "<p>Driven by faith or fury, zealots press on through wounds that would stop a lesser warrior.</p>",
+    "specialismKey": "zealot",
+    "page": 77,
+    "abilities": [],
+    "tactics": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 7700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.6.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

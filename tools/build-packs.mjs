@@ -21,6 +21,7 @@ import { fileURLToPath } from "node:url";
 import { compilePack } from "@foundryvtt/foundryvtt-cli";
 import { FACTIONS } from "../module/helpers/factions.mjs";
 import { ASTARTES_ITEMS } from "../module/helpers/weapons-astartes.mjs";
+import { SPECIALISMS } from "../module/helpers/specialisms.mjs";
 
 const SYSTEM_ID = "kill-team-rpg";
 
@@ -73,7 +74,8 @@ function stableId(key) {
 const ICONS = {
   faction: "icons/svg/statue.svg",
   weapon: "icons/svg/sword.svg",
-  wargear: "icons/svg/chest.svg"
+  wargear: "icons/svg/chest.svg",
+  specialism: "icons/svg/upgrade.svg"
 };
 
 function factionDocument(faction) {
@@ -152,6 +154,32 @@ function weaponDocument(entry, index) {
   };
 }
 
+function specialismDocument(specialism) {
+  const id = stableId(`specialism-${specialism.key}`);
+  return {
+    _key: `!items!${id}`,
+    _id: id,
+    name: specialism.name,
+    type: "specialism",
+    img: ICONS.specialism,
+    system: {
+      points: 0,
+      source: `pg ${specialism.page}`,
+      description: `<p>${specialism.description}</p>`,
+      specialismKey: specialism.key,
+      page: specialism.page,
+      abilities: specialism.abilities,
+      tactics: specialism.tactics
+    },
+    effects: [],
+    folder: null,
+    sort: specialism.page * 100,
+    ownership: { default: 0 },
+    flags: {},
+    _stats: stats()
+  };
+}
+
 /** Write source JSON then compile it into a LevelDB pack. */
 async function buildPack(name, documents) {
   const sourceDir = path.join(sourceRoot, name);
@@ -182,6 +210,11 @@ async function main() {
   await buildPack("weapons", ASTARTES_ITEMS.map((entry, index) => ({
     file: `${entry.key}`,
     doc: weaponDocument(entry, index)
+  })));
+
+  await buildPack("specialisms", SPECIALISMS.map(specialism => ({
+    file: specialism.key,
+    doc: specialismDocument(specialism)
   })));
 
   console.log("Packs built.");

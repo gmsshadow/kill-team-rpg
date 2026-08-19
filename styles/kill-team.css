@@ -1045,3 +1045,105 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* ---------------------------------------------------------------------------
+   Specialist progression
+   --------------------------------------------------------------------------- */
+
+.kill-team .kt-level-badge {
+  font-family: var(--kt-stencil);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--kt-line, #b0aca4);
+  background: #fff;
+  white-space: nowrap;
+}
+
+/* A hand-set level is worth distinguishing from one earned on the track. */
+.kill-team .kt-level-badge.is-override {
+  border-color: var(--kt-orange, #c8501e);
+  color: var(--kt-orange, #c8501e);
+}
+
+.kill-team .kt-specialist {
+  background: var(--kt-paper, #dcdad4);
+  border-top: 1px solid var(--kt-line, #b0aca4);
+  padding: 0.35rem 0.6rem;
+}
+
+.kill-team .kt-specialist-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.kill-team .kt-slot-count {
+  font-family: var(--kt-stencil);
+  font-size: 0.75rem;
+}
+
+.kill-team .kt-slot-count.is-over { color: #8b1a1a; }
+
+.kill-team .kt-next-level {
+  margin-left: auto;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #55504a;
+}
+
+.kill-team .kt-slots {
+  list-style: none;
+  margin: 0.3rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.kill-team .kt-slot {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.4rem;
+  background: #fff;
+  border-left: 3px solid var(--kt-orange, #c8501e);
+  font-size: 0.85rem;
+}
+
+/* An ability beyond the level's allowance, e.g. after losing a level. */
+.kill-team .kt-slot.is-over { border-left-color: #8b1a1a; }
+
+.kill-team .kt-slot-empty {
+  font-style: italic;
+  color: #8a857e;
+}
+
+.kill-team .kt-slot .kt-controls { margin-left: auto; }
+
+/* Ability and Tactic trees on a specialism definition. */
+.kill-team .kt-tree {
+  list-style: none;
+  margin: 0;
+  padding: 0.3rem 0.6rem;
+  background: var(--kt-paper, #dcdad4);
+}
+
+.kill-team .kt-tree-entry {
+  display: grid;
+  grid-template-columns: 3rem minmax(6rem, max-content) 1fr;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid var(--kt-line, #b0aca4);
+  font-size: 0.85rem;
+}
+
+.kill-team .kt-tree-entry:last-child { border-bottom: none; }
+
+.kill-team .kt-tree-level {
+  font-family: var(--kt-stencil);
+  font-size: 0.72rem;
+  color: var(--kt-orange, #c8501e);
+}
+
+.kill-team .kt-tree-name { font-weight: 700; }

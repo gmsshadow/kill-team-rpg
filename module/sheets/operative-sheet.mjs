@@ -61,6 +61,16 @@ export default class KTOperativeSheet extends HandlebarsApplicationMixin(ActorSh
       return;
     }
 
+    // A specialism definition sets the operative's specialism rather than being
+    // embedded. Its abilities are chosen individually as the operative levels.
+    if (item.type === "specialism") {
+      await this.document.update({ "system.specialism": item.system.specialismKey });
+      ui.notifications.info(game.i18n.format("KT.Info.SpecialismApplied", {
+        specialism: item.name, actor: this.document.name
+      }));
+      return;
+    }
+
     // Dropping an item the operative already owns is a no-op rather than a duplicate.
     if (item.parent === this.document) return;
     await this.document.createEmbeddedDocuments("Item", [item.toObject()]);
@@ -84,6 +94,11 @@ export default class KTOperativeSheet extends HandlebarsApplicationMixin(ActorSh
     }
     for (const list of Object.values(items)) list.sort((a, b) => a.sort - b.sort);
 
+    // Abilities granted by the operative's specialism, as opposed to its
+    // datasheet abilities, which are not tied to the progression track.
+    const specialistAbilities = items.ability
+      .filter(item => item.system.abilityType === "specialism");
+
     return Object.assign(context, {
       actor,
       system,
@@ -100,6 +115,20 @@ export default class KTOperativeSheet extends HandlebarsApplicationMixin(ActorSh
 
       specialismOptions: Object.entries(KT.specialisms)
         .map(([value, label]) => ({ value, label: game.i18n.localize(label) })),
+
+      /* --- Specialist progression --- */
+      specialistAbilities,
+      abilitiesChosen: specialistAbilities.length,
+      // Over the allowance usually means a level was lost, or one was added by hand.
+      abilitySlots: Array.fromRange(Math.max(system.abilitiesAllowed, specialistAbilities.length), 1)
+        .map(i => ({
+          index: i,
+          ability: specialistAbilities[i - 1] ?? null,
+          overAllowance: i > system.abilitiesAllowed
+        })),
+      levelOptions: [1, 2, 3, 4].map(level => ({
+        value: level, label: game.i18n.format("KT.LevelN", { level })
+      })),
 
       experienceBoxes: Array.fromRange(KT.experienceBoxes, 1).map(i => ({
         index: i,

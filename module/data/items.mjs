@@ -166,6 +166,20 @@ export class AbilityData extends foundry.abstract.TypeDataModel {
       }),
       // Tactics have a Command Point cost.
       cost: new fields.NumberField({ required: true, integer: true, min: 0, initial: 0, label: "KT.CommandPointCost" }),
+
+      /** Which specialism this belongs to, for specialism abilities and Tactics. */
+      specialismKey: new fields.StringField({
+        required: true, initial: "none", choices: KT.specialisms, label: "KT.SpecialismLabel"
+      }),
+
+      /**
+       * The specialist level at which this becomes available. 0 means it is
+       * not level-gated, which covers datasheet and faction abilities.
+       */
+      level: new fields.NumberField({
+        required: true, integer: true, min: 0, max: 4, initial: 0, label: "KT.Level"
+      }),
+
       active: new fields.BooleanField({ initial: true, label: "KT.Active" })
     };
   }
@@ -190,7 +204,55 @@ export class SpecialismData extends foundry.abstract.TypeDataModel {
       specialismKey: new fields.StringField({
         required: true, initial: "leader", choices: KT.specialisms, label: "KT.SpecialismLabel"
       }),
-      level: new fields.NumberField({ required: true, integer: true, min: 1, max: 4, initial: 1, label: "KT.Level" })
+
+      /** Page in the core book, kept as a traceability anchor. */
+      page: new fields.NumberField({
+        required: true, integer: true, min: 0, initial: 0, label: "KT.Page"
+      }),
+
+      /**
+       * The specialism's ability tree. A specialist chooses one ability each
+       * time it reaches a new level. `level` is the level at which an ability
+       * becomes available; 0 means available at any level.
+       */
+      abilities: new fields.ArrayField(
+        new fields.SchemaField({
+          name: new fields.StringField({ required: true, initial: "", label: "KT.Name" }),
+          level: new fields.NumberField({ required: true, integer: true, min: 0, max: 4, initial: 0, label: "KT.Level" }),
+          description: new fields.StringField({ required: true, initial: "", label: "KT.Description" })
+        }),
+        { initial: [], label: "KT.Abilities" }
+      ),
+
+      /** Tactics this specialism unlocks, with their Command Point costs. */
+      tactics: new fields.ArrayField(
+        new fields.SchemaField({
+          name: new fields.StringField({ required: true, initial: "", label: "KT.Name" }),
+          cost: new fields.NumberField({ required: true, integer: true, min: 0, initial: 1, label: "KT.CommandPointCost" }),
+          level: new fields.NumberField({ required: true, integer: true, min: 0, max: 4, initial: 0, label: "KT.Level" }),
+          description: new fields.StringField({ required: true, initial: "", label: "KT.Description" })
+        }),
+        { initial: [], label: "KT.Tactics" }
+      )
     };
+  }
+
+  /* -------------------------------------------- */
+
+  prepareDerivedData() {
+    this.abilityCount = this.abilities.length;
+    this.tacticCount = this.tactics.length;
+    // A definition with no abilities yet is scaffolding awaiting its data.
+    this.isPopulated = this.abilityCount > 0;
+  }
+
+  /** Abilities a specialist of the given level may choose from. */
+  availableAbilities(level) {
+    return this.abilities.filter(ability => ability.level === 0 || ability.level <= level);
+  }
+
+  /** Tactics unlocked at the given level. */
+  availableTactics(level) {
+    return this.tactics.filter(tactic => tactic.level === 0 || tactic.level <= level);
   }
 }

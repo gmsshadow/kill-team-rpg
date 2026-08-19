@@ -62,8 +62,14 @@ export default class OperativeData extends foundry.abstract.TypeDataModel {
       specialism: new fields.StringField({
         required: true, initial: "none", choices: KT.specialisms, label: "KT.SpecialismLabel"
       }),
-      level: new fields.NumberField({
-        required: true, integer: true, min: 1, max: 4, initial: 1, label: "KT.Level"
+      /**
+       * Specialist level is derived from the experience track. This overrides
+       * it for one-off games where experience is not being tracked; leave it
+       * null to let the track drive the level.
+       */
+      levelOverride: new fields.NumberField({
+        required: false, nullable: true, integer: true, min: 1, max: 4, initial: null,
+        label: "KT.LevelOverride"
       }),
       demeanour: new fields.StringField({
         required: true, initial: "", label: "KT.Demeanour"
@@ -132,6 +138,25 @@ export default class OperativeData extends foundry.abstract.TypeDataModel {
     // Battle-forged bookkeeping (pg 62).
     this.isLeader = this.specialism === "leader";
     this.isSpecialist = this.specialism !== "none";
+
+    /* --- Specialist progression (pg 66, 204) --- */
+
+    // Each level-up box crossed on the experience track raises the level.
+    this.levelFromExperience = 1 + KT.levelUpBoxes
+      .filter(box => this.experience >= box).length;
+    this.level = this.levelOverride ?? this.levelFromExperience;
+    this.usingLevelOverride = this.levelOverride !== null;
+
+    // Experience remaining until the next level, and the box that grants it.
+    this.nextLevelBox = KT.levelUpBoxes.find(box => this.experience < box) ?? null;
+    this.experienceToNextLevel = this.nextLevelBox === null
+      ? 0
+      : this.nextLevelBox - this.experience;
+
+    // How many specialism abilities this operative should have chosen.
+    this.abilitiesAllowed = this.isSpecialist
+      ? (KT.specialistAbilitiesByLevel[this.level] ?? 0)
+      : 0;
     // A Max of "-" means unlimited.
     const parsedMax = Number.parseInt(this.maxNumber, 10);
     this.maxCount = Number.isNaN(parsedMax) ? null : parsedMax;

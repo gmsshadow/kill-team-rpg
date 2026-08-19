@@ -1,0 +1,31 @@
+{
+  "_key": "!items!specialiwGAcgyca",
+  "_id": "specialiwGAcgyca",
+  "name": "Sniper",
+  "type": "specialism",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "points": 0,
+    "source": "pg 75",
+    "description": "<p>Marksmen who wait, unseen and unhurried, for the single shot that decides an engagement.</p>",
+    "specialismKey": "sniper",
+    "page": 75,
+    "abilities": [],
+    "tactics": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 7500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.6.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -3,6 +3,33 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.7.0
+
+Establishes the specialist progression machinery (pg 66, 204).
+
+### Added
+- **Specialist level is derived from the experience track.** The datacard's level-up boxes at 3, 7
+  and 12 drive it: 0-2 XP is Level 1, 3-6 Level 2, 7-11 Level 3, and 12 Level 4. The sheet shows
+  the level as a badge and how much experience remains until the next one.
+- **Level override** for one-off games where experience is not tracked. The badge is outlined in
+  orange when the level is set by hand rather than earned.
+- **Specialist ability slots.** A specialist shows one slot per ability it should have chosen,
+  filled or empty, with a count against its allowance. Abilities beyond the allowance are flagged
+  rather than removed, since losing a level should not silently delete anything.
+- **Specialism Item type** built out into a real definition: an ability tree and a Tactics list,
+  each entry carrying the level at which it unlocks, plus a page reference.
+- **Specialisms compendium** with all ten definitions, their names, descriptions and page numbers.
+- Dropping a specialism onto an operative sets its specialism, matching how factions behave.
+- Ability items now carry a `specialismKey` and a `level`, so a specialist ability knows which
+  tree it came from.
+
+### Not yet present
+- **The ability trees themselves are empty.** They are printed on pg 68-77, which has not been
+  transcribed. Every specialism definition is in place and the progression works; filling in the
+  abilities is data entry against the existing schema.
+- `KT.specialistAbilitiesByLevel` in `config.mjs` assumes a specialist gains its first ability at
+  Level 2, on the basis of pg 204. If pg 66 says otherwise, that is a one-line correction.
+
 ## 0.6.2
 
 ### Fixed

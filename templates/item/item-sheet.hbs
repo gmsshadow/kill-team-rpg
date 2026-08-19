@@ -84,6 +84,47 @@
   </div>
   {{/if}}
 
+  {{#if isSpecialism}}
+  <div class="kt-item-grid">
+    <label class="kt-field"><span>{{localize "KT.SpecialismLabel"}}</span>
+      <select name="system.specialismKey">
+        {{#each specialismOptions as |option|}}
+        <option value="{{option.value}}" {{#if (ktEq option.value ../system.specialismKey)}}selected{{/if}}>{{option.label}}</option>
+        {{/each}}
+      </select></label>
+    <label class="kt-field"><span>{{localize "KT.Page"}}</span>
+      <input type="number" name="system.page" value="{{system.page}}" min="0"/></label>
+  </div>
+
+  <div class="kt-bar">{{localize "KT.Abilities"}}</div>
+  {{#if system.abilities.length}}
+  <ul class="kt-tree">
+    {{#each system.abilities as |ability|}}
+    <li class="kt-tree-entry">
+      <span class="kt-tree-level">{{#if ability.level}}L{{ability.level}}{{else}}&mdash;{{/if}}</span>
+      <span class="kt-tree-name">{{ability.name}}</span>
+      <span class="kt-tree-text">{{ability.description}}</span>
+    </li>
+    {{/each}}
+  </ul>
+  {{else}}
+  <p class="kt-hint">{{localize "KT.SpecialismUnpopulated"}}</p>
+  {{/if}}
+
+  {{#if system.tactics.length}}
+  <div class="kt-bar">{{localize "KT.Tactics"}}</div>
+  <ul class="kt-tree">
+    {{#each system.tactics as |tactic|}}
+    <li class="kt-tree-entry">
+      <span class="kt-tree-level">{{tactic.cost}} CP</span>
+      <span class="kt-tree-name">{{tactic.name}}</span>
+      <span class="kt-tree-text">{{tactic.description}}</span>
+    </li>
+    {{/each}}
+  </ul>
+  {{/if}}
+  {{/if}}
+
   {{#if isFaction}}
   <div class="kt-item-grid">
     <label class="kt-field"><span>{{localize "KT.FactionKeyword"}}</span>

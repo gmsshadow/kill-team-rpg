@@ -1,0 +1,31 @@
+{
+  "_key": "!items!specialiiqYayOOQ",
+  "_id": "specialiiqYayOOQ",
+  "name": "Leader",
+  "type": "specialism",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "points": 0,
+    "source": "pg 68",
+    "description": "<p>A kill team is built around its Leader, whose presence steadies the squad and directs its efforts. Every Battle-forged kill team must include one, and only one.</p>",
+    "specialismKey": "leader",
+    "page": 68,
+    "abilities": [],
+    "tactics": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 6800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.6.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

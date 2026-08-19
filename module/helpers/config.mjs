@@ -56,6 +56,16 @@ KT.specialisms = {
 KT.experienceBoxes = 12;
 KT.levelUpBoxes = [3, 7, 12];
 
+/**
+ * Abilities a specialist has chosen by the time it reaches each level.
+ * Levelling up is what grants a new ability (pg 204), so a Level 1 specialist
+ * has none and a Level 4 specialist has three.
+ *
+ * Isolated here because the exact progression is defined on pg 66, which is
+ * not yet transcribed; correcting it later is a one-line change.
+ */
+KT.specialistAbilitiesByLevel = { 1: 0, 2: 1, 3: 2, 4: 3 };
+
 /** Flesh wound boxes on the datacard. */
 KT.fleshWoundBoxes = 3;
 
