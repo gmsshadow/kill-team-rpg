@@ -3,6 +3,23 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.8.1
+
+### Added
+- **Specialist ability picker.** The ability slots on a datacard are now clickable. Choosing one
+  opens a dialog listing only the abilities legal at that level: both branches at Level 2, only
+  those connected to the Level 2 already taken at Level 3, and anything unchosen at Level 4. The
+  Level 1 ability is granted without asking, since it is not a choice. Verified against the
+  Sniper walkthrough on pg 66.
+- The definition is looked up from a world Specialism item if one exists, otherwise from the
+  Specialisms compendium.
+
+### Fixed
+- **Items dropped from a compendium were created twice.** Rather than rely on binding exactly one
+  listener, the drop event is now tagged the first time it is handled and ignored on any repeat
+  delivery, so a second handler from anywhere cannot duplicate the item. Listeners are also torn
+  down with an AbortController before rebinding on each render.
+
 ## 0.8.0
 
 The specialism ability trees, transcribed from pg 66-77.

@@ -237,5 +237,11 @@
   "KT.Parent": "Connects to",
   "KT.Validate.DuplicateSpecialism": "Each specialism must be unique in a kill team ({count} × {specialism}).",
   "KT.Validate.AdvancedSpecialists": "{count} specialist(s) above Level 1: {names}. Normal matched play allows Level 1 only.",
-  "KT.SpecialistCost": "Specialist surcharge"
+  "KT.SpecialistCost": "Specialist surcharge",
+  "KT.Dialog.ChooseAbilityTitle": "Choose a Level {level} ability",
+  "KT.Dialog.Choose": "Choose",
+  "KT.Warn.NoSpecialism": "This operative has no specialism.",
+  "KT.Warn.LevelTooLow": "This operative has not reached Level {level} yet.",
+  "KT.Warn.NoSpecialismDefinition": "No definition found for that specialism. Import the Specialisms compendium, or create a Specialism item for it.",
+  "KT.Warn.NoAbilitiesAvailable": "No abilities are available at that level. The Level 3 choices depend on which Level 2 ability was taken."
 }

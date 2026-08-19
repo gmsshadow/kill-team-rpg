@@ -1,6 +1,6 @@
 import { KT, SYSTEM_ID } from "../helpers/config.mjs";
 import * as dice from "../helpers/dice.mjs";
-import { attachDragDrop, getDragData } from "../helpers/drag-drop.mjs";
+import { attachDragDrop, getDragData, handledOnce } from "../helpers/drag-drop.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
@@ -23,6 +23,7 @@ export default class KTOperativeSheet extends HandlebarsApplicationMixin(ActorSh
       setExperience: KTOperativeSheet.#onSetExperience,
       setFleshWounds: KTOperativeSheet.#onSetFleshWounds,
       toggleStatus: KTOperativeSheet.#onToggleStatus,
+      chooseAbility: KTOperativeSheet.#onChooseAbility,
       rollNerve: KTOperativeSheet.#onRollNerve,
       rollInjury: KTOperativeSheet.#onRollInjury,
       rollAdvance: KTOperativeSheet.#onRollAdvance,
@@ -42,9 +43,96 @@ export default class KTOperativeSheet extends HandlebarsApplicationMixin(ActorSh
     attachDragDrop(this);
   }
 
+  /* -------------------------------------------- */
+
+  /**
+   * Locate the definition for this operative's specialism: a world Item if one
+   * exists, otherwise the entry in the system compendium.
+   */
+  static async #findSpecialism(key) {
+    const world = game.items.find(i => i.type === "specialism" && i.system.specialismKey === key);
+    if (world) return world;
+
+    const pack = game.packs.get(`${SYSTEM_ID}.specialisms`);
+    if (!pack) return null;
+    const index = await pack.getIndex({ fields: ["system.specialismKey"] });
+    const entry = index.find(e => e.system?.specialismKey === key);
+    return entry ? pack.getDocument(entry._id) : null;
+  }
+
+  /**
+   * Choose a specialist ability for a level. Level 1 is granted rather than
+   * chosen, Level 2 offers both branches, Level 3 only the branch connected to
+   * the Level 2 already taken, and Level 4 anything left (pg 66).
+   */
+  static async #onChooseAbility(event, target) {
+    const actor = this.document;
+    const level = Number(target.closest("[data-level]")?.dataset.level) || 1;
+
+    if (!actor.system.isSpecialist) {
+      return ui.notifications.warn(game.i18n.localize("KT.Warn.NoSpecialism"));
+    }
+    if (level > actor.system.level) {
+      return ui.notifications.warn(game.i18n.format("KT.Warn.LevelTooLow", { level }));
+    }
+
+    const definition = await KTOperativeSheet.#findSpecialism(actor.system.specialism);
+    if (!definition) {
+      return ui.notifications.warn(game.i18n.localize("KT.Warn.NoSpecialismDefinition"));
+    }
+
+    const taken = actor.items
+      .filter(i => i.type === "ability" && i.system.abilityType === "specialism")
+      .map(i => i.name);
+    const options = definition.system.availableAbilities(level, taken);
+    if (!options.length) {
+      return ui.notifications.warn(game.i18n.localize("KT.Warn.NoAbilitiesAvailable"));
+    }
+
+    // The Level 1 ability is automatic, so take it without asking.
+    let chosen = options[0];
+    if (level > 1 || options.length > 1) {
+      const DialogV2 = foundry.applications.api.DialogV2;
+      const FormDataExtended = foundry.applications.ux?.FormDataExtended ?? globalThis.FormDataExtended;
+      const rows = options.map((ability, index) => `
+        <label class="kt-choice">
+          <input type="radio" name="ability" value="${index}" ${index === 0 ? "checked" : ""}/>
+          <span><strong>${ability.name}</strong>${ability.parent
+            ? ` <em>(${game.i18n.localize("KT.Parent")} ${ability.parent})</em>` : ""}<br/>${ability.description}</span>
+        </label>`).join("");
+
+      const data = await DialogV2.prompt({
+        window: { title: game.i18n.format("KT.Dialog.ChooseAbilityTitle", { level }) },
+        content: `<div class="kt-dialog kt-choices">${rows}</div>`,
+        ok: {
+          label: game.i18n.localize("KT.Dialog.Choose"),
+          callback: (ev, button) => new FormDataExtended(button.form).object
+        },
+        rejectClose: false
+      });
+      if (!data) return;
+      chosen = options[Number(data.ability)];
+    }
+
+    await actor.createEmbeddedDocuments("Item", [{
+      name: chosen.name,
+      type: "ability",
+      img: "icons/svg/upgrade.svg",
+      system: {
+        abilityType: "specialism",
+        specialismKey: actor.system.specialism,
+        level: chosen.level,
+        description: `<p>${chosen.description}</p>`,
+        source: `${definition.name}, pg ${definition.system.page}`
+      }
+    }]);
+  }
+
   /** Accept weapons, abilities and wargear dropped onto the datacard. */
   async _onDrop(event) {
     if (!this.isEditable) return;
+    // Ignore a repeat delivery of the same drop, which would duplicate the item.
+    if (!handledOnce(event)) return;
     const data = getDragData(event);
     if (data?.type !== "Item") return;
     const item = await Item.implementation.fromDropData(data);

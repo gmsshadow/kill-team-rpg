@@ -170,7 +170,9 @@
       {{#if abilitySlots.length}}
       <ul class="kt-slots">
         {{#each abilitySlots as |slot|}}
-        <li class="kt-slot {{#if slot.overAllowance}}is-over{{/if}}" data-item-id="{{slot.ability.id}}">
+        <li class="kt-slot {{#if slot.overAllowance}}is-over{{/if}}"
+            data-item-id="{{slot.ability.id}}" data-level="{{slot.index}}">
+          <span class="kt-slot-level">L{{slot.index}}</span>
           {{#if slot.ability}}
             <span class="kt-slot-name">{{slot.ability.name}}</span>
             <span class="kt-controls">
@@ -178,7 +180,9 @@
               <a data-action="deleteItem" data-tooltip="{{localize 'KT.Delete'}}"><i class="fa-solid fa-trash"></i></a>
             </span>
           {{else}}
-            <span class="kt-slot-empty">{{localize "KT.EmptyAbilitySlot"}}</span>
+            <a class="kt-slot-empty" data-action="chooseAbility">
+              <i class="fa-solid fa-plus"></i> {{localize "KT.EmptyAbilitySlot"}}
+            </a>
           {{/if}}
         </li>
         {{/each}}

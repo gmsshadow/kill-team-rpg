@@ -1,5 +1,5 @@
 import { KT, SYSTEM_ID } from "../helpers/config.mjs";
-import { attachDragDrop, getDragData } from "../helpers/drag-drop.mjs";
+import { attachDragDrop, getDragData, handledOnce } from "../helpers/drag-drop.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
@@ -34,6 +34,7 @@ export default class KTKillTeamSheet extends HandlebarsApplicationMixin(ActorShe
 
   /** Route drops to the roster handler. */
   async _onDrop(event) {
+    if (!handledOnce(event)) return;
     const data = getDragData(event);
     if (data?.type === "Actor") return this._onDropActor(event, data);
 

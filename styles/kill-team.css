@@ -1155,3 +1155,35 @@
   font-weight: 400;
   color: #8a857e;
 }
+
+/* Ability slot level marker and the choice dialog. */
+.kill-team .kt-slot-level {
+  font-family: var(--kt-stencil);
+  font-size: 0.68rem;
+  color: var(--kt-orange, #c8501e);
+  min-width: 1.4rem;
+}
+
+.kill-team .kt-slot-empty {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+.kill-team .kt-slot-empty:hover { color: var(--kt-orange, #c8501e); }
+
+.kt-choices { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.kt-choices .kt-choice {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  padding: 0.4rem;
+  border: 1px solid #b0aca4;
+  cursor: pointer;
+  line-height: 1.35;
+}
+
+.kt-choices .kt-choice:hover { border-color: #c8501e; }
+.kt-choices .kt-choice input { margin-top: 0.25rem; flex: 0 0 auto; }
