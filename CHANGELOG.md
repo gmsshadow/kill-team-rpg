@@ -3,6 +3,17 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.8.2
+
+### Fixed
+- **All Font Awesome icons rendered as empty boxes**, in the window header and on the edit and
+  delete controls alike. The cause was the guard rule added in 0.5.2, which named an icon font
+  family explicitly. Foundry sets the family and weight on the icon classes themselves, so naming
+  a family that does not resolve replaces every glyph with tofu. The rule now neutralises only the
+  inherited text properties and never touches the font. Scoping the button styling to
+  `.window-content` was the fix the header actually needed; the extra rule was both unnecessary
+  and harmful.
+
 ## 0.8.1
 
 ### Added

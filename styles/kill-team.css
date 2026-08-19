@@ -554,13 +554,15 @@
 }
 
 /*
- * Belt and braces: never let our typography reach an element that is carrying
- * an icon class, wherever it appears.
+ * Do not name an icon font here. Foundry sets the family and weight on the
+ * icon classes themselves, and naming a family that does not resolve replaces
+ * the glyphs with empty boxes. The button rule above is scoped to
+ * .window-content so it cannot reach the window header's icon buttons, which
+ * is all the protection that was actually needed.
+ *
+ * Only the inherited text properties are neutralised, never the font itself.
  */
-.kill-team [class*="fa-"]::before,
-.kill-team i[class*="fa-"],
-.kill-team button[class*="fa-"] {
-  font-family: var(--fa-style-family, "Font Awesome 6 Pro"), "Font Awesome 6 Free";
+.kill-team [class*="fa-"] {
   text-transform: none;
   letter-spacing: normal;
 }
