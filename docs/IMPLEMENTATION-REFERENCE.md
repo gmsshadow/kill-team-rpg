@@ -82,6 +82,27 @@ An unmodified 1 always passes. A failed test sets the shaken flag. The dialog re
 modifiers (+1 per friendly model shaken or out of action, -1 per other friendly model within 2").
 Checking whether a kill team is broken is currently a manual toggle on the sheet.
 
+## Choosing a kill team (pg 62)
+
+`KillTeamData#battleForged` validates the selected operatives against every Battle-forged
+restriction: three to twenty models, one and only one Leader, up to three other specialists, a
+shared Faction keyword, the 100-point Force limit, and the Max number from each datasheet. Max is
+counted per `system.modelType`, falling back to the actor name when that is blank, because the
+restriction applies to the datasheet rather than the operative's given name. Results render under
+the roster as errors and warnings; nothing is blocked, so an illegal team can still be played.
+
+## Command Points and Tactics (pg 64–65)
+
+`commandPointsForRound(firstRound)` returns 1, plus 1 for each full 10 points the kill team's
+Force sits below the highest Force among the kill team actors in the world. The bonus applies in
+the first battle round only. Both worked examples from the book hold: 19 points lower generates 2
+Command Points, 20 points lower generates 3. Unused points carry over because the pool is only
+ever added to.
+
+The six core Tactics ship in the sample-data script as `ability` items of type `tactic` with their
+printed costs. `spendCommandPoints()` deducts a cost and posts to chat, refusing when the pool is
+short. The once-per-phase restriction is left to the table.
+
 ## Campaigns (pg 202–205)
 
 The `killteam` actor holds Intelligence, Materiel, Morale and Territory, and flags a guerrilla
@@ -93,10 +114,11 @@ rolls, fire team advances and Crack Troops cost increases are not yet automated.
 
 ## Where to extend next
 
-- **Character creation** — add a `background` item type and a creation dialog; the operative schema
-  already has room for faction and keywords.
-- **Tactics and Command Points** — `ability` items already carry a CP cost and an ability type of
-  `tactic`; the roster tracks a CP pool. Wiring a spend button is a small step.
+- **Specialisms** — the ten specialisms are named in `config.mjs` but none of their level 1–4
+  abilities or Tactics are present. This needs pg 66–77.
+- **Faction datasheets** — pg 78 onwards, ideally as compendium packs built with the Foundry CLI.
+- **Character creation** — with pg 66–77 in hand, a creation dialog can pick a datasheet, apply a
+  specialism and roll a demeanour.
 - **Compendium packs** — declare packs in `system.json` and build them with the Foundry CLI.
 - **Psychic phase** — `dice.rollPsychic` exists (2D6 vs warp charge, Perils on double 1 or 6) but
   nothing on the sheet calls it yet; a `power` item type would be the natural home.

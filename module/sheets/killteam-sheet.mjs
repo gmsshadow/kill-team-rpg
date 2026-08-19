@@ -17,7 +17,9 @@ export default class KTKillTeamSheet extends HandlebarsApplicationMixin(ActorShe
       openMember: KTKillTeamSheet.#onOpenMember,
       removeMember: KTKillTeamSheet.#onRemoveMember,
       toggleMember: KTKillTeamSheet.#onToggleMember,
-      rollInitiative: KTKillTeamSheet.#onRollInitiative
+      rollInitiative: KTKillTeamSheet.#onRollInitiative,
+      generateCP: KTKillTeamSheet.#onGenerateCP,
+      adjustCP: KTKillTeamSheet.#onAdjustCP
     }
   };
 
@@ -56,9 +58,14 @@ export default class KTKillTeamSheet extends HandlebarsApplicationMixin(ActorShe
         specialismLabel: game.i18n.localize(
           KT.specialisms[member?.system?.specialism ?? "none"] ?? "KT.Specialism.None"
         ),
-        experience: member?.system?.experience ?? 0
+        experience: member?.system?.experience ?? 0,
+        modelType: member?.system?.datasheet ?? "",
+        isLeader: !!member?.system?.isLeader
       };
     });
+
+    const battleForged = system.battleForged;
+    const roundCP = system.commandPointsForRound(true);
 
     return Object.assign(context, {
       actor,
@@ -69,6 +76,9 @@ export default class KTKillTeamSheet extends HandlebarsApplicationMixin(ActorShe
       force: system.force,
       overLimit: system.force > system.forceLimit,
       guerrilla: system.guerrilla,
+      battleForged,
+      firstRoundCP: roundCP.gain,
+      firstRoundBonus: roundCP.bonus,
       enrichedBackground: await TextEditorImpl.enrichHTML(system.background, { relativeTo: actor }),
       enrichedNotes: await TextEditorImpl.enrichHTML(system.notes, { relativeTo: actor })
     });
@@ -114,6 +124,22 @@ export default class KTKillTeamSheet extends HandlebarsApplicationMixin(ActorShe
     if (!roster[index]) return;
     roster[index].inKillTeam = !roster[index].inKillTeam;
     await this.document.update({ "system.roster": roster });
+  }
+
+  /**
+   * Generate Command Points for a battle round. Hold Shift, or use the
+   * first-round button, to include the Force-difference bonus.
+   */
+  static async #onGenerateCP(event, target) {
+    const firstRound = target.dataset.round === "first";
+    await this.document.system.generateCommandPoints(firstRound);
+  }
+
+  /** Manual +1 / -1 on the Command Point pool. */
+  static async #onAdjustCP(event, target) {
+    const delta = Number(target.dataset.delta) || 0;
+    const value = Math.max(0, this.document.system.commandPoints.value + delta);
+    await this.document.update({ "system.commandPoints.value": value });
   }
 
   static async #onRollInitiative() {

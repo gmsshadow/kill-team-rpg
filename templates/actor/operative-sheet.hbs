@@ -24,8 +24,13 @@
       <span>W</span><span>A</span><span>Ld</span><span>Sv</span>
     </div>
     <div class="kt-row kt-grid-profile">
-      <input class="kt-name" type="text" name="name" value="{{actor.name}}"
-             placeholder="{{localize 'KT.Name'}}"/>
+      <span class="kt-namecell">
+        <input class="kt-name" type="text" name="name" value="{{actor.name}}"
+               placeholder="{{localize 'KT.Name'}}"/>
+        <input class="kt-modeltype" type="text" name="system.modelType"
+               value="{{system.modelType}}" placeholder="{{localize 'KT.ModelType'}}"
+               data-tooltip="{{localize 'KT.ModelTypeHint'}}"/>
+      </span>
       <input type="text" name="system.profile.move" value="{{system.profile.move}}"/>
       <span class="kt-stat"><input type="number" name="system.profile.ws" value="{{system.profile.ws}}" min="1" max="6"/><i>+</i></span>
       <span class="kt-stat"><input type="number" name="system.profile.bs" value="{{system.profile.bs}}" min="1" max="6"/><i>+</i></span>

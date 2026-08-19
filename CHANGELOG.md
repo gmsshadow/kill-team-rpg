@@ -3,6 +3,25 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.3.0
+
+Adds the Kill Teams chapter, pg 62-65.
+
+### Added
+- **Battle-forged validation** on the roster sheet (pg 62). Checks three to twenty models,
+  exactly one Leader, no more than three other specialists, a shared Faction keyword, the
+  100-point Force limit and the Max number per datasheet. Errors and warnings are listed
+  under the roster with a valid/invalid banner.
+- **Model Type** on the datacard, sitting under the operative's given name as it does on the
+  printed card. The Max restriction counts models sharing a datasheet rather than a name.
+- **Command Points** (pg 64). One per battle round, plus one for each full 10 points the kill
+  team's Force sits below the highest Force in the battle, first round only. The sheet shows
+  the first-round total before you commit, and generation posts to chat.
+- `spendCommandPoints()` on the kill team model, which refuses when the pool is short.
+- **Roster limit** field, twenty for matched play and twelve to start a campaign (pg 203).
+- The six core **Tactics** (pg 65) in the sample-data script, as ability items with their
+  printed Command Point costs.
+
 ## 0.2.0
 
 ### Added

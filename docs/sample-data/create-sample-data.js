@@ -79,5 +79,36 @@ const intercessor = await Actor.create({
   ]
 });
 
+// Add the model type so the Max restriction can be validated on a roster.
+await intercessor?.update({ "system.modelType": "Intercessor" });
+
+/* -------------------------------------------------------------------------- */
+/*  The six core Tactics (pg 65)                                              */
+/*                                                                            */
+/*  Created as world Items so they can be dragged onto any operative or kept  */
+/*  in a folder as a reference. Costs are the printed Command Point costs.     */
+/* -------------------------------------------------------------------------- */
+
+const TACTICS = [
+  ["Decisive Move", 1, "Start of the Movement phase. Move one model before any others, including an Advance, Fall Back or charge attempt. If another player uses this Tactic, roll off; the winner goes first."],
+  ["Decisive Shot", 2, "Start of the Shooting phase. Shoot with one eligible model before any others. If another player uses this Tactic, roll off; the winner goes first."],
+  ["Decisive Strike", 2, "Start of the Fight phase. Fight with one eligible model before any others. If another player uses this Tactic, roll off; the winner goes first."],
+  ["Tactical Re-roll", 1, "Re-roll a single Advance roll, charge roll, Psychic test, Deny the Witch test, hit roll, wound roll, saving throw, Injury roll or Nerve test."],
+  ["Insane Bravery", 1, "Before taking any Nerve tests in the Morale phase, automatically pass a single Nerve test for one model."],
+  ["Gritted Teeth", 1, "When a model with one or more flesh wounds is chosen to shoot or fight, its attacks ignore the hit penalty from its own flesh wounds until the end of the phase."]
+];
+
+const existingTactics = new Set(game.items.filter(i => i.type === "ability").map(i => i.name));
+const newTactics = TACTICS
+  .filter(([name]) => !existingTactics.has(name))
+  .map(([name, cost, description]) => ({
+    name,
+    type: "ability",
+    img: "icons/svg/upgrade.svg",
+    system: { abilityType: "tactic", cost, description: `<p>${description}</p>` }
+  }));
+
+if (newTactics.length) await Item.createDocuments(newTactics);
+
 intercessor?.sheet.render(true);
-ui.notifications.info("Kill Team sample data created.");
+ui.notifications.info(`Kill Team sample data created (${newTactics.length} Tactics added).`);

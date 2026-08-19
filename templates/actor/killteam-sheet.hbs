@@ -22,9 +22,51 @@
         <input type="text" name="system.squadQuirk" value="{{system.squadQuirk}}"/></label>
       <label class="kt-field"><span>{{localize "KT.ForceLimit"}}</span>
         <input type="number" name="system.forceLimit" value="{{system.forceLimit}}" min="0"/></label>
-      <label class="kt-field"><span>{{localize "KT.CommandPoints"}}</span>
-        <input type="number" name="system.commandPoints.value" value="{{system.commandPoints.value}}" min="0"/></label>
+      <label class="kt-field"><span>{{localize "KT.RosterLimit"}}</span>
+        <input type="number" name="system.rosterLimit" value="{{system.rosterLimit}}" min="0"/></label>
     </div>
+
+    {{!-- Command Points (pg 64) --}}
+    <div class="kt-bar">{{localize "KT.CommandPoints"}}</div>
+    <div class="kt-cp-panel">
+      <div class="kt-cp-pool">
+        <a data-action="adjustCP" data-delta="-1" data-tooltip="{{localize 'KT.SpendCP'}}">
+          <i class="fa-solid fa-minus"></i></a>
+        <input type="number" name="system.commandPoints.value"
+               value="{{system.commandPoints.value}}" min="0"/>
+        <a data-action="adjustCP" data-delta="1" data-tooltip="{{localize 'KT.GainCP'}}">
+          <i class="fa-solid fa-plus"></i></a>
+      </div>
+      <div class="kt-cp-actions">
+        <button type="button" data-action="generateCP" data-round="first">
+          {{localize "KT.GenerateFirstRound"}}
+          <span class="kt-cp-preview">+{{firstRoundCP}}</span>
+        </button>
+        <button type="button" data-action="generateCP">{{localize "KT.GenerateRound"}}
+          <span class="kt-cp-preview">+1</span>
+        </button>
+      </div>
+      {{#if firstRoundBonus}}
+        <p class="kt-hint">{{localize "KT.CPBonusHint"}}</p>
+      {{/if}}
+    </div>
+
+    {{!-- Battle-forged check (pg 62) --}}
+    <div class="kt-bar">{{localize "KT.BattleForged"}}
+      {{#if battleForged.ok}}<span class="kt-valid">{{localize "KT.Validate.Ok"}}</span>{{/if}}
+    </div>
+    {{#if battleForged.issues.length}}
+      <ul class="kt-validation">
+        {{#each battleForged.issues}}
+          <li class="kt-issue is-{{this.severity}}">
+            <i class="fa-solid {{#if (ktEq this.severity 'error')}}fa-circle-exclamation{{else}}fa-triangle-exclamation{{/if}}"></i>
+            {{this.text}}
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <p class="kt-hint">{{localize "KT.Validate.AllClear"}}</p>
+    {{/if}}
 
     <div class="kt-bar">{{localize "KT.Resources"}}{{#if guerrilla}} — {{localize "KT.Guerrilla"}}{{/if}}</div>
     <div class="kt-resources">

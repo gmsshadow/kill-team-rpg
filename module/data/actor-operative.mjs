@@ -93,6 +93,10 @@ export default class OperativeData extends foundry.abstract.TypeDataModel {
         broken: new fields.BooleanField({ initial: false, label: "KT.Broken" })
       }),
 
+      // Datasheet the operative was built from, e.g. "Skitarii Ranger". The Max
+      // restriction (pg 62) counts models sharing a datasheet, not a given name.
+      modelType: new fields.StringField({ required: true, initial: "", label: "KT.ModelType" }),
+
       faction: new fields.StringField({ required: true, initial: "", label: "KT.Faction" }),
       keywords: new fields.StringField({ required: true, initial: "", label: "KT.Keywords" }),
       abilities: new fields.HTMLField({ required: true, initial: "", label: "KT.Abilities" }),
@@ -124,6 +128,14 @@ export default class OperativeData extends foundry.abstract.TypeDataModel {
     let force = this.points;
     for (const item of this.parent.items) force += item.system.points ?? 0;
     this.force = force;
+
+    // Battle-forged bookkeeping (pg 62).
+    this.isLeader = this.specialism === "leader";
+    this.isSpecialist = this.specialism !== "none";
+    // A Max of "-" means unlimited.
+    const parsedMax = Number.parseInt(this.maxNumber, 10);
+    this.maxCount = Number.isNaN(parsedMax) ? null : parsedMax;
+    this.datasheet = this.modelType?.trim() || this.parent.name;
 
     this.levelUpAt = KT.levelUpBoxes;
   }
