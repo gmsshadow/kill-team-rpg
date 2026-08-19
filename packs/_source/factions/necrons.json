@@ -1,0 +1,25 @@
+{
+  "_key": "!items!necronsxekCoWoU4",
+  "_id": "necronsxekCoWoU4",
+  "name": "Necrons",
+  "type": "faction",
+  "img": "icons/svg/statue.svg",
+  "system": {
+    "keyword": "Necrons",
+    "parentKeyword": "",
+    "allegiance": "xenos",
+    "commonKeywords": "Infantry",
+    "page": 150,
+    "description": "<p>An ancient race who traded flesh for living metal and slept for sixty million years, now waking to reclaim a galaxy they consider theirs.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 15000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

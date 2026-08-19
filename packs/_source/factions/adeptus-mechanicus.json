@@ -1,0 +1,25 @@
+{
+  "_key": "!items!adeptusmy6WKOyoU",
+  "_id": "adeptusmy6WKOyoU",
+  "name": "Adeptus Mechanicus",
+  "type": "faction",
+  "img": "icons/svg/statue.svg",
+  "system": {
+    "keyword": "Adeptus Mechanicus",
+    "parentKeyword": "",
+    "allegiance": "imperium",
+    "commonKeywords": "Imperium, Infantry",
+    "page": 104,
+    "description": "<p>The Priesthood of Mars, part flesh and part machine, who venerate the Omnissiah and hoard the knowledge of the Dark Age of Technology.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 10400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

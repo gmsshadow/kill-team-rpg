@@ -1,0 +1,25 @@
+{
+  "_key": "!items!deathguaq0oSiUgi",
+  "_id": "deathguaq0oSiUgi",
+  "name": "Death Guard",
+  "type": "faction",
+  "img": "icons/svg/statue.svg",
+  "system": {
+    "keyword": "Death Guard",
+    "parentKeyword": "Heretic Astartes",
+    "allegiance": "chaos",
+    "commonKeywords": "Chaos, Nurgle, Infantry",
+    "page": 118,
+    "description": "<p>Nurgle's chosen: bloated, rotting and impossibly resilient, spreading contagion wherever they walk.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 11800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

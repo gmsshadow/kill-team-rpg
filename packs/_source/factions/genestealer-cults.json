@@ -1,0 +1,25 @@
+{
+  "_key": "!items!genesteaKyu0SCu0",
+  "_id": "genesteaKyu0SCu0",
+  "name": "Genestealer Cults",
+  "type": "faction",
+  "img": "icons/svg/statue.svg",
+  "system": {
+    "keyword": "Genestealer Cults",
+    "parentKeyword": "",
+    "allegiance": "xenos",
+    "commonKeywords": "Infantry",
+    "page": 182,
+    "description": "<p>Hidden broods burrowed into Imperial worlds, awaiting the arrival of the hive fleet they unknowingly summon.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 18200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

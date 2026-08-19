@@ -1,0 +1,25 @@
+{
+  "_key": "!items!adeptusaQGQocq8S",
+  "_id": "adeptusaQGQocq8S",
+  "name": "Adeptus Astartes",
+  "type": "faction",
+  "img": "icons/svg/statue.svg",
+  "system": {
+    "keyword": "Adeptus Astartes",
+    "parentKeyword": "",
+    "allegiance": "imperium",
+    "commonKeywords": "Imperium, Infantry",
+    "page": 78,
+    "description": "<p>The Space Marines: genetically engineered transhuman warriors, deployed in small squads where a whole company would be wasted.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 7800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

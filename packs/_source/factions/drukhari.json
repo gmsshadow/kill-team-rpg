@@ -1,0 +1,25 @@
+{
+  "_key": "!items!drukharisOMQgew2",
+  "_id": "drukharisOMQgew2",
+  "name": "Drukhari",
+  "type": "faction",
+  "img": "icons/svg/statue.svg",
+  "system": {
+    "keyword": "Drukhari",
+    "parentKeyword": "",
+    "allegiance": "xenos",
+    "commonKeywords": "Aeldari, Infantry",
+    "page": 138,
+    "description": "<p>The Dark Eldar of Commorragh, raiders and torturers who sustain themselves on the suffering of others.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 13800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

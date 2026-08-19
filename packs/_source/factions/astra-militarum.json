@@ -1,0 +1,25 @@
+{
+  "_key": "!items!astramilQM2eEiQe",
+  "_id": "astramilQM2eEiQe",
+  "name": "Astra Militarum",
+  "type": "faction",
+  "img": "icons/svg/statue.svg",
+  "system": {
+    "keyword": "Astra Militarum",
+    "parentKeyword": "",
+    "allegiance": "imperium",
+    "commonKeywords": "Imperium, Infantry",
+    "page": 96,
+    "description": "<p>The Imperial Guard: the hammer of the Emperor, numberless and expendable, holding the line through sheer weight of bodies.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 9600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

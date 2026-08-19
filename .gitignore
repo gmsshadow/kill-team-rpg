@@ -6,3 +6,7 @@ node_modules/
 .DS_Store
 Thumbs.db
 *.log
+
+# Pack build artifacts. packs/_source is the version-controlled truth;
+# packs/<name>/ is compiled by tools/build-packs.mjs and shipped in releases.
+node_modules/

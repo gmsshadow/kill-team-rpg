@@ -195,5 +195,18 @@
   "KT.Chat.CommandPoints": "Generates {gain} Command Point. Pool is now {total}.",
   "KT.Chat.CommandPointsFirstRound": "Generates {gain} Command Points, including {bonus} for the Force difference. Pool is now {total}.",
   "KT.Chat.TacticUsed": "Uses <strong>{name}</strong> for {cost} CP. {remaining} remaining.",
-  "KT.Warn.NotEnoughCP": "Not enough Command Points: {cost} needed, {value} available."
+  "KT.Warn.NotEnoughCP": "Not enough Command Points: {cost} needed, {value} available.",
+  "TYPES.Item.faction": "Faction",
+  "KT.FactionKeyword": "Faction Keyword",
+  "KT.FactionKeywordHint": "The Faction keyword as printed on a datasheet. Every model in a kill team must share one (pg 62).",
+  "KT.ParentKeyword": "Parent Keyword",
+  "KT.ParentKeywordHint": "A broader Faction keyword these models also carry, e.g. Deathwatch models are also Adeptus Astartes. Leave blank if the faction stands alone.",
+  "KT.Allegiance": "Allegiance",
+  "KT.Allegiance.Imperium": "Imperium",
+  "KT.Allegiance.Chaos": "Chaos",
+  "KT.Allegiance.Xenos": "Xenos",
+  "KT.CommonKeywords": "Common Keywords",
+  "KT.Page": "Page",
+  "KT.FactionApplyHint": "Drag this faction onto an operative or a kill team to set its Faction keyword. Dropping it on an operative also merges the keywords above.",
+  "KT.Info.FactionApplied": "Applied {faction} to {actor}."
 }

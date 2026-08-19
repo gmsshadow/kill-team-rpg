@@ -1,0 +1,25 @@
+{
+  "_key": "!items!deathwatAC4q26Ak",
+  "_id": "deathwatAC4q26Ak",
+  "name": "Deathwatch",
+  "type": "faction",
+  "img": "icons/svg/statue.svg",
+  "system": {
+    "keyword": "Deathwatch",
+    "parentKeyword": "Adeptus Astartes",
+    "allegiance": "imperium",
+    "commonKeywords": "Imperium, Infantry",
+    "page": 88,
+    "description": "<p>The Chamber Militant of the Ordo Xenos, drawn from every Chapter and trained to destroy alien threats.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 8800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

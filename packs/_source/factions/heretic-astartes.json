@@ -1,0 +1,25 @@
+{
+  "_key": "!items!hereticaAWMiu2Am",
+  "_id": "hereticaAWMiu2Am",
+  "name": "Heretic Astartes",
+  "type": "faction",
+  "img": "icons/svg/statue.svg",
+  "system": {
+    "keyword": "Heretic Astartes",
+    "parentKeyword": "",
+    "allegiance": "chaos",
+    "commonKeywords": "Chaos, Infantry",
+    "page": 112,
+    "description": "<p>The Traitor Legions and renegade warbands who turned on the Imperium during the Horus Heresy and have warred against it ever since.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 11200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

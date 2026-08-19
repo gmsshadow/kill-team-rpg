@@ -1,0 +1,25 @@
+{
+  "_key": "!items!harlequiOWAQQoe0",
+  "_id": "harlequiOWAQQoe0",
+  "name": "Harlequins",
+  "type": "faction",
+  "img": "icons/svg/statue.svg",
+  "system": {
+    "keyword": "Harlequins",
+    "parentKeyword": "",
+    "allegiance": "xenos",
+    "commonKeywords": "Aeldari, Infantry",
+    "page": 146,
+    "description": "<p>The travelling players of the Laughing God, whose dances are both performance and lethal battle drill.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 14600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

@@ -2,7 +2,7 @@
   "id": "kill-team-rpg",
   "title": "Kill Team 2018 (Lightweight RPG)",
   "description": "A lightweight roleplaying system built on the Warhammer 40,000: Kill Team (2018) core rules. Operative datacards, weapon profiles, specialisms, experience tracks and the D6 attack sequence.",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "compatibility": {
     "minimum": "13",
     "verified": "14"
@@ -26,7 +26,19 @@
       "path": "lang/en.json"
     }
   ],
-  "packs": [],
+  "packs": [
+    {
+      "name": "factions",
+      "label": "Kill Team Factions",
+      "path": "packs/factions",
+      "type": "Item",
+      "system": "kill-team-rpg",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
   "documentTypes": {
     "Actor": {
       "operative": {
@@ -62,6 +74,11 @@
         "htmlFields": [
           "description"
         ]
+      },
+      "faction": {
+        "htmlFields": [
+          "description"
+        ]
       }
     }
   },
@@ -75,5 +92,15 @@
   "download": "https://github.com/gmsshadow/kill-team-rpg/archive/refs/heads/main.zip",
   "license": "LICENSE.md",
   "readme": "README.md",
-  "bugs": "https://github.com/gmsshadow/kill-team-rpg/issues"
+  "bugs": "https://github.com/gmsshadow/kill-team-rpg/issues",
+  "packFolders": [
+    {
+      "name": "Kill Team",
+      "sorting": "m",
+      "color": "#c8501e",
+      "packs": [
+        "factions"
+      ]
+    }
+  ]
 }

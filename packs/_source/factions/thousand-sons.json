@@ -1,0 +1,25 @@
+{
+  "_key": "!items!thousandM8uSekI0",
+  "_id": "thousandM8uSekI0",
+  "name": "Thousand Sons",
+  "type": "faction",
+  "img": "icons/svg/statue.svg",
+  "system": {
+    "keyword": "Thousand Sons",
+    "parentKeyword": "Heretic Astartes",
+    "allegiance": "chaos",
+    "commonKeywords": "Chaos, Tzeentch, Infantry",
+    "page": 124,
+    "description": "<p>Sorcerers of Tzeentch and the automaton Rubricae, animated dust bound inside empty armour.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 12400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

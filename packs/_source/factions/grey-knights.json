@@ -1,0 +1,25 @@
+{
+  "_key": "!items!greyknigAsCO22M8",
+  "_id": "greyknigAsCO22M8",
+  "name": "Grey Knights",
+  "type": "faction",
+  "img": "icons/svg/statue.svg",
+  "system": {
+    "keyword": "Grey Knights",
+    "parentKeyword": "Adeptus Astartes",
+    "allegiance": "imperium",
+    "commonKeywords": "Imperium, Infantry, Psyker",
+    "page": 92,
+    "description": "<p>Silver-armoured daemon hunters, every one of them a psyker, whose existence is a secret kept from the wider Imperium.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 9200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

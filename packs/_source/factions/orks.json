@@ -1,0 +1,25 @@
+{
+  "_key": "!items!orksxxxx868eeQeK",
+  "_id": "orksxxxx868eeQeK",
+  "name": "Orks",
+  "type": "faction",
+  "img": "icons/svg/statue.svg",
+  "system": {
+    "keyword": "Orks",
+    "parentKeyword": "",
+    "allegiance": "xenos",
+    "commonKeywords": "Infantry",
+    "page": 158,
+    "description": "<p>Brutal, cunning and utterly delighted by violence, the Orks fight for the sheer joy of a good scrap.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 15800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

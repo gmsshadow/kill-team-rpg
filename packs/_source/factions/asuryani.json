@@ -1,0 +1,25 @@
+{
+  "_key": "!items!asuryaniIe8wEiqI",
+  "_id": "asuryaniIe8wEiqI",
+  "name": "Asuryani",
+  "type": "faction",
+  "img": "icons/svg/statue.svg",
+  "system": {
+    "keyword": "Asuryani",
+    "parentKeyword": "",
+    "allegiance": "xenos",
+    "commonKeywords": "Aeldari, Infantry",
+    "page": 130,
+    "description": "<p>The Craftworld Aeldari, an ancient and dwindling people who walk the Path and see the consequences of every action before they take it.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 13000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

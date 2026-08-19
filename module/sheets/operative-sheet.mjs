@@ -49,6 +49,18 @@ export default class KTOperativeSheet extends HandlebarsApplicationMixin(ActorSh
     if (data?.type !== "Item") return;
     const item = await Item.implementation.fromDropData(data);
     if (!item) return;
+
+    // A faction is applied to the operative rather than embedded: it sets the
+    // Faction keyword the Battle-forged check reads, and merges its keywords.
+    // Embedding it as well would leave two sources of truth.
+    if (item.type === "faction") {
+      await this.document.update(item.system.toActorUpdate(this.document));
+      ui.notifications.info(game.i18n.format("KT.Info.FactionApplied", {
+        faction: item.name, actor: this.document.name
+      }));
+      return;
+    }
+
     // Dropping an item the operative already owns is a no-op rather than a duplicate.
     if (item.parent === this.document) return;
     await this.document.createEmbeddedDocuments("Item", [item.toObject()]);

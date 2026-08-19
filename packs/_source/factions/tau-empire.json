@@ -1,0 +1,25 @@
+{
+  "_key": "!items!tauempir6GokGK6a",
+  "_id": "tauempir6GokGK6a",
+  "name": "T'au Empire",
+  "type": "faction",
+  "img": "icons/svg/statue.svg",
+  "system": {
+    "keyword": "T'au Empire",
+    "parentKeyword": "",
+    "allegiance": "xenos",
+    "commonKeywords": "Infantry",
+    "page": 166,
+    "description": "<p>A young, expansionist power built on advanced technology and the doctrine of the Greater Good.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 16600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "kill-team-rpg"
+  }
+}

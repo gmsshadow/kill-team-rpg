@@ -6,7 +6,20 @@
 
 export const SYSTEM_ID = "kill-team-rpg";
 
+import { FACTIONS, FACTION_CHOICES } from "./factions.mjs";
+
 export const KT = {};
+
+/** The sixteen core-book factions (pg 78-189). */
+KT.factions = FACTIONS;
+KT.factionChoices = FACTION_CHOICES;
+
+/** Loose grouping used for sorting the faction compendium. */
+KT.allegiances = {
+  imperium: "KT.Allegiance.Imperium",
+  chaos: "KT.Allegiance.Chaos",
+  xenos: "KT.Allegiance.Xenos"
+};
 
 /** Ranged and melee weapon types (Core Rules, Shooting/Fight phases). */
 KT.weaponTypes = {

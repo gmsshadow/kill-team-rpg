@@ -3,6 +3,24 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.5.0
+
+Begins the Item-based structure, starting with factions.
+
+### Added
+- **Faction Item type**, carrying the Faction keyword as printed on a datasheet, an optional
+  parent keyword, an allegiance grouping, the keywords models of that faction commonly share,
+  and the core-book page.
+- **Faction compendium** with all sixteen core-book factions, compiled to LevelDB and registered
+  in a "Kill Team" compendium folder.
+- Dropping a faction onto an operative sets its Faction keyword and merges the faction's keywords
+  into its keyword line. The merge is case-insensitive and idempotent, so re-dropping is safe.
+  Dropping one onto a kill team sets the roster's faction. Factions are applied rather than
+  embedded, so there is a single source of truth for the Battle-forged check.
+- `tools/build-packs.mjs`, which writes `packs/_source/factions/*.json` and compiles the pack.
+  Document ids are derived from the faction key, so rebuilds update entries rather than
+  duplicating them.
+
 ## 0.4.1
 
 ### Fixed

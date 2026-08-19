@@ -84,6 +84,29 @@
   </div>
   {{/if}}
 
+  {{#if isFaction}}
+  <div class="kt-item-grid">
+    <label class="kt-field"><span>{{localize "KT.FactionKeyword"}}</span>
+      <input type="text" name="system.keyword" value="{{system.keyword}}"
+             data-tooltip="{{localize 'KT.FactionKeywordHint'}}"/></label>
+    <label class="kt-field"><span>{{localize "KT.ParentKeyword"}}</span>
+      <input type="text" name="system.parentKeyword" value="{{system.parentKeyword}}"
+             data-tooltip="{{localize 'KT.ParentKeywordHint'}}"/></label>
+    <label class="kt-field"><span>{{localize "KT.Allegiance"}}</span>
+      <select name="system.allegiance">
+        {{#each allegianceOptions as |option|}}
+        <option value="{{option.value}}" {{#if (ktEq option.value ../system.allegiance)}}selected{{/if}}>{{option.label}}</option>
+        {{/each}}
+      </select></label>
+    <label class="kt-field"><span>{{localize "KT.Page"}}</span>
+      <input type="number" name="system.page" value="{{system.page}}" min="0"/></label>
+    <label class="kt-field kt-field-wide"><span>{{localize "KT.CommonKeywords"}}</span>
+      <input type="text" name="system.commonKeywords" value="{{system.commonKeywords}}"
+             placeholder="{{localize 'KT.KeywordsHint'}}"/></label>
+  </div>
+  <p class="kt-hint">{{localize "KT.FactionApplyHint"}}</p>
+  {{/if}}
+
   <div class="kt-bar">{{localize "KT.Description"}}</div>
   <div class="kt-item-description">
     {{#if editable}}

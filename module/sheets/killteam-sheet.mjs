@@ -35,8 +35,17 @@ export default class KTKillTeamSheet extends HandlebarsApplicationMixin(ActorShe
   /** Route drops to the roster handler. */
   async _onDrop(event) {
     const data = getDragData(event);
-    if (data?.type !== "Actor") return;
-    return this._onDropActor(event, data);
+    if (data?.type === "Actor") return this._onDropActor(event, data);
+
+    // Dropping a faction sets the kill team's Faction keyword.
+    if (data?.type === "Item") {
+      const item = await Item.implementation.fromDropData(data);
+      if (item?.type !== "faction") return;
+      await this.document.update({ "system.faction": item.system.keyword });
+      ui.notifications.info(game.i18n.format("KT.Info.FactionApplied", {
+        faction: item.name, actor: this.document.name
+      }));
+    }
   }
 
   async _prepareContext(options) {

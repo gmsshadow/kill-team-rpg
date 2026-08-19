@@ -37,6 +37,10 @@ export default class KTItemSheet extends HandlebarsApplicationMixin(ItemSheetV2)
       isAbility: item.type === "ability",
       isWargear: item.type === "wargear",
       isSpecialism: item.type === "specialism",
+      isFaction: item.type === "faction",
+      allegianceOptions: Object.entries(KT.allegiances).map(([value, label]) => ({
+        value, label: game.i18n.localize(label)
+      })),
       weaponTypeOptions: Object.entries(KT.weaponTypes)
         .map(([value, label]) => ({ value, label: game.i18n.localize(label) })),
       specialismOptions: Object.entries(KT.specialisms)
