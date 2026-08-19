@@ -3,6 +3,12 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.3.1
+
+### Changed
+- Manifest, download and url now point at `gmsshadow/kill-team-rpg`, matching the actual
+  repository. `download` uses the `main` branch archive.
+
 ## 0.3.0
 
 Adds the Kill Teams chapter, pg 62-65.

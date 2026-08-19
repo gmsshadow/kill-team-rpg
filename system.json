@@ -2,7 +2,7 @@
   "id": "kill-team-2018",
   "title": "Kill Team 2018 (Lightweight RPG)",
   "description": "A lightweight roleplaying system built on the Warhammer 40,000: Kill Team (2018) core rules. Operative datacards, weapon profiles, specialisms, experience tracks and the D6 attack sequence.",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "compatibility": {
     "minimum": "13",
     "verified": "14"
@@ -70,9 +70,10 @@
     "units": "in"
   },
   "primaryTokenAttribute": "wounds",
-  "url": "https://github.com/GMsShadow/kill-team-2018",
-  "manifest": "https://raw.githubusercontent.com/GMsShadow/kill-team-2018/main/system.json",
-  "download": "https://github.com/GMsShadow/kill-team-2018/releases/latest/download/kill-team-2018.zip",
+  "url": "https://github.com/gmsshadow/kill-team-rpg",
+  "manifest": "https://raw.githubusercontent.com/gmsshadow/kill-team-rpg/refs/heads/main/system.json",
+  "download": "https://github.com/gmsshadow/kill-team-rpg/archive/refs/heads/main.zip",
   "license": "LICENSE.md",
-  "readme": "README.md"
+  "readme": "README.md",
+  "bugs": "https://github.com/gmsshadow/kill-team-rpg/issues"
 }
