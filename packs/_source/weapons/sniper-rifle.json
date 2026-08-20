@@ -20,7 +20,7 @@
     "abilities": "A model firing a sniper rifle does not suffer the penalty to hit rolls for the target being at long range. If you roll a wound roll of 6+ for this weapon, it inflicts a mortal wound in addition to its normal damage."
   },
   "effects": [],
-  "folder": null,
+  "folder": "folderAdECOgM0aa",
   "sort": 2300,
   "ownership": {
     "default": 0
@@ -29,7 +29,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.7.0",
+    "systemVersion": "0.8.2",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

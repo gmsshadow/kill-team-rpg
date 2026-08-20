@@ -243,5 +243,14 @@
   "KT.Warn.NoSpecialism": "This operative has no specialism.",
   "KT.Warn.LevelTooLow": "This operative has not reached Level {level} yet.",
   "KT.Warn.NoSpecialismDefinition": "No definition found for that specialism. Import the Specialisms compendium, or create a Specialism item for it.",
-  "KT.Warn.NoAbilitiesAvailable": "No abilities are available at that level. The Level 3 choices depend on which Level 2 ability was taken."
+  "KT.Warn.NoAbilitiesAvailable": "No abilities are available at that level. The Level 3 choices depend on which Level 2 ability was taken.",
+  "TYPES.Item.model": "Model Datasheet",
+  "KT.Dialog.ApplyModelTitle": "Apply datasheet",
+  "KT.Dialog.ApplyModel": "Overwrite {actor}'s characteristics, points, faction and keywords with the {model} datasheet? Wargear, specialism and experience are left alone.",
+  "KT.Info.ModelApplied": "Applied the {model} datasheet to {actor}.",
+  "KT.MaxNumberHint": "Maximum number of this model allowed in a kill team. '-' means unlimited.",
+  "KT.Specialisms": "Specialisms",
+  "KT.AllowedSpecialisms": "Allowed specialisms",
+  "KT.ModelDropHint": "Drag this datasheet onto an operative to set its characteristics, points, faction and keywords.",
+  "KT.InvulnerableHint": "Invulnerable save. Never modified by Armour Penetration. Leave blank if the model has none."
 }

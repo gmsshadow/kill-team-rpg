@@ -71,6 +71,41 @@
   </div>
   {{/if}}
 
+  {{#if isModel}}
+  <div class="kt-bar kt-grid-profile-item">
+    <span>M</span><span>WS</span><span>BS</span><span>S</span><span>T</span>
+    <span>W</span><span>A</span><span>Ld</span><span>Sv</span><span>InSv</span><span>Max</span>
+  </div>
+  <div class="kt-row kt-grid-profile-item">
+    <input type="text" name="system.profile.move" value="{{system.profile.move}}"/>
+    <input type="number" name="system.profile.ws" value="{{system.profile.ws}}" min="1" max="7"/>
+    <input type="number" name="system.profile.bs" value="{{system.profile.bs}}" min="1" max="7"/>
+    <input type="number" name="system.profile.strength" value="{{system.profile.strength}}" min="1"/>
+    <input type="number" name="system.profile.toughness" value="{{system.profile.toughness}}" min="1"/>
+    <input type="number" name="system.profile.wounds" value="{{system.profile.wounds}}" min="1"/>
+    <input type="number" name="system.profile.attacks" value="{{system.profile.attacks}}" min="0"/>
+    <input type="number" name="system.profile.ld" value="{{system.profile.ld}}" min="1"/>
+    <input type="number" name="system.profile.save" value="{{system.profile.save}}" min="1" max="7"/>
+    <input type="number" name="system.profile.invulnerable" value="{{system.profile.invulnerable}}" min="1" max="7" placeholder="-"/>
+    <input type="text" name="system.maxNumber" value="{{system.maxNumber}}" placeholder="-"/>
+  </div>
+  <div class="kt-item-grid">
+    <label class="kt-field"><span>{{localize "KT.Faction"}}</span>
+      <input type="text" name="system.faction" value="{{system.faction}}"/></label>
+    <label class="kt-field"><span>{{localize "KT.Page"}}</span>
+      <input type="number" name="system.page" value="{{system.page}}" min="0"/></label>
+    <label class="kt-field kt-field-wide"><span>{{localize "KT.Keywords"}}</span>
+      <input type="text" name="system.keywords" value="{{system.keywords}}"
+             placeholder="{{localize 'KT.KeywordsHint'}}"/></label>
+    <label class="kt-field kt-field-wide"><span>{{localize "KT.Wargear"}}</span>
+      <input type="text" name="system.wargear" value="{{system.wargear}}"/></label>
+  </div>
+  {{#if system.specialismLabels.length}}
+  <p class="kt-hint">{{localize "KT.AllowedSpecialisms"}}: {{#each system.specialismLabels}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+  {{/if}}
+  <p class="kt-hint">{{localize "KT.ModelDropHint"}}</p>
+  {{/if}}
+
   {{#if isSpecialism}}
   <div class="kt-item-grid">
     <label class="kt-field"><span>{{localize "KT.SpecialismLabel"}}</span>

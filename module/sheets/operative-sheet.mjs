@@ -149,6 +149,25 @@ export default class KTOperativeSheet extends HandlebarsApplicationMixin(ActorSh
       return;
     }
 
+    // A model datasheet stamps the operative's base profile. It is applied
+    // rather than embedded: the datacard is a copy, so editing the datasheet
+    // later does not silently rewrite operatives already built from it.
+    if (item.type === "model") {
+      const confirmed = await foundry.applications.api.DialogV2.confirm({
+        window: { title: game.i18n.localize("KT.Dialog.ApplyModelTitle") },
+        content: `<p>${game.i18n.format("KT.Dialog.ApplyModel", {
+          model: item.name, actor: this.document.name
+        })}</p>`,
+        rejectClose: false
+      });
+      if (!confirmed) return;
+      await this.document.update(item.system.toOperativeUpdate());
+      ui.notifications.info(game.i18n.format("KT.Info.ModelApplied", {
+        model: item.name, actor: this.document.name
+      }));
+      return;
+    }
+
     // A specialism definition sets the operative's specialism rather than being
     // embedded. Its abilities are chosen individually as the operative levels.
     if (item.type === "specialism") {

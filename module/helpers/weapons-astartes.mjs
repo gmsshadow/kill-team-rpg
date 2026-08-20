@@ -218,3 +218,32 @@ export const ASTARTES_ITEMS = [
   ...ASTARTES_MELEE.map(w => ({ ...w, itemType: "weapon", page: 87 })),
   ...ASTARTES_WARGEAR.map(w => ({ ...w, itemType: "wargear", page: 87 }))
 ].map(entry => ({ ...entry, faction: "Adeptus Astartes" }));
+
+/**
+ * Adeptus Astartes model datasheets.
+ *
+ * Points are from the table on pg 87. Only the Intercessor's characteristics
+ * are recorded: the rest are printed on pg 84-85, which has not been
+ * transcribed, so those entries carry their points and Max but keep the schema
+ * defaults for their profile until the datasheets are available.
+ */
+export const ASTARTES_MODELS = [
+  {
+    key: "intercessor", name: "Intercessor", points: 15, page: 85, maxNumber: "-",
+    profile: { move: '6"', ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 2, attacks: 2, ld: 7, save: 3 },
+    keywords: "Imperium, Adeptus Astartes, Primaris, Infantry, Intercessor",
+    wargear: "Bolt rifle, bolt pistol, frag and krak grenades.",
+    specialisms: ["combat", "comms", "leader", "medic", "veteran", "zealot"],
+    incomplete: false
+  },
+  { key: "intercessor-gunner", name: "Intercessor Gunner", points: 16, page: 85, maxNumber: "-", incomplete: true },
+  { key: "intercessor-sergeant", name: "Intercessor Sergeant", points: 16, page: 85, maxNumber: "1", incomplete: true },
+  { key: "reiver", name: "Reiver", points: 16, page: 85, maxNumber: "-", incomplete: true },
+  { key: "reiver-sergeant", name: "Reiver Sergeant", points: 17, page: 85, maxNumber: "1", incomplete: true },
+  { key: "scout", name: "Scout", points: 10, page: 84, maxNumber: "-", incomplete: true },
+  { key: "scout-gunner", name: "Scout Gunner", points: 11, page: 84, maxNumber: "-", incomplete: true },
+  { key: "scout-sergeant", name: "Scout Sergeant", points: 11, page: 84, maxNumber: "1", incomplete: true },
+  { key: "tactical-marine", name: "Tactical Marine", points: 12, page: 84, maxNumber: "-", incomplete: true },
+  { key: "tactical-marine-gunner", name: "Tactical Marine Gunner", points: 13, page: 84, maxNumber: "-", incomplete: true },
+  { key: "tactical-sergeant", name: "Tactical Sergeant", points: 13, page: 84, maxNumber: "1", incomplete: true }
+].map(model => ({ ...model, faction: "Adeptus Astartes", itemType: "model" }));

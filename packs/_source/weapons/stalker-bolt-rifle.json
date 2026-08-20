@@ -20,7 +20,7 @@
     "abilities": ""
   },
   "effects": [],
-  "folder": null,
+  "folder": "folderAdECOgM0aa",
   "sort": 2400,
   "ownership": {
     "default": 0
@@ -29,7 +29,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.7.0",
+    "systemVersion": "0.8.2",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

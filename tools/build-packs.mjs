@@ -20,7 +20,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { compilePack } from "@foundryvtt/foundryvtt-cli";
 import { FACTIONS } from "../module/helpers/factions.mjs";
-import { ASTARTES_ITEMS } from "../module/helpers/weapons-astartes.mjs";
+import { ASTARTES_ITEMS, ASTARTES_MODELS } from "../module/helpers/weapons-astartes.mjs";
 import { SPECIALISMS } from "../module/helpers/specialisms.mjs";
 
 const SYSTEM_ID = "kill-team-rpg";
@@ -75,7 +75,8 @@ const ICONS = {
   faction: "icons/svg/statue.svg",
   weapon: "icons/svg/sword.svg",
   wargear: "icons/svg/chest.svg",
-  specialism: "icons/svg/upgrade.svg"
+  specialism: "icons/svg/upgrade.svg",
+  model: "icons/svg/mystery-man.svg"
 };
 
 function factionDocument(faction) {
@@ -105,7 +106,7 @@ function factionDocument(faction) {
   };
 }
 
-function weaponDocument(entry, index) {
+function weaponDocument(entry, index, folderId = null) {
   const id = stableId(`${entry.faction}-${entry.key}`);
   const source = `${entry.faction}, pg ${entry.page}`;
 
@@ -146,7 +147,7 @@ function weaponDocument(entry, index) {
     img: ICONS[entry.itemType],
     system,
     effects: [],
-    folder: null,
+    folder: folderId,
     sort: (index + 1) * 100,
     ownership: { default: 0 },
     flags: {},
@@ -180,6 +181,72 @@ function specialismDocument(specialism) {
   };
 }
 
+/**
+ * A compendium folder. Folders live in the same LevelDB as the documents, under
+ * the `folders` collection, so a pack can be organised by faction rather than
+ * presenting one long list.
+ */
+function folderDocument(name, sort = 0) {
+  const id = stableId(`folder-${name}`);
+  return {
+    _key: `!folders!${id}`,
+    _id: id,
+    name,
+    type: "Item",
+    description: "",
+    folder: null,
+    sorting: "a",
+    sort,
+    color: "#c8501e",
+    flags: {},
+    _stats: stats()
+  };
+}
+
+function modelDocument(entry, folderId, index) {
+  const id = stableId(`model-${entry.faction}-${entry.key}`);
+  const profile = entry.profile ?? {};
+  return {
+    _key: `!items!${id}`,
+    _id: id,
+    name: entry.name,
+    type: "model",
+    img: ICONS.model,
+    system: {
+      points: entry.points,
+      page: entry.page,
+      source: `${entry.faction}, pg ${entry.page}`,
+      maxNumber: entry.maxNumber ?? "-",
+      faction: entry.faction,
+      keywords: entry.keywords ?? "",
+      wargear: entry.wargear ?? "",
+      specialisms: entry.specialisms ?? [],
+      profile: {
+        move: profile.move ?? '6"',
+        ws: profile.ws ?? 4,
+        bs: profile.bs ?? 4,
+        strength: profile.strength ?? 3,
+        toughness: profile.toughness ?? 3,
+        wounds: profile.wounds ?? 1,
+        attacks: profile.attacks ?? 1,
+        ld: profile.ld ?? 6,
+        save: profile.save ?? 5,
+        invulnerable: profile.invulnerable ?? null
+      },
+      // Flagged in the description so an unfinished entry is obvious in play.
+      description: entry.incomplete
+        ? `<p><em>Characteristics not yet transcribed (pg ${entry.page}). Points and Max are correct.</em></p>`
+        : ""
+    },
+    effects: [],
+    folder: folderId,
+    sort: (index + 1) * 100,
+    ownership: { default: 0 },
+    flags: {},
+    _stats: stats()
+  };
+}
+
 /** Write source JSON then compile it into a LevelDB pack. */
 async function buildPack(name, documents) {
   const sourceDir = path.join(sourceRoot, name);
@@ -207,10 +274,33 @@ async function main() {
     doc: factionDocument(faction)
   })));
 
-  await buildPack("weapons", ASTARTES_ITEMS.map((entry, index) => ({
-    file: `${entry.key}`,
-    doc: weaponDocument(entry, index)
-  })));
+  // Weapons and wargear are grouped into a folder per faction, so the pack
+  // does not become one flat list as more factions are added.
+  const weaponFactions = [...new Set(ASTARTES_ITEMS.map(e => e.faction))];
+  const weaponFolders = weaponFactions.map((name, i) => folderDocument(name, i * 100));
+  const folderByFaction = Object.fromEntries(
+    weaponFactions.map((name, i) => [name, weaponFolders[i]._id])
+  );
+  await buildPack("weapons", [
+    ...weaponFolders.map(doc => ({ file: `folder-${doc.name.toLowerCase().replace(/\W+/g, "-")}`, doc })),
+    ...ASTARTES_ITEMS.map((entry, index) => ({
+      file: entry.key,
+      doc: weaponDocument(entry, index, folderByFaction[entry.faction])
+    }))
+  ]);
+
+  const modelFactions = [...new Set(ASTARTES_MODELS.map(e => e.faction))];
+  const modelFolders = modelFactions.map((name, i) => folderDocument(name, i * 100));
+  const modelFolderByFaction = Object.fromEntries(
+    modelFactions.map((name, i) => [name, modelFolders[i]._id])
+  );
+  await buildPack("models", [
+    ...modelFolders.map(doc => ({ file: `folder-${doc.name.toLowerCase().replace(/\W+/g, "-")}`, doc })),
+    ...ASTARTES_MODELS.map((entry, index) => ({
+      file: entry.key,
+      doc: modelDocument(entry, modelFolderByFaction[entry.faction], index)
+    }))
+  ]);
 
   await buildPack("specialisms", SPECIALISMS.map(specialism => ({
     file: specialism.key,

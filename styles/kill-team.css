@@ -147,9 +147,10 @@
 
 /* ---------- Grids: the bar and its rows share a template ---------- */
 
+/* NAME then M WS BS S T W A Ld Sv InSv Max: eleven stat columns. */
 .kill-team .kt-grid-profile {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) repeat(9, 3.1rem);
+  grid-template-columns: minmax(0, 1fr) repeat(11, 2.9rem);
   gap: 0.15rem;
 }
 
@@ -1189,3 +1190,12 @@
 
 .kt-choices .kt-choice:hover { border-color: #c8501e; }
 .kt-choices .kt-choice input { margin-top: 0.25rem; flex: 0 0 auto; }
+
+/* Model datasheet profile row on the item sheet. */
+.kill-team .kt-grid-profile-item {
+  display: grid;
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+  gap: 0.15rem;
+}
+
+.kill-team .kt-grid-profile-item input { text-align: center; }

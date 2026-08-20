@@ -20,7 +20,7 @@
     "abilities": "This weapon does not inflict any damage. If an enemy INFANTRY model is hit by any shock grenades, it is stunned; until the end of the next battle round that model cannot fire Overwatch or be Readied, and your opponent must subtract 1 from hit rolls made for the model."
   },
   "effects": [],
-  "folder": null,
+  "folder": "folderAdECOgM0aa",
   "sort": 2200,
   "ownership": {
     "default": 0
@@ -29,7 +29,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.7.0",
+    "systemVersion": "0.8.2",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

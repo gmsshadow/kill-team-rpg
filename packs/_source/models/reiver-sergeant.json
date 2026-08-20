@@ -1,0 +1,45 @@
+{
+  "_key": "!items!modelAdeGsc44qQi",
+  "_id": "modelAdeGsc44qQi",
+  "name": "Reiver Sergeant",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 17,
+    "page": 85,
+    "source": "Adeptus Astartes, pg 85",
+    "maxNumber": "1",
+    "faction": "Adeptus Astartes",
+    "keywords": "",
+    "wargear": "",
+    "specialisms": [],
+    "profile": {
+      "move": "6\"",
+      "ws": 4,
+      "bs": 4,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 6,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": "<p><em>Characteristics not yet transcribed (pg 85). Points and Max are correct.</em></p>"
+  },
+  "effects": [],
+  "folder": "folderAdECOgM0aa",
+  "sort": 500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.8.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -4,6 +4,7 @@ import OperativeData from "./data/actor-operative.mjs";
 import KillTeamData from "./data/actor-killteam.mjs";
 import { WeaponData, AbilityData, WargearData, SpecialismData } from "./data/items.mjs";
 import FactionData from "./data/item-faction.mjs";
+import ModelData from "./data/item-model.mjs";
 import { KTActor, KTItem } from "./documents/documents.mjs";
 import KTOperativeSheet from "./sheets/operative-sheet.mjs";
 import KTKillTeamSheet from "./sheets/killteam-sheet.mjs";
@@ -33,7 +34,8 @@ Hooks.once("init", function () {
     ability: AbilityData,
     wargear: WargearData,
     specialism: SpecialismData,
-    faction: FactionData
+    faction: FactionData,
+    model: ModelData
   };
 
   // Kill Team rolls off with 2D6 in the Initiative phase.

@@ -17,11 +17,13 @@
       </div>
     </header>
 
-    {{!-- Profile: NAME M WS BS S T W A Ld Sv --}}
+    {{!-- Profile: NAME M WS BS S T W A Ld Sv InSv Max --}}
     <div class="kt-bar kt-grid-profile">
       <span>{{localize "KT.Name"}}</span>
       <span>M</span><span>WS</span><span>BS</span><span>S</span><span>T</span>
       <span>W</span><span>A</span><span>Ld</span><span>Sv</span>
+      <span data-tooltip="{{localize 'KT.InvulnerableHint'}}">InSv</span>
+      <span data-tooltip="{{localize 'KT.MaxNumberHint'}}">Max</span>
     </div>
     <div class="kt-row kt-grid-profile">
       <span class="kt-namecell">
@@ -40,6 +42,10 @@
       <input type="number" name="system.profile.attacks" value="{{system.profile.attacks}}" min="0"/>
       <input type="number" name="system.profile.ld" value="{{system.profile.ld}}" min="1"/>
       <span class="kt-stat"><input type="number" name="system.profile.save" value="{{system.profile.save}}" min="1" max="7"/><i>+</i></span>
+      {{!-- Invulnerable save: blank rather than 0 when the model has none. --}}
+      <span class="kt-stat"><input type="number" name="system.profile.invulnerable"
+             value="{{system.profile.invulnerable}}" min="0" max="7" placeholder="-"/><i>+</i></span>
+      <input type="text" name="system.maxNumber" value="{{system.maxNumber}}" placeholder="-"/>
     </div>
 
     {{!-- Weapons: WEAPON RANGE TYPE S AP D ABILITIES --}}
@@ -305,14 +311,6 @@
         <span>{{localize "KT.Keywords"}}</span>
         <input type="text" name="system.keywords" value="{{system.keywords}}"
                placeholder="{{localize 'KT.KeywordsHint'}}"/>
-      </label>
-      <label class="kt-field">
-        <span>{{localize "KT.MaxNumber"}}</span>
-        <input type="text" name="system.maxNumber" value="{{system.maxNumber}}"/>
-      </label>
-      <label class="kt-field">
-        <span>{{localize "KT.Invulnerable"}}</span>
-        <input type="number" name="system.profile.invulnerable" value="{{system.profile.invulnerable}}" min="1" max="7"/>
       </label>
     </div>
 

@@ -3,6 +3,29 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.9.0
+
+### Added
+- **InSv and Max moved onto the stat line**, immediately after Sv, matching how later editions
+  print them. Both are removed from the details block below, so each appears in one place only.
+  An invulnerable save shows blank rather than 0 when the model has none.
+- **Model Datasheet item type.** Dropping one onto an operative stamps its characteristics,
+  points, faction, keywords and Max number, and sets wounds to full. It asks for confirmation
+  first, since it overwrites the stat line. Wargear, specialism and experience are left alone.
+  The datacard is a copy rather than a link, so editing a datasheet later does not rewrite
+  operatives already built from it - the same way a paper datacard is written out by hand.
+- **Model Datasheets compendium** with the eleven Adeptus Astartes entries and their points.
+- **Compendium folders by faction.** The weapons and models packs are now organised into a folder
+  per faction rather than one flat list, which is what will keep them usable as more factions are
+  added. Verified: every item sits in its faction folder, none orphaned.
+- A datasheet records which specialisms the model may take, ready for validating that an operative
+  is only given a specialism its datasheet allows.
+
+### Incomplete
+- Only the Intercessor has real characteristics. The other ten Astartes datasheets are on pg 84-85,
+  which has not been transcribed, so they carry correct points and Max but schema defaults for
+  their profile. Each says so in its description rather than looking authoritative.
+
 ## 0.8.2
 
 ### Fixed
