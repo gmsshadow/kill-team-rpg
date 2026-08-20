@@ -1199,3 +1199,11 @@
 }
 
 .kill-team .kt-grid-profile-item input { text-align: center; }
+
+.kill-team .kt-datasheet-ability {
+  padding: 0.25rem 0;
+  border-bottom: 1px solid var(--kt-line, #b0aca4);
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+.kill-team .kt-datasheet-ability:last-child { border-bottom: none; }

@@ -100,6 +100,14 @@
     <label class="kt-field kt-field-wide"><span>{{localize "KT.Wargear"}}</span>
       <input type="text" name="system.wargear" value="{{system.wargear}}"/></label>
   </div>
+  {{#if system.abilities.length}}
+  <div class="kt-bar">{{localize "KT.Abilities"}}</div>
+  <ul class="kt-tree">
+    {{#each system.abilities as |ability|}}
+    <li class="kt-datasheet-ability">{{ability}}</li>
+    {{/each}}
+  </ul>
+  {{/if}}
   {{#if system.specialismLabels.length}}
   <p class="kt-hint">{{localize "KT.AllowedSpecialisms"}}: {{#each system.specialismLabels}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
   {{/if}}

@@ -220,30 +220,122 @@ export const ASTARTES_ITEMS = [
 ].map(entry => ({ ...entry, faction: "Adeptus Astartes" }));
 
 /**
- * Adeptus Astartes model datasheets.
+ * Adeptus Astartes model datasheets (pg 84-85).
  *
- * Points are from the table on pg 87. Only the Intercessor's characteristics
- * are recorded: the rest are printed on pg 84-85, which has not been
- * transcribed, so those entries carry their points and Max but keep the schema
- * defaults for their profile until the datasheets are available.
+ * Points are from the table on pg 87. Abilities shared by every Astartes model
+ * are held in COMMON_ASTARTES_ABILITIES rather than repeated on each entry.
+ * Wargear-conditional abilities (camo cloak, auspex, grapnel launcher,
+ * grav-chute) are printed on the datasheet that can take them and are recorded
+ * there, since they only apply when the item is equipped.
  */
+
+const AND_THEY_SHALL_KNOW_NO_FEAR =
+  "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.";
+const TRANSHUMAN_PHYSIOLOGY =
+  "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered.";
+
+const COMMON_ASTARTES_ABILITIES = [AND_THEY_SHALL_KNOW_NO_FEAR, TRANSHUMAN_PHYSIOLOGY];
+
 export const ASTARTES_MODELS = [
+  /* --- Scout (pg 84), Sv 4+ and a single wound --- */
+  {
+    key: "scout", name: "Scout", points: 10, page: 84, maxNumber: "-",
+    profile: { move: '6"', ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 1, attacks: 1, ld: 7, save: 4 },
+    keywords: "Imperium, Adeptus Astartes, Infantry, Scout",
+    wargear: "Boltgun, bolt pistol, frag grenades and krak grenades.",
+    specialisms: ["comms", "demolitions", "scout", "sniper"],
+    abilities: [...COMMON_ASTARTES_ABILITIES,
+      "Camo Cloak: When an opponent makes a hit roll for a shooting attack that targets a model equipped with a camo cloak, and that model is obscured, that hit roll suffers an additional -1 modifier."]
+  },
+  {
+    key: "scout-gunner", name: "Scout Gunner", points: 11, page: 84, maxNumber: "2",
+    profile: { move: '6"', ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 1, attacks: 1, ld: 7, save: 4 },
+    keywords: "Imperium, Adeptus Astartes, Infantry, Scout",
+    wargear: "Boltgun, bolt pistol, frag grenades and krak grenades.",
+    specialisms: ["heavy", "comms", "demolitions", "scout", "sniper"],
+    abilities: [...COMMON_ASTARTES_ABILITIES]
+  },
+  {
+    key: "scout-sergeant", name: "Scout Sergeant", points: 11, page: 84, maxNumber: "1",
+    profile: { move: '6"', ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 1, attacks: 2, ld: 8, save: 4 },
+    keywords: "Imperium, Adeptus Astartes, Infantry, Scout",
+    wargear: "Boltgun, bolt pistol, frag grenades and krak grenades.",
+    specialisms: ["leader", "comms", "demolitions", "scout", "sniper"],
+    abilities: [...COMMON_ASTARTES_ABILITIES]
+  },
+
+  /* --- Tactical Marine (pg 84) --- */
+  {
+    key: "tactical-marine", name: "Tactical Marine", points: 12, page: 84, maxNumber: "-",
+    profile: { move: '6"', ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 1, attacks: 1, ld: 7, save: 3 },
+    keywords: "Imperium, Adeptus Astartes, Infantry, Tactical Marine",
+    wargear: "Boltgun, bolt pistol, frag grenades and krak grenades.",
+    specialisms: ["comms", "demolitions", "sniper", "veteran"],
+    abilities: [...COMMON_ASTARTES_ABILITIES]
+  },
+  {
+    key: "tactical-marine-gunner", name: "Tactical Marine Gunner", points: 13, page: 84, maxNumber: "2",
+    profile: { move: '6"', ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 1, attacks: 1, ld: 7, save: 3 },
+    keywords: "Imperium, Adeptus Astartes, Infantry, Tactical Marine",
+    wargear: "Boltgun, bolt pistol, frag grenades and krak grenades.",
+    specialisms: ["heavy", "comms", "demolitions", "sniper", "veteran"],
+    abilities: [...COMMON_ASTARTES_ABILITIES]
+  },
+  {
+    key: "tactical-sergeant", name: "Tactical Sergeant", points: 13, page: 84, maxNumber: "1",
+    profile: { move: '6"', ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 1, attacks: 2, ld: 8, save: 3 },
+    keywords: "Imperium, Adeptus Astartes, Infantry, Tactical Marine",
+    wargear: "Boltgun, bolt pistol, frag grenades and krak grenades.",
+    specialisms: ["leader", "comms", "demolitions", "sniper", "veteran"],
+    abilities: [...COMMON_ASTARTES_ABILITIES,
+      "Auspex: At the start of the Shooting phase, you can choose another ADEPTUS ASTARTES model within 3\" of a friendly model equipped with an auspex that is not shaken. That model does not suffer penalties to their hit or injury rolls due to their target being obscured."]
+  },
+
+  /* --- Reiver (pg 85), two wounds and Terror Troops --- */
+  {
+    key: "reiver", name: "Reiver", points: 16, page: 85, maxNumber: "-",
+    profile: { move: '6"', ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 2, attacks: 2, ld: 7, save: 3 },
+    keywords: "Imperium, Adeptus Astartes, Infantry, Primaris, Reiver",
+    wargear: "Bolt carbine, heavy bolt pistol, frag grenades, krak grenades and shock grenades.",
+    specialisms: ["combat", "comms", "demolitions", "scout", "veteran"],
+    abilities: [...COMMON_ASTARTES_ABILITIES,
+      "Terror Troops: Enemy models must subtract 1 from their Leadership if they are within 3\" of any Reiver or Reiver Sergeant models.",
+      "Grapnel Launcher: A model with a grapnel launcher can climb any distance vertically (up or down) when it makes a normal move - do not measure the distance moved in this way.",
+      "Grav-chute: A model with a grav-chute never suffers falling damage, and never falls on another model. If it would, instead place this model as close as possible to the point where it would have landed. This can bring it within 1\" of an enemy model."]
+  },
+  {
+    key: "reiver-sergeant", name: "Reiver Sergeant", points: 17, page: 85, maxNumber: "1",
+    profile: { move: '6"', ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 2, attacks: 3, ld: 8, save: 3 },
+    keywords: "Imperium, Adeptus Astartes, Infantry, Primaris, Reiver",
+    wargear: "Bolt carbine, heavy bolt pistol, frag grenades, krak grenades and shock grenades.",
+    specialisms: ["leader", "combat", "comms", "demolitions", "scout", "veteran"],
+    abilities: [...COMMON_ASTARTES_ABILITIES,
+      "Terror Troops: Enemy models must subtract 1 from their Leadership if they are within 3\" of any Reiver or Reiver Sergeant models."]
+  },
+
+  /* --- Intercessor (pg 85) --- */
   {
     key: "intercessor", name: "Intercessor", points: 15, page: 85, maxNumber: "-",
     profile: { move: '6"', ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 2, attacks: 2, ld: 7, save: 3 },
-    keywords: "Imperium, Adeptus Astartes, Primaris, Infantry, Intercessor",
-    wargear: "Bolt rifle, bolt pistol, frag and krak grenades.",
-    specialisms: ["combat", "comms", "leader", "medic", "veteran", "zealot"],
-    incomplete: false
+    keywords: "Imperium, Adeptus Astartes, Infantry, Primaris, Intercessor",
+    wargear: "Bolt rifle, bolt pistol, frag grenades and krak grenades.",
+    specialisms: ["comms", "demolitions", "sniper", "veteran"],
+    abilities: [...COMMON_ASTARTES_ABILITIES]
   },
-  { key: "intercessor-gunner", name: "Intercessor Gunner", points: 16, page: 85, maxNumber: "-", incomplete: true },
-  { key: "intercessor-sergeant", name: "Intercessor Sergeant", points: 16, page: 85, maxNumber: "1", incomplete: true },
-  { key: "reiver", name: "Reiver", points: 16, page: 85, maxNumber: "-", incomplete: true },
-  { key: "reiver-sergeant", name: "Reiver Sergeant", points: 17, page: 85, maxNumber: "1", incomplete: true },
-  { key: "scout", name: "Scout", points: 10, page: 84, maxNumber: "-", incomplete: true },
-  { key: "scout-gunner", name: "Scout Gunner", points: 11, page: 84, maxNumber: "-", incomplete: true },
-  { key: "scout-sergeant", name: "Scout Sergeant", points: 11, page: 84, maxNumber: "1", incomplete: true },
-  { key: "tactical-marine", name: "Tactical Marine", points: 12, page: 84, maxNumber: "-", incomplete: true },
-  { key: "tactical-marine-gunner", name: "Tactical Marine Gunner", points: 13, page: 84, maxNumber: "-", incomplete: true },
-  { key: "tactical-sergeant", name: "Tactical Sergeant", points: 13, page: 84, maxNumber: "1", incomplete: true }
+  {
+    key: "intercessor-gunner", name: "Intercessor Gunner", points: 16, page: 85, maxNumber: "2",
+    profile: { move: '6"', ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 2, attacks: 2, ld: 7, save: 3 },
+    keywords: "Imperium, Adeptus Astartes, Infantry, Primaris, Intercessor",
+    wargear: "Bolt rifle, bolt pistol, frag grenades and krak grenades.",
+    specialisms: ["heavy", "comms", "demolitions", "sniper", "veteran"],
+    abilities: [...COMMON_ASTARTES_ABILITIES]
+  },
+  {
+    key: "intercessor-sergeant", name: "Intercessor Sergeant", points: 16, page: 85, maxNumber: "1",
+    profile: { move: '6"', ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 2, attacks: 3, ld: 8, save: 3 },
+    keywords: "Imperium, Adeptus Astartes, Infantry, Primaris, Intercessor",
+    wargear: "Bolt rifle, bolt pistol, frag grenades and krak grenades.",
+    specialisms: ["leader", "comms", "demolitions", "sniper", "veteran"],
+    abilities: [...COMMON_ASTARTES_ABILITIES]
+  }
 ].map(model => ({ ...model, faction: "Adeptus Astartes", itemType: "model" }));

@@ -10,26 +10,39 @@
     "source": "Adeptus Astartes, pg 85",
     "maxNumber": "-",
     "faction": "Adeptus Astartes",
-    "keywords": "",
-    "wargear": "",
-    "specialisms": [],
+    "keywords": "Imperium, Adeptus Astartes, Infantry, Primaris, Reiver",
+    "wargear": "Bolt carbine, heavy bolt pistol, frag grenades, krak grenades and shock grenades.",
+    "abilities": [
+      "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered.",
+      "Terror Troops: Enemy models must subtract 1 from their Leadership if they are within 3\" of any Reiver or Reiver Sergeant models.",
+      "Grapnel Launcher: A model with a grapnel launcher can climb any distance vertically (up or down) when it makes a normal move - do not measure the distance moved in this way.",
+      "Grav-chute: A model with a grav-chute never suffers falling damage, and never falls on another model. If it would, instead place this model as close as possible to the point where it would have landed. This can bring it within 1\" of an enemy model."
+    ],
+    "specialisms": [
+      "combat",
+      "comms",
+      "demolitions",
+      "scout",
+      "veteran"
+    ],
     "profile": {
       "move": "6\"",
-      "ws": 4,
-      "bs": 4,
-      "strength": 3,
-      "toughness": 3,
-      "wounds": 1,
-      "attacks": 1,
-      "ld": 6,
-      "save": 5,
+      "ws": 3,
+      "bs": 3,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 2,
+      "attacks": 2,
+      "ld": 7,
+      "save": 3,
       "invulnerable": null
     },
-    "description": "<p><em>Characteristics not yet transcribed (pg 85). Points and Max are correct.</em></p>"
+    "description": ""
   },
   "effects": [],
   "folder": "folderAdECOgM0aa",
-  "sort": 400,
+  "sort": 700,
   "ownership": {
     "default": 0
   },
@@ -37,7 +50,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.8.2",
+    "systemVersion": "0.9.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

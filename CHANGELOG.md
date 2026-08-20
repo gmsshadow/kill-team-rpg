@@ -3,6 +3,23 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.9.1
+
+### Added
+- **All eleven Adeptus Astartes datasheets completed** from pg 84-85: real characteristics, Max
+  numbers, keywords, default wargear, allowed specialisms and datasheet abilities. The placeholder
+  entries from 0.9.0 are gone.
+- Model datasheets now carry their abilities, which are written into the operative's ABILITIES box
+  when the datasheet is applied. Abilities common to every Astartes model are defined once rather
+  than repeated on each entry; wargear-conditional ones (camo cloak, auspex, grapnel launcher,
+  grav-chute) sit on the datasheets that can take them.
+
+### Notes
+- Sergeants correctly differ from their rank and file: +1 Attack, Ld 8, Max 1, and Leader added to
+  their specialism list. Gunners have Max 2 and Heavy.
+- Scouts are the outlier in the faction: Sv 4+ and a single wound, where every other Astartes model
+  is 3+.
+
 ## 0.9.0
 
 ### Added

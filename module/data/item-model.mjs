@@ -54,6 +54,14 @@ export default class ModelData extends foundry.abstract.TypeDataModel {
       /** Text description of the model's default wargear, as printed. */
       wargear: new fields.StringField({ required: true, initial: "", label: "KT.Wargear" }),
 
+      /**
+       * Datasheet abilities, one entry per printed paragraph. Applied to the
+       * operative's ABILITIES box, matching where they sit on a datacard.
+       */
+      abilities: new fields.ArrayField(
+        new fields.StringField(), { initial: [], label: "KT.Abilities" }
+      ),
+
       page: new fields.NumberField({ required: true, integer: true, min: 0, initial: 0, label: "KT.Page" }),
       source: new fields.StringField({ required: true, initial: "", label: "KT.Source" }),
       description: new fields.HTMLField({ required: true, initial: "", label: "KT.Description" })
@@ -67,6 +75,11 @@ export default class ModelData extends foundry.abstract.TypeDataModel {
       .map(key => game.i18n.localize(KT.specialisms[key] ?? key));
     const max = Number.parseInt(this.maxNumber, 10);
     this.maxCount = Number.isNaN(max) ? null : max;
+
+    // Rendered for the operative's ABILITIES box.
+    this.abilitiesHtml = this.abilities.length
+      ? `<ul>${this.abilities.map(a => `<li>${a}</li>`).join("")}</ul>`
+      : "";
   }
 
   /**
@@ -91,7 +104,8 @@ export default class ModelData extends foundry.abstract.TypeDataModel {
       "system.profile.save": this.profile.save,
       "system.profile.invulnerable": this.profile.invulnerable,
       "system.wounds.max": this.profile.wounds,
-      "system.wounds.value": this.profile.wounds
+      "system.wounds.value": this.profile.wounds,
+      "system.abilities": this.abilitiesHtml
     };
   }
 }

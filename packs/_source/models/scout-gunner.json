@@ -8,28 +8,38 @@
     "points": 11,
     "page": 84,
     "source": "Adeptus Astartes, pg 84",
-    "maxNumber": "-",
+    "maxNumber": "2",
     "faction": "Adeptus Astartes",
-    "keywords": "",
-    "wargear": "",
-    "specialisms": [],
+    "keywords": "Imperium, Adeptus Astartes, Infantry, Scout",
+    "wargear": "Boltgun, bolt pistol, frag grenades and krak grenades.",
+    "abilities": [
+      "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
+    ],
+    "specialisms": [
+      "heavy",
+      "comms",
+      "demolitions",
+      "scout",
+      "sniper"
+    ],
     "profile": {
       "move": "6\"",
-      "ws": 4,
-      "bs": 4,
-      "strength": 3,
-      "toughness": 3,
+      "ws": 3,
+      "bs": 3,
+      "strength": 4,
+      "toughness": 4,
       "wounds": 1,
       "attacks": 1,
-      "ld": 6,
-      "save": 5,
+      "ld": 7,
+      "save": 4,
       "invulnerable": null
     },
-    "description": "<p><em>Characteristics not yet transcribed (pg 84). Points and Max are correct.</em></p>"
+    "description": ""
   },
   "effects": [],
   "folder": "folderAdECOgM0aa",
-  "sort": 700,
+  "sort": 200,
   "ownership": {
     "default": 0
   },
@@ -37,7 +47,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.8.2",
+    "systemVersion": "0.9.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

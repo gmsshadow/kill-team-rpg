@@ -220,6 +220,7 @@ function modelDocument(entry, folderId, index) {
       faction: entry.faction,
       keywords: entry.keywords ?? "",
       wargear: entry.wargear ?? "",
+      abilities: entry.abilities ?? [],
       specialisms: entry.specialisms ?? [],
       profile: {
         move: profile.move ?? '6"',
@@ -233,9 +234,8 @@ function modelDocument(entry, folderId, index) {
         save: profile.save ?? 5,
         invulnerable: profile.invulnerable ?? null
       },
-      // Flagged in the description so an unfinished entry is obvious in play.
       description: entry.incomplete
-        ? `<p><em>Characteristics not yet transcribed (pg ${entry.page}). Points and Max are correct.</em></p>`
+        ? `<p><em>Characteristics not yet transcribed (pg ${entry.page}).</em></p>`
         : ""
     },
     effects: [],
