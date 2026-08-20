@@ -1,0 +1,37 @@
+{
+  "_key": "!items!NecronstkSCqqc4a",
+  "_id": "NecronstkSCqqc4a",
+  "name": "Tesla carbine",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Necrons, pg 156",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "24\"",
+    "weaponType": "assault",
+    "attacks": "2",
+    "strength": "5",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "Each hit roll of 6+ with this weapon causes 3 hits."
+  },
+  "effects": [],
+  "folder": "folderNeui6aaisY",
+  "sort": 3700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.9.1",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

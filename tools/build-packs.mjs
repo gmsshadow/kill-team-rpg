@@ -21,6 +21,7 @@ import { fileURLToPath } from "node:url";
 import { compilePack } from "@foundryvtt/foundryvtt-cli";
 import { FACTIONS } from "../module/helpers/factions.mjs";
 import { ASTARTES_ITEMS, ASTARTES_MODELS } from "../module/helpers/weapons-astartes.mjs";
+import { NECRON_ITEMS, NECRON_MODEL_ITEMS } from "../module/helpers/weapons-necrons.mjs";
 import { SPECIALISMS } from "../module/helpers/specialisms.mjs";
 
 const SYSTEM_ID = "kill-team-rpg";
@@ -276,27 +277,29 @@ async function main() {
 
   // Weapons and wargear are grouped into a folder per faction, so the pack
   // does not become one flat list as more factions are added.
-  const weaponFactions = [...new Set(ASTARTES_ITEMS.map(e => e.faction))];
+  const allWeapons = [...ASTARTES_ITEMS, ...NECRON_ITEMS];
+  const weaponFactions = [...new Set(allWeapons.map(e => e.faction))];
   const weaponFolders = weaponFactions.map((name, i) => folderDocument(name, i * 100));
   const folderByFaction = Object.fromEntries(
     weaponFactions.map((name, i) => [name, weaponFolders[i]._id])
   );
   await buildPack("weapons", [
     ...weaponFolders.map(doc => ({ file: `folder-${doc.name.toLowerCase().replace(/\W+/g, "-")}`, doc })),
-    ...ASTARTES_ITEMS.map((entry, index) => ({
+    ...allWeapons.map((entry, index) => ({
       file: entry.key,
       doc: weaponDocument(entry, index, folderByFaction[entry.faction])
     }))
   ]);
 
-  const modelFactions = [...new Set(ASTARTES_MODELS.map(e => e.faction))];
+  const allModels = [...ASTARTES_MODELS, ...NECRON_MODEL_ITEMS];
+  const modelFactions = [...new Set(allModels.map(e => e.faction))];
   const modelFolders = modelFactions.map((name, i) => folderDocument(name, i * 100));
   const modelFolderByFaction = Object.fromEntries(
     modelFactions.map((name, i) => [name, modelFolders[i]._id])
   );
   await buildPack("models", [
     ...modelFolders.map(doc => ({ file: `folder-${doc.name.toLowerCase().replace(/\W+/g, "-")}`, doc })),
-    ...ASTARTES_MODELS.map((entry, index) => ({
+    ...allModels.map((entry, index) => ({
       file: entry.key,
       doc: modelDocument(entry, modelFolderByFaction[entry.faction], index)
     }))

@@ -3,6 +3,18 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.10.0
+
+### Added
+- **Necrons** (pg 154-156): all four datasheets, four ranged weapons and one melee weapon, in
+  their own faction folders alongside the Adeptus Astartes entries. Verified against the printed
+  tables.
+- Every Necron shares Reanimation Protocols and Ld 10, and every one has a single wound, so the
+  faction's resilience comes from Injury rolls rather than from soaking damage.
+- The Flayed One is the outlier: BS 6+ and three Attacks, built for the Fight phase. It is also
+  the cheapest model in the faction at 10 points.
+- No Necron weapon costs points, so a Necron kill team's Force is its models alone.
+
 ## 0.9.1
 
 ### Added

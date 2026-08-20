@@ -1,0 +1,53 @@
+{
+  "_key": "!items!modelNecSiC4GEkU",
+  "_id": "modelNecSiC4GEkU",
+  "name": "Flayed One",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 10,
+    "page": 155,
+    "source": "Necrons, pg 155",
+    "maxNumber": "-",
+    "faction": "Necrons",
+    "keywords": "Necrons, Infantry, Flayed One",
+    "wargear": "Flayer claws.",
+    "abilities": [
+      "Reanimation Protocols: When an Injury roll is made for this model, on an unmodified roll of 6 the model is not taken out of action and does not suffer a flesh wound. Instead it is restored to 1 wound remaining with no flesh wounds."
+    ],
+    "specialisms": [
+      "leader",
+      "combat",
+      "veteran",
+      "zealot"
+    ],
+    "profile": {
+      "move": "5\"",
+      "ws": 3,
+      "bs": 6,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 1,
+      "attacks": 3,
+      "ld": 10,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "folderNeui6aaisY",
+  "sort": 1500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.9.1",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

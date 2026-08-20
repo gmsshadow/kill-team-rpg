@@ -1,0 +1,54 @@
+{
+  "_key": "!items!modelNecuUmqOAyE",
+  "_id": "modelNecuUmqOAyE",
+  "name": "Deathmark",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 15,
+    "page": 155,
+    "source": "Necrons, pg 155",
+    "maxNumber": "-",
+    "faction": "Necrons",
+    "keywords": "Necrons, Infantry, Deathmark",
+    "wargear": "Synaptic disintegrator.",
+    "abilities": [
+      "Reanimation Protocols: When an Injury roll is made for this model, on an unmodified roll of 6 the model is not taken out of action and does not suffer a flesh wound. Instead it is restored to 1 wound remaining with no flesh wounds."
+    ],
+    "specialisms": [
+      "leader",
+      "comms",
+      "scout",
+      "sniper",
+      "veteran"
+    ],
+    "profile": {
+      "move": "5\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 10,
+      "save": 3,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "folderNeui6aaisY",
+  "sort": 1400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.9.1",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}
