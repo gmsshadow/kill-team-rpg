@@ -3,6 +3,17 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.14.1
+
+### Fixed
+- **The system could not be installed or updated through Foundry.** The `download` URL pointed at
+  the `main` branch archive, and GitHub nests branch archives inside a `<repo>-<branch>/` folder,
+  so Foundry unpacked it, found no `system.json` at the root and reported that the package did not
+  contain the expected manifest. `download` now points at a release asset.
+- Added `.github/workflows/release.yml`, which builds a correctly-rooted zip on a version tag,
+  checks the tag matches `system.json`, runs the localisation validator, verifies the manifest is
+  at the archive root before publishing, and attaches both the zip and `system.json` to the release.
+
 ## 0.14.0
 
 All 24 playable factions imported: 414 models and 735 weapons.
