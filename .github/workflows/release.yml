@@ -1,0 +1,68 @@
+name: Release
+
+# Publishes a Foundry-installable zip whenever a version tag is pushed.
+#
+# Foundry requires system.json at the root of the downloaded archive. GitHub's
+# branch archives nest everything inside <repo>-<branch>/, which is why
+# archive/refs/heads/main.zip fails to install with "did not contain the
+# expected system.json manifest file". This builds the zip from the repository
+# contents instead, so the manifest sits at the top level.
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read manifest version
+        id: manifest
+        run: |
+          VERSION=$(node -p "require('./system.json').version")
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "System version: $VERSION"
+
+      - name: Check the tag matches the manifest
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          TAG="${GITHUB_REF#refs/tags/v}"
+          MANIFEST="${{ steps.manifest.outputs.version }}"
+          if [ "$TAG" != "$MANIFEST" ]; then
+            echo "Tag v$TAG does not match system.json version $MANIFEST." >&2
+            exit 1
+          fi
+
+      - name: Validate localisation
+        run: node tools/check-lang.mjs
+
+      - name: Build the package
+        run: |
+          # Zip the contents, not the containing folder, so system.json is at
+          # the root of the archive where Foundry expects it.
+          zip -r kill-team-rpg.zip . \
+            -x '.git/*' '.github/*' 'docs/rulebook/*' '*.pdf' 'node_modules/*' '*.DS_Store'
+          unzip -l kill-team-rpg.zip | head -5
+
+      - name: Confirm the manifest is at the archive root
+        run: |
+          if ! unzip -l kill-team-rpg.zip | grep -qE ' system\.json$'; then
+            echo "system.json is not at the root of the archive." >&2
+            exit 1
+          fi
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: v${{ steps.manifest.outputs.version }}
+          files: |
+            kill-team-rpg.zip
+            system.json
+          generate_release_notes: true

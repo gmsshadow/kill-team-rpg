@@ -3,6 +3,21 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.14.2
+
+### Added
+- `docs/sample-data/test-bench.js`, a macro that builds three operatives from the compendiums to
+  exercise the parts of the system never confirmed in Foundry: a Level 3 Sniper carrying Marksman
+  and Sharpshooter for the rules engine, a Tactical Sergeant with plasma weapons, and a Necron
+  Warrior to shoot at. It reports what to look for and can be re-run safely.
+
+### Known regression
+- **Multi-profile weapons are no longer present in the data.** The catalogue splits them into
+  separate entries - "Plasma gun - standard" and "Plasma gun - supercharge" rather than one weapon
+  with two profiles - so the profile chooser added in 0.6.0 now has nothing to act on. The feature
+  and its schema remain; the importer would need to recombine entries sharing a stem, and the
+  combi-weapon rule that firing both profiles costs -1 to hit is currently unrepresented.
+
 ## 0.14.1
 
 ### Fixed
