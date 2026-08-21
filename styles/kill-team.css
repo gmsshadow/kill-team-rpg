@@ -1218,3 +1218,16 @@
   font-size: 0.8rem;
   line-height: 1.4;
 }
+
+/* A die that was replaced by a re-roll, shown next to its replacement so the
+   card records what actually happened rather than only the final result. */
+.kt-die.is-discarded {
+  opacity: 0.45;
+  text-decoration: line-through;
+  font-size: 0.85em;
+}
+
+.kt-die.is-reroll {
+  position: relative;
+  box-shadow: inset 0 0 0 2px #c8501e;
+}

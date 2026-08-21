@@ -285,5 +285,6 @@
   "KT.Condition.AutoHitWeapon": "with auto-hitting weapons",
   "KT.Condition.GrenadeWeapon": "with Grenade weapons",
   "KT.Condition.RandomDamage": "with random Damage",
-  "KT.Condition.NoFactionInCommon": "against models with no Faction keyword in common"
+  "KT.Condition.NoFactionInCommon": "against models with no Faction keyword in common",
+  "KT.Roll.Rerolled": "Re-rolled"
 }

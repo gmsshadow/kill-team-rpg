@@ -193,7 +193,7 @@ function rerollLabel(rule) {
  * @param {object} rule     A reroll rule: when is "ones", "failed" or "all".
  * @param {Function} test   Re-evaluates success for a new die result.
  */
-async function applyReroll(detail, rule, test) {
+async function applyReroll(detail, rule, test, collected = []) {
   const eligible = detail
     .map((d, index) => ({ ...d, index }))
     .filter(d => {
@@ -205,12 +205,16 @@ async function applyReroll(detail, rule, test) {
 
   const roll = new Roll(`${eligible.length}d6`);
   await roll.evaluate();
+  // Attach it to the message so the dice are animated and the message's roll
+  // data matches what the card shows.
+  collected.push(roll);
   const fresh = roll.dice[0].results.map(r => r.result);
 
   const out = [...detail];
   eligible.forEach((entry, i) => {
     const die = fresh[i];
-    out[entry.index] = { die, success: test(die), rerolled: true };
+    // `was` keeps the discarded result so the card can show what changed.
+    out[entry.index] = { die, success: test(die), rerolled: true, was: entry.die };
   });
   return out;
 }
@@ -229,6 +233,7 @@ export async function resolveAttack(actor, weapon, config) {
   // Everything the operative's items contribute, filtered per roll below.
   const rules = Rules.collectRules(actor);
   const phase = isMelee ? "fight" : "shooting";
+  const rerollRolls = [];   // extra Roll objects, attached to the message below
 
   // Conditions the engine can verify. A rule naming anything else is only
   // applied when the caller has confirmed it in the dialog.
@@ -285,7 +290,7 @@ export async function resolveAttack(actor, weapon, config) {
   let hitDetail = hitDice.map(die => ({ die, success: succeedsOnHit(die) }));
   const hitReroll = Rules.bestReroll(rules, { ...ruleContext, roll: "hit" });
   if (hitReroll) {
-    hitDetail = await applyReroll(hitDetail, hitReroll, succeedsOnHit);
+    hitDetail = await applyReroll(hitDetail, hitReroll, succeedsOnHit, rerollRolls);
     applied.push(`${hitReroll.source}: ${rerollLabel(hitReroll)} ${game.i18n.localize("KT.Roll.Hit")}`);
   }
   const hits = hitDetail.filter(d => d.success).length;
@@ -315,7 +320,7 @@ export async function resolveAttack(actor, weapon, config) {
     woundDetail = woundRoll.dice[0].results.map(r => ({ die: r.result, success: succeedsOnWound(r.result) }));
     const woundReroll = Rules.bestReroll(rules, { ...ruleContext, roll: "wound" });
     if (woundReroll) {
-      woundDetail = await applyReroll(woundDetail, woundReroll, succeedsOnWound);
+      woundDetail = await applyReroll(woundDetail, woundReroll, succeedsOnWound, rerollRolls);
       applied.push(`${woundReroll.source}: ${rerollLabel(woundReroll)} ${game.i18n.localize("KT.Roll.Wound")}`);
     }
     wounds = woundDetail.filter(d => d.success).length;
@@ -348,8 +353,10 @@ export async function resolveAttack(actor, weapon, config) {
   const diceRow = (label, detail, note) => `
     <div class="kt-result-row">
       <span class="kt-result-label">${label}</span>
-      <span class="kt-result-dice">${detail.map(d =>
-        `<span class="kt-die ${d.success ? "is-success" : "is-failure"}">${d.die}</span>`).join("")}</span>
+      <span class="kt-result-dice">${detail.map(d => d.rerolled
+        ? `<span class="kt-die is-discarded" data-tooltip="${game.i18n.localize("KT.Roll.Rerolled")}">${d.was}</span>`
+          + `<span class="kt-die ${d.success ? "is-success" : "is-failure"} is-reroll">${d.die}</span>`
+        : `<span class="kt-die ${d.success ? "is-success" : "is-failure"}">${d.die}</span>`).join("")}</span>
       <span class="kt-result-note">${note}</span>
     </div>`;
 
@@ -394,7 +401,7 @@ export async function resolveAttack(actor, weapon, config) {
       <i class="fa-solid fa-skull"></i> ${game.i18n.localize("KT.Roll.InjuryRoll")}</button>`);
   }
 
-  const rolls = [hitRoll, woundRoll, saveRoll].filter(r => r);
+  const rolls = [hitRoll, woundRoll, saveRoll, ...rerollRolls].filter(r => r);
   await postCard({
     actor,
     flavor: isMelee ? game.i18n.localize("KT.Roll.CloseCombatAttack") : game.i18n.localize("KT.Roll.ShootingAttack"),

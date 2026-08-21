@@ -3,6 +3,21 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.14.3
+
+### Fixed
+- **Re-rolls happened silently.** The card showed only the final dice, so a re-roll was invisible
+  apart from the line naming the ability. The discarded result is now shown struck through beside
+  its replacement, which is outlined, so the card records what actually happened.
+- **The re-rolled dice were not attached to the message.** Only the original Roll was, so Dice So
+  Nice animated dice that no longer matched the card and the message's roll data disagreed with
+  what was displayed. Every re-roll Roll is now included.
+
+### Verified
+- Re-roll semantics tested deterministically rather than waiting on a 1 at the table: a die is
+  replaced once and only once, so a re-rolled 1 that comes up 1 again stays a 1 (pg 20). Dice not
+  eligible for the re-roll are left untouched, and re-rolling failures leaves successes alone.
+
 ## 0.14.2
 
 ### Added
