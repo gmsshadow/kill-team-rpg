@@ -54,7 +54,7 @@
   },
   "effects": [],
   "folder": "folderNeui6aaisY",
-  "sort": 1900,
+  "sort": 5900,
   "ownership": {
     "default": 0
   },
@@ -62,7 +62,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.11.0",
+    "systemVersion": "0.12.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

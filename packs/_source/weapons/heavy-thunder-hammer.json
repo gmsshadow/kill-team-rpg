@@ -1,0 +1,37 @@
+{
+  "_key": "!items!AdeptusAC8Kg2CQA",
+  "_id": "AdeptusAC8Kg2CQA",
+  "name": "Heavy thunder hammer",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adeptus Astartes, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "x2",
+    "ap": -3,
+    "damage": "4",
+    "abilities": "When attacking with this weapon, subtract 1 from the hit roll."
+  },
+  "effects": [],
+  "folder": "folderAdECOgM0aa",
+  "sort": 7400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.12.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

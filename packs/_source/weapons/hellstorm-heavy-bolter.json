@@ -1,0 +1,37 @@
+{
+  "_key": "!items!AdeptusAKgeQ66QE",
+  "_id": "AdeptusAKgeQ66QE",
+  "name": "Hellstorm heavy bolter",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 7,
+    "source": "Adeptus Astartes, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "30\"",
+    "weaponType": "heavy",
+    "attacks": "4",
+    "strength": "5",
+    "ap": 0,
+    "damage": "2",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "folderAdECOgM0aa",
+  "sort": 3200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.12.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

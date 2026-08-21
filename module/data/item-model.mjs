@@ -46,9 +46,16 @@ export default class ModelData extends foundry.abstract.TypeDataModel {
        * Which specialisms this model may take. A datasheet lists these, and a
        * model may only be given a specialism from its own list (pg 66).
        */
+      /**
+       * Specialisms this model may take, as written in the source data.
+       *
+       * Deliberately not constrained to KT.specialisms: the Commanders and
+       * Elites expansions add their own (Fortitude, Logistics, Strategist and
+       * so on), and a fixed choice list would make every imported Commander
+       * fail validation and drop out of the compendium.
+       */
       specialisms: new fields.ArrayField(
-        new fields.StringField({ choices: KT.specialisms }),
-        { initial: [], label: "KT.Specialisms" }
+        new fields.StringField(), { initial: [], label: "KT.Specialisms" }
       ),
 
       /** Text description of the model's default wargear, as printed. */
@@ -74,8 +81,10 @@ export default class ModelData extends foundry.abstract.TypeDataModel {
   /* -------------------------------------------- */
 
   prepareDerivedData() {
-    this.specialismLabels = this.specialisms
-      .map(key => game.i18n.localize(KT.specialisms[key] ?? key));
+    this.specialismLabels = this.specialisms.map(key => {
+      const known = KT.specialisms[key] ?? KT.specialisms[key.toLowerCase()];
+      return known ? game.i18n.localize(known) : key;
+    });
     const max = Number.parseInt(this.maxNumber, 10);
     this.maxCount = Number.isNaN(max) ? null : max;
 

@@ -1,0 +1,37 @@
+{
+  "_key": "!items!AdeptusA6GWIm0Ay",
+  "_id": "AdeptusA6GWIm0Ay",
+  "name": "Inferno pistol",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 8,
+    "source": "Adeptus Astartes, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "6\"",
+    "weaponType": "pistol",
+    "attacks": "1",
+    "strength": "8",
+    "ap": -4,
+    "damage": "D6",
+    "abilities": "When an attack made with this weapon hits a target that is within half range, that attack has a Damage characteristic of D6+2."
+  },
+  "effects": [],
+  "folder": "folderAdECOgM0aa",
+  "sort": 3300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.12.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

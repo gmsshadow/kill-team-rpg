@@ -5,8 +5,8 @@
   "type": "weapon",
   "img": "icons/svg/sword.svg",
   "system": {
-    "points": 3,
-    "source": "Adeptus Astartes, pg 86",
+    "points": 7,
+    "source": "Adeptus Astartes, pg undefined",
     "description": "",
     "equipped": true,
     "profileMode": "single",
@@ -17,11 +17,11 @@
     "strength": "8",
     "ap": -4,
     "damage": "D6",
-    "abilities": "If the target is within half range of this weapon, roll two dice when inflicting damage with it and discard the lowest result."
+    "abilities": "When an attack made with this weapon hits a target that is within half range, that attack has a Damage characteristic of D6+2."
   },
   "effects": [],
   "folder": "folderAdECOgM0aa",
-  "sort": 1800,
+  "sort": 4700,
   "ownership": {
     "default": 0
   },
@@ -29,7 +29,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.11.0",
+    "systemVersion": "0.12.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

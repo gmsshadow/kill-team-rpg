@@ -6,12 +6,11 @@
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "points": 11,
-    "page": 84,
-    "source": "Adeptus Astartes, pg 84",
+    "source": "Adeptus Astartes, pg undefined",
     "maxNumber": "1",
     "faction": "Adeptus Astartes",
-    "keywords": "Imperium, Adeptus Astartes, Infantry, Scout",
-    "wargear": "Boltgun, bolt pistol, frag grenades and krak grenades.",
+    "keywords": "Adeptus Astartes, Imperium, Infantry, Scout",
+    "wargear": "",
     "abilities": [
       "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
@@ -45,11 +44,10 @@
       }
     ],
     "specialisms": [
-      "leader",
-      "comms",
-      "demolitions",
-      "scout",
-      "sniper"
+      "Comms",
+      "Demolitions",
+      "Scout",
+      "Sniper"
     ],
     "profile": {
       "move": "6\"",
@@ -67,7 +65,7 @@
   },
   "effects": [],
   "folder": "folderAdECOgM0aa",
-  "sort": 300,
+  "sort": 3700,
   "ownership": {
     "default": 0
   },
@@ -75,7 +73,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.11.0",
+    "systemVersion": "0.12.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

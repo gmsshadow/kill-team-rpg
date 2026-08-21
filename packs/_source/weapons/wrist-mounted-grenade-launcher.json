@@ -1,0 +1,37 @@
+{
+  "_key": "!items!AdeptusAy82Wkwsi",
+  "_id": "AdeptusAy82Wkwsi",
+  "name": "Wrist-mounted grenade launcher",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 2,
+    "source": "Adeptus Astartes, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "assault",
+    "attacks": "D3",
+    "strength": "4",
+    "ap": -1,
+    "damage": "1",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "folderAdECOgM0aa",
+  "sort": 6400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.12.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

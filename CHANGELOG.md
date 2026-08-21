@@ -3,6 +3,32 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.13.0
+
+### Added
+- **Cross-catalogue resolution in the importer.** Adeptus Astartes, Deathwatch and Adepta
+  Sororitas hold only a faction overlay for their models - which may be taken, and what
+  specialisms they get - while the characteristics, weapons and points live in Space Marines.cat,
+  referenced by id. The importer now follows the catalogue link, merges the linked profile under
+  the local overlay, and searches both files for weapon and ability profiles.
+- **Adeptus Astartes re-imported: 51 models and 84 weapons**, up from 11 and 33. Includes the
+  Primaris range and 13 Commanders, every model with its allowed specialisms.
+
+### Changed
+- The hand-transcribed Astartes and Necron data files are removed. Faction data now has a single
+  source, and re-importing is a one-line command per faction.
+- Expansion-era stats apply throughout: the Tactical Marine is W2 at 14 points where the 2018 book
+  printed W1 at 12.
+
+### Fixed
+- Model specialisms are no longer constrained to the ten core specialisms. The Commanders and
+  Elites expansions add their own, and a fixed choice list would have made every imported
+  Commander fail validation and vanish from the compendium.
+
+### Verified
+- Necron Dynasty is a self-contained sub-faction picker with no profiles or points, so nothing was
+  hidden there. Only three of the 27 catalogues link out, all to Space Marines.
+
 ## 0.12.0
 
 Faction data now comes from the New Recruit catalogues rather than hand transcription.

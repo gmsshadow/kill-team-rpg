@@ -1,0 +1,37 @@
+{
+  "_key": "!items!AdeptusAw8amqAqW",
+  "_id": "AdeptusAw8amqAqW",
+  "name": "Cyclone missile launcher",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 6,
+    "source": "Adeptus Astartes, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "-",
+    "weaponType": "assault",
+    "attacks": "1",
+    "strength": "",
+    "ap": 0,
+    "damage": "-",
+    "abilities": "When attacking with this weapon, choose one of the profiles below."
+  },
+  "effects": [],
+  "folder": "folderAdECOgM0aa",
+  "sort": 1500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.12.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

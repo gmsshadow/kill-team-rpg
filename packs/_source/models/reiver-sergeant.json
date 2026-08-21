@@ -6,16 +6,15 @@
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "points": 17,
-    "page": 85,
-    "source": "Adeptus Astartes, pg 85",
+    "source": "Adeptus Astartes, pg undefined",
     "maxNumber": "1",
     "faction": "Adeptus Astartes",
-    "keywords": "Imperium, Adeptus Astartes, Infantry, Primaris, Reiver",
-    "wargear": "Bolt carbine, heavy bolt pistol, frag grenades, krak grenades and shock grenades.",
+    "keywords": "Adeptus Astartes, Imperium, Infantry, Phobos, Primaris, Reiver",
+    "wargear": "",
     "abilities": [
       "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered.",
-      "Terror Troops: Enemy models must subtract 1 from their Leadership if they are within 3\" of any Reiver or Reiver Sergeant models."
+      "Terror Troops: Subtract 1 from the Leadership characteristic of models while they are within 3\" of any enemy REIVER models."
     ],
     "rules": [
       {
@@ -59,12 +58,11 @@
       }
     ],
     "specialisms": [
-      "leader",
-      "combat",
-      "comms",
-      "demolitions",
-      "scout",
-      "veteran"
+      "Combat",
+      "Comms",
+      "Demolitions",
+      "Scout",
+      "Veteran"
     ],
     "profile": {
       "move": "6\"",
@@ -82,7 +80,7 @@
   },
   "effects": [],
   "folder": "folderAdECOgM0aa",
-  "sort": 800,
+  "sort": 3400,
   "ownership": {
     "default": 0
   },
@@ -90,7 +88,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.11.0",
+    "systemVersion": "0.12.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

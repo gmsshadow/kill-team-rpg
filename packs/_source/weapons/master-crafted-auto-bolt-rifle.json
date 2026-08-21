@@ -1,0 +1,37 @@
+{
+  "_key": "!items!AdeptusA6EiMsCwg",
+  "_id": "AdeptusA6EiMsCwg",
+  "name": "Master-crafted auto bolt rifle",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adeptus Astartes, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "24\"",
+    "weaponType": "assault",
+    "attacks": "3",
+    "strength": "4",
+    "ap": 0,
+    "damage": "2",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "folderAdECOgM0aa",
+  "sort": 4000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.12.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

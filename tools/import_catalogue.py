@@ -133,9 +133,55 @@ def specialisms_from_group(node, shared=None):
     return []
 
 
+def index_entries(root):
+    """Every selectionEntry in a catalogue, keyed by id."""
+    NSE = f"{NS}selectionEntry"
+    return {e.get("id"): e for e in root.iter(NSE) if e.get("id")}
+
+
+def load_linked_roots(path, root):
+    """The parsed roots of every catalogue this one links to."""
+    directory = os.path.dirname(os.path.abspath(path))
+    roots = []
+    for link in root.iter(f"{NS}catalogueLink"):
+        target = os.path.join(directory, f"{link.get('name')}.cat")
+        if os.path.exists(target):
+            roots.append(ET.parse(target).getroot())
+    return roots
+
+
+def load_linked_catalogues(path, root):
+    """
+    Load any catalogue this one links to.
+
+    Three faction files - Adeptus Astartes, Deathwatch and Adepta Sororitas -
+    hold only a faction-specific overlay for their models: which ones may be
+    taken and what specialisms they get. The characteristics, weapons and
+    points live in Space Marines.cat, referenced by id. Without following the
+    link those models import with no stats, or are missed entirely.
+    """
+    directory = os.path.dirname(os.path.abspath(path))
+    index = {}
+    for link in root.iter(f"{NS}catalogueLink"):
+        name = link.get("name")
+        target = os.path.join(directory, f"{name}.cat")
+        if not os.path.exists(target):
+            print(f"  warning: linked catalogue '{name}' not found; "
+                  f"models defined there will be skipped", file=sys.stderr)
+            continue
+        index.update(index_entries(ET.parse(target).getroot()))
+        print(f"  linked catalogue: {name}")
+    return index
+
+
 def import_catalogue(path):
     root = ET.parse(path).getroot()
     faction = root.get("name")
+    external = load_linked_catalogues(path, root)
+    linked_roots = load_linked_roots(path, root)
+    # Weapon and ability profiles are searched across the linked catalogues as
+    # well, because the models that use them are defined there.
+    all_roots = [root] + linked_roots
 
     # Rank-and-file models carry their specialisms on a catalogue-level
     # entryLink rather than inside the model entry, so collect those by name
@@ -150,14 +196,16 @@ def import_catalogue(path):
         if found:
             linked_specialisms.setdefault(link.get("name"), found)
 
-    abilities = {name: chars.get("Description", "")
-                 for name, chars in collect_profiles(root, "Ability").items()}
-    wargear_text = {name: chars.get("Ability", "")
-                    for name, chars in collect_profiles(root, "Wargear").items()}
+    abilities, wargear_text = {}, {}
+    for r in all_roots:
+        for nm, chars in collect_profiles(r, "Ability").items():
+            abilities.setdefault(nm, chars.get("Description", ""))
+        for nm, chars in collect_profiles(r, "Wargear").items():
+            wargear_text.setdefault(nm, chars.get("Ability", ""))
 
     # ---- weapons ----
     weapons, seen_weapons = [], set()
-    for p in root.iter(f"{NS}profile"):
+    for p in (q for r in all_roots for q in r.iter(f"{NS}profile")):
         if p.get("typeName") != "Weapon":
             continue
         name = p.get("name")
@@ -182,7 +230,7 @@ def import_catalogue(path):
 
     # Weapon and wargear points live on the selection entry, not the profile.
     points_by_name = {}
-    for se in root.iter(f"{NS}selectionEntry"):
+    for se in (q for r in all_roots for q in r.iter(f"{NS}selectionEntry")):
         cost = entry_costs(se)
         if cost:
             points_by_name[se.get("name")] = cost
@@ -190,17 +238,32 @@ def import_catalogue(path):
         w["points"] = points_by_name.get(w["name"], 0)
 
     # ---- models ----
-    models = []
-    for se in root.iter(f"{NS}selectionEntry"):
-        if se.get("type") != "model":
-            continue
+    # Models defined here, plus models pulled in from a linked catalogue by an
+    # overlay entryLink. The overlay supplies specialisms and categories; the
+    # linked entry supplies the profile, weapons and points.
+    candidates = [(se, None) for se in root.iter(f"{NS}selectionEntry")
+                  if se.get("type") == "model"]
+    for link in root.iter(f"{NS}entryLink"):
+        target = external.get(link.get("targetId"))
+        if target is not None and target.get("type") == "model":
+            candidates.append((target, link))
+
+    models, seen_models = [], set()
+    for se, overlay in candidates:
         profile = next((p for p in se.iter(f"{NS}profile")
                         if p.get("typeName") == "Model"), None)
         if profile is None:
             continue
+        name = (overlay if overlay is not None else se).get("name") or se.get("name")
+        if name in seen_models:
+            continue
+        seen_models.add(name)
         c = characteristics(profile)
 
         cats = [cl.get("name") for cl in se.iter(f"{NS}categoryLink")]
+        if overlay is not None:
+            cats += [cl.get("name") for cl in overlay.iter(f"{NS}categoryLink")]
+        cats = [c for c in cats if c and c != "New CategoryLink"]
         keywords = [k for k in cats if k not in ("Model",) and not k.startswith("Faction:")]
         faction_cat = next((k[len("Faction:"):].strip() for k in cats
                             if k.startswith("Faction:")), faction)
@@ -218,8 +281,14 @@ def import_catalogue(path):
         # selectionEntries. Commander specialisms (Fortitude, Logistics,
         # Strategist and so on) come from the Commanders expansion and sit
         # alongside the ten core ones, so both are kept as written.
-        specialisms = (specialisms_from_group(se, shared_groups)
-                       or linked_specialisms.get(se.get("name"), []))
+        # The overlay is the authority on specialisms: the same model may be
+        # allowed different ones in different factions.
+        specialisms = []
+        if overlay is not None:
+            specialisms = specialisms_from_group(overlay, shared_groups)
+        if not specialisms:
+            specialisms = (specialisms_from_group(se, shared_groups)
+                           or linked_specialisms.get(name, []))
 
         # Commander specialisms come from the Commanders expansion. A model
         # offering them is a Commander even where the category is absent.
@@ -228,8 +297,8 @@ def import_catalogue(path):
         is_commander = "Commander" in cats or bool(set(specialisms) & COMMANDER_SPECIALISMS)
 
         models.append({
-            "key": slug(se.get("name")),
-            "name": se.get("name"),
+            "key": slug(name),
+            "name": name,
             "points": entry_costs(se),
             "maxNumber": c.get("Max", "-") or "-",
             "profile": {

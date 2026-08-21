@@ -5,8 +5,8 @@
   "type": "weapon",
   "img": "icons/svg/sword.svg",
   "system": {
-    "points": 3,
-    "source": "Adeptus Astartes, pg 86",
+    "points": 6,
+    "source": "Adeptus Astartes, pg undefined",
     "description": "",
     "equipped": true,
     "profileMode": "single",
@@ -16,12 +16,12 @@
     "attacks": "3",
     "strength": "5",
     "ap": -1,
-    "damage": "1",
+    "damage": "2",
     "abilities": ""
   },
   "effects": [],
   "folder": "folderAdECOgM0aa",
-  "sort": 1600,
+  "sort": 2900,
   "ownership": {
     "default": 0
   },
@@ -29,7 +29,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.11.0",
+    "systemVersion": "0.12.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

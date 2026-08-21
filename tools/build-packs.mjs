@@ -20,7 +20,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { compilePack } from "@foundryvtt/foundryvtt-cli";
 import { FACTIONS } from "../module/helpers/factions.mjs";
-import { ASTARTES_ITEMS, ASTARTES_MODELS } from "../module/helpers/weapons-astartes.mjs";
+import { ADEPTUS_ASTARTES_ITEMS, ADEPTUS_ASTARTES_MODEL_ITEMS } from "../module/helpers/factions/adeptus-astartes.mjs";
 import { NECRONS_ITEMS, NECRONS_MODEL_ITEMS } from "../module/helpers/factions/necrons.mjs";
 import { rulesForAbilities } from "../module/rules/faction-rules.mjs";
 import { SPECIALISMS } from "../module/helpers/specialisms.mjs";
@@ -283,7 +283,7 @@ async function main() {
 
   // Weapons and wargear are grouped into a folder per faction, so the pack
   // does not become one flat list as more factions are added.
-  const allWeapons = [...ASTARTES_ITEMS, ...NECRONS_ITEMS];
+  const allWeapons = [...ADEPTUS_ASTARTES_ITEMS, ...NECRONS_ITEMS];
   const weaponFactions = [...new Set(allWeapons.map(e => e.faction))];
   const weaponFolders = weaponFactions.map((name, i) => folderDocument(name, i * 100));
   const folderByFaction = Object.fromEntries(
@@ -299,7 +299,7 @@ async function main() {
 
   // Imported factions are tagged by ability name at build time, so re-running
   // the importer never loses the rules work.
-  const allModels = [...ASTARTES_MODELS, ...NECRONS_MODEL_ITEMS].map(m => ({
+  const allModels = [...ADEPTUS_ASTARTES_MODEL_ITEMS, ...NECRONS_MODEL_ITEMS].map(m => ({
     ...m,
     rules: (m.rules?.length ? m.rules : rulesForAbilities(m.abilities, m.faction))
   }));

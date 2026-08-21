@@ -6,30 +6,27 @@
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "points": 16,
-    "page": 85,
-    "source": "Adeptus Astartes, pg 85",
+    "source": "Adeptus Astartes, pg undefined",
     "maxNumber": "-",
     "faction": "Adeptus Astartes",
-    "keywords": "Imperium, Adeptus Astartes, Infantry, Primaris, Reiver",
-    "wargear": "Bolt carbine, heavy bolt pistol, frag grenades, krak grenades and shock grenades.",
+    "keywords": "Adeptus Astartes, Imperium, Infantry, Phobos, Primaris, Reiver",
+    "wargear": "",
     "abilities": [
-      "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
+      "Terror Troops: Subtract 1 from the Leadership characteristic of models while they are within 3\" of any enemy REIVER models.",
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered.",
-      "Terror Troops: Enemy models must subtract 1 from their Leadership if they are within 3\" of any Reiver or Reiver Sergeant models.",
-      "Grapnel Launcher: A model with a grapnel launcher can climb any distance vertically (up or down) when it makes a normal move - do not measure the distance moved in this way.",
-      "Grav-chute: A model with a grav-chute never suffers falling damage, and never falls on another model. If it would, instead place this model as close as possible to the point where it would have landed. This can bring it within 1\" of an enemy model."
+      "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model."
     ],
     "rules": [
       {
-        "type": "reroll",
-        "roll": "nerve",
-        "characteristic": null,
-        "when": "failed",
-        "value": 0,
+        "type": "modifier",
+        "roll": null,
+        "characteristic": "leadership",
+        "when": null,
+        "value": -1,
         "penalty": null,
         "phase": "any",
-        "scope": "self",
-        "range": null,
+        "scope": "enemy",
+        "range": 3,
         "condition": null,
         "note": ""
       },
@@ -47,51 +44,25 @@
         "note": ""
       },
       {
-        "type": "modifier",
-        "roll": null,
-        "characteristic": "leadership",
-        "when": null,
-        "value": -1,
+        "type": "reroll",
+        "roll": "nerve",
+        "characteristic": null,
+        "when": "failed",
+        "value": 0,
         "penalty": null,
         "phase": "any",
-        "scope": "enemy",
-        "range": 3,
+        "scope": "self",
+        "range": null,
         "condition": null,
         "note": ""
-      },
-      {
-        "type": "manual",
-        "roll": null,
-        "characteristic": null,
-        "when": null,
-        "value": 0,
-        "penalty": null,
-        "phase": "any",
-        "scope": "self",
-        "range": null,
-        "condition": null,
-        "note": "Grapnel launcher: climb any vertical distance on a normal move without measuring it."
-      },
-      {
-        "type": "manual",
-        "roll": null,
-        "characteristic": null,
-        "when": null,
-        "value": 0,
-        "penalty": null,
-        "phase": "any",
-        "scope": "self",
-        "range": null,
-        "condition": null,
-        "note": "Grav-chute: never suffers falling damage and never falls on another model."
       }
     ],
     "specialisms": [
-      "combat",
-      "comms",
-      "demolitions",
-      "scout",
-      "veteran"
+      "Combat",
+      "Comms",
+      "Demolitions",
+      "Scout",
+      "Veteran"
     ],
     "profile": {
       "move": "6\"",
@@ -109,7 +80,7 @@
   },
   "effects": [],
   "folder": "folderAdECOgM0aa",
-  "sort": 700,
+  "sort": 3300,
   "ownership": {
     "default": 0
   },
@@ -117,7 +88,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.11.0",
+    "systemVersion": "0.12.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null
