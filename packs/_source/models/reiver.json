@@ -19,6 +19,73 @@
       "Grapnel Launcher: A model with a grapnel launcher can climb any distance vertically (up or down) when it makes a normal move - do not measure the distance moved in this way.",
       "Grav-chute: A model with a grav-chute never suffers falling damage, and never falls on another model. If it would, instead place this model as close as possible to the point where it would have landed. This can bring it within 1\" of an enemy model."
     ],
+    "rules": [
+      {
+        "type": "reroll",
+        "roll": "nerve",
+        "characteristic": null,
+        "when": "failed",
+        "value": 0,
+        "penalty": null,
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      },
+      {
+        "type": "ignorePenalty",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": "fleshWound",
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      },
+      {
+        "type": "modifier",
+        "roll": null,
+        "characteristic": "leadership",
+        "when": null,
+        "value": -1,
+        "penalty": null,
+        "phase": "any",
+        "scope": "enemy",
+        "range": 3,
+        "condition": null,
+        "note": ""
+      },
+      {
+        "type": "manual",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": null,
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": "Grapnel launcher: climb any vertical distance on a normal move without measuring it."
+      },
+      {
+        "type": "manual",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": null,
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": "Grav-chute: never suffers falling damage and never falls on another model."
+      }
+    ],
     "specialisms": [
       "combat",
       "comms",
@@ -50,7 +117,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.9.1",
+    "systemVersion": "0.11.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

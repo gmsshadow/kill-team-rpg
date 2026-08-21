@@ -1,17 +1,17 @@
 {
   "_key": "!items!NecronsggM2qaGcO",
   "_id": "NecronsggM2qaGcO",
-  "name": "Gauss blaster",
+  "name": "Gauss Blaster",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
   "system": {
     "points": 0,
-    "source": "Necrons, pg 156",
+    "source": "Necrons, pg undefined",
     "description": "",
     "equipped": true,
     "profileMode": "single",
     "profiles": [],
-    "range": "24\"",
+    "range": "30\"",
     "weaponType": "rapidFire",
     "attacks": "1",
     "strength": "5",
@@ -21,7 +21,7 @@
   },
   "effects": [],
   "folder": "folderNeui6aaisY",
-  "sort": 3400,
+  "sort": 3700,
   "ownership": {
     "default": 0
   },
@@ -29,7 +29,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.9.1",
+    "systemVersion": "0.11.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

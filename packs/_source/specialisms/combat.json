@@ -15,43 +15,148 @@
         "name": "Expert Fighter",
         "level": 1,
         "parent": null,
-        "description": "Add 1 to this model's Attacks characteristic."
+        "description": "Add 1 to this model's Attacks characteristic.",
+        "rules": [
+          {
+            "type": "modifier",
+            "roll": null,
+            "characteristic": "attacks",
+            "when": null,
+            "value": 1,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Warrior Adept",
         "level": 2,
         "parent": null,
-        "description": "Add 1 to hit rolls for this model in the Fight phase."
+        "description": "Add 1 to hit rolls for this model in the Fight phase.",
+        "rules": [
+          {
+            "type": "modifier",
+            "roll": "hit",
+            "characteristic": null,
+            "when": null,
+            "value": 1,
+            "penalty": null,
+            "phase": "fight",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Deadly Counter",
         "level": 2,
         "parent": null,
-        "description": "If any hit rolls of 1 or less are made for a model's attacks that target this model in the Fight phase, unless this model is shaken, roll a D6. On a 5+, the model that made the attack suffers 1 mortal wound after all of their attacks have been resolved."
+        "description": "If any hit rolls of 1 or less are made for a model's attacks that target this model in the Fight phase, unless this model is shaken, roll a D6. On a 5+, the model that made the attack suffers 1 mortal wound after all of their attacks have been resolved.",
+        "rules": [
+          {
+            "type": "manual",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": "On an enemy hit roll of 1 or less against this model in the Fight phase, roll a D6; on a 5+ that attacker suffers 1 mortal wound."
+          }
+        ]
       },
       {
         "name": "Deathblow",
         "level": 3,
         "parent": "Warrior Adept",
-        "description": "Any wound rolls of 6 you make for this model in the Fight phase inflict 1 mortal wound on the target in addition to any other damage."
+        "description": "Any wound rolls of 6 you make for this model in the Fight phase inflict 1 mortal wound on the target in addition to any other damage.",
+        "rules": [
+          {
+            "type": "manual",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": "Wound rolls of 6 in the Fight phase inflict 1 mortal wound in addition to other damage."
+          }
+        ]
       },
       {
         "name": "Combat Master",
         "level": 3,
         "parent": "Warrior Adept",
-        "description": "Add 1 to the Attacks characteristic of this model for each enemy model within 1\" of it at the start of the Fight phase, until the end of the phase."
+        "description": "Add 1 to the Attacks characteristic of this model for each enemy model within 1\" of it at the start of the Fight phase, until the end of the phase.",
+        "rules": [
+          {
+            "type": "manual",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": "Add 1 to Attacks for each enemy model within 1\" at the start of the Fight phase."
+          }
+        ]
       },
       {
         "name": "Killer Instinct",
         "level": 3,
         "parent": "Deadly Counter",
-        "description": "You can re-roll any failed wound rolls you make for this model in the Fight phase."
+        "description": "You can re-roll any failed wound rolls you make for this model in the Fight phase.",
+        "rules": [
+          {
+            "type": "reroll",
+            "roll": "wound",
+            "characteristic": null,
+            "when": "failed",
+            "value": 0,
+            "penalty": null,
+            "phase": "fight",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Bloodlust",
         "level": 3,
         "parent": "Deadly Counter",
-        "description": "You can re-roll any failed charge rolls you make for this model."
+        "description": "You can re-roll any failed charge rolls you make for this model.",
+        "rules": [
+          {
+            "type": "reroll",
+            "roll": "charge",
+            "characteristic": null,
+            "when": "failed",
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": ""
+          }
+        ]
       }
     ],
     "tactics": [
@@ -85,7 +190,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.9.1",
+    "systemVersion": "0.11.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

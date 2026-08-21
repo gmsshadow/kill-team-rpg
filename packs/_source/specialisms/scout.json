@@ -15,43 +15,148 @@
         "name": "Swift",
         "level": 1,
         "parent": null,
-        "description": "You can re-roll Advance rolls for this model."
+        "description": "You can re-roll Advance rolls for this model.",
+        "rules": [
+          {
+            "type": "reroll",
+            "roll": "advance",
+            "characteristic": null,
+            "when": "all",
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Forward Scout",
         "level": 2,
         "parent": null,
-        "description": "This model automatically passes dangerous terrain tests (pg 42)."
+        "description": "This model automatically passes dangerous terrain tests (pg 42).",
+        "rules": [
+          {
+            "type": "ignorePenalty",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": "dangerousTerrain",
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Pathfinder",
         "level": 2,
         "parent": null,
-        "description": "If this model is not in Convalescence (pg 204), you can add or subtract 1 from the result when you roll to determine a mission. If you do, this model must be included in your kill team."
+        "description": "If this model is not in Convalescence (pg 204), you can add or subtract 1 from the result when you roll to determine a mission. If you do, this model must be included in your kill team.",
+        "rules": [
+          {
+            "type": "manual",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": "Add or subtract 1 when rolling to determine a mission; this model must then be included."
+          }
+        ]
       },
       {
         "name": "Skirmisher",
         "level": 3,
         "parent": "Forward Scout",
-        "description": "Your opponent(s) must subtract 1 from hit rolls for shooting attacks that target this model if the firing model is more than 12\" from this model and this model is not shaken or obscured."
+        "description": "Your opponent(s) must subtract 1 from hit rolls for shooting attacks that target this model if the firing model is more than 12\" from this model and this model is not shaken or obscured.",
+        "rules": [
+          {
+            "type": "manual",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": "Enemies more than 12\" away subtract 1 from hit rolls against this model, if it is not shaken or obscured."
+          }
+        ]
       },
       {
         "name": "Vanguard",
         "level": 3,
         "parent": "Forward Scout",
-        "description": "You can re-roll hit rolls of 1 in the Shooting phase for attacks made by models from your kill team against enemy models that are within 6\" of this model, as long as this model is not shaken."
+        "description": "You can re-roll hit rolls of 1 in the Shooting phase for attacks made by models from your kill team against enemy models that are within 6\" of this model, as long as this model is not shaken.",
+        "rules": [
+          {
+            "type": "reroll",
+            "roll": "hit",
+            "characteristic": null,
+            "when": "ones",
+            "value": 0,
+            "penalty": null,
+            "phase": "shooting",
+            "scope": "friendly",
+            "range": null,
+            "condition": "notShaken",
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Observer",
         "level": 3,
         "parent": "Pathfinder",
-        "description": "If this model is in your kill team, you can roll a D6 at the start of the Scouting phase. On a 4+ you can pick an additional strategy."
+        "description": "If this model is in your kill team, you can roll a D6 at the start of the Scouting phase. On a 4+ you can pick an additional strategy.",
+        "rules": [
+          {
+            "type": "manual",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": "Roll a D6 at the start of the Scouting phase; on a 4+ pick an additional strategy."
+          }
+        ]
       },
       {
         "name": "Explorer",
         "level": 3,
         "parent": "Pathfinder",
-        "description": "After each battle in which this model was in your kill team, if this model is not in Convalescence (pg 204), you can roll a D6. On a 5+ you gain 1 Territory."
+        "description": "After each battle in which this model was in your kill team, if this model is not in Convalescence (pg 204), you can roll a D6. On a 5+ you gain 1 Territory.",
+        "rules": [
+          {
+            "type": "manual",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": "Post-battle: roll a D6; on a 5+ gain 1 Territory."
+          }
+        ]
       }
     ],
     "tactics": [
@@ -85,7 +190,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.9.1",
+    "systemVersion": "0.11.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

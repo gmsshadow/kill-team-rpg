@@ -1,12 +1,12 @@
 {
   "_key": "!items!NecronsfO6CUcUCe",
   "_id": "NecronsfO6CUcUCe",
-  "name": "Flayer claws",
+  "name": "Flayer Claws",
   "type": "weapon",
   "img": "icons/svg/sword.svg",
   "system": {
     "points": 0,
-    "source": "Necrons, pg 156",
+    "source": "Necrons, pg undefined",
     "description": "",
     "equipped": true,
     "profileMode": "single",
@@ -15,13 +15,13 @@
     "weaponType": "melee",
     "attacks": "1",
     "strength": "User",
-    "ap": 0,
+    "ap": -1,
     "damage": "1",
-    "abilities": "Re-roll failed wound rolls for this weapon."
+    "abilities": ""
   },
   "effects": [],
   "folder": "folderNeui6aaisY",
-  "sort": 3800,
+  "sort": 5100,
   "ownership": {
     "default": 0
   },
@@ -29,7 +29,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.9.1",
+    "systemVersion": "0.11.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

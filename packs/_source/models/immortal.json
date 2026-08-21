@@ -5,30 +5,43 @@
   "type": "model",
   "img": "icons/svg/mystery-man.svg",
   "system": {
-    "points": 16,
-    "page": 154,
-    "source": "Necrons, pg 154",
+    "points": 17,
+    "source": "Necrons, pg undefined",
     "maxNumber": "-",
     "faction": "Necrons",
     "keywords": "Necrons, Infantry, Immortal",
-    "wargear": "Gauss blaster. May replace its gauss blaster with a tesla carbine.",
+    "wargear": "Gauss Blaster; Tesla Carbine",
     "abilities": [
-      "Reanimation Protocols: When an Injury roll is made for this model, on an unmodified roll of 6 the model is not taken out of action and does not suffer a flesh wound. Instead it is restored to 1 wound remaining with no flesh wounds."
+      "Reanimation Protocols: When an Injury roll is made for this model, on an unmodified roll of 6 the model is not taken out of action and does not suffer a flesh wound.  Instead it is restored to 1 wound remaining with no flesh wounds."
+    ],
+    "rules": [
+      {
+        "type": "manual",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": null,
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": "On an unmodified Injury roll of 6, restore to 1 wound with no flesh wounds instead of going out of action."
+      }
     ],
     "specialisms": [
-      "leader",
-      "comms",
-      "veteran",
-      "zealot"
+      "Comms",
+      "Veteran",
+      "Zealot"
     ],
     "profile": {
       "move": "5\"",
       "ws": 3,
       "bs": 3,
       "strength": 4,
-      "toughness": 4,
+      "toughness": 5,
       "wounds": 1,
-      "attacks": 1,
+      "attacks": 2,
       "ld": 10,
       "save": 3,
       "invulnerable": null
@@ -37,7 +50,7 @@
   },
   "effects": [],
   "folder": "folderNeui6aaisY",
-  "sort": 1300,
+  "sort": 1600,
   "ownership": {
     "default": 0
   },
@@ -45,7 +58,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.9.1",
+    "systemVersion": "0.11.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

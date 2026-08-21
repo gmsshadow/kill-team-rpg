@@ -17,6 +17,47 @@
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered.",
       "Auspex: At the start of the Shooting phase, you can choose another ADEPTUS ASTARTES model within 3\" of a friendly model equipped with an auspex that is not shaken. That model does not suffer penalties to their hit or injury rolls due to their target being obscured."
     ],
+    "rules": [
+      {
+        "type": "reroll",
+        "roll": "nerve",
+        "characteristic": null,
+        "when": "failed",
+        "value": 0,
+        "penalty": null,
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      },
+      {
+        "type": "ignorePenalty",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": "fleshWound",
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      },
+      {
+        "type": "manual",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": null,
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": "Auspex: nominate a friendly Astartes model within 3\"; it ignores obscured penalties to hit and Injury rolls this phase."
+      }
+    ],
     "specialisms": [
       "leader",
       "comms",
@@ -48,7 +89,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.9.1",
+    "systemVersion": "0.11.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

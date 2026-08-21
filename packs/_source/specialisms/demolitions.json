@@ -15,43 +15,161 @@
         "name": "Breacher",
         "level": 1,
         "parent": null,
-        "description": "You can add 1 to this model's wound rolls against targets that are obscured."
+        "description": "You can add 1 to this model's wound rolls against targets that are obscured.",
+        "rules": [
+          {
+            "type": "modifier",
+            "roll": "wound",
+            "characteristic": null,
+            "when": null,
+            "value": 1,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": "targetObscured",
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Pyromaniac",
         "level": 2,
         "parent": null,
-        "description": "You can re-roll wound rolls of 1 for this model when it is attacking with a weapon that hits automatically."
+        "description": "You can re-roll wound rolls of 1 for this model when it is attacking with a weapon that hits automatically.",
+        "rules": [
+          {
+            "type": "reroll",
+            "roll": "wound",
+            "characteristic": null,
+            "when": "ones",
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": "autoHitWeapon",
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Grenadier",
         "level": 2,
         "parent": null,
-        "description": "Add 3\" to the range of any Grenade weapon this model uses. You can re-roll hit rolls of 1 for Grenade weapons this model uses."
+        "description": "Add 3\" to the range of any Grenade weapon this model uses. You can re-roll hit rolls of 1 for Grenade weapons this model uses.",
+        "rules": [
+          {
+            "type": "modifier",
+            "roll": null,
+            "characteristic": "range",
+            "when": null,
+            "value": 3,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": "grenadeWeapon",
+            "note": ""
+          },
+          {
+            "type": "reroll",
+            "roll": "hit",
+            "characteristic": null,
+            "when": "ones",
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": "grenadeWeapon",
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Saboteur",
         "level": 3,
         "parent": "Pyromaniac",
-        "description": "If this model is in your kill team and not out of action when you make your Casualty rolls, roll a D6. On a 5+ choose an opponent who played that mission to lose 1 Materiel."
+        "description": "If this model is in your kill team and not out of action when you make your Casualty rolls, roll a D6. On a 5+ choose an opponent who played that mission to lose 1 Materiel.",
+        "rules": [
+          {
+            "type": "manual",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": "Post-battle: roll a D6; on a 5+ an opponent loses 1 Materiel."
+          }
+        ]
       },
       {
         "name": "Sapper",
         "level": 3,
         "parent": "Pyromaniac",
-        "description": "If this model is in your kill team and you choose the Plant Traps strategy (pg 49), you can add 1 to the number of pieces of terrain you can booby trap."
+        "description": "If this model is in your kill team and you choose the Plant Traps strategy (pg 49), you can add 1 to the number of pieces of terrain you can booby trap.",
+        "rules": [
+          {
+            "type": "manual",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": "Add 1 to the number of pieces of terrain you can booby trap with Plant Traps."
+          }
+        ]
       },
       {
         "name": "Siegemaster",
         "level": 3,
         "parent": "Grenadier",
-        "description": "You can add 1 to Injury rolls caused by this model's attacks in the Shooting phase if those Injury rolls are for models that are obscured."
+        "description": "You can add 1 to Injury rolls caused by this model's attacks in the Shooting phase if those Injury rolls are for models that are obscured.",
+        "rules": [
+          {
+            "type": "modifier",
+            "roll": "injury",
+            "characteristic": null,
+            "when": null,
+            "value": 1,
+            "penalty": null,
+            "phase": "shooting",
+            "scope": "self",
+            "range": null,
+            "condition": "targetObscured",
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Ammo Hound",
         "level": 3,
         "parent": "Grenadier",
-        "description": "If this model is in your kill team and not out of action when you make your Casualty rolls, roll a D6. On a 5+ you gain 1 Materiel."
+        "description": "If this model is in your kill team and not out of action when you make your Casualty rolls, roll a D6. On a 5+ you gain 1 Materiel.",
+        "rules": [
+          {
+            "type": "manual",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": "Post-battle: roll a D6; on a 5+ gain 1 Materiel."
+          }
+        ]
       }
     ],
     "tactics": [
@@ -85,7 +203,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.9.1",
+    "systemVersion": "0.11.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

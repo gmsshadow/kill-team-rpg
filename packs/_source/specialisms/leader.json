@@ -15,43 +15,148 @@
         "name": "Resourceful",
         "level": 1,
         "parent": null,
-        "description": "As long as this model is on the battlefield and not shaken, you gain an additional Command Point at the beginning of the battle round."
+        "description": "As long as this model is on the battlefield and not shaken, you gain an additional Command Point at the beginning of the battle round.",
+        "rules": [
+          {
+            "type": "manual",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": "Gain 1 additional Command Point at the beginning of the battle round while on the battlefield and not shaken."
+          }
+        ]
       },
       {
         "name": "Bold",
         "level": 2,
         "parent": null,
-        "description": "This model automatically passes Nerve tests."
+        "description": "This model automatically passes Nerve tests.",
+        "rules": [
+          {
+            "type": "autoPass",
+            "roll": "nerve",
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Inspiring",
         "level": 2,
         "parent": null,
-        "description": "Friendly models within 3\" of this model - as long as it is not shaken - automatically pass Nerve tests."
+        "description": "Friendly models within 3\" of this model - as long as it is not shaken - automatically pass Nerve tests.",
+        "rules": [
+          {
+            "type": "autoPass",
+            "roll": "nerve",
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "friendly",
+            "range": 3,
+            "condition": "notShaken",
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Paragon",
         "level": 3,
         "parent": "Bold",
-        "description": "Re-roll hit rolls of 1 for friendly models within 3\" of this model, as long as it is not shaken."
+        "description": "Re-roll hit rolls of 1 for friendly models within 3\" of this model, as long as it is not shaken.",
+        "rules": [
+          {
+            "type": "reroll",
+            "roll": "hit",
+            "characteristic": null,
+            "when": "ones",
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "friendly",
+            "range": 3,
+            "condition": "notShaken",
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Tyrant",
         "level": 3,
         "parent": "Bold",
-        "description": "Your opponent(s) must add 1 to Nerve tests for any enemy models within 6\" of this model, as long as it is not shaken."
+        "description": "Your opponent(s) must add 1 to Nerve tests for any enemy models within 6\" of this model, as long as it is not shaken.",
+        "rules": [
+          {
+            "type": "modifier",
+            "roll": "nerve",
+            "characteristic": null,
+            "when": null,
+            "value": 1,
+            "penalty": null,
+            "phase": "any",
+            "scope": "enemy",
+            "range": 6,
+            "condition": "notShaken",
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Tactician",
         "level": 3,
         "parent": "Inspiring",
-        "description": "As long as this model is on the battlefield and not shaken, roll a D6 each time you use a Tactic. On a 5+ you gain a Command Point."
+        "description": "As long as this model is on the battlefield and not shaken, roll a D6 each time you use a Tactic. On a 5+ you gain a Command Point.",
+        "rules": [
+          {
+            "type": "manual",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": "Roll a D6 each time you use a Tactic; on a 5+ gain a Command Point."
+          }
+        ]
       },
       {
         "name": "Mentor",
         "level": 3,
         "parent": "Inspiring",
-        "description": "Once per battle round, when you choose a friendly model within 3\" of this model to shoot in the Shooting phase - as long as this model is not shaken - you can re-roll failed hit rolls for that model until the end of the phase."
+        "description": "Once per battle round, when you choose a friendly model within 3\" of this model to shoot in the Shooting phase - as long as this model is not shaken - you can re-roll failed hit rolls for that model until the end of the phase.",
+        "rules": [
+          {
+            "type": "reroll",
+            "roll": "hit",
+            "characteristic": null,
+            "when": "failed",
+            "value": 0,
+            "penalty": null,
+            "phase": "shooting",
+            "scope": "friendly",
+            "range": 3,
+            "condition": "notShaken",
+            "note": ""
+          }
+        ]
       }
     ],
     "tactics": [
@@ -85,7 +190,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.9.1",
+    "systemVersion": "0.11.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

@@ -180,7 +180,14 @@ export class AbilityData extends foundry.abstract.TypeDataModel {
         required: true, integer: true, min: 0, max: 4, initial: 0, label: "KT.Level"
       }),
 
-      active: new fields.BooleanField({ initial: true, label: "KT.Active" })
+      active: new fields.BooleanField({ initial: true, label: "KT.Active" }),
+
+      /**
+       * Machine-readable rules, in the vocabulary defined in
+       * module/rules/vocabulary.mjs. An empty array means the ability is
+       * reference text only.
+       */
+      rules: new fields.ArrayField(new fields.ObjectField(), { initial: [], label: "KT.RulesLabel" })
     };
   }
 }
@@ -224,7 +231,8 @@ export class SpecialismData extends foundry.abstract.TypeDataModel {
            * only be taken if its parent was the Level 2 choice (pg 66).
            */
           parent: new fields.StringField({ required: false, nullable: true, initial: null, label: "KT.Parent" }),
-          description: new fields.StringField({ required: true, initial: "", label: "KT.Description" })
+          description: new fields.StringField({ required: true, initial: "", label: "KT.Description" }),
+          rules: new fields.ArrayField(new fields.ObjectField(), { initial: [] })
         }),
         { initial: [], label: "KT.Abilities" }
       ),

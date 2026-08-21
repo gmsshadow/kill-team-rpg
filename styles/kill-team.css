@@ -1207,3 +1207,14 @@
   line-height: 1.35;
 }
 .kill-team .kt-datasheet-ability:last-child { border-bottom: none; }
+
+/* Abilities that changed an attack, listed under the dice on the chat card. */
+.kt-applied {
+  list-style: none;
+  margin: 0.4rem 0 0;
+  padding: 0.3rem 0.5rem;
+  border-left: 3px solid #c8501e;
+  background: rgba(200, 80, 30, 0.08);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}

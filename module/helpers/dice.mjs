@@ -1,5 +1,6 @@
 import { KT, SYSTEM_ID } from "./config.mjs";
 import { WeaponData } from "../data/items.mjs";
+import * as Rules from "../rules/vocabulary.mjs";
 
 const FormDataExtended = foundry.applications.ux?.FormDataExtended ?? globalThis.FormDataExtended;
 const DialogV2 = foundry.applications.api.DialogV2;
@@ -172,6 +173,48 @@ function profileLabel(weapon, profile) {
 /**
  * Resolve a full attack: hit rolls, wound rolls and saving throws.
  */
+
+/* -------------------------------------------- */
+/*  Re-roll support                             */
+/* -------------------------------------------- */
+
+/** Human label for a re-roll rule, e.g. "re-roll 1s". */
+function rerollLabel(rule) {
+  return game.i18n.localize(`KT.Reroll.${rule.when[0].toUpperCase()}${rule.when.slice(1)}`);
+}
+
+/**
+ * Re-roll the dice a rule allows and keep the new results.
+ *
+ * A die may only be re-rolled once (pg 20), so this replaces the eligible dice
+ * in a single pass rather than looping until they succeed.
+ *
+ * @param {{die: number, success: boolean}[]} detail
+ * @param {object} rule     A reroll rule: when is "ones", "failed" or "all".
+ * @param {Function} test   Re-evaluates success for a new die result.
+ */
+async function applyReroll(detail, rule, test) {
+  const eligible = detail
+    .map((d, index) => ({ ...d, index }))
+    .filter(d => {
+      if (rule.when === "all") return true;
+      if (rule.when === "failed") return !d.success;
+      return d.die === 1;                     // "ones"
+    });
+  if (!eligible.length) return detail;
+
+  const roll = new Roll(`${eligible.length}d6`);
+  await roll.evaluate();
+  const fresh = roll.dice[0].results.map(r => r.result);
+
+  const out = [...detail];
+  eligible.forEach((entry, i) => {
+    const die = fresh[i];
+    out[entry.index] = { die, success: test(die), rerolled: true };
+  });
+  return out;
+}
+
 export async function resolveAttack(actor, weapon, config) {
   const system = weapon.system;
   // Single-profile weapons resolve against their own statistics.
@@ -182,13 +225,46 @@ export async function resolveAttack(actor, weapon, config) {
   let attacks = Math.max(1, Number(config.attacks) || 1);
   if (config.halfRange) attacks *= 2; // Rapid Fire within half range
 
+  /* --- Rules in play --- */
+  // Everything the operative's items contribute, filtered per roll below.
+  const rules = Rules.collectRules(actor);
+  const phase = isMelee ? "fight" : "shooting";
+
+  // Conditions the engine can verify. A rule naming anything else is only
+  // applied when the caller has confirmed it in the dialog.
+  const conditions = [];
+  if (!actor.system.status?.shaken) conditions.push("notShaken");
+  if (actor.system.status?.readied) conditions.push("readied");
+  if (actor.system.status?.charged) conditions.push("charged");
+  if (config.obscured) conditions.push("targetObscured");
+  if (overwatch) conditions.push("overwatch");
+  if (/D3|D6/i.test(String(profile.damage))) conditions.push("randomDamage");
+  if (profile.weaponType === "grenade") conditions.push("grenadeWeapon");
+  if (/automatically hits/i.test(profile.abilities ?? "")) conditions.push("autoHitWeapon");
+
+  const ruleContext = { phase, conditions };
+  const applied = [];   // what fired, for the chat card
+
   // Cumulative hit modifiers.
   let modifier = actor.system.hitModifier + (Number(config.other) || 0);
-  if (config.longRange) modifier -= 1;
+  if (config.longRange && !Rules.cancels(rules, "longRange", conditions)) modifier -= 1;
   if (config.obscured) modifier -= 1;
   if (config.intervening) modifier -= 1;
-  if (config.moved) modifier -= 1;
-  if (config.advanced) modifier -= 1;
+  if (config.moved && !Rules.cancels(rules, "heavyMoved", conditions)) modifier -= 1;
+  if (config.advanced && !Rules.cancels(rules, "assaultAdvanced", conditions)) modifier -= 1;
+
+  // Modifiers contributed by abilities.
+  const hitBonus = Rules.totalModifier(rules, { ...ruleContext, roll: "hit" });
+  modifier += hitBonus;
+  for (const r of Rules.rulesFor(rules, { ...ruleContext, type: "modifier", roll: "hit" })) {
+    applied.push(`${r.source}: ${r.value > 0 ? "+" : ""}${r.value} ${game.i18n.localize("KT.Roll.Hit")}`);
+  }
+  for (const penalty of ["heavyMoved", "assaultAdvanced", "longRange"]) {
+    if (Rules.cancels(rules, penalty, conditions)) {
+      const r = rules.find(x => x.penalty === penalty);
+      applied.push(`${r.source}: ${game.i18n.localize("KT.Rules.Cancels")} ${game.i18n.localize(`KT.Penalty.${penalty[0].toUpperCase()}${penalty.slice(1)}`)}`);
+    }
+  }
 
   const skill = Math.max(1, Number(config.skill) || 4);
   const toughness = Math.max(1, Number(config.toughness) || 3);
@@ -199,14 +275,19 @@ export async function resolveAttack(actor, weapon, config) {
   await hitRoll.evaluate();
   const hitDice = hitRoll.dice[0].results.map(r => r.result);
 
-  const hitDetail = hitDice.map(die => {
-    let success;
-    if (overwatch) success = die === 6;              // Overwatch always needs a 6
-    else if (die === 1) success = false;             // Unmodified 1 always fails
-    else if (die === 6) success = true;              // Unmodified 6 always hits
-    else success = (die + modifier) >= skill;
-    return { die, success };
-  });
+  const succeedsOnHit = die => {
+    if (overwatch) return die === 6;                 // Overwatch always needs a 6
+    if (die === 1) return false;                     // Unmodified 1 always fails
+    if (die === 6) return true;                      // Unmodified 6 always hits
+    return (die + modifier) >= skill;
+  };
+
+  let hitDetail = hitDice.map(die => ({ die, success: succeedsOnHit(die) }));
+  const hitReroll = Rules.bestReroll(rules, { ...ruleContext, roll: "hit" });
+  if (hitReroll) {
+    hitDetail = await applyReroll(hitDetail, hitReroll, succeedsOnHit);
+    applied.push(`${hitReroll.source}: ${rerollLabel(hitReroll)} ${game.i18n.localize("KT.Roll.Hit")}`);
+  }
   const hits = hitDetail.filter(d => d.success).length;
 
   /* --- Wound rolls --- */
@@ -219,14 +300,24 @@ export async function resolveAttack(actor, weapon, config) {
   if (hits > 0) {
     woundRoll = new Roll(`${hits}d6`);
     await woundRoll.evaluate();
-    woundDetail = woundRoll.dice[0].results.map(r => {
-      const die = r.result;
-      let success;
-      if (die === 1) success = false;
-      else if (die === 6) success = true;
-      else success = die >= woundTarget;
-      return { die, success };
-    });
+    const woundBonus = Rules.totalModifier(rules, { ...ruleContext, roll: "wound" });
+    if (woundBonus) {
+      for (const r of Rules.rulesFor(rules, { ...ruleContext, type: "modifier", roll: "wound" })) {
+        applied.push(`${r.source}: ${r.value > 0 ? "+" : ""}${r.value} ${game.i18n.localize("KT.Roll.Wound")}`);
+      }
+    }
+    const succeedsOnWound = die => {
+      if (die === 1) return false;
+      if (die === 6) return true;
+      return (die + woundBonus) >= woundTarget;
+    };
+
+    woundDetail = woundRoll.dice[0].results.map(r => ({ die: r.result, success: succeedsOnWound(r.result) }));
+    const woundReroll = Rules.bestReroll(rules, { ...ruleContext, roll: "wound" });
+    if (woundReroll) {
+      woundDetail = await applyReroll(woundDetail, woundReroll, succeedsOnWound);
+      applied.push(`${woundReroll.source}: ${rerollLabel(woundReroll)} ${game.i18n.localize("KT.Roll.Wound")}`);
+    }
     wounds = woundDetail.filter(d => d.success).length;
   }
 
@@ -276,6 +367,13 @@ export async function resolveAttack(actor, weapon, config) {
       ? game.i18n.localize("KT.Roll.NoSave")
       : `${effectiveSave}+${usingInvulnerable ? ` ${game.i18n.localize("KT.Roll.InvulnerableTag")}` : ""}`;
     parts.push(diceRow(game.i18n.localize("KT.Roll.Saves"), saveDetail, saveNote));
+  }
+
+  // List the abilities that changed this attack, so the result can be checked.
+  if (applied.length) {
+    parts.push(`<ul class="kt-applied">${
+      [...new Set(applied)].map(a => `<li>${a}</li>`).join("")
+    }</ul>`);
   }
 
   let summary;

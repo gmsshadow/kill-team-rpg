@@ -122,6 +122,9 @@ export default class KTOperativeSheet extends HandlebarsApplicationMixin(ActorSh
         abilityType: "specialism",
         specialismKey: actor.system.specialism,
         level: chosen.level,
+        // Carry the machine-readable rules across, so the ability does work
+        // rather than only reminding.
+        rules: chosen.rules ?? [],
         description: `<p>${chosen.description}</p>`,
         source: `${definition.name}, pg ${definition.system.page}`
       }

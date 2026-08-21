@@ -1,0 +1,37 @@
+{
+  "_key": "!items!Necronswm6msUwqS",
+  "_id": "Necronswm6msUwqS",
+  "name": "Warscythe",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Necrons, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "+2",
+    "ap": -4,
+    "damage": "2",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "folderNeui6aaisY",
+  "sort": 5900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.11.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

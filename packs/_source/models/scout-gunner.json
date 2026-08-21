@@ -16,6 +16,34 @@
       "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
     ],
+    "rules": [
+      {
+        "type": "reroll",
+        "roll": "nerve",
+        "characteristic": null,
+        "when": "failed",
+        "value": 0,
+        "penalty": null,
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      },
+      {
+        "type": "ignorePenalty",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": "fleshWound",
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      }
+    ],
     "specialisms": [
       "heavy",
       "comms",
@@ -47,7 +75,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.9.1",
+    "systemVersion": "0.11.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

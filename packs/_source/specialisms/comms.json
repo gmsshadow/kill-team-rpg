@@ -15,43 +15,148 @@
         "name": "Scanner",
         "level": 1,
         "parent": null,
-        "description": "Once per Shooting phase, when you pick a model from your kill team to shoot that is within 6\" of this model, if this model is not shaken, you can add 1 to hit rolls for that model in this phase."
+        "description": "Once per Shooting phase, when you pick a model from your kill team to shoot that is within 6\" of this model, if this model is not shaken, you can add 1 to hit rolls for that model in this phase.",
+        "rules": [
+          {
+            "type": "modifier",
+            "roll": "hit",
+            "characteristic": null,
+            "when": null,
+            "value": 1,
+            "penalty": null,
+            "phase": "shooting",
+            "scope": "friendly",
+            "range": 6,
+            "condition": "notShaken",
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Expert",
         "level": 2,
         "parent": null,
-        "description": "Roll a D6 at the start of each battle round if this model is not shaken. On a 5+, you gain 1 additional Command Point. This additional Command Point is lost at the end of the battle round if not used."
+        "description": "Roll a D6 at the start of each battle round if this model is not shaken. On a 5+, you gain 1 additional Command Point. This additional Command Point is lost at the end of the battle round if not used.",
+        "rules": [
+          {
+            "type": "manual",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": "Roll a D6 at the start of each battle round while not shaken; on a 5+ gain 1 Command Point, lost at end of round if unused."
+          }
+        ]
       },
       {
         "name": "Static Screech",
         "level": 2,
         "parent": null,
-        "description": "Once per battle at the start of the Fight phase, if this model is not shaken, subtract 1 from hit rolls for enemy models that make attacks while they are within 6\" of this model until the end of the phase."
+        "description": "Once per battle at the start of the Fight phase, if this model is not shaken, subtract 1 from hit rolls for enemy models that make attacks while they are within 6\" of this model until the end of the phase.",
+        "rules": [
+          {
+            "type": "modifier",
+            "roll": "hit",
+            "characteristic": null,
+            "when": null,
+            "value": -1,
+            "penalty": null,
+            "phase": "fight",
+            "scope": "enemy",
+            "range": 6,
+            "condition": "notShaken",
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Vox Ghost",
         "level": 3,
         "parent": "Expert",
-        "description": "Subtract 1 from the Leadership characteristic of enemy models while this model is on the battlefield, as long as it is not shaken."
+        "description": "Subtract 1 from the Leadership characteristic of enemy models while this model is on the battlefield, as long as it is not shaken.",
+        "rules": [
+          {
+            "type": "modifier",
+            "roll": null,
+            "characteristic": "leadership",
+            "when": null,
+            "value": -1,
+            "penalty": null,
+            "phase": "any",
+            "scope": "enemy",
+            "range": null,
+            "condition": "notShaken",
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Command Relay",
         "level": 3,
         "parent": "Expert",
-        "description": "Roll a D6 each time you use a Tactic while this model is on the battlefield and not shaken. On a 6 the Command Points spent on that Tactic are immediately refunded."
+        "description": "Roll a D6 each time you use a Tactic while this model is on the battlefield and not shaken. On a 6 the Command Points spent on that Tactic are immediately refunded.",
+        "rules": [
+          {
+            "type": "manual",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": "Roll a D6 each time you use a Tactic; on a 6 the Command Points are refunded."
+          }
+        ]
       },
       {
         "name": "Triangulator",
         "level": 3,
         "parent": "Static Screech",
-        "description": "Once per Shooting phase, when you pick a model from your kill team to shoot a Heavy weapon, if this model is not shaken, you can re-roll the dice when determining the number of attacks that model can make."
+        "description": "Once per Shooting phase, when you pick a model from your kill team to shoot a Heavy weapon, if this model is not shaken, you can re-roll the dice when determining the number of attacks that model can make.",
+        "rules": [
+          {
+            "type": "reroll",
+            "roll": "damage",
+            "characteristic": null,
+            "when": "all",
+            "value": 0,
+            "penalty": null,
+            "phase": "shooting",
+            "scope": "friendly",
+            "range": null,
+            "condition": "notShaken",
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Vox Hacker",
         "level": 3,
         "parent": "Static Screech",
-        "description": "After each battle in which this model was in your kill team, if this model is not in Convalescence (pg 204) or dead, roll a D6. On a 5+ you gain 1 Intelligence."
+        "description": "After each battle in which this model was in your kill team, if this model is not in Convalescence (pg 204) or dead, roll a D6. On a 5+ you gain 1 Intelligence.",
+        "rules": [
+          {
+            "type": "manual",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": "Post-battle: roll a D6; on a 5+ gain 1 Intelligence."
+          }
+        ]
       }
     ],
     "tactics": [
@@ -85,7 +190,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.9.1",
+    "systemVersion": "0.11.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

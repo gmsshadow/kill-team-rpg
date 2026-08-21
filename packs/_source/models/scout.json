@@ -17,6 +17,47 @@
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered.",
       "Camo Cloak: When an opponent makes a hit roll for a shooting attack that targets a model equipped with a camo cloak, and that model is obscured, that hit roll suffers an additional -1 modifier."
     ],
+    "rules": [
+      {
+        "type": "reroll",
+        "roll": "nerve",
+        "characteristic": null,
+        "when": "failed",
+        "value": 0,
+        "penalty": null,
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      },
+      {
+        "type": "ignorePenalty",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": "fleshWound",
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      },
+      {
+        "type": "manual",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": null,
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": "Camo cloak: enemies suffer an additional -1 to hit this model while it is obscured."
+      }
+    ],
     "specialisms": [
       "comms",
       "demolitions",
@@ -47,7 +88,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.9.1",
+    "systemVersion": "0.11.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

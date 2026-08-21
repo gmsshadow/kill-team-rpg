@@ -15,43 +15,161 @@
         "name": "Marksman",
         "level": 1,
         "parent": null,
-        "description": "You can re-roll hit rolls of 1 for this model when it makes a shooting attack."
+        "description": "You can re-roll hit rolls of 1 for this model when it makes a shooting attack.",
+        "rules": [
+          {
+            "type": "reroll",
+            "roll": "hit",
+            "characteristic": null,
+            "when": "ones",
+            "value": 0,
+            "penalty": null,
+            "phase": "shooting",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Assassin",
         "level": 2,
         "parent": null,
-        "description": "You can re-roll wound rolls of 1 for this model when it makes a shooting attack."
+        "description": "You can re-roll wound rolls of 1 for this model when it makes a shooting attack.",
+        "rules": [
+          {
+            "type": "reroll",
+            "roll": "wound",
+            "characteristic": null,
+            "when": "ones",
+            "value": 0,
+            "penalty": null,
+            "phase": "shooting",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Sharpshooter",
         "level": 2,
         "parent": null,
-        "description": "If this model is Readied, add 1 to hit rolls when it makes a shooting attack."
+        "description": "If this model is Readied, add 1 to hit rolls when it makes a shooting attack.",
+        "rules": [
+          {
+            "type": "modifier",
+            "roll": "hit",
+            "characteristic": null,
+            "when": null,
+            "value": 1,
+            "penalty": null,
+            "phase": "shooting",
+            "scope": "self",
+            "range": null,
+            "condition": "readied",
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Deadeye",
         "level": 3,
         "parent": "Assassin",
-        "description": "On an unmodified wound roll of 6 for this model's shooting attacks, increase the Damage characteristic of that attack by 1."
+        "description": "On an unmodified wound roll of 6 for this model's shooting attacks, increase the Damage characteristic of that attack by 1.",
+        "rules": [
+          {
+            "type": "manual",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": "On an unmodified wound roll of 6 in the Shooting phase, increase that attack's Damage by 1."
+          }
+        ]
       },
       {
         "name": "Armour Piercing",
         "level": 3,
         "parent": "Assassin",
-        "description": "On an unmodified wound roll of 6 for this model's shooting attacks, improve the AP characteristic of that attack by 1 (e.g. AP0 becomes AP-1)."
+        "description": "On an unmodified wound roll of 6 for this model's shooting attacks, improve the AP characteristic of that attack by 1 (e.g. AP0 becomes AP-1).",
+        "rules": [
+          {
+            "type": "manual",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": "On an unmodified wound roll of 6 in the Shooting phase, improve that attack's AP by 1."
+          }
+        ]
       },
       {
         "name": "Mobile",
         "level": 3,
         "parent": "Sharpshooter",
-        "description": "This model does not suffer the -1 penalty for shooting with a Heavy weapon after moving in the preceding Movement phase, or for shooting an Assault weapon after Advancing."
+        "description": "This model does not suffer the -1 penalty for shooting with a Heavy weapon after moving in the preceding Movement phase, or for shooting an Assault weapon after Advancing.",
+        "rules": [
+          {
+            "type": "ignorePenalty",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": "heavyMoved",
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": ""
+          },
+          {
+            "type": "ignorePenalty",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": "assaultAdvanced",
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Eagle-eye",
         "level": 3,
         "parent": "Sharpshooter",
-        "description": "Increase the Range characteristic of all Rapid Fire and Heavy weapons this model is armed with by 6\"."
+        "description": "Increase the Range characteristic of all Rapid Fire and Heavy weapons this model is armed with by 6\".",
+        "rules": [
+          {
+            "type": "modifier",
+            "roll": null,
+            "characteristic": "range",
+            "when": null,
+            "value": 6,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": ""
+          }
+        ]
       }
     ],
     "tactics": [
@@ -85,7 +203,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.9.1",
+    "systemVersion": "0.11.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

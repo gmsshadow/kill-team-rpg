@@ -3,6 +3,67 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.12.0
+
+Faction data now comes from the New Recruit catalogues rather than hand transcription.
+
+### Added
+- **`tools/import_catalogue.py`**, which reads a BattleScribe `.cat` file and writes a generated
+  faction data file. Models, characteristics, Max, points, keywords, wargear options, allowed
+  specialisms and weapon profiles all import; ability text imports as prose.
+- **Necrons re-imported from the catalogue**, replacing the hand transcription. 13 models and 26
+  weapons, up from 4 and 5, now including Lychguard, Triarch Praetorian and seven Commanders.
+- **`module/rules/faction-rules.mjs`** tags faction abilities by name, applied at build time. The
+  imported files are generated and overwritten, so keeping the rules work outside them means
+  re-importing never destroys it.
+- The importer resolves specialisms through catalogue-level entry links and shared groups, not
+  just inline ones, and flags Commanders by their expansion-only specialisms.
+
+### Changed
+- **The catalogue is a later data vintage than the 2018 core manual and now wins.** The Immortal
+  is T5 A2 at 17 points where the book printed T4 A1 at 16; the Deathmark is BS2+ T5 at 16 where
+  the book printed BS3+ T4 at 15. Both reflect errata and the Elites expansion.
+
+### Known gaps
+- The catalogue splits the Space Marines across two files. `Adeptus Astartes.cat` holds the
+  2018-era Scouts and Tactical Marines with their specialisms; `Space Marines.cat` holds the
+  Primaris models but assigns specialisms only to its 14 Commanders, leaving 30 models without.
+  The hand-transcribed Astartes datasheets are therefore still in use, pending a decision on
+  which list to follow.
+- Ankra the Colossus imports with no specialisms; the catalogue records none.
+
+## 0.11.0
+
+The rules engine. Abilities now change dice rolls instead of only describing them.
+
+### Added
+- **A rule vocabulary** (`module/rules/vocabulary.mjs`). Bucketing the 70 specialist abilities
+  showed most collapse into five shapes: re-roll, modifier, auto-pass, ignore-penalty and
+  ignore-wound. A rule is declarative data, so the engine asks what applies to a roll rather than
+  each ability carrying its own code.
+- **All 70 specialist abilities tagged** (`module/rules/specialist-rules.mjs`). 45 are automated;
+  25 are marked MANUAL and surfaced to the player. Campaign effects, Command Point generation and
+  anything needing a judgement call are deliberately left alone - half-automating those is worse
+  than not automating them, because the player stops checking.
+- **The attack sequence consumes rules.** Hit and wound rolls pick up modifiers and re-rolls,
+  named penalties can be cancelled, and conditions are checked against the roll: Sharpshooter only
+  applies while Readied, Marksman only in the Shooting phase, Puritan only against a target with
+  no Faction keyword in common.
+- **Re-rolls follow the rule that a die may be re-rolled only once** (pg 20), so eligible dice are
+  replaced in a single pass rather than rolled until they succeed. Where several re-rolls apply,
+  the strongest wins: all beats failed beats ones.
+- **The chat card lists what fired**, so a result can be checked rather than taken on trust.
+- **Faction abilities use the same vocabulary.** And They Shall Know No Fear is a Nerve test
+  re-roll, Transhuman Physiology cancels the flesh wound penalty, Terror Troops is a Leadership
+  aura. All 15 model datasheets carry rules.
+
+### Notes
+- Reanimation Protocols is MANUAL by design: it inverts the meaning of an Injury roll of 6 rather
+  than modifying the roll, so it does not fit the modifier shape.
+- Auras (`scope: friendly`, `range: 3`) are recorded but not yet measured against the battlefield;
+  they apply when the roll's conditions confirm them. Measuring distance automatically is the next
+  step for those.
+
 ## 0.10.0
 
 ### Added

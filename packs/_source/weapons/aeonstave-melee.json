@@ -1,0 +1,37 @@
+{
+  "_key": "!items!Necronsa4CgUYak6",
+  "_id": "Necronsa4CgUYak6",
+  "name": "Aeonstave (melee)",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Necrons, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "User",
+    "ap": -2,
+    "damage": "1",
+    "abilities": "When attacking with this weapon, an invulnerable save cannot be used."
+  },
+  "effects": [],
+  "folder": "folderNeui6aaisY",
+  "sort": 4800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.11.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

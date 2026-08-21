@@ -21,8 +21,10 @@ import { fileURLToPath } from "node:url";
 import { compilePack } from "@foundryvtt/foundryvtt-cli";
 import { FACTIONS } from "../module/helpers/factions.mjs";
 import { ASTARTES_ITEMS, ASTARTES_MODELS } from "../module/helpers/weapons-astartes.mjs";
-import { NECRON_ITEMS, NECRON_MODEL_ITEMS } from "../module/helpers/weapons-necrons.mjs";
+import { NECRONS_ITEMS, NECRONS_MODEL_ITEMS } from "../module/helpers/factions/necrons.mjs";
+import { rulesForAbilities } from "../module/rules/faction-rules.mjs";
 import { SPECIALISMS } from "../module/helpers/specialisms.mjs";
+import { rulesForAbility } from "../module/rules/specialist-rules.mjs";
 
 const SYSTEM_ID = "kill-team-rpg";
 
@@ -170,7 +172,10 @@ function specialismDocument(specialism) {
       description: `<p>${specialism.description}</p>`,
       specialismKey: specialism.key,
       page: specialism.page,
-      abilities: specialism.abilities,
+      // Attach the machine-readable rules to each ability in the tree.
+      abilities: specialism.abilities.map(a => ({
+        ...a, rules: rulesForAbility(specialism.key, a.name)
+      })),
       tactics: specialism.tactics
     },
     effects: [],
@@ -222,6 +227,7 @@ function modelDocument(entry, folderId, index) {
       keywords: entry.keywords ?? "",
       wargear: entry.wargear ?? "",
       abilities: entry.abilities ?? [],
+      rules: entry.rules ?? [],
       specialisms: entry.specialisms ?? [],
       profile: {
         move: profile.move ?? '6"',
@@ -277,7 +283,7 @@ async function main() {
 
   // Weapons and wargear are grouped into a folder per faction, so the pack
   // does not become one flat list as more factions are added.
-  const allWeapons = [...ASTARTES_ITEMS, ...NECRON_ITEMS];
+  const allWeapons = [...ASTARTES_ITEMS, ...NECRONS_ITEMS];
   const weaponFactions = [...new Set(allWeapons.map(e => e.faction))];
   const weaponFolders = weaponFactions.map((name, i) => folderDocument(name, i * 100));
   const folderByFaction = Object.fromEntries(
@@ -291,7 +297,12 @@ async function main() {
     }))
   ]);
 
-  const allModels = [...ASTARTES_MODELS, ...NECRON_MODEL_ITEMS];
+  // Imported factions are tagged by ability name at build time, so re-running
+  // the importer never loses the rules work.
+  const allModels = [...ASTARTES_MODELS, ...NECRONS_MODEL_ITEMS].map(m => ({
+    ...m,
+    rules: (m.rules?.length ? m.rules : rulesForAbilities(m.abilities, m.faction))
+  }));
   const modelFactions = [...new Set(allModels.map(e => e.faction))];
   const modelFolders = modelFactions.map((name, i) => folderDocument(name, i * 100));
   const modelFolderByFaction = Object.fromEntries(

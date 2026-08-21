@@ -219,6 +219,8 @@ export const ASTARTES_ITEMS = [
   ...ASTARTES_WARGEAR.map(w => ({ ...w, itemType: "wargear", page: 87 }))
 ].map(entry => ({ ...entry, faction: "Adeptus Astartes" }));
 
+import { reroll, ignorePenalty, characteristic, manual } from "../rules/vocabulary.mjs";
+
 /**
  * Adeptus Astartes model datasheets (pg 84-85).
  *
@@ -236,6 +238,18 @@ const TRANSHUMAN_PHYSIOLOGY =
 
 const COMMON_ASTARTES_ABILITIES = [AND_THEY_SHALL_KNOW_NO_FEAR, TRANSHUMAN_PHYSIOLOGY];
 
+/**
+ * Rules for the two abilities every Astartes model carries. Transhuman
+ * Physiology cancels the hit penalty from a single flesh wound, which the
+ * engine models as ignoring the flesh wound penalty entirely - correct while
+ * the model has one flesh wound, generous with two or more, so it is capped in
+ * the operative's hitModifier rather than here.
+ */
+const COMMON_ASTARTES_RULES = [
+  reroll("nerve", "failed"),
+  ignorePenalty("fleshWound")
+];
+
 export const ASTARTES_MODELS = [
   /* --- Scout (pg 84), Sv 4+ and a single wound --- */
   {
@@ -245,7 +259,9 @@ export const ASTARTES_MODELS = [
     wargear: "Boltgun, bolt pistol, frag grenades and krak grenades.",
     specialisms: ["comms", "demolitions", "scout", "sniper"],
     abilities: [...COMMON_ASTARTES_ABILITIES,
-      "Camo Cloak: When an opponent makes a hit roll for a shooting attack that targets a model equipped with a camo cloak, and that model is obscured, that hit roll suffers an additional -1 modifier."]
+      "Camo Cloak: When an opponent makes a hit roll for a shooting attack that targets a model equipped with a camo cloak, and that model is obscured, that hit roll suffers an additional -1 modifier."],
+    rules: [...COMMON_ASTARTES_RULES,
+      manual("Camo cloak: enemies suffer an additional -1 to hit this model while it is obscured.")]
   },
   {
     key: "scout-gunner", name: "Scout Gunner", points: 11, page: 84, maxNumber: "2",
@@ -253,7 +269,7 @@ export const ASTARTES_MODELS = [
     keywords: "Imperium, Adeptus Astartes, Infantry, Scout",
     wargear: "Boltgun, bolt pistol, frag grenades and krak grenades.",
     specialisms: ["heavy", "comms", "demolitions", "scout", "sniper"],
-    abilities: [...COMMON_ASTARTES_ABILITIES]
+    abilities: [...COMMON_ASTARTES_ABILITIES], rules: [...COMMON_ASTARTES_RULES]
   },
   {
     key: "scout-sergeant", name: "Scout Sergeant", points: 11, page: 84, maxNumber: "1",
@@ -261,7 +277,7 @@ export const ASTARTES_MODELS = [
     keywords: "Imperium, Adeptus Astartes, Infantry, Scout",
     wargear: "Boltgun, bolt pistol, frag grenades and krak grenades.",
     specialisms: ["leader", "comms", "demolitions", "scout", "sniper"],
-    abilities: [...COMMON_ASTARTES_ABILITIES]
+    abilities: [...COMMON_ASTARTES_ABILITIES], rules: [...COMMON_ASTARTES_RULES]
   },
 
   /* --- Tactical Marine (pg 84) --- */
@@ -271,7 +287,7 @@ export const ASTARTES_MODELS = [
     keywords: "Imperium, Adeptus Astartes, Infantry, Tactical Marine",
     wargear: "Boltgun, bolt pistol, frag grenades and krak grenades.",
     specialisms: ["comms", "demolitions", "sniper", "veteran"],
-    abilities: [...COMMON_ASTARTES_ABILITIES]
+    abilities: [...COMMON_ASTARTES_ABILITIES], rules: [...COMMON_ASTARTES_RULES]
   },
   {
     key: "tactical-marine-gunner", name: "Tactical Marine Gunner", points: 13, page: 84, maxNumber: "2",
@@ -279,7 +295,7 @@ export const ASTARTES_MODELS = [
     keywords: "Imperium, Adeptus Astartes, Infantry, Tactical Marine",
     wargear: "Boltgun, bolt pistol, frag grenades and krak grenades.",
     specialisms: ["heavy", "comms", "demolitions", "sniper", "veteran"],
-    abilities: [...COMMON_ASTARTES_ABILITIES]
+    abilities: [...COMMON_ASTARTES_ABILITIES], rules: [...COMMON_ASTARTES_RULES]
   },
   {
     key: "tactical-sergeant", name: "Tactical Sergeant", points: 13, page: 84, maxNumber: "1",
@@ -288,7 +304,9 @@ export const ASTARTES_MODELS = [
     wargear: "Boltgun, bolt pistol, frag grenades and krak grenades.",
     specialisms: ["leader", "comms", "demolitions", "sniper", "veteran"],
     abilities: [...COMMON_ASTARTES_ABILITIES,
-      "Auspex: At the start of the Shooting phase, you can choose another ADEPTUS ASTARTES model within 3\" of a friendly model equipped with an auspex that is not shaken. That model does not suffer penalties to their hit or injury rolls due to their target being obscured."]
+      "Auspex: At the start of the Shooting phase, you can choose another ADEPTUS ASTARTES model within 3\" of a friendly model equipped with an auspex that is not shaken. That model does not suffer penalties to their hit or injury rolls due to their target being obscured."],
+    rules: [...COMMON_ASTARTES_RULES,
+      manual("Auspex: nominate a friendly Astartes model within 3\"; it ignores obscured penalties to hit and Injury rolls this phase.")]
   },
 
   /* --- Reiver (pg 85), two wounds and Terror Troops --- */
@@ -301,7 +319,11 @@ export const ASTARTES_MODELS = [
     abilities: [...COMMON_ASTARTES_ABILITIES,
       "Terror Troops: Enemy models must subtract 1 from their Leadership if they are within 3\" of any Reiver or Reiver Sergeant models.",
       "Grapnel Launcher: A model with a grapnel launcher can climb any distance vertically (up or down) when it makes a normal move - do not measure the distance moved in this way.",
-      "Grav-chute: A model with a grav-chute never suffers falling damage, and never falls on another model. If it would, instead place this model as close as possible to the point where it would have landed. This can bring it within 1\" of an enemy model."]
+      "Grav-chute: A model with a grav-chute never suffers falling damage, and never falls on another model. If it would, instead place this model as close as possible to the point where it would have landed. This can bring it within 1\" of an enemy model."],
+    rules: [...COMMON_ASTARTES_RULES,
+      characteristic("leadership", -1, { scope: "enemy", range: 3 }),
+      manual("Grapnel launcher: climb any vertical distance on a normal move without measuring it."),
+      manual("Grav-chute: never suffers falling damage and never falls on another model.")]
   },
   {
     key: "reiver-sergeant", name: "Reiver Sergeant", points: 17, page: 85, maxNumber: "1",
@@ -310,7 +332,9 @@ export const ASTARTES_MODELS = [
     wargear: "Bolt carbine, heavy bolt pistol, frag grenades, krak grenades and shock grenades.",
     specialisms: ["leader", "combat", "comms", "demolitions", "scout", "veteran"],
     abilities: [...COMMON_ASTARTES_ABILITIES,
-      "Terror Troops: Enemy models must subtract 1 from their Leadership if they are within 3\" of any Reiver or Reiver Sergeant models."]
+      "Terror Troops: Enemy models must subtract 1 from their Leadership if they are within 3\" of any Reiver or Reiver Sergeant models."],
+    rules: [...COMMON_ASTARTES_RULES,
+      characteristic("leadership", -1, { scope: "enemy", range: 3 })]
   },
 
   /* --- Intercessor (pg 85) --- */
@@ -320,7 +344,7 @@ export const ASTARTES_MODELS = [
     keywords: "Imperium, Adeptus Astartes, Infantry, Primaris, Intercessor",
     wargear: "Bolt rifle, bolt pistol, frag grenades and krak grenades.",
     specialisms: ["comms", "demolitions", "sniper", "veteran"],
-    abilities: [...COMMON_ASTARTES_ABILITIES]
+    abilities: [...COMMON_ASTARTES_ABILITIES], rules: [...COMMON_ASTARTES_RULES]
   },
   {
     key: "intercessor-gunner", name: "Intercessor Gunner", points: 16, page: 85, maxNumber: "2",
@@ -328,7 +352,7 @@ export const ASTARTES_MODELS = [
     keywords: "Imperium, Adeptus Astartes, Infantry, Primaris, Intercessor",
     wargear: "Bolt rifle, bolt pistol, frag grenades and krak grenades.",
     specialisms: ["heavy", "comms", "demolitions", "sniper", "veteran"],
-    abilities: [...COMMON_ASTARTES_ABILITIES]
+    abilities: [...COMMON_ASTARTES_ABILITIES], rules: [...COMMON_ASTARTES_RULES]
   },
   {
     key: "intercessor-sergeant", name: "Intercessor Sergeant", points: 16, page: 85, maxNumber: "1",
@@ -336,6 +360,6 @@ export const ASTARTES_MODELS = [
     keywords: "Imperium, Adeptus Astartes, Infantry, Primaris, Intercessor",
     wargear: "Bolt rifle, bolt pistol, frag grenades and krak grenades.",
     specialisms: ["leader", "comms", "demolitions", "sniper", "veteran"],
-    abilities: [...COMMON_ASTARTES_ABILITIES]
+    abilities: [...COMMON_ASTARTES_ABILITIES], rules: [...COMMON_ASTARTES_RULES]
   }
 ].map(model => ({ ...model, faction: "Adeptus Astartes", itemType: "model" }));

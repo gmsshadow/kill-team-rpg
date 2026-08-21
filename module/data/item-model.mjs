@@ -62,6 +62,9 @@ export default class ModelData extends foundry.abstract.TypeDataModel {
         new fields.StringField(), { initial: [], label: "KT.Abilities" }
       ),
 
+      /** Machine-readable rules for the datasheet abilities above. */
+      rules: new fields.ArrayField(new fields.ObjectField(), { initial: [], label: "KT.RulesLabel" }),
+
       page: new fields.NumberField({ required: true, integer: true, min: 0, initial: 0, label: "KT.Page" }),
       source: new fields.StringField({ required: true, initial: "", label: "KT.Source" }),
       description: new fields.HTMLField({ required: true, initial: "", label: "KT.Description" })

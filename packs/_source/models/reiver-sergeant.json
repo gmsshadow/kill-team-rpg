@@ -17,6 +17,47 @@
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered.",
       "Terror Troops: Enemy models must subtract 1 from their Leadership if they are within 3\" of any Reiver or Reiver Sergeant models."
     ],
+    "rules": [
+      {
+        "type": "reroll",
+        "roll": "nerve",
+        "characteristic": null,
+        "when": "failed",
+        "value": 0,
+        "penalty": null,
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      },
+      {
+        "type": "ignorePenalty",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": "fleshWound",
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      },
+      {
+        "type": "modifier",
+        "roll": null,
+        "characteristic": "leadership",
+        "when": null,
+        "value": -1,
+        "penalty": null,
+        "phase": "any",
+        "scope": "enemy",
+        "range": 3,
+        "condition": null,
+        "note": ""
+      }
+    ],
     "specialisms": [
       "leader",
       "combat",
@@ -49,7 +90,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.9.1",
+    "systemVersion": "0.11.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

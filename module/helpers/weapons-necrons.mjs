@@ -7,8 +7,18 @@
  * from wounds - each model has a single wound.
  */
 
+import { manual } from "../rules/vocabulary.mjs";
+
 const REANIMATION_PROTOCOLS =
   "Reanimation Protocols: When an Injury roll is made for this model, on an unmodified roll of 6 the model is not taken out of action and does not suffer a flesh wound. Instead it is restored to 1 wound remaining with no flesh wounds.";
+
+/**
+ * Reanimation Protocols reverses the usual reading of an Injury roll: a 6
+ * normally means out of action, and here it means fully recovered. That
+ * inverts the outcome rather than modifying the roll, so it does not fit the
+ * modifier shape and is applied by the Injury roll itself.
+ */
+const REANIMATION_RULES = [manual("Reanimation Protocols: on an unmodified Injury roll of 6, restore to 1 wound with no flesh wounds instead of going out of action.")];
 
 export const NECRON_RANGED = [
   {
@@ -46,7 +56,7 @@ export const NECRON_MODELS = [
     keywords: "Necrons, Infantry, Necron Warrior",
     wargear: "Gauss flayer.",
     specialisms: ["leader", "comms", "veteran"],
-    abilities: [REANIMATION_PROTOCOLS]
+    abilities: [REANIMATION_PROTOCOLS], rules: [...REANIMATION_RULES]
   },
   {
     key: "immortal", name: "Immortal", points: 16, page: 154, maxNumber: "-",
@@ -54,7 +64,7 @@ export const NECRON_MODELS = [
     keywords: "Necrons, Infantry, Immortal",
     wargear: "Gauss blaster. May replace its gauss blaster with a tesla carbine.",
     specialisms: ["leader", "comms", "veteran", "zealot"],
-    abilities: [REANIMATION_PROTOCOLS]
+    abilities: [REANIMATION_PROTOCOLS], rules: [...REANIMATION_RULES]
   },
   {
     key: "deathmark", name: "Deathmark", points: 15, page: 155, maxNumber: "-",
@@ -62,7 +72,7 @@ export const NECRON_MODELS = [
     keywords: "Necrons, Infantry, Deathmark",
     wargear: "Synaptic disintegrator.",
     specialisms: ["leader", "comms", "scout", "sniper", "veteran"],
-    abilities: [REANIMATION_PROTOCOLS]
+    abilities: [REANIMATION_PROTOCOLS], rules: [...REANIMATION_RULES]
   },
   {
     // The only Necron with a Ballistic Skill worth noting: 6+, and three
@@ -72,7 +82,7 @@ export const NECRON_MODELS = [
     keywords: "Necrons, Infantry, Flayed One",
     wargear: "Flayer claws.",
     specialisms: ["leader", "combat", "veteran", "zealot"],
-    abilities: [REANIMATION_PROTOCOLS]
+    abilities: [REANIMATION_PROTOCOLS], rules: [...REANIMATION_RULES]
   }
 ];
 

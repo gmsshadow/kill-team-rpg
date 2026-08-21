@@ -15,43 +15,148 @@
         "name": "Grizzled",
         "level": 1,
         "parent": null,
-        "description": "This model ignores penalties to its Leadership characteristic and Nerve tests."
+        "description": "This model ignores penalties to its Leadership characteristic and Nerve tests.",
+        "rules": [
+          {
+            "type": "ignorePenalty",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": "leadership",
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Practised",
         "level": 2,
         "parent": null,
-        "description": "You can re-roll one hit roll or wound roll for this model in each battle round."
+        "description": "You can re-roll one hit roll or wound roll for this model in each battle round.",
+        "rules": [
+          {
+            "type": "manual",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": "Re-roll one hit roll or wound roll for this model in each battle round."
+          }
+        ]
       },
       {
         "name": "Seen It All",
         "level": 2,
         "parent": null,
-        "description": "You can subtract 1 from Nerve tests for models from your kill team within 3\" of this model, as long as it is not shaken."
+        "description": "You can subtract 1 from Nerve tests for models from your kill team within 3\" of this model, as long as it is not shaken.",
+        "rules": [
+          {
+            "type": "modifier",
+            "roll": "nerve",
+            "characteristic": null,
+            "when": null,
+            "value": -1,
+            "penalty": null,
+            "phase": "any",
+            "scope": "friendly",
+            "range": 3,
+            "condition": "notShaken",
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Survivor",
         "level": 3,
         "parent": "Practised",
-        "description": "You can add 1 to saving throws for this model."
+        "description": "You can add 1 to saving throws for this model.",
+        "rules": [
+          {
+            "type": "modifier",
+            "roll": "save",
+            "characteristic": null,
+            "when": null,
+            "value": 1,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": ""
+          }
+        ]
       },
       {
         "name": "One-man Army",
         "level": 3,
         "parent": "Practised",
-        "description": "This model generates 1 Command Point at the beginning of each battle round, unless it is shaken or out of action. This Command Point can only be used for Veteran Tactics."
+        "description": "This model generates 1 Command Point at the beginning of each battle round, unless it is shaken or out of action. This Command Point can only be used for Veteran Tactics.",
+        "rules": [
+          {
+            "type": "manual",
+            "roll": null,
+            "characteristic": null,
+            "when": null,
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": null,
+            "note": "Generates 1 Command Point at the beginning of each battle round, usable only for Veteran Tactics."
+          }
+        ]
       },
       {
         "name": "Battle Scarred",
         "level": 3,
         "parent": "Seen It All",
-        "description": "Enemy models suffer -1 Leadership whilst they are within 6\" of this model, as long as it is not shaken."
+        "description": "Enemy models suffer -1 Leadership whilst they are within 6\" of this model, as long as it is not shaken.",
+        "rules": [
+          {
+            "type": "modifier",
+            "roll": null,
+            "characteristic": "leadership",
+            "when": null,
+            "value": -1,
+            "penalty": null,
+            "phase": "any",
+            "scope": "enemy",
+            "range": 6,
+            "condition": "notShaken",
+            "note": ""
+          }
+        ]
       },
       {
         "name": "Nerves of Steel",
         "level": 3,
         "parent": "Seen It All",
-        "description": "You can re-roll failed hit rolls for this model when it fires Overwatch."
+        "description": "You can re-roll failed hit rolls for this model when it fires Overwatch.",
+        "rules": [
+          {
+            "type": "reroll",
+            "roll": "hit",
+            "characteristic": null,
+            "when": "failed",
+            "value": 0,
+            "penalty": null,
+            "phase": "any",
+            "scope": "self",
+            "range": null,
+            "condition": "overwatch",
+            "note": ""
+          }
+        ]
       }
     ],
     "tactics": [
@@ -85,7 +190,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.9.1",
+    "systemVersion": "0.11.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null
