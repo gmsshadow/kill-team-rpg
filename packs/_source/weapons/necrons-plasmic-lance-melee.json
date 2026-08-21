@@ -1,0 +1,37 @@
+{
+  "_key": "!items!3sBMnmvu18ZKXefs",
+  "_id": "3sBMnmvu18ZKXefs",
+  "name": "Plasmic lance (melee)",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Necrons, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "User",
+    "ap": -3,
+    "damage": "2",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "BMFWB0JStCdknIpI",
+  "sort": 61200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

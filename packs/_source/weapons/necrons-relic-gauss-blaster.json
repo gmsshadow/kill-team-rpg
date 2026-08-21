@@ -1,0 +1,37 @@
+{
+  "_key": "!items!kNA3eTSrSfSBkTI3",
+  "_id": "kNA3eTSrSfSBkTI3",
+  "name": "Relic gauss blaster",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Necrons, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "30\"",
+    "weaponType": "rapidFire",
+    "attacks": "2",
+    "strength": "5",
+    "ap": -2,
+    "damage": "2",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "BMFWB0JStCdknIpI",
+  "sort": 60000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "_key": "!items!wR0LGvwjU12Z8FaX",
+  "_id": "wR0LGvwjU12Z8FaX",
+  "name": "DS8 Tactical Support Turret",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 0,
+    "source": "T'au Empire, pg undefined",
+    "maxNumber": "1",
+    "faction": "T'au Empire",
+    "keywords": "T'au Empire, Infantry, DS8 Tactical Support Turret",
+    "wargear": "",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "-",
+      "ws": 4,
+      "bs": 4,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 0,
+      "ld": 4,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "mPKVSDA56tsrIx4F",
+  "sort": 36900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

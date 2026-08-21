@@ -1,0 +1,37 @@
+{
+  "_key": "!items!tWBI3GZajQLoBKbQ",
+  "_id": "tWBI3GZajQLoBKbQ",
+  "name": "Voidscythe",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Necrons, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "x2",
+    "ap": -4,
+    "damage": "3",
+    "abilities": "When attacking with this weapon, subtract 1 from the hit roll."
+  },
+  "effects": [],
+  "folder": "BMFWB0JStCdknIpI",
+  "sort": 61600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

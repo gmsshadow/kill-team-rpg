@@ -1,0 +1,37 @@
+{
+  "_key": "!items!inuRarGhYd41S9yh",
+  "_id": "inuRarGhYd41S9yh",
+  "name": "Master-crafted special issue bolt pistol",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adeptus Astartes, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "pistol",
+    "attacks": "1",
+    "strength": "4",
+    "ap": -2,
+    "damage": "2",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "WngXm3Y7Qjy9sDAT",
+  "sort": 13300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,6 +1,6 @@
 {
-  "_key": "!items!astramilQM2eEiQe",
-  "_id": "astramilQM2eEiQe",
+  "_key": "!items!olWryNw3eDO5enaf",
+  "_id": "olWryNw3eDO5enaf",
   "name": "Astra Militarum",
   "type": "faction",
   "img": "icons/svg/statue.svg",
@@ -22,7 +22,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.12.0",
+    "systemVersion": "0.13.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

@@ -1,0 +1,37 @@
+{
+  "_key": "!items!o7c3ujQ94lIzA5gZ",
+  "_id": "o7c3ujQ94lIzA5gZ",
+  "name": "Kroot rifle - shooting",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "T'au Empire, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "24\"",
+    "weaponType": "rapidFire",
+    "attacks": "1",
+    "strength": "4",
+    "ap": 0,
+    "damage": "1",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "mPKVSDA56tsrIx4F",
+  "sort": 68700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

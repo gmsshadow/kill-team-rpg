@@ -1,0 +1,37 @@
+{
+  "_key": "!items!Yl25uTePUjUjyRYh",
+  "_id": "Yl25uTePUjUjyRYh",
+  "name": "Shokk Attack Gun",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 27,
+    "source": "Orks, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "60\"",
+    "weaponType": "heavy",
+    "attacks": "D6",
+    "strength": "2D6",
+    "ap": -5,
+    "damage": "D3",
+    "abilities": "Before firing this weapon, roll once to determine the Strength of all its shots. If the result is 11+, do not make wound rolls - instead, each attack that hits causes D3 mortal wounds."
+  },
+  "effects": [],
+  "folder": "S7e90hmrUlQ3AXQr",
+  "sort": 63200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

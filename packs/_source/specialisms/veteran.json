@@ -1,6 +1,6 @@
 {
-  "_key": "!items!specialiA2QqwCYk",
-  "_id": "specialiA2QqwCYk",
+  "_key": "!items!yx0zCDuH6XURWNKL",
+  "_id": "yx0zCDuH6XURWNKL",
   "name": "Veteran",
   "type": "specialism",
   "img": "icons/svg/upgrade.svg",
@@ -190,7 +190,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.12.0",
+    "systemVersion": "0.13.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

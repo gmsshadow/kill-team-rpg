@@ -1,0 +1,68 @@
+{
+  "_key": "!items!eFkFkNiLmVEDYR0N",
+  "_id": "eFkFkNiLmVEDYR0N",
+  "name": "Royal Warden",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 46,
+    "source": "Necrons, pg undefined",
+    "maxNumber": "1",
+    "faction": "Necrons",
+    "keywords": "Necrons, Infantry, Royal Warden",
+    "wargear": "Relic gauss blaster",
+    "abilities": [
+      "Living Metal: At the beginning of each battle round, this model recovers 1 wound lost earlier in the battle."
+    ],
+    "rules": [
+      {
+        "type": "manual",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": null,
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": "Living Metal: see the datasheet text."
+      }
+    ],
+    "specialisms": [
+      "Fortitude",
+      "Leadership",
+      "Logistics",
+      "Shooting",
+      "Strategist"
+    ],
+    "profile": {
+      "move": "5\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 5,
+      "toughness": 5,
+      "wounds": 4,
+      "attacks": 3,
+      "ld": 10,
+      "save": 3,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "BMFWB0JStCdknIpI",
+  "sort": 32100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

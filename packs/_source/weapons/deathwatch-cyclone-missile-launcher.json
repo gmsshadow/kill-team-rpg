@@ -1,0 +1,37 @@
+{
+  "_key": "!items!lGXYfAfWBY7eJuje",
+  "_id": "lGXYfAfWBY7eJuje",
+  "name": "Cyclone missile launcher",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 6,
+    "source": "Deathwatch, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "-",
+    "weaponType": "assault",
+    "attacks": "1",
+    "strength": "",
+    "ap": 0,
+    "damage": "-",
+    "abilities": "When attacking with this weapon, choose one of the profiles below."
+  },
+  "effects": [],
+  "folder": "sRUjWRON4HQfodYf",
+  "sort": 34000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "_key": "!items!UngtAhsrSXstYpA3",
+  "_id": "UngtAhsrSXstYpA3",
+  "name": "Master-crafted stalker bolt rifle",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adeptus Astartes, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "24\"",
+    "weaponType": "heavy",
+    "attacks": "1",
+    "strength": "4",
+    "ap": -2,
+    "damage": "3",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "WngXm3Y7Qjy9sDAT",
+  "sort": 13400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

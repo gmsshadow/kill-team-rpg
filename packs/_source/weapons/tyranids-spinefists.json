@@ -1,0 +1,37 @@
+{
+  "_key": "!items!lKfGN6ruro3ote1s",
+  "_id": "lKfGN6ruro3ote1s",
+  "name": "Spinefists",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Tyranids, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "pistol",
+    "attacks": "*",
+    "strength": "3",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "When a model fires this weapon, it makes a number of shots equal to its Attacks characteristic."
+  },
+  "effects": [],
+  "folder": "jkpkVm5sTQnYF4D2",
+  "sort": 72800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

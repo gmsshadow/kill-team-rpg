@@ -1,0 +1,49 @@
+{
+  "_key": "!items!i3khQva5iD4d6d2j",
+  "_id": "i3khQva5iD4d6d2j",
+  "name": "Crasker Matterzhek",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 18,
+    "source": "Genestealer Cults, pg undefined",
+    "maxNumber": "1",
+    "faction": "Genestealer Cults",
+    "keywords": "Genestealer Cults, Tyranids, Infantry, Commander, Acolyte Iconward, Level 1, Level 2, Level 3, Level 4",
+    "wargear": "Level 1: Sacred Duty; Level 2: Fearless Dedication; Level 3: Scale the Heights; Level 4: Raise the Standard High; Sacred Duty",
+    "abilities": [
+      "Cult Ambush: After deployment but before the first battle round, roll a D6 for this model. On a 5+ this model can immediately move up to 6\".",
+      "Unquestioning Loyalty: Roll a D6 each time you use the Look Out, Sir! Commander Tactic on this model. On a 2+, you gain a Command Point."
+    ],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 4,
+      "toughness": 3,
+      "wounds": 5,
+      "attacks": 4,
+      "ld": 8,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "NIJ4DcraRsB8D410",
+  "sort": 25500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

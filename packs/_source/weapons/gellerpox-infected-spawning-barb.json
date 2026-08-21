@@ -1,0 +1,37 @@
+{
+  "_key": "!items!Wngl2B0RmvWPgBYn",
+  "_id": "Wngl2B0RmvWPgBYn",
+  "name": "Spawning barb",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Gellerpox Infected, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "User",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "Each hit roll of 6+ made for this weapon automatically results in a wound (do not make a wound roll for that attack)."
+  },
+  "effects": [],
+  "folder": "xa5ETwzGr8PI5yz4",
+  "sort": 47300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

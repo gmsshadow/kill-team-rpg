@@ -1,0 +1,37 @@
+{
+  "_key": "!items!DGZwJavqlCPmp2Tm",
+  "_id": "DGZwJavqlCPmp2Tm",
+  "name": "Deffgun",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Orks, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "48\"",
+    "weaponType": "heavy",
+    "attacks": "D3",
+    "strength": "7",
+    "ap": -1,
+    "damage": "2",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "S7e90hmrUlQ3AXQr",
+  "sort": 62000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

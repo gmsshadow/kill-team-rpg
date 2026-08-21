@@ -1,0 +1,53 @@
+{
+  "_key": "!items!zKrCbiDonS7gj4Ha",
+  "_id": "zKrCbiDonS7gj4Ha",
+  "name": "Skitarii Ranger",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 9,
+    "source": "Adeptus Mechanicus, pg undefined",
+    "maxNumber": "-",
+    "faction": "Adeptus Mechanicus",
+    "keywords": "Adeptus Mechanicus, Infantry, Imperium, Skitarii, Skitarii Ranger",
+    "wargear": "",
+    "abilities": [
+      "Bionics: This model has a 6+ invulnerable save."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Comms",
+      "Scout",
+      "Sniper",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 4,
+      "bs": 3,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 6,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "b09An29gloB2fENi",
+  "sort": 7800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

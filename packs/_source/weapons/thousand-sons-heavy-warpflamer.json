@@ -1,0 +1,37 @@
+{
+  "_key": "!items!9evm9yXeTO5ituJ4",
+  "_id": "9evm9yXeTO5ituJ4",
+  "name": "Heavy warpflamer",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Thousand Sons, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "8\"",
+    "weaponType": "heavy",
+    "attacks": "D6",
+    "strength": "5",
+    "ap": -2,
+    "damage": "1",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "w1gHiXyTidM90JkZ",
+  "sort": 70500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

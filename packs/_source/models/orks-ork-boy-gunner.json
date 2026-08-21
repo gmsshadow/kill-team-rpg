@@ -1,0 +1,53 @@
+{
+  "_key": "!items!RsT8NQZUZ4ho7Sl0",
+  "_id": "RsT8NQZUZ4ho7Sl0",
+  "name": "Ork Boy Gunner",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 7,
+    "source": "Orks, pg undefined",
+    "maxNumber": "2",
+    "faction": "Orks",
+    "keywords": "Orks, Infantry, Ork Boy",
+    "wargear": "Slugga and Choppa",
+    "abilities": [
+      "'Ere We Go: Re-roll failed charge rolls for a unit with this ability."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Demolitions",
+      "Heavy",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "5\"",
+      "ws": 3,
+      "bs": 5,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 1,
+      "attacks": 2,
+      "ld": 6,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "S7e90hmrUlQ3AXQr",
+  "sort": 34400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

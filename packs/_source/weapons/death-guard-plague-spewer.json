@@ -1,0 +1,37 @@
+{
+  "_key": "!items!NeBylGpgdMl8PiDI",
+  "_id": "NeBylGpgdMl8PiDI",
+  "name": "Plague spewer",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 4,
+    "source": "Death Guard, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "9\"",
+    "weaponType": "heavy",
+    "attacks": "D6",
+    "strength": "5",
+    "ap": -1,
+    "damage": "1",
+    "abilities": "You can re-roll wound rolls of 1 for this weapon. This weapon automatically hits its target."
+  },
+  "effects": [],
+  "folder": "ux2vKzuRofSnWRuf",
+  "sort": 30600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

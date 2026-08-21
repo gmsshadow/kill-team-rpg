@@ -1,0 +1,37 @@
+{
+  "_key": "!items!0BS7S1aDQvmF0zeT",
+  "_id": "0BS7S1aDQvmF0zeT",
+  "name": "Misericordia",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adeptus Custodes, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "User",
+    "ap": -2,
+    "damage": "1",
+    "abilities": "Each time the bearer fights, it can make 1 additional attack with this weapon unless it is also equipped with a storm shield."
+  },
+  "effects": [],
+  "folder": "bYb8xUNcXW7K3ypC",
+  "sort": 18000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

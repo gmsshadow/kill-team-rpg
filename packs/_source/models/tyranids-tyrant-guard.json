@@ -1,0 +1,52 @@
+{
+  "_key": "!items!V4jmZ4HUnwnGj07u",
+  "_id": "V4jmZ4HUnwnGj07u",
+  "name": "Tyrant Guard",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 32,
+    "source": "Tyranids, pg undefined",
+    "maxNumber": "-",
+    "faction": "Tyranids",
+    "keywords": "Tyranids, Infantry, Tyrant Guard",
+    "wargear": "Crushing claws",
+    "abilities": [
+      "Instinctive Behaviour: Unless this model is within 24\" of a friendly SYNAPSE model, you must subtract 1 from any hit rolls made for it when shooting any target other than the nearest visible enemy model, and subtract 2 from any charge rolls made for it if it declares a charge against any model other than the nearest enemy model."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Veteran",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "7\"",
+      "ws": 3,
+      "bs": 4,
+      "strength": 5,
+      "toughness": 5,
+      "wounds": 3,
+      "attacks": 3,
+      "ld": 6,
+      "save": 3,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "jkpkVm5sTQnYF4D2",
+  "sort": 41400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "_key": "!items!cHoP2nkNwTazSxgp",
+  "_id": "cHoP2nkNwTazSxgp",
+  "name": "Captain in Gravis Armour",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 88,
+    "source": "Adeptus Astartes, pg undefined",
+    "maxNumber": "1",
+    "faction": "Adeptus Astartes",
+    "keywords": "Adeptus Astartes, Imperium, Infantry, Primaris, Captain, Mk X Gravis",
+    "wargear": "Boltstorm gauntlet",
+    "abilities": [
+      "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
+    ],
+    "rules": [
+      {
+        "type": "reroll",
+        "roll": "nerve",
+        "characteristic": null,
+        "when": "failed",
+        "value": 0,
+        "penalty": null,
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      },
+      {
+        "type": "ignorePenalty",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": "fleshWound",
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      }
+    ],
+    "specialisms": [
+      "Ferocity",
+      "Fortitude",
+      "Leadership",
+      "Logistics",
+      "Melee",
+      "Shooting",
+      "Strategist",
+      "Strength"
+    ],
+    "profile": {
+      "move": "5\"",
+      "ws": 2,
+      "bs": 2,
+      "strength": 4,
+      "toughness": 5,
+      "wounds": 7,
+      "attacks": 5,
+      "ld": 9,
+      "save": 3,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "WngXm3Y7Qjy9sDAT",
+  "sort": 1300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

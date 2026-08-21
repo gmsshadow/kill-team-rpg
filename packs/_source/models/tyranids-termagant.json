@@ -1,0 +1,51 @@
+{
+  "_key": "!items!qvoRw36JINQhIxGn",
+  "_id": "qvoRw36JINQhIxGn",
+  "name": "Termagant",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 4,
+    "source": "Tyranids, pg undefined",
+    "maxNumber": "-",
+    "faction": "Tyranids",
+    "keywords": "Tyranids, Infantry, Termagant",
+    "wargear": "",
+    "abilities": [
+      "Instinctive Behaviour: Unless this model is within 24\" of a friendly SYNAPSE model, you must subtract 1 from any hit rolls made for it when shooting any target other than the nearest visible enemy model, and subtract 2 from any charge rolls made for it if it declares a charge against any model other than the nearest enemy model."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Scout",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 4,
+      "bs": 4,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 5,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "jkpkVm5sTQnYF4D2",
+  "sort": 41000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

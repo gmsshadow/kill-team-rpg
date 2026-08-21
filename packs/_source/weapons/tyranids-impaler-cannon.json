@@ -1,0 +1,37 @@
+{
+  "_key": "!items!l0FwHYdkjYfUzAxK",
+  "_id": "l0FwHYdkjYfUzAxK",
+  "name": "Impaler cannon",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Tyranids, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "36\"",
+    "weaponType": "heavy",
+    "attacks": "2",
+    "strength": "8",
+    "ap": -2,
+    "damage": "D3",
+    "abilities": "This weapon can be fired at models that are not visible to the bearer. If the target is not visible to the bearer, a 6 is required for a successful hit roll, irrespective of the firing model’s Ballistic Skill or any modifiers."
+  },
+  "effects": [],
+  "folder": "jkpkVm5sTQnYF4D2",
+  "sort": 72600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

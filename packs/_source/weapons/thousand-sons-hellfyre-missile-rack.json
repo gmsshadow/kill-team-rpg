@@ -1,0 +1,37 @@
+{
+  "_key": "!items!oLGXa7uJsJA9kZyv",
+  "_id": "oLGXa7uJsJA9kZyv",
+  "name": "Hellfyre missile rack",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 4,
+    "source": "Thousand Sons, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "24\"",
+    "weaponType": "heavy",
+    "attacks": "2",
+    "strength": "8",
+    "ap": -2,
+    "damage": "D3",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "w1gHiXyTidM90JkZ",
+  "sort": 70600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

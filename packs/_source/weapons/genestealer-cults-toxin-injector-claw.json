@@ -1,0 +1,37 @@
+{
+  "_key": "!items!8HIniVsB8fqRGdSB",
+  "_id": "8HIniVsB8fqRGdSB",
+  "name": "Toxin Injector Claw",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Genestealer Cults, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "User",
+    "ap": -1,
+    "damage": "1",
+    "abilities": "This weapon always wounds on a roll of 2+. Furthermore, each time you make a wound roll of 6+ with this weapon, that hit is resolved with an AP of -4."
+  },
+  "effects": [],
+  "folder": "NIJ4DcraRsB8D410",
+  "sort": 51900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

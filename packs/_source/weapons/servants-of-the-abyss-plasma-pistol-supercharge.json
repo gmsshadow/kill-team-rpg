@@ -1,0 +1,37 @@
+{
+  "_key": "!items!tUP4BGN6vQPKl638",
+  "_id": "tUP4BGN6vQPKl638",
+  "name": "Plasma pistol - Supercharge",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Servants of the Abyss, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "pistol",
+    "attacks": "1",
+    "strength": "8",
+    "ap": -3,
+    "damage": "1",
+    "abilities": "On an unmodified hit roll of 1, the bearer is taken out of action."
+  },
+  "effects": [],
+  "folder": "dAJE9GD0dejQZE3g",
+  "sort": 66300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

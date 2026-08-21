@@ -1,0 +1,37 @@
+{
+  "_key": "!items!IxUTORo1ub6FCzSZ",
+  "_id": "IxUTORo1ub6FCzSZ",
+  "name": "Tzaangor blades",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Thousand Sons, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "User",
+    "ap": -1,
+    "damage": "1",
+    "abilities": "Each time the bearer fights, it can make 1 additional attack with this weapon."
+  },
+  "effects": [],
+  "folder": "w1gHiXyTidM90JkZ",
+  "sort": 72000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

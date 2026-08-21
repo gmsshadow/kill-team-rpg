@@ -1,0 +1,82 @@
+{
+  "_key": "!items!jUFK7aBIxGNsFMzA",
+  "_id": "jUFK7aBIxGNsFMzA",
+  "name": "Assault Intercessor",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 15,
+    "source": "Adeptus Astartes, pg undefined",
+    "maxNumber": "-",
+    "faction": "Adeptus Astartes",
+    "keywords": "Adeptus Astartes, Imperium, Infantry, Primaris, Assault Intercessor",
+    "wargear": "",
+    "abilities": [
+      "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
+    ],
+    "rules": [
+      {
+        "type": "reroll",
+        "roll": "nerve",
+        "characteristic": null,
+        "when": "failed",
+        "value": 0,
+        "penalty": null,
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      },
+      {
+        "type": "ignorePenalty",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": "fleshWound",
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      }
+    ],
+    "specialisms": [
+      "Combat",
+      "Comms",
+      "Scout",
+      "Veteran",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 2,
+      "attacks": 2,
+      "ld": 7,
+      "save": 3,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "WngXm3Y7Qjy9sDAT",
+  "sort": 900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

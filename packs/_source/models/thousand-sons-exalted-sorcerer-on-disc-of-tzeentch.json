@@ -1,0 +1,73 @@
+{
+  "_key": "!items!DgTa5o1QHExsxKVK",
+  "_id": "DgTa5o1QHExsxKVK",
+  "name": "Exalted Sorcerer on Disc of Tzeentch",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 81,
+    "source": "Thousand Sons, pg undefined",
+    "maxNumber": "1",
+    "faction": "Thousand Sons",
+    "keywords": "Thousand Sons, Chaos, Tzeentch, Heretic Astartes, Sorcerer, Psyker, Cavalry, Daemon, Fly, Exalted Sorcerer",
+    "wargear": "Blades; Disc of Tzeentch; Plasma pistol; Power sword",
+    "abilities": [
+      "Death to the False Emperor: If a model with this ability makes an attack in the Fight phase which targets an IMPERIUM model, each time you roll a hit roll of 6+ you may make an additional attack with the same weapon against the same target. These attacks cannot themselves generate any further attacks.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered.",
+      "Favoured of Tzeentch: This model has a 5+ invulnerable save."
+    ],
+    "rules": [
+      {
+        "type": "ignorePenalty",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": "fleshWound",
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      }
+    ],
+    "specialisms": [
+      "Fortitude",
+      "Leadership",
+      "Logistics",
+      "Melee",
+      "Psyker",
+      "Shooting",
+      "Strategist",
+      "Strength"
+    ],
+    "profile": {
+      "move": "12\"",
+      "ws": 2,
+      "bs": 2,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 5,
+      "attacks": 4,
+      "ld": 9,
+      "save": 3,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "w1gHiXyTidM90JkZ",
+  "sort": 39300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

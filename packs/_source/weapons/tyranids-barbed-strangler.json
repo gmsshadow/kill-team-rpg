@@ -1,0 +1,37 @@
+{
+  "_key": "!items!wd6J0nGjetsPWxiF",
+  "_id": "wd6J0nGjetsPWxiF",
+  "name": "Barbed strangler",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 3,
+    "source": "Tyranids, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "36\"",
+    "weaponType": "assault",
+    "attacks": "D6",
+    "strength": "5",
+    "ap": -1,
+    "damage": "1",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "jkpkVm5sTQnYF4D2",
+  "sort": 72100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

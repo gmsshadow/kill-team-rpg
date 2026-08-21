@@ -1,0 +1,37 @@
+{
+  "_key": "!items!Hk3qnGVSPknKPkHQ",
+  "_id": "Hk3qnGVSPknKPkHQ",
+  "name": "Frag missile",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adepta Sororitas, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "48\"",
+    "weaponType": "heavy",
+    "attacks": "D6",
+    "strength": "4",
+    "ap": 0,
+    "damage": "1",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "CfklqBY3SVghw1i5",
+  "sort": 2200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "_key": "!folders!WjefwLG9g3iFYVGl",
+  "_id": "WjefwLG9g3iFYVGl",
+  "name": "Chaos Daemons",
+  "type": "Item",
+  "description": "",
+  "folder": null,
+  "sorting": "a",
+  "sort": 600,
+  "color": "#c8501e",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

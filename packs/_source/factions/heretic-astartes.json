@@ -1,6 +1,6 @@
 {
-  "_key": "!items!hereticaAWMiu2Am",
-  "_id": "hereticaAWMiu2Am",
+  "_key": "!items!yl6pSFarq1s3GnIB",
+  "_id": "yl6pSFarq1s3GnIB",
   "name": "Heretic Astartes",
   "type": "faction",
   "img": "icons/svg/statue.svg",
@@ -22,7 +22,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.12.0",
+    "systemVersion": "0.13.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

@@ -1,0 +1,37 @@
+{
+  "_key": "!items!LmVMXCVarSdqHUBg",
+  "_id": "LmVMXCVarSdqHUBg",
+  "name": "Blades",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Thousand Sons, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "4",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "After a model on this mount makes its close combat attacks, you can attack with its mount. Make 1 additional attack, using this weapon profile."
+  },
+  "effects": [],
+  "folder": "w1gHiXyTidM90JkZ",
+  "sort": 71600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

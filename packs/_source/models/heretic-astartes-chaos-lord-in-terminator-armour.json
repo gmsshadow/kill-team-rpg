@@ -1,0 +1,73 @@
+{
+  "_key": "!items!bEDQr21wL6jwdEnQ",
+  "_id": "bEDQr21wL6jwdEnQ",
+  "name": "Chaos Lord in Terminator Armour",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 80,
+    "source": "Heretic Astartes, pg undefined",
+    "maxNumber": "1",
+    "faction": "Heretic Astartes",
+    "keywords": "Heretic Astartes, Chaos, Infantry, Terminator, Chaos Lord",
+    "wargear": "",
+    "abilities": [
+      "Death to the False Emperor: If a model with this ability makes an attack in the Fight phase which targets an IMPERIUM model, each time you roll a hit roll of 6+ you may make an additional attack with the same weapon against the same target. These attacks cannot themselves generate any further attacks.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered.",
+      "Sigil of Corruption: This model has a 4+ invulnerable save."
+    ],
+    "rules": [
+      {
+        "type": "ignorePenalty",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": "fleshWound",
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      }
+    ],
+    "specialisms": [
+      "Ferocity",
+      "Fortitude",
+      "Leadership",
+      "Logistics",
+      "Melee",
+      "Shooting",
+      "Strategist",
+      "Strength"
+    ],
+    "profile": {
+      "move": "5\"",
+      "ws": 2,
+      "bs": 2,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 6,
+      "attacks": 4,
+      "ld": 9,
+      "save": 2,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "k5mzmPmXmHIhi54d",
+  "sort": 29200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

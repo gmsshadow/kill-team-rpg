@@ -1,0 +1,37 @@
+{
+  "_key": "!items!0NGFuPW18lKpufkZ",
+  "_id": "0NGFuPW18lKpufkZ",
+  "name": "Mirrorswords",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Asuryani, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "User",
+    "ap": -2,
+    "damage": "1",
+    "abilities": "You can re-roll failed hit rolls when attacking with this weapon."
+  },
+  "effects": [],
+  "folder": "DKJAf438T2LABUhU",
+  "sort": 27900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

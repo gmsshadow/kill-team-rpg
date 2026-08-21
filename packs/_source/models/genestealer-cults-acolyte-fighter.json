@@ -1,0 +1,53 @@
+{
+  "_key": "!items!AxeX4tSDmPivGnA1",
+  "_id": "AxeX4tSDmPivGnA1",
+  "name": "Acolyte Fighter",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 8,
+    "source": "Genestealer Cults, pg undefined",
+    "maxNumber": "4",
+    "faction": "Genestealer Cults",
+    "keywords": "Genestealer Cults, Tyranids, Infantry",
+    "wargear": "Cultist Knife and Rending Claw",
+    "abilities": [
+      "Cult Ambush: After deployment but before the first battle round, roll a D6 for this model. On a 5+ this model can immediately move up to 6\"."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Comms",
+      "Demolitions",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 4,
+      "strength": 4,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 2,
+      "ld": 7,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "NIJ4DcraRsB8D410",
+  "sort": 24800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

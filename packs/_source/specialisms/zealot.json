@@ -1,6 +1,6 @@
 {
-  "_key": "!items!specialium8sGsoU",
-  "_id": "specialium8sGsoU",
+  "_key": "!items!EdmZGn6lOr6HwTYf",
+  "_id": "EdmZGn6lOr6HwTYf",
   "name": "Zealot",
   "type": "specialism",
   "img": "icons/svg/upgrade.svg",
@@ -203,7 +203,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.12.0",
+    "systemVersion": "0.13.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

@@ -1,0 +1,49 @@
+{
+  "_key": "!items!Ds1ItyrsRmXuRiRQ",
+  "_id": "Ds1ItyrsRmXuRiRQ",
+  "name": "Krootox Rider",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 27,
+    "source": "Kroot, pg undefined",
+    "maxNumber": "1",
+    "faction": "Kroot",
+    "keywords": "Kroot, Krootox Rider, Cavalry",
+    "wargear": "Kroot gun; Krootox fists",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "7\"",
+      "ws": 3,
+      "bs": 4,
+      "strength": 6,
+      "toughness": 5,
+      "wounds": 4,
+      "attacks": 2,
+      "ld": 6,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "GDmpE5uVSl63spMv",
+  "sort": 31000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

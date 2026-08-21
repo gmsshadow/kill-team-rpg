@@ -1,0 +1,55 @@
+{
+  "_key": "!items!unINEzePk1oNwZu5",
+  "_id": "unINEzePk1oNwZu5",
+  "name": "Rubric Marine Gunner",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 16,
+    "source": "Thousand Sons, pg undefined",
+    "maxNumber": "1",
+    "faction": "Thousand Sons",
+    "keywords": "Thousand Sons, Chaos, Tzeentch, Heretic Astartes, Infantry, Rubric Marine",
+    "wargear": "",
+    "abilities": [
+      "Death to the False Emperor: If a model with this ability makes an attack in the Fight phase which targets an IMPERIUM model, each time you roll a hit roll of 6+ you may make an additional attack with the same weapon against the same target. These attacks cannot themselves generate any further attacks.",
+      "All is Dust: Add 1 to saving throws for this model if the attack has a Damage characteristic of 1. In addition, the -1 modifier to hit rolls for moving and shooting Heavy weapons does not apply to Rubric Marine Gunners or Scarab Occult Gunners.",
+      "Favoured of Tzeentch: This model has a 5+ invulnerable save."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Demolitions",
+      "Heavy",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "5\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 7,
+      "save": 3,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "w1gHiXyTidM90JkZ",
+  "sort": 39500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

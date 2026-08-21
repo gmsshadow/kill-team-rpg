@@ -1,0 +1,52 @@
+{
+  "_key": "!items!12zgN6ZATyxIn0zK",
+  "_id": "12zgN6ZATyxIn0zK",
+  "name": "Acolyte Hybrid",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 7,
+    "source": "Genestealer Cults, pg undefined",
+    "maxNumber": "-",
+    "faction": "Genestealer Cults",
+    "keywords": "Genestealer Cults, Tyranids, Infantry",
+    "wargear": "",
+    "abilities": [
+      "Cult Ambush: After deployment but before the first battle round, roll a D6 for this model. On a 5+ this model can immediately move up to 6\"."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Comms",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 4,
+      "strength": 4,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 2,
+      "ld": 7,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "NIJ4DcraRsB8D410",
+  "sort": 24900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

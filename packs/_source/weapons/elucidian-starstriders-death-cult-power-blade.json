@@ -1,0 +1,37 @@
+{
+  "_key": "!items!F2bWvMf4ZuTEZwbw",
+  "_id": "F2bWvMf4ZuTEZwbw",
+  "name": "Death Cult Power Blade",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Elucidian Starstriders, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "User",
+    "ap": -2,
+    "damage": "1",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "v0TGbMTklMPKJcFg",
+  "sort": 45900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "_key": "!items!76jeZ6BwH0zUjMRS",
+  "_id": "76jeZ6BwH0zUjMRS",
+  "name": "Autogun",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Heretic Astartes, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "24\"",
+    "weaponType": "rapidFire",
+    "attacks": "1",
+    "strength": "3",
+    "ap": 0,
+    "damage": "1",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "k5mzmPmXmHIhi54d",
+  "sort": 55100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

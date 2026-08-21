@@ -1,6 +1,6 @@
 {
-  "_key": "!items!necronsxekCoWoU4",
-  "_id": "necronsxekCoWoU4",
+  "_key": "!items!MpY1M12dwDitYvAp",
+  "_id": "MpY1M12dwDitYvAp",
   "name": "Necrons",
   "type": "faction",
   "img": "icons/svg/statue.svg",
@@ -22,7 +22,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.12.0",
+    "systemVersion": "0.13.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

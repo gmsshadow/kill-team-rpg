@@ -1,0 +1,37 @@
+{
+  "_key": "!items!0JAXeJCrOBqHKjSJ",
+  "_id": "0JAXeJCrOBqHKjSJ",
+  "name": "Ghostswords",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Asuryani, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "+1",
+    "ap": -3,
+    "damage": "1",
+    "abilities": "Each time the bearer fights, it can make one additional attack with this weapon."
+  },
+  "effects": [],
+  "folder": "DKJAf438T2LABUhU",
+  "sort": 27800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

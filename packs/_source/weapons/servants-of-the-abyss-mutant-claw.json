@@ -1,0 +1,37 @@
+{
+  "_key": "!items!kLuHIBOzmvANobCj",
+  "_id": "kLuHIBOzmvANobCj",
+  "name": "Mutant Claw",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Servants of the Abyss, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "User",
+    "ap": -2,
+    "damage": "2",
+    "abilities": "Each time the bearer fights, before the bearer makes any other attacks it can make one (and only one) attack with this weapon. If the attack hits, you can re-roll hit rolls for attacks made by the bearer that target the same model until the end of the phase."
+  },
+  "effects": [],
+  "folder": "dAJE9GD0dejQZE3g",
+  "sort": 67000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

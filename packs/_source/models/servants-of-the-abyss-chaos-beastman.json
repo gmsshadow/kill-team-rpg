@@ -1,0 +1,53 @@
+{
+  "_key": "!items!JMZYV0ZIBiXe9WDI",
+  "_id": "JMZYV0ZIBiXe9WDI",
+  "name": "Chaos Beastman",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 7,
+    "source": "Servants of the Abyss, pg undefined",
+    "maxNumber": "-",
+    "faction": "Servants of the Abyss",
+    "keywords": "Servants of the Abyss, Chaos, Infantry, Chaos Beastmen",
+    "wargear": "Pistol and melee weapon",
+    "abilities": [
+      "Servants of the Abyss: You can re-roll failed Nerve tests for this model whilst it is within 6\" of a HERETIC ASTARTES model from your kill team."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Demolitions",
+      "Veteran",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 4,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 6,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "dAJE9GD0dejQZE3g",
+  "sort": 34800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

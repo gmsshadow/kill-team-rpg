@@ -1,0 +1,55 @@
+{
+  "_key": "!items!nW1qJwlEHG9cRsVc",
+  "_id": "nW1qJwlEHG9cRsVc",
+  "name": "Flash Git",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 23,
+    "source": "Orks, pg undefined",
+    "maxNumber": "-",
+    "faction": "Orks",
+    "keywords": "Orks, Infantry, Flash Git, Freebooterz",
+    "wargear": "",
+    "abilities": [
+      "'Ere We Go: Re-roll failed charge rolls for a unit with this ability.",
+      "Gun-crazy Show-off: After this model has shot in the Shooting phase, roll a D6. On a 6, this model can immediately shoot again, but can only target the nearest enemy model."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Comms",
+      "Demolitions",
+      "Heavy",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "5\"",
+      "ws": 3,
+      "bs": 4,
+      "strength": 5,
+      "toughness": 4,
+      "wounds": 2,
+      "attacks": 3,
+      "ld": 6,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "S7e90hmrUlQ3AXQr",
+  "sort": 33300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

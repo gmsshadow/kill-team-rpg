@@ -1,0 +1,37 @@
+{
+  "_key": "!items!9qR4FEzItEjYTobs",
+  "_id": "9qR4FEzItEjYTobs",
+  "name": "Heavy flamer",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 5,
+    "source": "Adepta Sororitas, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "heavy",
+    "attacks": "D6",
+    "strength": "5",
+    "ap": -1,
+    "damage": "1",
+    "abilities": "This weapon automatically hits its target."
+  },
+  "effects": [],
+  "folder": "CfklqBY3SVghw1i5",
+  "sort": 3000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

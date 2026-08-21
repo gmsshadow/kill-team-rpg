@@ -1,0 +1,37 @@
+{
+  "_key": "!items!fmzSt2z0larATOPI",
+  "_id": "fmzSt2z0larATOPI",
+  "name": "Photon grenade",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "T'au Empire, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "grenade",
+    "attacks": "D6",
+    "strength": "-",
+    "ap": 0,
+    "damage": "-",
+    "abilities": "This weapon does not inflict any damage. Your opponent must subtract 1 from hit rolls made for INFANTRY models that have suffered any hits from photon grenades until the end of the battle round."
+  },
+  "effects": [],
+  "folder": "mPKVSDA56tsrIx4F",
+  "sort": 69000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

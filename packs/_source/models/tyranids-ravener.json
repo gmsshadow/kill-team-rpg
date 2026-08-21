@@ -1,0 +1,52 @@
+{
+  "_key": "!items!erqvy7U7O7GvyFez",
+  "_id": "erqvy7U7O7GvyFez",
+  "name": "Ravener",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 15,
+    "source": "Tyranids, pg undefined",
+    "maxNumber": "-",
+    "faction": "Tyranids",
+    "keywords": "Tyranids, Infantry, Ravener",
+    "wargear": "",
+    "abilities": [
+      "Instinctive Behaviour: Unless this model is within 24\" of a friendly SYNAPSE model, you must subtract 1 from any hit rolls made for it when shooting any target other than the nearest visible enemy model, and subtract 2 from any charge rolls made for it if it declares a charge against any model other than the nearest enemy model."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Scout",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "12\"",
+      "ws": 3,
+      "bs": 4,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 3,
+      "attacks": 4,
+      "ld": 5,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "jkpkVm5sTQnYF4D2",
+  "sort": 40900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

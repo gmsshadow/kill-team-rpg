@@ -1,0 +1,55 @@
+{
+  "_key": "!items!Xm5ghmD2LmHaH6tc",
+  "_id": "Xm5ghmD2LmHaH6tc",
+  "name": "Battle Sister",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 9,
+    "source": "Adepta Sororitas, pg undefined",
+    "maxNumber": "-",
+    "faction": "Adepta Sororitas",
+    "keywords": "Adepta Sororitas, Imperium, Infantry, Battle Sister",
+    "wargear": "",
+    "abilities": [
+      "Shield of Faith: Models with this ability have a 6+ invulnerable save.\n\nIn addition, models with this ability can attempt to deny one psychic power in each Psychic phase in the same manner as a PSYKER. When making this attempt, roll one D6 instead of 2D6; the psychic power is resisted if the roll is greater than the result of the Psychic test that manifested the power."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Comms",
+      "Demolitions",
+      "Medic",
+      "Sniper",
+      "Veteran",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 4,
+      "bs": 3,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 7,
+      "save": 3,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "CfklqBY3SVghw1i5",
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "_key": "!items!hoRcNQfW9uzaxyF2",
+  "_id": "hoRcNQfW9uzaxyF2",
+  "name": "Magnarail lance",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adeptus Mechanicus, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "18\"",
+    "weaponType": "heavy",
+    "attacks": "1",
+    "strength": "7",
+    "ap": -3,
+    "damage": "D3",
+    "abilities": "When the bearer makes a shooting attack with this weapon in the Shooting phase, increase that attack's Damage characteristic to 3 if they remained stationary iduring the previous Movement phase."
+  },
+  "effects": [],
+  "folder": "b09An29gloB2fENi",
+  "sort": 19300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

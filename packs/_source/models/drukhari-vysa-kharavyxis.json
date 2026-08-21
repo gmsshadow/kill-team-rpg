@@ -1,0 +1,46 @@
+{
+  "_key": "!items!Re3MZ2ZY363aBczw",
+  "_id": "Re3MZ2ZY363aBczw",
+  "name": "Vysa Kharavyxis",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 48,
+    "source": "Drukhari, pg undefined",
+    "maxNumber": "1",
+    "faction": "Drukhari",
+    "keywords": "Drukhari, Aeldari, Infantry, Wych Cult, Succubus, Level 1, Level 2, Level 3, Level 4",
+    "wargear": "Level 1 - Dancing with Death; Level 2 - Back from the Dead; Level 3 - Gladiatrix; Level 4 - Talent Scout",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "8\"",
+      "ws": 2,
+      "bs": 2,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 5,
+      "attacks": 4,
+      "ld": 8,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "ZeTAJOve9kXS5sdW",
+  "sort": 22600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

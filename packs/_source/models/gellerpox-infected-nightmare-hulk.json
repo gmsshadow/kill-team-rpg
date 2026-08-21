@@ -1,0 +1,53 @@
+{
+  "_key": "!items!raNQVEZEtAdqRCxK",
+  "_id": "raNQVEZEtAdqRCxK",
+  "name": "Nightmare Hulk",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 31,
+    "source": "Gellerpox Infected, pg undefined",
+    "maxNumber": "2",
+    "faction": "Gellerpox Infected",
+    "keywords": "Gellerpox Infected, Chaos, Nurgle, Infantry, Nightmare Hulk",
+    "wargear": "",
+    "abilities": [
+      "Horrific Visage: Subtract 1 from the Leadership characteristic of models whilst they are within 6\" of any enemy models with this ability.",
+      "Disgustingly Resilient: Each time a model with this ability loses a wound, roll a D6, on a 5+ the model does not lose that wound."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Veteran",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "4\"",
+      "ws": 4,
+      "bs": 4,
+      "strength": 5,
+      "toughness": 5,
+      "wounds": 4,
+      "attacks": 3,
+      "ld": 7,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "xa5ETwzGr8PI5yz4",
+  "sort": 24400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

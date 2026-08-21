@@ -1,0 +1,56 @@
+{
+  "_key": "!items!azMlMt8bWVIBM3K5",
+  "_id": "azMlMt8bWVIBM3K5",
+  "name": "Dire Avenger",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 10,
+    "source": "Asuryani, pg undefined",
+    "maxNumber": "-",
+    "faction": "Asuryani",
+    "keywords": "Asuryani, Aeldari, Infantry, Aspect Warrior, Dire Avenger",
+    "wargear": "",
+    "abilities": [
+      "Ancient Doom: You can re-roll failed hit rolls in the Fight phase for this model in a battle round in which it charges or is charged by a SLAANESH model. However, you must add 1 to Nerve tests for this model if it is within 3\" of any SLAANESH models.",
+      "Battle Focus: If this model moves or Advances in its Movement phase, weapons (excluding Heavy weapons) are used as if the model had remained stationary.",
+      "Defence Tactics: When this model fires Overwatch, they successfully hit on a roll of 5 or 6."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Comms",
+      "Medic",
+      "Scout",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "7\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 8,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "DKJAf438T2LABUhU",
+  "sort": 11500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "_key": "!folders!ux2vKzuRofSnWRuf",
+  "_id": "ux2vKzuRofSnWRuf",
+  "name": "Death Guard",
+  "type": "Item",
+  "description": "",
+  "folder": null,
+  "sorting": "a",
+  "sort": 700,
+  "color": "#c8501e",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

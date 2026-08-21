@@ -1,0 +1,37 @@
+{
+  "_key": "!items!GRGjyjoHUxO5eb6x",
+  "_id": "GRGjyjoHUxO5eb6x",
+  "name": "Eradication pistol",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adeptus Mechanicus, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "pistol",
+    "attacks": "D3",
+    "strength": "6",
+    "ap": -1,
+    "damage": "1",
+    "abilities": "If the target is within 6\" of the bearer, this weapon has a Type of Pistol 1, an AP of -3 and a Damage of D3."
+  },
+  "effects": [],
+  "folder": "b09An29gloB2fENi",
+  "sort": 18600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

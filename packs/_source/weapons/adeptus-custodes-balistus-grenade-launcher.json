@@ -1,0 +1,37 @@
+{
+  "_key": "!items!09iX2XsNi3gXsNu3",
+  "_id": "09iX2XsNi3gXsNu3",
+  "name": "Balistus grenade launcher",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adeptus Custodes, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "assault",
+    "attacks": "D3",
+    "strength": "4",
+    "ap": -3,
+    "damage": "1",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "bYb8xUNcXW7K3ypC",
+  "sort": 17400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

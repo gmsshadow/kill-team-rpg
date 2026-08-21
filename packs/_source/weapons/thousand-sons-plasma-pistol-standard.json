@@ -1,0 +1,37 @@
+{
+  "_key": "!items!mPQlIt07WJaVoBmd",
+  "_id": "mPQlIt07WJaVoBmd",
+  "name": "Plasma pistol - Standard",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Thousand Sons, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "pistol",
+    "attacks": "1",
+    "strength": "7",
+    "ap": -3,
+    "damage": "1",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "w1gHiXyTidM90JkZ",
+  "sort": 71100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

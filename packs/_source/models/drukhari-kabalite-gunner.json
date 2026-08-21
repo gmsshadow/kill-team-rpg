@@ -1,0 +1,46 @@
+{
+  "_key": "!items!sN4v4dyrIp07spMR",
+  "_id": "sN4v4dyrIp07spMR",
+  "name": "Kabalite Gunner",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 8,
+    "source": "Drukhari, pg undefined",
+    "maxNumber": "2",
+    "faction": "Drukhari",
+    "keywords": "Drukhari, Aeldari, Infantry, Kabalite Warrior, Kabal",
+    "wargear": "",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "7\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 7,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "ZeTAJOve9kXS5sdW",
+  "sort": 21900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

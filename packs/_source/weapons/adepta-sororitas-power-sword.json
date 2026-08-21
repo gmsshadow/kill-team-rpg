@@ -1,0 +1,37 @@
+{
+  "_key": "!items!96nWVCzcnopOh6dW",
+  "_id": "96nWVCzcnopOh6dW",
+  "name": "Power sword",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adepta Sororitas, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "+1",
+    "ap": -3,
+    "damage": "1",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "CfklqBY3SVghw1i5",
+  "sort": 8700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

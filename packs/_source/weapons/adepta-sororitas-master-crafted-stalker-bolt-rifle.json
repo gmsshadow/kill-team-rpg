@@ -1,0 +1,37 @@
+{
+  "_key": "!items!qdwBKH81mFMrMr25",
+  "_id": "qdwBKH81mFMrMr25",
+  "name": "Master-crafted stalker bolt rifle",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adepta Sororitas, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "24\"",
+    "weaponType": "heavy",
+    "attacks": "1",
+    "strength": "4",
+    "ap": -2,
+    "damage": "3",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "CfklqBY3SVghw1i5",
+  "sort": 4600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

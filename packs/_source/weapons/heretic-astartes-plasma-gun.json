@@ -1,0 +1,37 @@
+{
+  "_key": "!items!DW3Sr4V4LYX0TSNM",
+  "_id": "DW3Sr4V4LYX0TSNM",
+  "name": "Plasma gun",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 3,
+    "source": "Heretic Astartes, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "24\"",
+    "weaponType": "rapidFire",
+    "attacks": "1",
+    "strength": "7",
+    "ap": -3,
+    "damage": "1",
+    "abilities": "This weapon can be supercharged bythe bearer before firing. If they do so, increase the Strength and Damage of the weapon by 1. On any unmodified hit rolls of 1 when firing supercharge, the bearer is taken out of action, after all of the weapon's shots have been resolved."
+  },
+  "effects": [],
+  "folder": "k5mzmPmXmHIhi54d",
+  "sort": 56600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

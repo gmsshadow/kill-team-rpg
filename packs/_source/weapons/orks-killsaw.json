@@ -1,0 +1,37 @@
+{
+  "_key": "!items!XOVCnipSTcDkFGd6",
+  "_id": "XOVCnipSTcDkFGd6",
+  "name": "Killsaw",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 5,
+    "source": "Orks, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "x2",
+    "ap": -4,
+    "damage": "2",
+    "abilities": "When attacking with this weapon, you must subtract 1 from the hit roll. If a model is armed with two killsaws, add 1 to its Attacks characteristic."
+  },
+  "effects": [],
+  "folder": "S7e90hmrUlQ3AXQr",
+  "sort": 64300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

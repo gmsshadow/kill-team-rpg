@@ -1,0 +1,37 @@
+{
+  "_key": "!items!UlaR8fcbSX67s76N",
+  "_id": "UlaR8fcbSX67s76N",
+  "name": "Needle Pistol",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Genestealer Cults, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "pistol",
+    "attacks": "1",
+    "strength": "1",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "This weapon always wounds on a roll of 2+."
+  },
+  "effects": [],
+  "folder": "NIJ4DcraRsB8D410",
+  "sort": 48700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "_key": "!items!QX6PmhGp2LCpMxWN",
+  "_id": "QX6PmhGp2LCpMxWN",
+  "name": "XV25 Stealth Battlesuit Shas'ui",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 20,
+    "source": "T'au Empire, pg undefined",
+    "maxNumber": "-",
+    "faction": "T'au Empire",
+    "keywords": "T'au Empire, Battlesuit, Infantry, Jet Pack, Fly, XV25 Stealth Battlesuit",
+    "wargear": "",
+    "abilities": [
+      "Stealth Team Bonding Knife Ritual: You can subtract 1 from Nerve tests for Stealth Shas'uis or Stealth Shas'vres from your kill team within 3\" of any other friendly models with this ability that are not shaken.",
+      "Camouflage Fields: Your opponent must subtract 1 from all hit rolls for attacks that target this model."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Comms",
+      "Heavy",
+      "Scout",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "8\"",
+      "ws": 5,
+      "bs": 4,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 2,
+      "attacks": 2,
+      "ld": 7,
+      "save": 3,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "mPKVSDA56tsrIx4F",
+  "sort": 38700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

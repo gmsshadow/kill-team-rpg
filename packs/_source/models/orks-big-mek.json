@@ -1,0 +1,54 @@
+{
+  "_key": "!items!E9KtWHIt2nA14fSl",
+  "_id": "E9KtWHIt2nA14fSl",
+  "name": "Big Mek",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 20,
+    "source": "Orks, pg undefined",
+    "maxNumber": "1",
+    "faction": "Orks",
+    "keywords": "Orks, Commander, Infantry, Big Mek",
+    "wargear": "Kustom force field",
+    "abilities": [
+      "'Ere We Go: Re-roll failed charge rolls for a unit with this ability."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Ferocity",
+      "Fortitude",
+      "Logistics",
+      "Melee",
+      "Strength"
+    ],
+    "profile": {
+      "move": "5\"",
+      "ws": 3,
+      "bs": 5,
+      "strength": 5,
+      "toughness": 4,
+      "wounds": 4,
+      "attacks": 3,
+      "ld": 7,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "S7e90hmrUlQ3AXQr",
+  "sort": 32500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

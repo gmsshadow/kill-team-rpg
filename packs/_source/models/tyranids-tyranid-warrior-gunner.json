@@ -1,0 +1,54 @@
+{
+  "_key": "!items!n2DgtqXar0duJkTW",
+  "_id": "n2DgtqXar0duJkTW",
+  "name": "Tyranid Warrior Gunner",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 20,
+    "source": "Tyranids, pg undefined",
+    "maxNumber": "1",
+    "faction": "Tyranids",
+    "keywords": "Tyranids, Infantry, Synapse, Tyranid Warrior",
+    "wargear": "",
+    "abilities": [
+      "Synapse: TYRANIDS models automatically pass Nerve tests while they are within 12\" of any friendly models with this ability.",
+      "Shadow in the Warp: Subract 1 from any psychic tests made for enemy PSKYERS within 18\" of a model with this ability. TYRANIDS PSYKERS are not affected."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Comms",
+      "Heavy",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 4,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 3,
+      "attacks": 3,
+      "ld": 9,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "jkpkVm5sTQnYF4D2",
+  "sort": 41300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "_key": "!items!8bwj0ziv03gbcF4R",
+  "_id": "8bwj0ziv03gbcF4R",
+  "name": "Cursemite",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 4,
+    "source": "Gellerpox Infected, pg undefined",
+    "maxNumber": "4",
+    "faction": "Gellerpox Infected",
+    "keywords": "Gellerpox Infected, Chaos, Nurgle, Beast, Mutoid Vermin, Cursemite",
+    "wargear": "Bloodsucking proboscis",
+    "abilities": [
+      "Vermin: Add 1 to Injury rolls made for this model."
+    ],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "8\"",
+      "ws": 4,
+      "bs": 4,
+      "strength": 2,
+      "toughness": 2,
+      "wounds": 1,
+      "attacks": 2,
+      "ld": 8,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "xa5ETwzGr8PI5yz4",
+  "sort": 23900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

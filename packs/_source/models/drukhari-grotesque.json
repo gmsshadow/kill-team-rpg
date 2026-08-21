@@ -1,0 +1,52 @@
+{
+  "_key": "!items!qvqtiTKf4daLCbQ7",
+  "_id": "qvqtiTKf4daLCbQ7",
+  "name": "Grotesque",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 38,
+    "source": "Drukhari, pg undefined",
+    "maxNumber": "-",
+    "faction": "Drukhari",
+    "keywords": "Drukhari, Aeldari, Haemonculus Coven, Infantry, Grotesque",
+    "wargear": "Monstrous cleaver",
+    "abilities": [
+      "Insensible to Pain: This model has a 5+ invulnerable save."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Demolitions",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "7\"",
+      "ws": 3,
+      "bs": 6,
+      "strength": 5,
+      "toughness": 5,
+      "wounds": 4,
+      "attacks": 4,
+      "ld": 8,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "ZeTAJOve9kXS5sdW",
+  "sort": 21500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

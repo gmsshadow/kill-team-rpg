@@ -1,0 +1,52 @@
+{
+  "_key": "!items!i5cLi5U5AT63wxG7",
+  "_id": "i5cLi5U5AT63wxG7",
+  "name": "Rogue Psyker",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 20,
+    "source": "Servants of the Abyss, pg undefined",
+    "maxNumber": "-",
+    "faction": "Servants of the Abyss",
+    "keywords": "Servants of the Abyss, Chaos, Infantry, Psyker, Rogue Psyker",
+    "wargear": "Chaos stave; Laspistol",
+    "abilities": [
+      "Servants of the Abyss: You can re-roll failed Nerve tests for this model whilst it is within 6\" of a HERETIC ASTARTES model from your kill team."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Comms",
+      "Veteran",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 4,
+      "bs": 4,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 4,
+      "attacks": 2,
+      "ld": 8,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "dAJE9GD0dejQZE3g",
+  "sort": 35600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

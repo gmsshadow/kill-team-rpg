@@ -1,0 +1,37 @@
+{
+  "_key": "!items!2nEx2LenaDSBOt8j",
+  "_id": "2nEx2LenaDSBOt8j",
+  "name": "Plasma pistol - Supercharge",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Heretic Astartes, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "pistol",
+    "attacks": "1",
+    "strength": "8",
+    "ap": -3,
+    "damage": "2",
+    "abilities": "On an unmodified hit roll of 1, the bearer is taken out of action."
+  },
+  "effects": [],
+  "folder": "k5mzmPmXmHIhi54d",
+  "sort": 57000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

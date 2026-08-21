@@ -1,0 +1,37 @@
+{
+  "_key": "!items!7GpwB2Rid6ZaxMv8",
+  "_id": "7GpwB2Rid6ZaxMv8",
+  "name": "Krak grenade",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Servants of the Abyss, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "6\"",
+    "weaponType": "grenade",
+    "attacks": "1",
+    "strength": "6",
+    "ap": -1,
+    "damage": "D3",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "dAJE9GD0dejQZE3g",
+  "sort": 65700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

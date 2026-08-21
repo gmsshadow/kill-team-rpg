@@ -1,6 +1,6 @@
 {
-  "_key": "!items!deathguaq0oSiUgi",
-  "_id": "deathguaq0oSiUgi",
+  "_key": "!items!CNyhYLI30fGfUv03",
+  "_id": "CNyhYLI30fGfUv03",
   "name": "Death Guard",
   "type": "faction",
   "img": "icons/svg/statue.svg",
@@ -22,7 +22,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.12.0",
+    "systemVersion": "0.13.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

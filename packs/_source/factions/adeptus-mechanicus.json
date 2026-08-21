@@ -1,6 +1,6 @@
 {
-  "_key": "!items!adeptusmy6WKOyoU",
-  "_id": "adeptusmy6WKOyoU",
+  "_key": "!items!FqD4D63enK7WBcBQ",
+  "_id": "FqD4D63enK7WBcBQ",
   "name": "Adeptus Mechanicus",
   "type": "faction",
   "img": "icons/svg/statue.svg",
@@ -22,7 +22,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.12.0",
+    "systemVersion": "0.13.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

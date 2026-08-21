@@ -1,0 +1,37 @@
+{
+  "_key": "!items!YRmF6faT4pQHy7mJ",
+  "_id": "YRmF6faT4pQHy7mJ",
+  "name": "Plasma pistol - standard",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adepta Sororitas, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "pistol",
+    "attacks": "1",
+    "strength": "7",
+    "ap": -3,
+    "damage": "1",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "CfklqBY3SVghw1i5",
+  "sort": 5600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

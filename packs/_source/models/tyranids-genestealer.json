@@ -1,0 +1,50 @@
+{
+  "_key": "!items!slYv6HIVAzKdgPCH",
+  "_id": "slYv6HIVAzKdgPCH",
+  "name": "Genestealer",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 11,
+    "source": "Tyranids, pg undefined",
+    "maxNumber": "-",
+    "faction": "Tyranids",
+    "keywords": "Tyranids, Infantry, Genestealer",
+    "wargear": "Extended Carapace; Flesh Hooks",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Scout",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "8\"",
+      "ws": 3,
+      "bs": 4,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 1,
+      "attacks": 3,
+      "ld": 9,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "jkpkVm5sTQnYF4D2",
+  "sort": 40400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

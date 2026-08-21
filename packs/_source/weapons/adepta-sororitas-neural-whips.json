@@ -1,0 +1,37 @@
+{
+  "_key": "!items!dizWpUFIlyrqvw9Y",
+  "_id": "dizWpUFIlyrqvw9Y",
+  "name": "Neural Whips",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adepta Sororitas, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "User",
+    "ap": -2,
+    "damage": "1",
+    "abilities": "When resolving an attack made with this weapon against a model which has a Leadership characteristic of 7 or less, add one to the wound roll."
+  },
+  "effects": [],
+  "folder": "CfklqBY3SVghw1i5",
+  "sort": 8100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

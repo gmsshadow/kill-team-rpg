@@ -1,0 +1,46 @@
+{
+  "_key": "!items!EvKzqbmviT4DarU1",
+  "_id": "EvKzqbmviT4DarU1",
+  "name": "Lord Commissar",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 25,
+    "source": "Astra Militarum, pg undefined",
+    "maxNumber": "1",
+    "faction": "Astra Militarum",
+    "keywords": "Astra Militarum, Imperium, Infantry, Lord Commissar, Officio Prefectus",
+    "wargear": "",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "6\"",
+      "ws": 2,
+      "bs": 2,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 4,
+      "attacks": 3,
+      "ld": 9,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "QTsFQ70RmVG5i7gb",
+  "sort": 9800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "_key": "!items!zUxcZyBIRSJQZED2",
+  "_id": "zUxcZyBIRSJQZED2",
+  "name": "Deathwatch frag cannon - frag",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Deathwatch, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "assault",
+    "attacks": "2D3",
+    "strength": "6",
+    "ap": -1,
+    "damage": "1",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "sRUjWRON4HQfodYf",
+  "sort": 34400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

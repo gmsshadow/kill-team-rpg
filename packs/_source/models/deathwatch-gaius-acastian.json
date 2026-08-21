@@ -1,0 +1,76 @@
+{
+  "_key": "!items!oTmRCHqN4tUHGRYX",
+  "_id": "oTmRCHqN4tUHGRYX",
+  "name": "Gaius Acastian",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 125,
+    "source": "Deathwatch, pg undefined",
+    "maxNumber": "-",
+    "faction": "Deathwatch",
+    "keywords": "Deathwatch, Adeptus Astartes, Imperium, Infantry, Watch Master, Level 1, Level 3, Level 2, Level 4",
+    "wargear": "Level 1 - Scion of Guillman; Level 2 - Instinctive Strategist; Level 3 - Lead by Example; Level 4 - Artisan Weapon",
+    "abilities": [
+      "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
+    ],
+    "rules": [
+      {
+        "type": "reroll",
+        "roll": "nerve",
+        "characteristic": null,
+        "when": "failed",
+        "value": 0,
+        "penalty": null,
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      },
+      {
+        "type": "ignorePenalty",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": "fleshWound",
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      }
+    ],
+    "specialisms": [],
+    "profile": {
+      "move": "6\"",
+      "ws": 2,
+      "bs": 2,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 6,
+      "attacks": 4,
+      "ld": 9,
+      "save": 2,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "sRUjWRON4HQfodYf",
+  "sort": 17900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

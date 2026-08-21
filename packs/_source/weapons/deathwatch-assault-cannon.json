@@ -1,0 +1,37 @@
+{
+  "_key": "!items!nwzmRupWNmhkPyN4",
+  "_id": "nwzmRupWNmhkPyN4",
+  "name": "Assault cannon",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 5,
+    "source": "Deathwatch, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "24\"",
+    "weaponType": "heavy",
+    "attacks": "6",
+    "strength": "6",
+    "ap": -1,
+    "damage": "1",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "sRUjWRON4HQfodYf",
+  "sort": 32800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

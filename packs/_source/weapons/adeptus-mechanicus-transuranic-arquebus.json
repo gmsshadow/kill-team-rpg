@@ -1,0 +1,37 @@
+{
+  "_key": "!items!IJa9GnSByVmnS1aR",
+  "_id": "IJa9GnSByVmnS1aR",
+  "name": "Transuranic arquebus",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 5,
+    "source": "Adeptus Mechanicus, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "60\"",
+    "weaponType": "heavy",
+    "attacks": "1",
+    "strength": "7",
+    "ap": -2,
+    "damage": "D3",
+    "abilities": "This weapon cannot be fired if the firing model moved during the Movement phase. A model firing a Transuranic Arquebus does not suffer the penalty to hit rolls for the target being at long range. Each time you make a wound roll of 6+ for this weapon, it inflicts a mortal wound in addition to the normal damage."
+  },
+  "effects": [],
+  "folder": "b09An29gloB2fENi",
+  "sort": 20300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

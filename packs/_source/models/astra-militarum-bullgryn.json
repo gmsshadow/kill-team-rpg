@@ -1,0 +1,54 @@
+{
+  "_key": "!items!xsZMpG7wT0VQ5YhO",
+  "_id": "xsZMpG7wT0VQ5YhO",
+  "name": "Bullgryn",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 37,
+    "source": "Astra Militarum, pg undefined",
+    "maxNumber": "-",
+    "faction": "Astra Militarum",
+    "keywords": "Astra Militarum, Imperium, Militarum Auxilla, Infantry, Ogryn, Bullgryn",
+    "wargear": "",
+    "abilities": [
+      "Avalanche of Muscle: You can add 1 to the Attacks characteristic of this model in the Fight phase of any battle round in which it charged. This ability may only be used the first time this model fights each battle round.",
+      "Auxilla: The Voice of Command ability has no effect on this model."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Demolitions",
+      "Heavy",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 4,
+      "strength": 5,
+      "toughness": 5,
+      "wounds": 3,
+      "attacks": 3,
+      "ld": 7,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "QTsFQ70RmVG5i7gb",
+  "sort": 9000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

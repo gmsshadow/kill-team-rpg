@@ -1,0 +1,37 @@
+{
+  "_key": "!items!NqXCRAbGvEPs14dQ",
+  "_id": "NqXCRAbGvEPs14dQ",
+  "name": "Grav-gun",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 2,
+    "source": "Deathwatch, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "18\"",
+    "weaponType": "rapidFire",
+    "attacks": "1",
+    "strength": "5",
+    "ap": -3,
+    "damage": "1",
+    "abilities": "If the target has a Save characteristic of 3+ or better, this weapon has a Damage characteristic of 2."
+  },
+  "effects": [],
+  "folder": "sRUjWRON4HQfodYf",
+  "sort": 35200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

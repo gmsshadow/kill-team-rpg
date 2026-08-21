@@ -1,0 +1,62 @@
+{
+  "_key": "!items!lKH2PeZu9CfmTchK",
+  "_id": "lKH2PeZu9CfmTchK",
+  "name": "Obsidius Mallex",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 125,
+    "source": "Servants of the Abyss, pg undefined",
+    "maxNumber": "1",
+    "faction": "Servants of the Abyss",
+    "keywords": "Servants of the Abyss, Chaos, Heretic Astartes, Black Legion, Commander, Infantry, Obsidius Mallex",
+    "wargear": "Plasma pistol; Thunder hammer",
+    "abilities": [
+      "Transhuman Physiology: Ignore the penalty to this model’s hit rolls from one flesh wound it has suffered."
+    ],
+    "rules": [
+      {
+        "type": "ignorePenalty",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": "fleshWound",
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      }
+    ],
+    "specialisms": [],
+    "profile": {
+      "move": "6\"",
+      "ws": 2,
+      "bs": 2,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 5,
+      "attacks": 4,
+      "ld": 9,
+      "save": 3,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "dAJE9GD0dejQZE3g",
+  "sort": 35500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

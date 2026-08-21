@@ -1,0 +1,37 @@
+{
+  "_key": "!items!1KPMd2vWVWT2NiPW",
+  "_id": "1KPMd2vWVWT2NiPW",
+  "name": "Ichor injector",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 5,
+    "source": "Drukhari, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "User",
+    "ap": -1,
+    "damage": "1",
+    "abilities": "The bearer can only make a single attack with this weapon each time it fights. You can re-roll failed wound rolls for this weapon. Each time you roll a wound roll of 6+ for this weapon, the target suffers D3 mortal wounds in addition to any other damage."
+  },
+  "effects": [],
+  "folder": "ZeTAJOve9kXS5sdW",
+  "sort": 44200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

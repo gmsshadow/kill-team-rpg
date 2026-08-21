@@ -1,0 +1,54 @@
+{
+  "_key": "!items!KpQrMR2X8lkbQZUv",
+  "_id": "KpQrMR2X8lkbQZUv",
+  "name": "Kommando",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 8,
+    "source": "Orks, pg undefined",
+    "maxNumber": "-",
+    "faction": "Orks",
+    "keywords": "Orks, Infantry, Kommando",
+    "wargear": "",
+    "abilities": [
+      "'Ere We Go: Re-roll failed charge rolls for a unit with this ability.",
+      "Sneaky Gits: When an enemy player makes a hit roll for a shooting attack that targets this model, and this model is obscurred, that hit roll suffers and additional -1 modifier."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Demolitions",
+      "Scout",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 5,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 1,
+      "attacks": 2,
+      "ld": 6,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "S7e90hmrUlQ3AXQr",
+  "sort": 33700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

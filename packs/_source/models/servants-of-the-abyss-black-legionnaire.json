@@ -1,0 +1,68 @@
+{
+  "_key": "!items!yPgPqFQdGZq7iLyD",
+  "_id": "yPgPqFQdGZq7iLyD",
+  "name": "Black Legionnaire",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 12,
+    "source": "Servants of the Abyss, pg undefined",
+    "maxNumber": "-",
+    "faction": "Servants of the Abyss",
+    "keywords": "Servants of the Abyss, Chaos, Heretic Astartes, Infantry, Black Legionnaire",
+    "wargear": "Boltgun",
+    "abilities": [
+      "Transhuman Physiology: Ignore the penalty to this model’s hit rolls from one flesh wound it has suffered.",
+      "Death to the False Emperor: If a model with this ability makes an attack in the Fight phase which targets an Imperium model, each time you roll a hit roll of 6+ you may make an additional attack with the same weapon against the same target. These attacks cannot themselves generate any further attacks."
+    ],
+    "rules": [
+      {
+        "type": "ignorePenalty",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": "fleshWound",
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      }
+    ],
+    "specialisms": [
+      "Combat",
+      "Sniper",
+      "Veteran",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 7,
+      "save": 3,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "dAJE9GD0dejQZE3g",
+  "sort": 34700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

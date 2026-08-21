@@ -1,0 +1,37 @@
+{
+  "_key": "!items!jYlYTW38ns1cfEdI",
+  "_id": "jYlYTW38ns1cfEdI",
+  "name": "Radium pistol",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adeptus Mechanicus, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "pistol",
+    "attacks": "1",
+    "strength": "3",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "Each time you make a wound roll of 6+ for this weapon, that hit is resolved with a Damage of 2."
+  },
+  "effects": [],
+  "folder": "b09An29gloB2fENi",
+  "sort": 20000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "_key": "!items!BIxixy9wlwpOfc5Q",
+  "_id": "BIxixy9wlwpOfc5Q",
+  "name": "Ork Boy",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 6,
+    "source": "Orks, pg undefined",
+    "maxNumber": "-",
+    "faction": "Orks",
+    "keywords": "Orks, Infantry, Ork Boy",
+    "wargear": "Shoota; Slugga and Choppa",
+    "abilities": [
+      "'Ere We Go: Re-roll failed charge rolls for a unit with this ability."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Demolitions",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "5\"",
+      "ws": 3,
+      "bs": 5,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 1,
+      "attacks": 2,
+      "ld": 6,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "S7e90hmrUlQ3AXQr",
+  "sort": 34300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

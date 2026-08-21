@@ -1,0 +1,68 @@
+{
+  "_key": "!items!rMTi5WvaRSZ8buVW",
+  "_id": "rMTi5WvaRSZ8buVW",
+  "name": "Aspiring Sorcerer",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 17,
+    "source": "Thousand Sons, pg undefined",
+    "maxNumber": "1",
+    "faction": "Thousand Sons",
+    "keywords": "Thousand Sons, Chaos, Tzeentch, Heretic Astartes, Infantry, Psyker, Rubric Marine",
+    "wargear": "",
+    "abilities": [
+      "Death to the False Emperor: If a model with this ability makes an attack in the Fight phase which targets an IMPERIUM model, each time you roll a hit roll of 6+ you may make an additional attack with the same weapon against the same target. These attacks cannot themselves generate any further attacks.",
+      "Favoured of Tzeentch: This model has a 5+ invulnerable save.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
+    ],
+    "rules": [
+      {
+        "type": "ignorePenalty",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": "fleshWound",
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      }
+    ],
+    "specialisms": [
+      "Combat",
+      "Demolitions",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 1,
+      "attacks": 2,
+      "ld": 8,
+      "save": 3,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "w1gHiXyTidM90JkZ",
+  "sort": 39100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

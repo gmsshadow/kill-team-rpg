@@ -20,8 +20,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { compilePack } from "@foundryvtt/foundryvtt-cli";
 import { FACTIONS } from "../module/helpers/factions.mjs";
-import { ADEPTUS_ASTARTES_ITEMS, ADEPTUS_ASTARTES_MODEL_ITEMS } from "../module/helpers/factions/adeptus-astartes.mjs";
-import { NECRONS_ITEMS, NECRONS_MODEL_ITEMS } from "../module/helpers/factions/necrons.mjs";
+import { ALL_FACTION_ITEMS, ALL_FACTION_MODELS } from "../module/helpers/factions/_index.mjs";
 import { rulesForAbilities } from "../module/rules/faction-rules.mjs";
 import { SPECIALISMS } from "../module/helpers/specialisms.mjs";
 import { rulesForAbility } from "../module/rules/specialist-rules.mjs";
@@ -59,19 +58,37 @@ const packRoot = path.join(root, "packs");
  * alphabet. Deriving them from the faction key keeps ids stable across
  * rebuilds, so re-importing a pack updates entries instead of duplicating them.
  */
+/** Filename-safe form of a faction name. */
+function slugify(text) {
+  return String(text).toLowerCase().replace(/\W+/g, "-").replace(/^-|-$/g, "");
+}
+
 function stableId(key) {
+  // Foundry ids are 16 characters from a restricted alphabet. The previous
+  // version seeded from the key's first 8 characters, which are identical for
+  // every model ("model-Adeptus..."), leaving only 8 hash characters and
+  // colliding across a few hundred entries - silently dropping documents,
+  // because a later write simply overwrites an earlier one.
+  //
+  // FNV-1a over the whole key, twice with different offsets, gives the full
+  // 16 characters real entropy while staying deterministic across rebuilds.
   const alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-  let hash = 0;
-  for (const char of key) hash = (hash * 31 + char.charCodeAt(0)) >>> 0;
+  const hash = (seed) => {
+    let h = seed;
+    for (let i = 0; i < key.length; i++) {
+      h ^= key.charCodeAt(i);
+      h = Math.imul(h, 0x01000193) >>> 0;
+    }
+    return h;
+  };
+  let a = hash(0x811c9dc5), b = hash(0x9e3779b9);
   let id = "";
-  // Seed with the key so distinct factions never collide, then pad from the hash.
-  const seed = key.replace(/[^a-zA-Z0-9]/g, "");
-  id = seed.slice(0, 8).padEnd(8, "x");
-  for (let i = 0; i < 8; i++) {
-    hash = (hash * 1103515245 + 12345) >>> 0;
-    id += alphabet[hash % alphabet.length];
+  for (let i = 0; i < 16; i++) {
+    const source = i < 8 ? (a = Math.imul(a, 1103515245) + 12345 >>> 0)
+                         : (b = Math.imul(b, 1103515245) + 12345 >>> 0);
+    id += alphabet[source % alphabet.length];
   }
-  return id.slice(0, 16);
+  return id;
 }
 
 const ICONS = {
@@ -283,7 +300,7 @@ async function main() {
 
   // Weapons and wargear are grouped into a folder per faction, so the pack
   // does not become one flat list as more factions are added.
-  const allWeapons = [...ADEPTUS_ASTARTES_ITEMS, ...NECRONS_ITEMS];
+  const allWeapons = ALL_FACTION_ITEMS;
   const weaponFactions = [...new Set(allWeapons.map(e => e.faction))];
   const weaponFolders = weaponFactions.map((name, i) => folderDocument(name, i * 100));
   const folderByFaction = Object.fromEntries(
@@ -292,14 +309,14 @@ async function main() {
   await buildPack("weapons", [
     ...weaponFolders.map(doc => ({ file: `folder-${doc.name.toLowerCase().replace(/\W+/g, "-")}`, doc })),
     ...allWeapons.map((entry, index) => ({
-      file: entry.key,
+      file: `${slugify(entry.faction)}-${entry.key}`,
       doc: weaponDocument(entry, index, folderByFaction[entry.faction])
     }))
   ]);
 
   // Imported factions are tagged by ability name at build time, so re-running
   // the importer never loses the rules work.
-  const allModels = [...ADEPTUS_ASTARTES_MODEL_ITEMS, ...NECRONS_MODEL_ITEMS].map(m => ({
+  const allModels = ALL_FACTION_MODELS.map(m => ({
     ...m,
     rules: (m.rules?.length ? m.rules : rulesForAbilities(m.abilities, m.faction))
   }));
@@ -311,7 +328,7 @@ async function main() {
   await buildPack("models", [
     ...modelFolders.map(doc => ({ file: `folder-${doc.name.toLowerCase().replace(/\W+/g, "-")}`, doc })),
     ...allModels.map((entry, index) => ({
-      file: entry.key,
+      file: `${slugify(entry.faction)}-${entry.key}`,
       doc: modelDocument(entry, modelFolderByFaction[entry.faction], index)
     }))
   ]);

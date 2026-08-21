@@ -1,0 +1,49 @@
+{
+  "_key": "!items!0JGf03KD8BA3MjED",
+  "_id": "0JGf03KD8BA3MjED",
+  "name": "Kroot Hound",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 6,
+    "source": "Kroot, pg undefined",
+    "maxNumber": "4",
+    "faction": "Kroot",
+    "keywords": "Kroot, Beast, Kroot Hound",
+    "wargear": "Ripping fangs",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Scout"
+    ],
+    "profile": {
+      "move": "12\"",
+      "ws": 3,
+      "bs": 4,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 2,
+      "ld": 5,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "GDmpE5uVSl63spMv",
+  "sort": 30900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

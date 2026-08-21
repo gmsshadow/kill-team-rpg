@@ -1,0 +1,37 @@
+{
+  "_key": "!items!kL6nEbwt2f8zarWB",
+  "_id": "kL6nEbwt2f8zarWB",
+  "name": "Ossefactor",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 5,
+    "source": "Drukhari, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "24\"",
+    "weaponType": "assault",
+    "attacks": "1",
+    "strength": "*",
+    "ap": -3,
+    "damage": "1",
+    "abilities": "This weapon always wounds on a roll of 2+. If a model is taken out of action by an attack made by this weapon, roll a D6 for each model within 2\" of that model. On a roll of 5+, that model suffers a mortal wound."
+  },
+  "effects": [],
+  "folder": "ZeTAJOve9kXS5sdW",
+  "sort": 42500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

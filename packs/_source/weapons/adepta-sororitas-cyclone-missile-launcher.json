@@ -1,0 +1,37 @@
+{
+  "_key": "!items!F09iRYbwf0FofkzC",
+  "_id": "F09iRYbwf0FofkzC",
+  "name": "Cyclone missile launcher",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 6,
+    "source": "Adepta Sororitas, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "-",
+    "weaponType": "assault",
+    "attacks": "1",
+    "strength": "",
+    "ap": 0,
+    "damage": "-",
+    "abilities": "When attacking with this weapon, choose one of the profiles below."
+  },
+  "effects": [],
+  "folder": "CfklqBY3SVghw1i5",
+  "sort": 1500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

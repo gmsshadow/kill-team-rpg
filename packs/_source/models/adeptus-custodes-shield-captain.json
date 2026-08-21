@@ -1,0 +1,59 @@
+{
+  "_key": "!items!Vq9IJujMTSJSfCz0",
+  "_id": "Vq9IJujMTSJSfCz0",
+  "name": "Shield-Captain",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 118,
+    "source": "Adeptus Custodes, pg undefined",
+    "maxNumber": "1",
+    "faction": "Adeptus Custodes",
+    "keywords": "Adeptus Custodes, Imperium, Infantry, Shield-Captain",
+    "wargear": "",
+    "abilities": [
+      "Aegis of the Emperor: This model has a 5+ invulnerable save. In addition, roll a D6 each time a model with this ability suffers a mortal wound in the Psychic phase. On a 6 that mortal wound is ignored.",
+      "Superior Transhuman Physiology: Ignore the penalty to this model's hit rolls from flesh wounds."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Ferocity",
+      "Fortitude",
+      "Leadership",
+      "Logistics",
+      "Melee",
+      "Shooting",
+      "Stealth",
+      "Strategist",
+      "Strength"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 2,
+      "bs": 2,
+      "strength": 5,
+      "toughness": 5,
+      "wounds": 6,
+      "attacks": 5,
+      "ld": 9,
+      "save": 2,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "bYb8xUNcXW7K3ypC",
+  "sort": 6800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

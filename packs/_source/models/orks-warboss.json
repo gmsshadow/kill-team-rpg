@@ -1,0 +1,55 @@
+{
+  "_key": "!items!rezG32t8bavyrUFa",
+  "_id": "rezG32t8bavyrUFa",
+  "name": "Warboss",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 62,
+    "source": "Orks, pg undefined",
+    "maxNumber": "1",
+    "faction": "Orks",
+    "keywords": "Orks, Commander, Infantry, Warboss",
+    "wargear": "",
+    "abilities": [
+      "'Ere We Go: Re-roll failed charge rolls for a unit with this ability."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Ferocity",
+      "Fortitude",
+      "Leadership",
+      "Melee",
+      "Strategist",
+      "Strength"
+    ],
+    "profile": {
+      "move": "5\"",
+      "ws": 2,
+      "bs": 5,
+      "strength": 6,
+      "toughness": 5,
+      "wounds": 6,
+      "attacks": 4,
+      "ld": 8,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "S7e90hmrUlQ3AXQr",
+  "sort": 34600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

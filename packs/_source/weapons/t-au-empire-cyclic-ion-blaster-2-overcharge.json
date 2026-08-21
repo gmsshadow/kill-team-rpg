@@ -1,0 +1,37 @@
+{
+  "_key": "!items!ATkdENgf0lu36b8Z",
+  "_id": "ATkdENgf0lu36b8Z",
+  "name": "Cyclic ion blaster (2. overcharge)",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "T'au Empire, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "18",
+    "weaponType": "assault",
+    "attacks": "3",
+    "strength": "8",
+    "ap": -1,
+    "damage": "D3",
+    "abilities": "If you make one or more unmodified hit rolls of 1, the bearer suffers a mortal wound after all of this weapon's shots have been resolved."
+  },
+  "effects": [],
+  "folder": "mPKVSDA56tsrIx4F",
+  "sort": 68100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "_key": "!items!qNQry9CbsngVEVyf",
+  "_id": "qNQry9CbsngVEVyf",
+  "name": "Shrieker Cannon - Shuriken",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Harlequins, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "24\"",
+    "weaponType": "assault",
+    "attacks": "3",
+    "strength": "6",
+    "ap": 0,
+    "damage": "1",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "vifkpcRuNotCZGNa",
+  "sort": 54200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

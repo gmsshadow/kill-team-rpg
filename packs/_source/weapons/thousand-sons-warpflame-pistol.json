@@ -1,0 +1,37 @@
+{
+  "_key": "!items!DU5WNEhsFcboVc12",
+  "_id": "DU5WNEhsFcboVc12",
+  "name": "Warpflame pistol",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 1,
+    "source": "Thousand Sons, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "6\"",
+    "weaponType": "pistol",
+    "attacks": "D6",
+    "strength": "3",
+    "ap": -2,
+    "damage": "1",
+    "abilities": "This weapon automatically hits its target."
+  },
+  "effects": [],
+  "folder": "w1gHiXyTidM90JkZ",
+  "sort": 71400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

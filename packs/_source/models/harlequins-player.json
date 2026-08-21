@@ -1,0 +1,52 @@
+{
+  "_key": "!items!0rmRALqXwVa9KTyB",
+  "_id": "0rmRALqXwVa9KTyB",
+  "name": "Player",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 12,
+    "source": "Harlequins, pg undefined",
+    "maxNumber": "-",
+    "faction": "Harlequins",
+    "keywords": "Harlequins, Aeldari, Infantry, Player",
+    "wargear": "",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Medic",
+      "Scout",
+      "Veteran",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "8\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 4,
+      "ld": 8,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "vifkpcRuNotCZGNa",
+  "sort": 28300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

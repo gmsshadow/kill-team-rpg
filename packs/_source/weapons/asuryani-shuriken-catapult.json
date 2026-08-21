@@ -1,0 +1,37 @@
+{
+  "_key": "!items!Dy3iL8D63UPW50ZK",
+  "_id": "Dy3iL8D63UPW50ZK",
+  "name": "Shuriken catapult",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Asuryani, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "assault",
+    "attacks": "2",
+    "strength": "4",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "Each time you make a wound roll of 6+ for this weapon, that hit is resolved with an AP of -3."
+  },
+  "effects": [],
+  "folder": "DKJAf438T2LABUhU",
+  "sort": 26600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "_key": "!items!bmRkNmnIRQjGLSJu",
+  "_id": "bmRkNmnIRQjGLSJu",
+  "name": "Scarab Occult Terminator",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 32,
+    "source": "Thousand Sons, pg undefined",
+    "maxNumber": "-",
+    "faction": "Thousand Sons",
+    "keywords": "Thousand Sons, Chaos, Tzeentch, Heretic Astartes, Infantry, Terminator, Scarab Occult Terminator",
+    "wargear": "",
+    "abilities": [
+      "Death to the False Emperor: If a model with this ability makes an attack in the Fight phase which targets an IMPERIUM model, each time you roll a hit roll of 6+ you may make an additional attack with the same weapon against the same target. These attacks cannot themselves generate any further attacks.",
+      "All is Dust: Add 1 to saving throws for this model if the attack has a Damage characteristic of 1. In addition, the -1 modifier to hit rolls for moving and shooting Heavy weapons does not apply to Rubric Marine Gunners or Scarab Occult Gunners.",
+      "Terminator Armour: This model has a 5+ invulnerable save."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Demolitions",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "4\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 2,
+      "attacks": 2,
+      "ld": 8,
+      "save": 2,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "w1gHiXyTidM90JkZ",
+  "sort": 39800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

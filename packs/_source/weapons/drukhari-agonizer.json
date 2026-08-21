@@ -1,0 +1,37 @@
+{
+  "_key": "!items!s9aZkH25gP2xYZ2R",
+  "_id": "s9aZkH25gP2xYZ2R",
+  "name": "Agonizer",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 2,
+    "source": "Drukhari, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "*",
+    "ap": -2,
+    "damage": "1",
+    "abilities": "This weapon always wounds on a 4+."
+  },
+  "effects": [],
+  "folder": "ZeTAJOve9kXS5sdW",
+  "sort": 43300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

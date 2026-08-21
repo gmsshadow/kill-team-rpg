@@ -1,0 +1,48 @@
+{
+  "_key": "!items!nCbSt6jAPUpSFkbq",
+  "_id": "nCbSt6jAPUpSFkbq",
+  "name": "Ghyrson Stark",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 25,
+    "source": "Genestealer Cults, pg undefined",
+    "maxNumber": "1",
+    "faction": "Genestealer Cults",
+    "keywords": "Genestealer Cults, Tyranids, Infantry, Kelermorph, Level 1, Level 2, Level 3, Level 4",
+    "wargear": "Cultist knife; Level 1 - Hybrid Agility; Level 2 - Preternatural Skill; Level 3 - Swift Reflexes; Level 4 - Trick Shooter; Liberator autostub",
+    "abilities": [
+      "Cult Ambush: After deployment but before the first battle round, roll a D6 for this model. On a 5+ this model can immediately move up to 6\"."
+    ],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "7\"",
+      "ws": 3,
+      "bs": 2,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 4,
+      "attacks": 3,
+      "ld": 8,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "NIJ4DcraRsB8D410",
+  "sort": 25700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

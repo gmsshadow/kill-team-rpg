@@ -1,0 +1,37 @@
+{
+  "_key": "!items!pCpurqXGdivub8Pe",
+  "_id": "pCpurqXGdivub8Pe",
+  "name": "Galvanic rifle",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adeptus Mechanicus, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "30\"",
+    "weaponType": "rapidFire",
+    "attacks": "1",
+    "strength": "4",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "Each time you make a wound roll of 6+ for this weapon, that hit is resolved with an AP of -1."
+  },
+  "effects": [],
+  "folder": "b09An29gloB2fENi",
+  "sort": 18900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

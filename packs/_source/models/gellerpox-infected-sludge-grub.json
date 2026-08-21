@@ -1,0 +1,48 @@
+{
+  "_key": "!items!wLQNmrKTSb2LMf4t",
+  "_id": "wLQNmrKTSb2LMf4t",
+  "name": "Sludge-grub",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 5,
+    "source": "Gellerpox Infected, pg undefined",
+    "maxNumber": "4",
+    "faction": "Gellerpox Infected",
+    "keywords": "Gellerpox Infected, Chaos, Nurgle, Beast, Mutoid Vermin, Sludge-grub",
+    "wargear": "Acid spit; Fanged maw and stinger",
+    "abilities": [
+      "Vermin: Add 1 to Injury rolls made for this model."
+    ],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "5\"",
+      "ws": 4,
+      "bs": 4,
+      "strength": 3,
+      "toughness": 2,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 8,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "xa5ETwzGr8PI5yz4",
+  "sort": 24500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

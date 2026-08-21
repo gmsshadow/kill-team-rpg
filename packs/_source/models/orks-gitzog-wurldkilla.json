@@ -1,0 +1,48 @@
+{
+  "_key": "!items!UnIXcHKPqDy5ezoF",
+  "_id": "UnIXcHKPqDy5ezoF",
+  "name": "Gitzog Wurldkilla",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 86,
+    "source": "Orks, pg undefined",
+    "maxNumber": "1",
+    "faction": "Orks",
+    "keywords": "Orks, Infantry, Warboss, Level 1, Level 2, Level 3, Level 4",
+    "wargear": "Level 1 - Dead 'Ard; Level 2 - Redfangz Smellz Yer!; Level 3 - Krumpin' Time; Level 4 - Loota",
+    "abilities": [
+      "'Ere We Go: Re-roll failed charge rolls for a unit with this ability."
+    ],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "5\"",
+      "ws": 2,
+      "bs": 5,
+      "strength": 6,
+      "toughness": 6,
+      "wounds": 6,
+      "attacks": 4,
+      "ld": 8,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "S7e90hmrUlQ3AXQr",
+  "sort": 33400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

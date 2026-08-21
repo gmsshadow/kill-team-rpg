@@ -1,0 +1,37 @@
+{
+  "_key": "!items!wrQjyRmfmLABOz0j",
+  "_id": "wrQjyRmfmLABOz0j",
+  "name": "Smart missile system",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 5,
+    "source": "T'au Empire, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "30\"",
+    "weaponType": "heavy",
+    "attacks": "4",
+    "strength": "5",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "This weapon can be fired at models that are not visible to the bearer. It the target is not visible to the bearer, a 6 is required for a successful hit roll, irrespective of the firing model's Ballistic Skill or any modifiers."
+  },
+  "effects": [],
+  "folder": "mPKVSDA56tsrIx4F",
+  "sort": 69900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

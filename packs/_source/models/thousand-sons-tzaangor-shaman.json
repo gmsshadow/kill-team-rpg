@@ -1,0 +1,56 @@
+{
+  "_key": "!items!ta1QZGxSPWTybO5i",
+  "_id": "ta1QZGxSPWTybO5i",
+  "name": "Tzaangor Shaman",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 40,
+    "source": "Thousand Sons, pg undefined",
+    "maxNumber": "1",
+    "faction": "Thousand Sons",
+    "keywords": "Thousand Sons, Chaos, Tzeentch, Heretic Astartes, Cavalry, Daemon, Tzaangor, Fly, Psyker, Shaman",
+    "wargear": "Blades; Disc of Tzeentch",
+    "abilities": [
+      "Aura of Dark Glory: This model has a 5+ invulnerable save."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Ferocity",
+      "Fortitude",
+      "Leadership",
+      "Melee",
+      "Psyker",
+      "Strategist",
+      "Strength"
+    ],
+    "profile": {
+      "move": "12\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 4,
+      "attacks": 3,
+      "ld": 8,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "w1gHiXyTidM90JkZ",
+  "sort": 40100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

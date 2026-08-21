@@ -1,0 +1,55 @@
+{
+  "_key": "!items!HWRIB0LEbKX6LWF2",
+  "_id": "HWRIB0LEbKX6LWF2",
+  "name": "Vulgrar Thrice-cursed",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 65,
+    "source": "Gellerpox Infected, pg undefined",
+    "maxNumber": "1",
+    "faction": "Gellerpox Infected",
+    "keywords": "Gellerpox Infected, Chaos, Nurgle, Commander, Twisted Lord, Vulgrar Thrice-Cursed",
+    "wargear": "Belly-flamer; Fleshripper claws",
+    "abilities": [
+      "Disgustingly Resilient: Each time a model with this ability loses a wound, roll a D6, on a 5+ the model does not lose that wound.",
+      "Horrific Visage: Subtract 1 from the Leadership characteristic of models whilst they are within 6\" of any enemy models with this ability."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Demolitions",
+      "Strength",
+      "Veteran",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "4\"",
+      "ws": 3,
+      "bs": 6,
+      "strength": 5,
+      "toughness": 5,
+      "wounds": 5,
+      "attacks": 4,
+      "ld": 9,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "xa5ETwzGr8PI5yz4",
+  "sort": 24600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "_key": "!items!45KNuxWt6NYfcBkT",
+  "_id": "45KNuxWt6NYfcBkT",
+  "name": "Flesh gauntlet",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Drukhari, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "User",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "Each time you roll a wound roll of 6+ for this weapon , the target suffers a mortal wound in addition to any other damage."
+  },
+  "effects": [],
+  "folder": "ZeTAJOve9kXS5sdW",
+  "sort": 43600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

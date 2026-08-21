@@ -1,0 +1,52 @@
+{
+  "_key": "!items!Mx6LiBwL4FoNOP6J",
+  "_id": "Mx6LiBwL4FoNOP6J",
+  "name": "Pink Horror Hornblower",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 13,
+    "source": "Chaos Daemons, pg undefined",
+    "maxNumber": "1",
+    "faction": "Chaos Daemons",
+    "keywords": "Chaos Daemons, Chaos, Tzeentch, Infantry, Daemon, Horror",
+    "wargear": "Instrument of Tzeentch",
+    "abilities": [
+      "Ephemeral Daemons: This model has an invulnerable save of 4+. Blue Horrors instead have an invulnerable save of 5+. Pairs of Brimstone Horrors instead have an invulnerable save of 6+."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Comms",
+      "Demolitions",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 4,
+      "bs": 4,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 7,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "WjefwLG9g3iFYVGl",
+  "sort": 14200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

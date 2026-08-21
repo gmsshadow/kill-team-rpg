@@ -1,0 +1,54 @@
+{
+  "_key": "!items!VMfkHKb41oDMxGVA",
+  "_id": "VMfkHKb41oDMxGVA",
+  "name": "Nob",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 15,
+    "source": "Orks, pg undefined",
+    "maxNumber": "-",
+    "faction": "Orks",
+    "keywords": "Orks, Infantry, Nob",
+    "wargear": "",
+    "abilities": [
+      "'Ere We Go: Re-roll failed charge rolls for a unit with this ability.",
+      "Keepin' Order: When you make an unmodified roll of 6 for a Nerve test taken for a model within 3\" of a friendly model with this ability, that Nerve test is passed."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Comms",
+      "Demolitions",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "5\"",
+      "ws": 3,
+      "bs": 5,
+      "strength": 5,
+      "toughness": 4,
+      "wounds": 2,
+      "attacks": 3,
+      "ld": 6,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "S7e90hmrUlQ3AXQr",
+  "sort": 34200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

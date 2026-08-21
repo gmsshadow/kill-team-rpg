@@ -1,0 +1,55 @@
+{
+  "_key": "!items!qXonuh67utIfkLa1",
+  "_id": "qXonuh67utIfkLa1",
+  "name": "Sicarian Infiltrator",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 14,
+    "source": "Adeptus Mechanicus, pg undefined",
+    "maxNumber": "-",
+    "faction": "Adeptus Mechanicus",
+    "keywords": "Adeptus Mechanicus, Imperium, Infantry, Sicarian Infiltrator, Skitarii",
+    "wargear": "Flechette Blaster and Taser Goad; Stubcarbine and Powersword",
+    "abilities": [
+      "Bionics: This model has a 6+ invulnerable save.",
+      "Neurostatic Aura: Subtract 1 from the Leadership characteristic of enemy models whilst they are within 3\" of one or more models with this ability."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Comms",
+      "Scout",
+      "Veteran",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "8\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 4,
+      "toughness": 3,
+      "wounds": 2,
+      "attacks": 2,
+      "ld": 6,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "b09An29gloB2fENi",
+  "sort": 7600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

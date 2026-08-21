@@ -1,0 +1,55 @@
+{
+  "_key": "!items!kdeZ6ryvQ5ATGtK1",
+  "_id": "kdeZ6ryvQ5ATGtK1",
+  "name": "Tzaangor",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 7,
+    "source": "Thousand Sons, pg undefined",
+    "maxNumber": "-",
+    "faction": "Thousand Sons",
+    "keywords": "Thousand Sons, Chaos, Tzeentch, Heretic Astartes, Infantry, Tzaangor",
+    "wargear": "Autopistol and chainsword",
+    "abilities": [
+      "Aura of Dark Glory: This model has a 5+ invulnerable save."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Comms",
+      "Demolitions",
+      "Medic",
+      "Veteran",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 4,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 6,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "w1gHiXyTidM90JkZ",
+  "sort": 40000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

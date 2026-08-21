@@ -1,0 +1,37 @@
+{
+  "_key": "!items!YPQbEl0rsHgVyT4H",
+  "_id": "YPQbEl0rsHgVyT4H",
+  "name": "Hallucinogen grenade launcher",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Harlequins, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "18\"",
+    "weaponType": "assault",
+    "attacks": "1",
+    "strength": "*",
+    "ap": 0,
+    "damage": "*",
+    "abilities": "If a model is hit by this weapon, roll 2D6 - if the result is equal to or greater than the target model's Leadership, it suffers a mortal wound."
+  },
+  "effects": [],
+  "folder": "vifkpcRuNotCZGNa",
+  "sort": 53800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

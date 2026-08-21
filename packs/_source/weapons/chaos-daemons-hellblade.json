@@ -1,0 +1,37 @@
+{
+  "_key": "!items!xCJwHMhmXAtYZEny",
+  "_id": "xCJwHMhmXAtYZEny",
+  "name": "Hellblade",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Chaos Daemons, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "User",
+    "ap": -3,
+    "damage": "1",
+    "abilities": "Any attacks with a wound roll of 6+ for this weapon have a Damage characteristic of 2 instead of 1."
+  },
+  "effects": [],
+  "folder": "WjefwLG9g3iFYVGl",
+  "sort": 29100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

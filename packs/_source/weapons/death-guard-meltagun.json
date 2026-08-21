@@ -1,0 +1,37 @@
+{
+  "_key": "!items!7iT2LelCbqRaDAxO",
+  "_id": "7iT2LelCbqRaDAxO",
+  "name": "Meltagun",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 3,
+    "source": "Death Guard, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "assault",
+    "attacks": "1",
+    "strength": "8",
+    "ap": -4,
+    "damage": "D6",
+    "abilities": "If the target is within half range of this weapon, roll two dice when inflicting damage with it and discard the lowest result."
+  },
+  "effects": [],
+  "folder": "ux2vKzuRofSnWRuf",
+  "sort": 30400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

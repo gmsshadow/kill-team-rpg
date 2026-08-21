@@ -1,0 +1,37 @@
+{
+  "_key": "!items!ah6Bq56LC3gr4tq5",
+  "_id": "ah6Bq56LC3gr4tq5",
+  "name": "Flesh hooks",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Tyranids, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "6\"",
+    "weaponType": "assault",
+    "attacks": "2",
+    "strength": "User",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "The weapon can be fired within 1\" of an enemy model, and can target enemy models within 1\" of friendly models."
+  },
+  "effects": [],
+  "folder": "jkpkVm5sTQnYF4D2",
+  "sort": 72400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

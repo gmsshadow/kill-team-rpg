@@ -1,0 +1,37 @@
+{
+  "_key": "!items!7if232FKvQbQ76Bs",
+  "_id": "7if232FKvQbQ76Bs",
+  "name": "Aeonstave (shooting)",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Necrons, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "18\"",
+    "weaponType": "assault",
+    "attacks": "D3",
+    "strength": "5",
+    "ap": -2,
+    "damage": "1",
+    "abilities": "When attacking with this weapon, an invulnerable save cannot be used."
+  },
+  "effects": [],
+  "folder": "BMFWB0JStCdknIpI",
+  "sort": 59300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "_key": "!items!eT6DKb4Zc7UpGX0R",
+  "_id": "eT6DKb4Zc7UpGX0R",
+  "name": "Canoness",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 40,
+    "source": "Adepta Sororitas, pg undefined",
+    "maxNumber": "1",
+    "faction": "Adepta Sororitas",
+    "keywords": "Adepta Sororitas, Imperium, Infantry, Canoness",
+    "wargear": "",
+    "abilities": [
+      "Shield of Faith: Models with this ability have a 6+ invulnerable save.\n\nIn addition, models with this ability can attempt to deny one psychic power in each Psychic phase in the same manner as a PSYKER. When making this attempt, roll one D6 instead of 2D6; the psychic power is resisted if the roll is greater than the result of the Psychic test that manifested the power."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Ferocity",
+      "Fortitude",
+      "Leadership",
+      "Logistics",
+      "Melee",
+      "Shooting",
+      "Strategist",
+      "Strength"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 2,
+      "bs": 2,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 5,
+      "attacks": 4,
+      "ld": 9,
+      "save": 3,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "CfklqBY3SVghw1i5",
+  "sort": 400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

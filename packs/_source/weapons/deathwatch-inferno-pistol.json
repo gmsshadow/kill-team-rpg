@@ -1,0 +1,37 @@
+{
+  "_key": "!items!JibsjU7g3WzQJi1A",
+  "_id": "JibsjU7g3WzQJi1A",
+  "name": "Inferno pistol",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 8,
+    "source": "Deathwatch, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "6\"",
+    "weaponType": "pistol",
+    "attacks": "1",
+    "strength": "8",
+    "ap": -4,
+    "damage": "D6",
+    "abilities": "When an attack made with this weapon hits a target that is within half range, that attack has a Damage characteristic of D6+2."
+  },
+  "effects": [],
+  "folder": "sRUjWRON4HQfodYf",
+  "sort": 36100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

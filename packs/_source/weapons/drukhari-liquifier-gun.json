@@ -1,0 +1,37 @@
+{
+  "_key": "!items!0fItE3qvuZyFa30Z",
+  "_id": "0fItE3qvuZyFa30Z",
+  "name": "Liquifier gun",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 4,
+    "source": "Drukhari, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "8\"",
+    "weaponType": "assault",
+    "attacks": "D6",
+    "strength": "3",
+    "ap": 3,
+    "damage": "1",
+    "abilities": "Each time this weapon is fired, roll a D3 to determine its AP for those attacks. For example, if you rolled a 1, this weapon would have an AP of -1. This weapon automatically hits its target."
+  },
+  "effects": [],
+  "folder": "ZeTAJOve9kXS5sdW",
+  "sort": 42400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

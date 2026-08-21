@@ -1,0 +1,37 @@
+{
+  "_key": "!items!dyXGv0tibqtGzsjE",
+  "_id": "dyXGv0tibqtGzsjE",
+  "name": "Seismic Cannon (Long-wave)",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Genestealer Cults, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "24\"",
+    "weaponType": "heavy",
+    "attacks": "4",
+    "strength": "3",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "All wound rolls of 6+ have an AP of -4."
+  },
+  "effects": [],
+  "folder": "NIJ4DcraRsB8D410",
+  "sort": 48800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

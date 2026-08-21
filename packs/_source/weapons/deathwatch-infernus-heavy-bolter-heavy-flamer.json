@@ -1,0 +1,37 @@
+{
+  "_key": "!items!hotapIruz4D8Xq10",
+  "_id": "hotapIruz4D8Xq10",
+  "name": "Infernus heavy bolter - heavy flamer",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Deathwatch, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "heavy",
+    "attacks": "D6",
+    "strength": "5",
+    "ap": -1,
+    "damage": "1",
+    "abilities": "This weapon automatically hits its target."
+  },
+  "effects": [],
+  "folder": "sRUjWRON4HQfodYf",
+  "sort": 36400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

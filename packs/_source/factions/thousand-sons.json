@@ -1,6 +1,6 @@
 {
-  "_key": "!items!thousandM8uSekI0",
-  "_id": "thousandM8uSekI0",
+  "_key": "!items!EBaJE3UR2bc76bSd",
+  "_id": "EBaJE3UR2bc76bSd",
   "name": "Thousand Sons",
   "type": "faction",
   "img": "icons/svg/statue.svg",
@@ -22,7 +22,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.12.0",
+    "systemVersion": "0.13.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

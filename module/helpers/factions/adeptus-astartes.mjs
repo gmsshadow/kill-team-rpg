@@ -5,7 +5,7 @@
  * which tracks Kill Team 2018 including errata and the Elites and Commanders
  * expansions. Do not hand-edit: re-run the importer instead.
  *
- * 51 models, 84 weapons.
+ * 57 models, 84 weapons.
  *
  * Ability text is imported as prose. Machine-readable rules are tagged
  * separately, by hand, in module/rules/ - deciding what an ability does is a
@@ -511,6 +511,37 @@ export const ADEPTUS_ASTARTES_MODELS = [
       "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
     ] },
+  { key: "space-wolf-terminator", name: "Space Wolf Terminator", points: 25, maxNumber: "-", profile: { move: "5\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 3, attacks: 2, ld: 8, save: 2 }, keywords: "Adeptus Astartes, Imperium, Infantry, Terminator, Space Wolves", wargear: "", specialisms: [
+      "Combat",
+      "Comms",
+      "Demolitions",
+      "Veteran",
+      "Zealot"
+    ], commander: false, abilities: [
+      "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
+    ] },
+  { key: "space-wolf-terminator-gunner", name: "Space Wolf Terminator Gunner", points: 26, maxNumber: "-", profile: { move: "5\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 3, attacks: 2, ld: 8, save: 2 }, keywords: "Adeptus Astartes, Imperium, Infantry, Terminator, Space Wolves", wargear: "", specialisms: [
+      "Combat",
+      "Comms",
+      "Demolitions",
+      "Heavy",
+      "Veteran",
+      "Zealot"
+    ], commander: false, abilities: [
+      "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
+    ] },
+  { key: "space-wolf-terminator-sergeant", name: "Space Wolf Terminator Sergeant", points: 27, maxNumber: "-", profile: { move: "5\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 3, attacks: 2, ld: 8, save: 2 }, keywords: "Adeptus Astartes, Imperium, Infantry, Terminator, Space Wolves", wargear: "", specialisms: [
+      "Combat",
+      "Comms",
+      "Demolitions",
+      "Veteran",
+      "Zealot"
+    ], commander: false, abilities: [
+      "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
+    ] },
   { key: "sternguard-gunner", name: "Sternguard Gunner", points: 17, maxNumber: "2", profile: { move: "6\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 2, attacks: 2, ld: 8, save: 3 }, keywords: "Adeptus Astartes, Imperium, Infantry, Sternguard Veteran", wargear: "", specialisms: [
       "Comms",
       "Demolitions",
@@ -584,6 +615,37 @@ export const ADEPTUS_ASTARTES_MODELS = [
       "Medic",
       "Sniper",
       "Veteran"
+    ], commander: false, abilities: [
+      "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
+    ] },
+  { key: "terminator", name: "Terminator", points: 25, maxNumber: "-", profile: { move: "5\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 3, attacks: 2, ld: 8, save: 2 }, keywords: "Adeptus Astartes, Imperium, Infantry, Terminator", wargear: "Pair of lightning claws; Thunder hammer and Storm shield", specialisms: [
+      "Combat",
+      "Comms",
+      "Demolitions",
+      "Veteran",
+      "Zealot"
+    ], commander: false, abilities: [
+      "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
+    ] },
+  { key: "terminator-gunner", name: "Terminator Gunner", points: 26, maxNumber: "-", profile: { move: "5\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 3, attacks: 2, ld: 8, save: 2 }, keywords: "Adeptus Astartes, Imperium, Infantry, Terminator", wargear: "", specialisms: [
+      "Combat",
+      "Comms",
+      "Demolitions",
+      "Heavy",
+      "Veteran",
+      "Zealot"
+    ], commander: false, abilities: [
+      "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
+    ] },
+  { key: "terminator-sergeant", name: "Terminator Sergeant", points: 27, maxNumber: "-", profile: { move: "5\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 3, attacks: 2, ld: 8, save: 2 }, keywords: "Adeptus Astartes, Imperium, Infantry, Terminator", wargear: "Pair of lightning claws; Thunder hammer and Storm shield", specialisms: [
+      "Combat",
+      "Comms",
+      "Demolitions",
+      "Veteran",
+      "Zealot"
     ], commander: false, abilities: [
       "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."

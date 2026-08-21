@@ -1,0 +1,37 @@
+{
+  "_key": "!items!ghmPyPUVS1Mz25Ud",
+  "_id": "ghmPyPUVS1Mz25Ud",
+  "name": "Envenomed blade",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Astra Militarum, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "+1",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "This weapon wounds on a 2+."
+  },
+  "effects": [],
+  "folder": "QTsFQ70RmVG5i7gb",
+  "sort": 24600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

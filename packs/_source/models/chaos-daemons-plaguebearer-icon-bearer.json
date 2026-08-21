@@ -1,0 +1,53 @@
+{
+  "_key": "!items!jgLaPQT8laZAzqvU",
+  "_id": "jgLaPQT8laZAzqvU",
+  "name": "Plaguebearer Icon Bearer",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 8,
+    "source": "Chaos Daemons, pg undefined",
+    "maxNumber": "1",
+    "faction": "Chaos Daemons",
+    "keywords": "Chaos Daemons, Chaos, Nurgle, Infantry, Daemon, Plaguebearer",
+    "wargear": "Icon of Nurgle",
+    "abilities": [
+      "Daemonic: This model has a 5+ invulnerable save.",
+      "Disgustingly Resilient: Each time a model with this ability loses a wound, roll a D6; on a 5+ the model does not lose that wound."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Comms",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "5\"",
+      "ws": 4,
+      "bs": 4,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 7,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "WjefwLG9g3iFYVGl",
+  "sort": 14600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

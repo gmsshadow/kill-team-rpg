@@ -1,0 +1,37 @@
+{
+  "_key": "!items!9o1wV63oTOFobKZG",
+  "_id": "9o1wV63oTOFobKZG",
+  "name": "Locus blades",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Genestealer Cults, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "User",
+    "ap": -3,
+    "damage": "1",
+    "abilities": "This weapon's Damage characteristic is 2 in a battle round in which this model charged, was charged or performed a Sudden Strike."
+  },
+  "effects": [],
+  "folder": "NIJ4DcraRsB8D410",
+  "sort": 50700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

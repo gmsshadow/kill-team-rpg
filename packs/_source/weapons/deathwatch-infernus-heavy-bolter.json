@@ -1,0 +1,37 @@
+{
+  "_key": "!items!jSRaPUrEfy9iHGFg",
+  "_id": "jSRaPUrEfy9iHGFg",
+  "name": "Infernus heavy bolter",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 2,
+    "source": "Deathwatch, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "-",
+    "weaponType": "assault",
+    "attacks": "1",
+    "strength": "-",
+    "ap": 0,
+    "damage": "-",
+    "abilities": "When attacking with this weapon, choose one or both of the profiles vbelow. If you choose both, subtract 1 from all hit rolls made for this weapon."
+  },
+  "effects": [],
+  "folder": "sRUjWRON4HQfodYf",
+  "sort": 36200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

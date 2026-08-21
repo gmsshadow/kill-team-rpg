@@ -1,0 +1,52 @@
+{
+  "_key": "!items!mn2Jw3cPqPiLYVuJ",
+  "_id": "mn2Jw3cPqPiLYVuJ",
+  "name": "Scion",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 9,
+    "source": "Astra Militarum, pg undefined",
+    "maxNumber": "-",
+    "faction": "Astra Militarum",
+    "keywords": "Astra Militarum, Militarum Tempestus, Miltarum Tempestus Scion, Infantry",
+    "wargear": "Vox Caster + Hot-shot laspistol",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [
+      "Comms",
+      "Medic",
+      "Scout",
+      "Sniper",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 4,
+      "bs": 3,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 6,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "QTsFQ70RmVG5i7gb",
+  "sort": 10400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

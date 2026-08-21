@@ -1,0 +1,53 @@
+{
+  "_key": "!items!w9K1WT4bYJALAzol",
+  "_id": "w9K1WT4bYJALAzol",
+  "name": "Neophyte Hybrid",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 5,
+    "source": "Genestealer Cults, pg undefined",
+    "maxNumber": "-",
+    "faction": "Genestealer Cults",
+    "keywords": "Genestealer Cults, Tyranids, Infantry",
+    "wargear": "",
+    "abilities": [
+      "Cult Ambush: After deployment but before the first battle round, roll a D6 for this model. On a 5+ this model can immediately move up to 6\"."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Demolitions",
+      "Medic",
+      "Scout",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 4,
+      "bs": 4,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 7,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "NIJ4DcraRsB8D410",
+  "sort": 26400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

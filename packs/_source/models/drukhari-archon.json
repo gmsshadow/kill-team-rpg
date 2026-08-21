@@ -1,0 +1,46 @@
+{
+  "_key": "!items!CrWJO785urIh0HwH",
+  "_id": "CrWJO785urIh0HwH",
+  "name": "Archon",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 56,
+    "source": "Drukhari, pg undefined",
+    "maxNumber": "1",
+    "faction": "Drukhari",
+    "keywords": "Drukhari, Aeldari, Archon, Commander, Infantry, Kabal",
+    "wargear": "",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "8\"",
+      "ws": 2,
+      "bs": 2,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 5,
+      "attacks": 5,
+      "ld": 9,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "ZeTAJOve9kXS5sdW",
+  "sort": 21400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

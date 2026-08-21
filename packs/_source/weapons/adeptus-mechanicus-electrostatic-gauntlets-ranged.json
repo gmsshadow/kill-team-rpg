@@ -1,0 +1,37 @@
+{
+  "_key": "!items!XWnO1AXIZOrg5Ola",
+  "_id": "XWnO1AXIZOrg5Ola",
+  "name": "Electrostatic gauntlets - ranged",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adeptus Mechanicus, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "assault",
+    "attacks": "3",
+    "strength": "5",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "Each unmodified hit roll of 6 made for an attack with this weapon scores 3 hits rather than 1."
+  },
+  "effects": [],
+  "folder": "b09An29gloB2fENi",
+  "sort": 18500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

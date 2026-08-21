@@ -1,0 +1,55 @@
+{
+  "_key": "!items!5obKH8puTQFOP2ra",
+  "_id": "5obKH8puTQFOP2ra",
+  "name": "Custodian Guard",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 33,
+    "source": "Adeptus Custodes, pg undefined",
+    "maxNumber": "-",
+    "faction": "Adeptus Custodes",
+    "keywords": "Adeptus Custodes, Imperium, Infantry, Custodian Guard",
+    "wargear": "Sentinel blade and storm shield",
+    "abilities": [
+      "Aegis of the Emperor: This model has a 5+ invulnerable save. In addition, roll a D6 each time a model with this ability suffers a mortal wound in the Psychic phase. On a 6 that mortal wound is ignored.",
+      "Superior Transhuman Physiology: Ignore the penalty to this model's hit rolls from flesh wounds."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Scout",
+      "Sniper",
+      "Veteran",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 2,
+      "bs": 2,
+      "strength": 5,
+      "toughness": 5,
+      "wounds": 3,
+      "attacks": 3,
+      "ld": 8,
+      "save": 2,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "bYb8xUNcXW7K3ypC",
+  "sort": 6700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

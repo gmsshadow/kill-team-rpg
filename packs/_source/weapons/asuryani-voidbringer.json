@@ -1,0 +1,37 @@
+{
+  "_key": "!items!Mvana3SxWNs1UXKt",
+  "_id": "Mvana3SxWNs1UXKt",
+  "name": "Voidbringer",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Asuryani, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "48\"",
+    "weaponType": "heavy",
+    "attacks": "1",
+    "strength": "4",
+    "ap": -3,
+    "damage": "3",
+    "abilities": "A model firing this weapon does not suffer the penalty to hit rolls for the target being at long range. This weapon wounds on a 2+. Each time you roll a wound roll of 6+ for this weapon, it inflicts a mortal wound in addition to any other damage."
+  },
+  "effects": [],
+  "folder": "DKJAf438T2LABUhU",
+  "sort": 27000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

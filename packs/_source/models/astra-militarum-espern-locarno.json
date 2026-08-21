@@ -1,0 +1,46 @@
+{
+  "_key": "!items!0hUTaj8LMbAlOvAz",
+  "_id": "0hUTaj8LMbAlOvAz",
+  "name": "Espern Locarno",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 30,
+    "source": "Astra Militarum, pg undefined",
+    "maxNumber": "1",
+    "faction": "Astra Militarum",
+    "keywords": "Astra Militarum, Imperium, Navis Nobilite, Infantry, Psyker, Navigator, Espern Locarno",
+    "wargear": "Force-orb cane",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "6\"",
+      "ws": 5,
+      "bs": 5,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 3,
+      "attacks": 2,
+      "ld": 7,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "QTsFQ70RmVG5i7gb",
+  "sort": 9400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

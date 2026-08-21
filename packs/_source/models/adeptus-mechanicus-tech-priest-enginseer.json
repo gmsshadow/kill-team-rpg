@@ -1,0 +1,55 @@
+{
+  "_key": "!items!8JEtStihYZONS12D",
+  "_id": "8JEtStihYZONS12D",
+  "name": "Tech-priest Enginseer",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 28,
+    "source": "Adeptus Mechanicus, pg undefined",
+    "maxNumber": "1",
+    "faction": "Adeptus Mechanicus",
+    "keywords": "Adeptus Mechanicus, Imperium, Cult Mechanicus, Infantry, Tech-priest, Enginseer",
+    "wargear": "Laspistol; Servo-arm",
+    "abilities": [
+      "Bionics: This model has a 6+ invulnerable save."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Fortitude",
+      "Leadership",
+      "Logistics",
+      "Shooting",
+      "Strategist",
+      "Strength"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 4,
+      "bs": 4,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 4,
+      "attacks": 2,
+      "ld": 8,
+      "save": 3,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "b09An29gloB2fENi",
+  "sort": 8500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

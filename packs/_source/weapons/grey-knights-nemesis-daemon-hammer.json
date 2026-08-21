@@ -1,0 +1,37 @@
+{
+  "_key": "!items!mDUF4ZU5AF63yRk3",
+  "_id": "mDUF4ZU5AF63yRk3",
+  "name": "Nemesis Daemon Hammer",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 2,
+    "source": "Grey Knights, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "x2",
+    "ap": -3,
+    "damage": "3",
+    "abilities": "When a model attacks with this weapon, you must subtract 1 from the hit roll."
+  },
+  "effects": [],
+  "folder": "oV6r2XiVQHif6Pix",
+  "sort": 53200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

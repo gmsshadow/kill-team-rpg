@@ -1,0 +1,37 @@
+{
+  "_key": "!items!7QPwbEV8hoDML8tG",
+  "_id": "7QPwbEV8hoDML8tG",
+  "name": "Phosphor serpenta",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 4,
+    "source": "Adeptus Mechanicus, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "18\"",
+    "weaponType": "assault",
+    "attacks": "1",
+    "strength": "5",
+    "ap": -1,
+    "damage": "1",
+    "abilities": "Attacks made with this weapon do not suffer the penalty to hit rolls for the target being obscured."
+  },
+  "effects": [],
+  "folder": "b09An29gloB2fENi",
+  "sort": 19600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

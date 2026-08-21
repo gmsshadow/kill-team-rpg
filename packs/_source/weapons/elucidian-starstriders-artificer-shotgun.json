@@ -1,0 +1,37 @@
+{
+  "_key": "!items!xAPs7oH0NY7U9mTU",
+  "_id": "xAPs7oH0NY7U9mTU",
+  "name": "Artificer Shotgun",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Elucidian Starstriders, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "assault",
+    "attacks": "2",
+    "strength": "4",
+    "ap": 0,
+    "damage": "2",
+    "abilities": "If the target is within half range, add 1 to this weapon's Strength characteristic."
+  },
+  "effects": [],
+  "folder": "v0TGbMTklMPKJcFg",
+  "sort": 45100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

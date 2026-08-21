@@ -1,0 +1,37 @@
+{
+  "_key": "!items!4nixwT4ZePmdMJoL",
+  "_id": "4nixwT4ZePmdMJoL",
+  "name": "Plague knife",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Death Guard, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "User",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "You can re-roll wound rolls of 1 for this weapon."
+  },
+  "effects": [],
+  "folder": "ux2vKzuRofSnWRuf",
+  "sort": 32200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "_key": "!items!IBYBYveVy7czqXMl",
+  "_id": "IBYBYveVy7czqXMl",
+  "name": "Dahyak Grekh",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 25,
+    "source": "T'au Empire, pg undefined",
+    "maxNumber": "1",
+    "faction": "T'au Empire",
+    "keywords": "T'au Empire, Infantry, Dahyak Grekh",
+    "wargear": "Kroot pistol; Kroot rifle",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "7\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 3,
+      "attacks": 3,
+      "ld": 7,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "mPKVSDA56tsrIx4F",
+  "sort": 37000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

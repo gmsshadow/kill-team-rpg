@@ -1,0 +1,37 @@
+{
+  "_key": "!items!YnsvoR2XOt4bc9kV",
+  "_id": "YnsvoR2XOt4bc9kV",
+  "name": "Flamer",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 3,
+    "source": "Genestealer Cults, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "8\"",
+    "weaponType": "assault",
+    "attacks": "D6",
+    "strength": "4",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "This weapon automatically hits its target."
+  },
+  "effects": [],
+  "folder": "NIJ4DcraRsB8D410",
+  "sort": 47900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

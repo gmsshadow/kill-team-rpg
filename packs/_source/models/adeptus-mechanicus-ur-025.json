@@ -1,0 +1,46 @@
+{
+  "_key": "!items!gJw3CR8jElW9i1Oh",
+  "_id": "gJw3CR8jElW9i1Oh",
+  "name": "UR-025",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 30,
+    "source": "Adeptus Mechanicus, pg undefined",
+    "maxNumber": "1",
+    "faction": "Adeptus Mechanicus",
+    "keywords": "Adeptus Mechanicus, Imperium, Robotica Imperialis, Infantry, Imperial Robot, UR-025",
+    "wargear": "Mk I assault cannon; Power claw",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "5\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 5,
+      "toughness": 5,
+      "wounds": 3,
+      "attacks": 2,
+      "ld": 8,
+      "save": 3,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "b09An29gloB2fENi",
+  "sort": 8700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

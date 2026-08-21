@@ -1,0 +1,37 @@
+{
+  "_key": "!items!mrq9kfGXOx4nWNir",
+  "_id": "mrq9kfGXOx4nWNir",
+  "name": "Heirloom Pistol",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Elucidian Starstriders, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "pistol",
+    "attacks": "1",
+    "strength": "4",
+    "ap": -2,
+    "damage": "2",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "v0TGbMTklMPKJcFg",
+  "sort": 45400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

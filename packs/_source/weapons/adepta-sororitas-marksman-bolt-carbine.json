@@ -1,0 +1,37 @@
+{
+  "_key": "!items!hgBKFmbYfo1Qf0D0",
+  "_id": "hgBKFmbYfo1Qf0D0",
+  "name": "Marksman bolt carbine",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adepta Sororitas, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "24\"",
+    "weaponType": "rapidFire",
+    "attacks": "1",
+    "strength": "4",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "Each unmodified hit roll of 6 made for this weapon's attacks automatically results in a wound (do not make a wound roll for that attack)."
+  },
+  "effects": [],
+  "folder": "CfklqBY3SVghw1i5",
+  "sort": 4000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

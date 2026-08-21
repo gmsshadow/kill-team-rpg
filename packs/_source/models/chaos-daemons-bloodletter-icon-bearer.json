@@ -1,0 +1,53 @@
+{
+  "_key": "!items!OF6hYdK5UryLSZW1",
+  "_id": "OF6hYdK5UryLSZW1",
+  "name": "Bloodletter Icon Bearer",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 8,
+    "source": "Chaos Daemons, pg undefined",
+    "maxNumber": "1",
+    "faction": "Chaos Daemons",
+    "keywords": "Chaos Daemons, Chaos, Khorne, Infantry, Daemon, Bloodletter",
+    "wargear": "Icon of Khorne",
+    "abilities": [
+      "Daemonic: This model has a 5+ invulnerable save.",
+      "Unstoppable Ferocity: You can add 1 to the Attacks and Strength characteristics of a model with this ability in a battle round in which they charged."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Comms",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 4,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 7,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "WjefwLG9g3iFYVGl",
+  "sort": 13500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,6 +1,6 @@
 {
-  "_key": "!items!adeptusaQGQocq8S",
-  "_id": "adeptusaQGQocq8S",
+  "_key": "!items!GDYtSpybEbEJmjiF",
+  "_id": "GDYtSpybEbEJmjiF",
   "name": "Adeptus Astartes",
   "type": "faction",
   "img": "icons/svg/statue.svg",
@@ -22,7 +22,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.12.0",
+    "systemVersion": "0.13.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

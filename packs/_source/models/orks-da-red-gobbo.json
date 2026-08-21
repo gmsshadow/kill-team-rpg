@@ -1,0 +1,46 @@
+{
+  "_key": "!items!7GjMtmrQx6DQxwlk",
+  "_id": "7GjMtmrQx6DQxwlk",
+  "name": "Da Red Gobbo",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 43,
+    "source": "Orks, pg undefined",
+    "maxNumber": "1",
+    "faction": "Orks",
+    "keywords": "Orks, Infantry, Gretchin, Da Red Gobbo",
+    "wargear": "Icon of da Revolushun; Kustom grot blasta",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "5\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 5,
+      "attacks": 4,
+      "ld": 7,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "S7e90hmrUlQ3AXQr",
+  "sort": 33200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

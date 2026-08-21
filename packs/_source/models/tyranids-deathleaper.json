@@ -1,0 +1,46 @@
+{
+  "_key": "!items!ajKHyt8pqXoniZ6X",
+  "_id": "ajKHyt8pqXoniZ6X",
+  "name": "Deathleaper",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 70,
+    "source": "Tyranids, pg undefined",
+    "maxNumber": "1",
+    "faction": "Tyranids",
+    "keywords": "Tyranids, Infantry, Lictor, Deathleaper",
+    "wargear": "",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "9\"",
+      "ws": 2,
+      "bs": 4,
+      "strength": 6,
+      "toughness": 4,
+      "wounds": 6,
+      "attacks": 4,
+      "ld": 10,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "jkpkVm5sTQnYF4D2",
+  "sort": 40300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

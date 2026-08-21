@@ -1,0 +1,37 @@
+{
+  "_key": "!items!Pc3YTKTMxSbwBGH4",
+  "_id": "Pc3YTKTMxSbwBGH4",
+  "name": "Shock grenade",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Deathwatch, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "6\"",
+    "weaponType": "grenade",
+    "attacks": "D3",
+    "strength": "*",
+    "ap": 0,
+    "damage": "*",
+    "abilities": "This weapon does not inflict any damage. If an enemy INFANTRY model is hit by any shock grenades, it is stunned; until the end of the next battle round that model cannot fire Overwatch or be Readied, and your opponent must subtract 1 from hit rolls made for the model."
+  },
+  "effects": [],
+  "folder": "sRUjWRON4HQfodYf",
+  "sort": 38800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

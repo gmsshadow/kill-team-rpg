@@ -1,0 +1,54 @@
+{
+  "_key": "!items!oFoVqzGV2BwBwfqp",
+  "_id": "oFoVqzGV2BwBwfqp",
+  "name": "Special Weapons Guardsman",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 5,
+    "source": "Astra Militarum, pg undefined",
+    "maxNumber": "-",
+    "faction": "Astra Militarum",
+    "keywords": "Astra Militarum, Imperium, Infantry, Special Weapons Squad Guardsman",
+    "wargear": "",
+    "abilities": [
+      "Voice of Command: Once per battle round, if your Leader or an OFFICER from your kill team is on the battlefield and not shaken, you can pick one of these models to issue an order to other members of your kill team at the start of the Shooting phase. To issue an order, pick another friendly ASTRA MILITARUM model (other than a shaken or COMMANDER model) within 12\" of your Leader or OFFICER and choose which order you wish to issue from the list opposite. A model may only be affected by one order per battle round."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Demolitions",
+      "Medic",
+      "Scout",
+      "Sniper",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 4,
+      "bs": 4,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 6,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "QTsFQ70RmVG5i7gb",
+  "sort": 10900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

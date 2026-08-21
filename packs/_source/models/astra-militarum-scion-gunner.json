@@ -1,0 +1,53 @@
+{
+  "_key": "!items!W54TG1wv8LoFMhGT",
+  "_id": "W54TG1wv8LoFMhGT",
+  "name": "Scion Gunner",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 10,
+    "source": "Astra Militarum, pg undefined",
+    "maxNumber": "4",
+    "faction": "Astra Militarum",
+    "keywords": "Astra Militarum, Militarum Tempestus, Miltarum Tempestus Scion, Infantry",
+    "wargear": "",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [
+      "Demolitions",
+      "Heavy",
+      "Medic",
+      "Scout",
+      "Sniper",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 4,
+      "bs": 3,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 6,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "QTsFQ70RmVG5i7gb",
+  "sort": 10500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

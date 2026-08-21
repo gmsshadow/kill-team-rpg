@@ -1,0 +1,37 @@
+{
+  "_key": "!items!W5AHkfGDeNSZwxKR",
+  "_id": "W5AHkfGDeNSZwxKR",
+  "name": "Bloodsucking proboscis",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Gellerpox Infected, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "User",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "Each unmodified hit roll of 6 made with this weapon scores 2 hits."
+  },
+  "effects": [],
+  "folder": "xa5ETwzGr8PI5yz4",
+  "sort": 46600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

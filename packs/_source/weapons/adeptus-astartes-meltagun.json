@@ -1,0 +1,37 @@
+{
+  "_key": "!items!jiZGLe9cFUJIxaPa",
+  "_id": "jiZGLe9cFUJIxaPa",
+  "name": "Meltagun",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 7,
+    "source": "Adeptus Astartes, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "assault",
+    "attacks": "1",
+    "strength": "8",
+    "ap": -4,
+    "damage": "D6",
+    "abilities": "When an attack made with this weapon hits a target that is within half range, that attack has a Damage characteristic of D6+2."
+  },
+  "effects": [],
+  "folder": "WngXm3Y7Qjy9sDAT",
+  "sort": 13600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

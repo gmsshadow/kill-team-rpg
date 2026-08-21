@@ -1,0 +1,51 @@
+{
+  "_key": "!items!NcFahCNOx6RMBAd2",
+  "_id": "NcFahCNOx6RMBAd2",
+  "name": "Poxwalker",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 3,
+    "source": "Death Guard, pg undefined",
+    "maxNumber": "-",
+    "faction": "Death Guard",
+    "keywords": "Death Guard, Chaos, Nurgle, Heretic Astartes, Infantry, Poxwalker",
+    "wargear": "Improvised Weapon",
+    "abilities": [
+      "Disgustingly Resilient: Each time a model with this ability loses a wound, roll a D6; on a 5+ the model does not lose that wound."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "4\"",
+      "ws": 5,
+      "bs": 6,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 2,
+      "ld": 4,
+      "save": 7,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "ux2vKzuRofSnWRuf",
+  "sort": 16200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

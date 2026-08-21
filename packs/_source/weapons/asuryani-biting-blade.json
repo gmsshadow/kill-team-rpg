@@ -1,0 +1,37 @@
+{
+  "_key": "!items!JStG7gzuXAVqletM",
+  "_id": "JStG7gzuXAVqletM",
+  "name": "Biting blade",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 3,
+    "source": "Asuryani, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "+2",
+    "ap": -1,
+    "damage": "2",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "DKJAf438T2LABUhU",
+  "sort": 27300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

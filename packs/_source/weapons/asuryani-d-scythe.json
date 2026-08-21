@@ -1,0 +1,37 @@
+{
+  "_key": "!items!YRuLyBil6JG3YVwp",
+  "_id": "YRuLyBil6JG3YVwp",
+  "name": "D-scythe",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Asuryani, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "8\"",
+    "weaponType": "assault",
+    "attacks": "D3",
+    "strength": "10",
+    "ap": -4,
+    "damage": "1",
+    "abilities": "This weapon automatically hits its target."
+  },
+  "effects": [],
+  "folder": "DKJAf438T2LABUhU",
+  "sort": 25700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

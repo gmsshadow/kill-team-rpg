@@ -1,0 +1,46 @@
+{
+  "_key": "!items!8NIr6RkPUviNcPIV",
+  "_id": "8NIr6RkPUviNcPIV",
+  "name": "Feodor Lasko",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 15,
+    "source": "Astra Militarum, pg undefined",
+    "maxNumber": "1",
+    "faction": "Astra Militarum",
+    "keywords": "Astra Militarum, Imperium, Officio Prefectus, Infantry, Commissar, Level 1, Level 2, Level 3, Level 4",
+    "wargear": "Level 1 - True Grit; Level 2 - Skilled Swordsman; Level 3 - Grav-chute; Level 4 - I've Had Worse!",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 3,
+      "toughness": 4,
+      "wounds": 3,
+      "attacks": 3,
+      "ld": 8,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "QTsFQ70RmVG5i7gb",
+  "sort": 9500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

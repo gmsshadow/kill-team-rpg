@@ -1,0 +1,37 @@
+{
+  "_key": "!items!9EJAVwzUx296jUN8",
+  "_id": "9EJAVwzUx296jUN8",
+  "name": "Hydra gauntlets",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 2,
+    "source": "Drukhari, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "User",
+    "ap": -1,
+    "damage": "1",
+    "abilities": "Each time the bearer fights, it can make 1 additional attack with this weapon. You can re-roll failed wound rolls for this weapon."
+  },
+  "effects": [],
+  "folder": "ZeTAJOve9kXS5sdW",
+  "sort": 44100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

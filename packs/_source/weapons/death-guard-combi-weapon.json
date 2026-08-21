@@ -1,0 +1,37 @@
+{
+  "_key": "!items!TI5ancriRAh4rU7c",
+  "_id": "TI5ancriRAh4rU7c",
+  "name": "Combi-weapon",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Death Guard, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "-",
+    "weaponType": "assault",
+    "attacks": "1",
+    "strength": "",
+    "ap": 0,
+    "damage": "-",
+    "abilities": "When attacking with this weapon, choose one or both of the profiles below. If you choose both, subtract 1 from all hit rolls made for this weapon."
+  },
+  "effects": [],
+  "folder": "ux2vKzuRofSnWRuf",
+  "sort": 29900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

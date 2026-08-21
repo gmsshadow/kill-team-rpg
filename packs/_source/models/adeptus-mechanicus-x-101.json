@@ -1,0 +1,46 @@
+{
+  "_key": "!items!QPetspOXSz2pMvcp",
+  "_id": "QPetspOXSz2pMvcp",
+  "name": "X-101",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 10,
+    "source": "Adeptus Mechanicus, pg undefined",
+    "maxNumber": "1",
+    "faction": "Adeptus Mechanicus",
+    "keywords": "Adeptus Mechanicus, Imperium, Infantry, Servitor, X-101",
+    "wargear": "Grav-gun; Hydraulic claw",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "5\"",
+      "ws": 5,
+      "bs": 5,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 2,
+      "attacks": 2,
+      "ld": 6,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "b09An29gloB2fENi",
+  "sort": 8800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

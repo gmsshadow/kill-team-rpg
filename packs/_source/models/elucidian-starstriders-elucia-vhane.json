@@ -1,0 +1,52 @@
+{
+  "_key": "!items!VuLmfgdw5mDMJAru",
+  "_id": "VuLmfgdw5mDMJAru",
+  "name": "Elucia Vhane",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 45,
+    "source": "Elucidian Starstriders, pg undefined",
+    "maxNumber": "1",
+    "faction": "Elucidian Starstriders",
+    "keywords": "Elucidian Starstriders, Imperium, Infantry, Elucia Vhane, Rogue Trader, Astra Cartographica",
+    "wargear": "Heirloom Pistol; Monomolecular Cane-rapier",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Scout",
+      "Strategist",
+      "Veteran",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 4,
+      "attacks": 3,
+      "ld": 9,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "v0TGbMTklMPKJcFg",
+  "sort": 23200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

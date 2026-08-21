@@ -1,0 +1,37 @@
+{
+  "_key": "!items!5k5C9Yf6FwnkTOlI",
+  "_id": "5k5C9Yf6FwnkTOlI",
+  "name": "Arco Flails",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adepta Sororitas, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "+1",
+    "ap": -1,
+    "damage": "1",
+    "abilities": "Make D3 hit rolls for each attack made with this weapon, instead of 1."
+  },
+  "effects": [],
+  "folder": "CfklqBY3SVghw1i5",
+  "sort": 6500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

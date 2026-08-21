@@ -1,6 +1,6 @@
 {
-  "_key": "!items!asuryaniIe8wEiqI",
-  "_id": "asuryaniIe8wEiqI",
+  "_key": "!items!GluD858p4ZwzeHIB",
+  "_id": "GluD858p4ZwzeHIB",
   "name": "Asuryani",
   "type": "faction",
   "img": "icons/svg/statue.svg",
@@ -22,7 +22,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.12.0",
+    "systemVersion": "0.13.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

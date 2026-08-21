@@ -1,6 +1,6 @@
 {
-  "_key": "!items!specialiiqYayOOQ",
-  "_id": "specialiiqYayOOQ",
+  "_key": "!items!sN6B8Dux67MTafel",
+  "_id": "sN6B8Dux67MTafel",
   "name": "Leader",
   "type": "specialism",
   "img": "icons/svg/upgrade.svg",
@@ -190,7 +190,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.12.0",
+    "systemVersion": "0.13.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

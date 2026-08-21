@@ -1,0 +1,46 @@
+{
+  "_key": "!items!itcf4LwNwBqFmTw5",
+  "_id": "itcf4LwNwBqFmTw5",
+  "name": "Shas'nel Vior'la Atsumo Twinflame",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 23,
+    "source": "T'au Empire, pg undefined",
+    "maxNumber": "1",
+    "faction": "T'au Empire",
+    "keywords": "T'au Empire, T'au Empire, Infantry, Cadre Fireblade, Level 1, Level 2, Level 3, Level 4",
+    "wargear": "Level 1 - Art of Vashi'va; Level 2 - Disciplined Defence; Level 3 - Experienced Medic; Level 4 - Ever Hopeful",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 2,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 5,
+      "attacks": 3,
+      "ld": 8,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "mPKVSDA56tsrIx4F",
+  "sort": 38600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

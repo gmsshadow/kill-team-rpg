@@ -1,0 +1,53 @@
+{
+  "_key": "!items!naziB2bQf4jgpuhO",
+  "_id": "naziB2bQf4jgpuhO",
+  "name": "Commander in XV85 Enforcer Battlesuit",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 62,
+    "source": "T'au Empire, pg undefined",
+    "maxNumber": "1",
+    "faction": "T'au Empire",
+    "keywords": "T'au Empire, Battlesuit, XV85 Enforcer, Jet Pack, Fly",
+    "wargear": "",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [
+      "Fortitude",
+      "Leadership",
+      "Logistics",
+      "Shooting",
+      "Strategist",
+      "Strength"
+    ],
+    "profile": {
+      "move": "8\"",
+      "ws": 3,
+      "bs": 2,
+      "strength": 5,
+      "toughness": 5,
+      "wounds": 6,
+      "attacks": 4,
+      "ld": 9,
+      "save": 3,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "mPKVSDA56tsrIx4F",
+  "sort": 36800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

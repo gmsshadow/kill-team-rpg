@@ -1,0 +1,53 @@
+{
+  "_key": "!items!rSNwxKv23O5UhqTm",
+  "_id": "rSNwxKv23O5UhqTm",
+  "name": "Troupe Master",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 50,
+    "source": "Harlequins, pg undefined",
+    "maxNumber": "1",
+    "faction": "Harlequins",
+    "keywords": "Harlequins, Aeldari, Infantry, Troupe Master",
+    "wargear": "Power sword",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [
+      "Ferocity",
+      "Leadership",
+      "Melee",
+      "Shooting",
+      "Stealth",
+      "Strategist"
+    ],
+    "profile": {
+      "move": "8\"",
+      "ws": 2,
+      "bs": 2,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 5,
+      "attacks": 5,
+      "ld": 9,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "vifkpcRuNotCZGNa",
+  "sort": 28500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "_key": "!items!9uhUBgbuNWDYhYh2",
+  "_id": "9uhUBgbuNWDYhYh2",
+  "name": "Plague Marine Gunner",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 15,
+    "source": "Death Guard, pg undefined",
+    "maxNumber": "2",
+    "faction": "Death Guard",
+    "keywords": "Death Guard, Chaos, Nurgle, Heretic Astartes, Infantry, Plague Marine",
+    "wargear": "Blight launcher; Meltagun; Plague belcher; Plague spewer",
+    "abilities": [
+      "Disgustingly Resilient: Each time a model with this ability loses a wound, roll a D6; on a 5+ the model does not lose that wound.",
+      "Death to the False Emperor: If a model with this ability makes an attack in the Fight phase which targets an IMPERIUM model, each time you roll a hit roll of 6+ you may make an additional attack with the same weapon against the same target. These attacks cannot themselves generate any further attacks.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
+    ],
+    "rules": [
+      {
+        "type": "ignorePenalty",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": "fleshWound",
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      }
+    ],
+    "specialisms": [
+      "Combat",
+      "Demolitions",
+      "Heavy",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "5\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 4,
+      "toughness": 5,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 7,
+      "save": 3,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "ux2vKzuRofSnWRuf",
+  "sort": 16000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

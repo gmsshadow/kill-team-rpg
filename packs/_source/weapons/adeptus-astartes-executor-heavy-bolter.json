@@ -1,0 +1,37 @@
+{
+  "_key": "!items!ix2DSL6rcNAX0Dsf",
+  "_id": "ix2DSL6rcNAX0Dsf",
+  "name": "Executor heavy bolter",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 7,
+    "source": "Adeptus Astartes, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "42\"",
+    "weaponType": "heavy",
+    "attacks": "2",
+    "strength": "5",
+    "ap": -2,
+    "damage": "3",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "WngXm3Y7Qjy9sDAT",
+  "sort": 10800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "_key": "!items!sj05gp4LAb2ZqbIT",
+  "_id": "sj05gp4LAb2ZqbIT",
+  "name": "Broodlord",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 131,
+    "source": "Tyranids, pg undefined",
+    "maxNumber": "1",
+    "faction": "Tyranids",
+    "keywords": "Tyranids, Infantry, Commander, Broodlord, Synapse, Psyker",
+    "wargear": "",
+    "abilities": [
+      "Shadow in the Warp: Subract 1 from any psychic tests made for enemy PSKYERS within 18\" of a model with this ability. TYRANIDS PSYKERS are not affected.",
+      "Synapse: TYRANIDS models automatically pass Nerve tests while they are within 12\" of any friendly models with this ability."
+    ],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "8\"",
+      "ws": 2,
+      "bs": 4,
+      "strength": 5,
+      "toughness": 5,
+      "wounds": 6,
+      "attacks": 6,
+      "ld": 10,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "jkpkVm5sTQnYF4D2",
+  "sort": 40200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

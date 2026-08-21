@@ -1,18 +1,18 @@
 {
-  "_key": "!folders!folderAdECOgM0aa",
-  "_id": "folderAdECOgM0aa",
+  "_key": "!folders!WngXm3Y7Qjy9sDAT",
+  "_id": "WngXm3Y7Qjy9sDAT",
   "name": "Adeptus Astartes",
   "type": "Item",
   "description": "",
   "folder": null,
   "sorting": "a",
-  "sort": 0,
+  "sort": 100,
   "color": "#c8501e",
   "flags": {},
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.12.0",
+    "systemVersion": "0.13.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

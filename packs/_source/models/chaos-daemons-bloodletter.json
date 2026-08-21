@@ -1,0 +1,52 @@
+{
+  "_key": "!items!mby3aBczwJErojA9",
+  "_id": "mby3aBczwJErojA9",
+  "name": "Bloodletter",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 7,
+    "source": "Chaos Daemons, pg undefined",
+    "maxNumber": "-",
+    "faction": "Chaos Daemons",
+    "keywords": "Chaos Daemons, Chaos, Khorne, Infantry, Daemon, Bloodletter",
+    "wargear": "",
+    "abilities": [
+      "Daemonic: This model has a 5+ invulnerable save.",
+      "Unstoppable Ferocity: You can add 1 to the Attacks and Strength characteristics of a model with this ability in a battle round in which they charged."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 4,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 7,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "WjefwLG9g3iFYVGl",
+  "sort": 13300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

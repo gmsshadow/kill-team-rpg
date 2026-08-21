@@ -1,0 +1,37 @@
+{
+  "_key": "!items!ZEhaFi3i1ULIPqP8",
+  "_id": "ZEhaFi3i1ULIPqP8",
+  "name": "Psyk-out grenade",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Grey Knights, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "6\"",
+    "weaponType": "grenade",
+    "attacks": "D3",
+    "strength": "2",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "Each time you roll a hit roll of 6+ for this weapon when targeting a PSYKER or DAEMON, the target suffers a mortal wound instead of the normal damage."
+  },
+  "effects": [],
+  "folder": "oV6r2XiVQHif6Pix",
+  "sort": 53000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

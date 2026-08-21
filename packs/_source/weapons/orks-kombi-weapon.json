@@ -1,0 +1,37 @@
+{
+  "_key": "!items!3Edgzmrgv4Pa9k3K",
+  "_id": "3Edgzmrgv4Pa9k3K",
+  "name": "Kombi-weapon",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Orks, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "-",
+    "weaponType": "assault",
+    "attacks": "1",
+    "strength": "-",
+    "ap": 0,
+    "damage": "-",
+    "abilities": "When attacking with this weapon, choose one or more of the profiles. If you choose both, subtract 1 from all hit rolls made for this weapon."
+  },
+  "effects": [],
+  "folder": "S7e90hmrUlQ3AXQr",
+  "sort": 62200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "_key": "!items!Uze7E7OdOvkBKvmT",
+  "_id": "Uze7E7OdOvkBKvmT",
+  "name": "Cultist of the Abyss Gunner",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 6,
+    "source": "Servants of the Abyss, pg undefined",
+    "maxNumber": "2",
+    "faction": "Servants of the Abyss",
+    "keywords": "Servants of the Abyss, Chaos, Infantry, Cultists of the Abyss",
+    "wargear": "Grenade launcher; Heavy stubber",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Demolitions",
+      "Heavy",
+      "Veteran",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 4,
+      "bs": 4,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 6,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "dAJE9GD0dejQZE3g",
+  "sort": 35300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

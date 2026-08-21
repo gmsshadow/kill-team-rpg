@@ -1,6 +1,6 @@
 {
-  "_key": "!items!tyranidswuio0KY6",
-  "_id": "tyranidswuio0KY6",
+  "_key": "!items!odmXC7EJebinUZct",
+  "_id": "odmXC7EJebinUZct",
   "name": "Tyranids",
   "type": "faction",
   "img": "icons/svg/statue.svg",
@@ -22,7 +22,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.12.0",
+    "systemVersion": "0.13.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

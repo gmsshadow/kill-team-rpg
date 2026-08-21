@@ -1,0 +1,37 @@
+{
+  "_key": "!items!ROn87u9sPOjuNgRO",
+  "_id": "ROn87u9sPOjuNgRO",
+  "name": "Injector goad",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Genestealer Cults, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "+1",
+    "ap": 0,
+    "damage": "D3",
+    "abilities": "This weapon always wounds on a 2+. If a COMMANDER loses any wounds from this weapon, roll a D6 for it after all of this model's attacks have been resolved. If the result is higher than the Wounds characteristic of the COMMANDER, it suffers D3 mortal wounds."
+  },
+  "effects": [],
+  "folder": "NIJ4DcraRsB8D410",
+  "sort": 50500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

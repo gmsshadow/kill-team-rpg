@@ -1,0 +1,48 @@
+{
+  "_key": "!items!cJYJupW1QXWjcHCF",
+  "_id": "cJYJupW1QXWjcHCF",
+  "name": "Boss Snikrot",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 82,
+    "source": "Orks, pg undefined",
+    "maxNumber": "1",
+    "faction": "Orks",
+    "keywords": "Orks, Infantry, Kommando, Boss Snikrot",
+    "wargear": "Mork's Tooth",
+    "abilities": [
+      "'Ere We Go: Re-roll failed charge rolls for a unit with this ability."
+    ],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "6\"",
+      "ws": 2,
+      "bs": 5,
+      "strength": 6,
+      "toughness": 4,
+      "wounds": 6,
+      "attacks": 6,
+      "ld": 7,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "S7e90hmrUlQ3AXQr",
+  "sort": 32900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

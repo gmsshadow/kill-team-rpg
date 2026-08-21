@@ -1,0 +1,52 @@
+{
+  "_key": "!items!OzGHuPEzmD2fKvoD",
+  "_id": "OzGHuPEzmD2fKvoD",
+  "name": "Sanctus",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 33,
+    "source": "Genestealer Cults, pg undefined",
+    "maxNumber": "1",
+    "faction": "Genestealer Cults",
+    "keywords": "Genestealer Cults, Infantry, Sanctus",
+    "wargear": "Familiar claws; Sanctus bio-dagger; Silencer sniper rifle",
+    "abilities": [
+      "Cult Ambush: After deployment but before the first battle round, roll a D6 for this model. On a 5+ this model can immediately move up to 6\"."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Melee",
+      "Shooting",
+      "Stealth"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 2,
+      "bs": 2,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 4,
+      "attacks": 4,
+      "ld": 8,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "NIJ4DcraRsB8D410",
+  "sort": 26900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

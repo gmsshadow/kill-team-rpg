@@ -3,6 +3,38 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.14.0
+
+All 24 playable factions imported: 414 models and 735 weapons.
+
+### Added
+- Every faction from the New Recruit catalogues, each in its own compendium folder, with
+  characteristics, points, Max, keywords, wargear options, allowed specialisms and weapon profiles.
+- `module/helpers/factions/_index.mjs` collects the playable factions for the build.
+
+### Fixed
+- **Models with a linked profile were dropped silently.** Many models carry no inline profile and
+  reference a shared one by infoLink. Requiring an inline profile discarded them without warning -
+  Thousand Sons imported 10 models where the catalogue holds 11, and Grey Knights 9 where it holds
+  12. Profiles are now resolved by id.
+- **The specialism group is named both "Specialism" and "Specialisms".** Matching only the singular
+  stripped specialisms from whole factions: Thousand Sons lost 7 of 10, Astra Militarum 12 of 24,
+  Heretic Astartes 9 of 22. Both spellings are matched now.
+- **Compendium documents were being lost to id collisions.** `stableId` seeded from the first
+  8 characters of a key, which are identical for every model, leaving only 8 characters of real
+  entropy. It now hashes the whole key twice with different offsets.
+- **Source filenames collided across factions.** Every faction wrote `captain.json`, so one
+  faction's Captain overwrote another's before compilation - 49 models never reached the pack.
+  Filenames are namespaced by faction, and the built count now matches the source exactly.
+
+### Notes
+- Excluded: `Space Marines` is a shared library the Astartes, Deathwatch and Sororitas catalogues
+  draw from rather than a kill team; `Unaligned` holds scenario NPCs with no points; `Exodite
+  Dragon Masters` is empty in the source.
+- Two weapons are lost to same-name duplicates within a single faction, 735 built from 737.
+- Models without specialisms are usually correct rather than missing: T'au Drones, turrets and
+  named characters cannot take one.
+
 ## 0.13.0
 
 ### Added

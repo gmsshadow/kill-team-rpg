@@ -1,0 +1,37 @@
+{
+  "_key": "!items!Ri5gh8Bcj2BoTYlG",
+  "_id": "Ri5gh8Bcj2BoTYlG",
+  "name": "Nemesis Warding Stave",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Grey Knights, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "+2",
+    "ap": -1,
+    "damage": "D3",
+    "abilities": "A model armed with this weapon has a 5+ invulnerable save against attacks made in the Fight phase. If it already has an invulnerable save, add 1 to invulnerable saving throws you make for it in the Fight phase instead."
+  },
+  "effects": [],
+  "folder": "oV6r2XiVQHif6Pix",
+  "sort": 53600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

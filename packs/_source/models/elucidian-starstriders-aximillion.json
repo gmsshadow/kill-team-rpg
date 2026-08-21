@@ -1,0 +1,52 @@
+{
+  "_key": "!items!tOrg5u5kbYHKHA7M",
+  "_id": "tOrg5u5kbYHKHA7M",
+  "name": "Aximillion",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 6,
+    "source": "Elucidian Starstriders, pg undefined",
+    "maxNumber": "1",
+    "faction": "Elucidian Starstriders",
+    "keywords": "Elucidian Starstriders, Imperium, Voidsman, Aximillion, Beast",
+    "wargear": "Vicious Bite",
+    "abilities": [
+      "Loyal Retainer: Add 1 to the Leadership characteristic of this model whilst it is within 6\" of ELUCIA VHANE."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Demolitions",
+      "Scout",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "8\"",
+      "ws": 3,
+      "bs": 4,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 2,
+      "ld": 5,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "v0TGbMTklMPKJcFg",
+  "sort": 23100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

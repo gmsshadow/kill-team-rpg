@@ -1,0 +1,46 @@
+{
+  "_key": "!items!xGv0tM16tudSBizw",
+  "_id": "xGv0tM16tudSBizw",
+  "name": "Alchemicus Familiar",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 4,
+    "source": "Genestealer Cults, pg undefined",
+    "maxNumber": "1",
+    "faction": "Genestealer Cults",
+    "keywords": "Genestealer Cults, Infantry, Familiar",
+    "wargear": "",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 6,
+      "strength": 4,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 2,
+      "ld": 8,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "NIJ4DcraRsB8D410",
+  "sort": 25200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -5,7 +5,7 @@
  * which tracks Kill Team 2018 including errata and the Elites and Commanders
  * expansions. Do not hand-edit: re-run the importer instead.
  *
- * 44 models, 82 weapons.
+ * 50 models, 82 weapons.
  *
  * Ability text is imported as prose. Machine-readable rules are tagged
  * separately, by hand, in module/rules/ - deciding what an ability does is a
@@ -114,7 +114,7 @@ export const SPACE_MARINES_MODELS = [
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered.",
       "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model."
     ] },
-  { key: "captain-in-gravis-armour", name: "Captain in Gravis Armour", points: 88, maxNumber: "1", profile: { move: "5\"", ws: 2, bs: 2, strength: 4, toughness: 5, wounds: 7, attacks: 5, ld: 9, save: 3 }, keywords: "Space Marines, New CategoryLink, Imperium, Infantry, Primaris, Captain, Mk X Gravis", wargear: "Boltstorm gauntlet", specialisms: [
+  { key: "captain-in-gravis-armour", name: "Captain in Gravis Armour", points: 88, maxNumber: "1", profile: { move: "5\"", ws: 2, bs: 2, strength: 4, toughness: 5, wounds: 7, attacks: 5, ld: 9, save: 3 }, keywords: "Space Marines, Imperium, Infantry, Primaris, Captain, Mk X Gravis", wargear: "Boltstorm gauntlet", specialisms: [
       "Ferocity",
       "Fortitude",
       "Leadership",
@@ -127,7 +127,7 @@ export const SPACE_MARINES_MODELS = [
       "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
     ] },
-  { key: "captain-in-phobos-armour", name: "Captain in Phobos Armour", points: 81, maxNumber: "1", profile: { move: "6\"", ws: 2, bs: 2, strength: 4, toughness: 4, wounds: 6, attacks: 5, ld: 9, save: 3 }, keywords: "Space Marines, Imperium, New CategoryLink, Infantry, Primaris, Captain, Phobos", wargear: "Master-crafted instigator bolt rifle", specialisms: [
+  { key: "captain-in-phobos-armour", name: "Captain in Phobos Armour", points: 81, maxNumber: "1", profile: { move: "6\"", ws: 2, bs: 2, strength: 4, toughness: 4, wounds: 6, attacks: 5, ld: 9, save: 3 }, keywords: "Space Marines, Imperium, Infantry, Primaris, Captain, Phobos", wargear: "Master-crafted instigator bolt rifle", specialisms: [
       "Ferocity",
       "Fortitude",
       "Leadership",
@@ -142,7 +142,7 @@ export const SPACE_MARINES_MODELS = [
       "Concealed Position: When you set up this model during deployment, it can be set up anywhere on the battlefield that is more than 9\" away from any enemy deployment zone.",
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
     ] },
-  { key: "captain-in-terminator-armour", name: "Captain in Terminator Armour", points: 80, maxNumber: "1", profile: { move: "5\"", ws: 2, bs: 2, strength: 4, toughness: 4, wounds: 6, attacks: 4, ld: 9, save: 2 }, keywords: "Space Marines, Imperium, New CategoryLink, Infantry, Terminator, Captain", wargear: "Combi-bolter; Wrist-mounted grenade launcher", specialisms: [
+  { key: "captain-in-terminator-armour", name: "Captain in Terminator Armour", points: 80, maxNumber: "1", profile: { move: "5\"", ws: 2, bs: 2, strength: 4, toughness: 4, wounds: 6, attacks: 4, ld: 9, save: 2 }, keywords: "Space Marines, Imperium, Infantry, Terminator, Captain", wargear: "Combi-bolter; Wrist-mounted grenade launcher", specialisms: [
       "Ferocity",
       "Fortitude",
       "Leadership",
@@ -155,7 +155,7 @@ export const SPACE_MARINES_MODELS = [
       "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
     ] },
-  { key: "captain-with-master-crafted-heavy-bolt-rifle", name: "Captain with Master-crafted Heavy Bolt Rifle", points: 85, maxNumber: "1", profile: { move: "5\"", ws: 2, bs: 2, strength: 4, toughness: 5, wounds: 7, attacks: 5, ld: 9, save: 3 }, keywords: "Space Marines, New CategoryLink, Imperium, Infantry, Primaris, Captain, Mk X Gravis", wargear: "Master-crafted heavy bolt rifle", specialisms: [
+  { key: "captain-with-master-crafted-heavy-bolt-rifle", name: "Captain with Master-crafted Heavy Bolt Rifle", points: 85, maxNumber: "1", profile: { move: "5\"", ws: 2, bs: 2, strength: 4, toughness: 5, wounds: 7, attacks: 5, ld: 9, save: 3 }, keywords: "Space Marines, Imperium, Infantry, Primaris, Captain, Mk X Gravis", wargear: "Master-crafted heavy bolt rifle", specialisms: [
       "Ferocity",
       "Fortitude",
       "Leadership",
@@ -168,7 +168,7 @@ export const SPACE_MARINES_MODELS = [
       "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
     ] },
-  { key: "chaplain-in-terminator-armour", name: "Chaplain in Terminator Armour", points: 74, maxNumber: "1", profile: { move: "5\"", ws: 2, bs: 3, strength: 4, toughness: 4, wounds: 5, attacks: 3, ld: 9, save: 2 }, keywords: "Space Marines, Imperium, New CategoryLink, Infantry, Terminator, Chaplain", wargear: "", specialisms: [
+  { key: "chaplain-in-terminator-armour", name: "Chaplain in Terminator Armour", points: 74, maxNumber: "1", profile: { move: "5\"", ws: 2, bs: 3, strength: 4, toughness: 4, wounds: 5, attacks: 3, ld: 9, save: 2 }, keywords: "Space Marines, Imperium, Infantry, Terminator, Chaplain", wargear: "", specialisms: [
       "Ferocity",
       "Fortitude",
       "Leadership",
@@ -240,7 +240,7 @@ export const SPACE_MARINES_MODELS = [
       "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
     ] },
-  { key: "judiciar", name: "Judiciar", points: 73, maxNumber: "1", profile: { move: "6\"", ws: 2, bs: 3, strength: 4, toughness: 4, wounds: 5, attacks: 4, ld: 9, save: 3 }, keywords: "Space Marines, New CategoryLink, Imperium, Infantry, Primaris, Judiciar", wargear: "Executioner relic blade", specialisms: [
+  { key: "judiciar", name: "Judiciar", points: 73, maxNumber: "1", profile: { move: "6\"", ws: 2, bs: 3, strength: 4, toughness: 4, wounds: 5, attacks: 4, ld: 9, save: 3 }, keywords: "Space Marines, Imperium, Infantry, Primaris, Judiciar", wargear: "Executioner relic blade", specialisms: [
       "Ferocity",
       "Fortitude",
       "Leadership",
@@ -251,7 +251,7 @@ export const SPACE_MARINES_MODELS = [
       "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
     ] },
-  { key: "librarian-in-phobos-armour", name: "Librarian in Phobos Armour", points: 89, maxNumber: "1", profile: { move: "6\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 5, attacks: 4, ld: 9, save: 3 }, keywords: "Space Marines, Imperium, New CategoryLink, Infantry, Primaris, Librarian, Psyker, Phobos", wargear: "", specialisms: [
+  { key: "librarian-in-phobos-armour", name: "Librarian in Phobos Armour", points: 89, maxNumber: "1", profile: { move: "6\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 5, attacks: 4, ld: 9, save: 3 }, keywords: "Space Marines, Imperium, Infantry, Primaris, Librarian, Psyker, Phobos", wargear: "", specialisms: [
       "Fortitude",
       "Melee",
       "Psyker",
@@ -262,7 +262,7 @@ export const SPACE_MARINES_MODELS = [
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered.",
       "Concealed Position: When you set up this model during deployment, it can be set up anywhere on the battlefield that is more than 9\" away from any enemy deployment zone."
     ] },
-  { key: "librarian-in-terminator-armour", name: "Librarian in Terminator Armour", points: 88, maxNumber: "1", profile: { move: "5\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 5, attacks: 3, ld: 9, save: 2 }, keywords: "Space Marines, Imperium, New CategoryLink, Infantry, Terminator, Psyker, Librarian", wargear: "", specialisms: [
+  { key: "librarian-in-terminator-armour", name: "Librarian in Terminator Armour", points: 88, maxNumber: "1", profile: { move: "5\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 5, attacks: 3, ld: 9, save: 2 }, keywords: "Space Marines, Imperium, Infantry, Terminator, Psyker, Librarian", wargear: "", specialisms: [
       "Fortitude",
       "Melee",
       "Psyker",
@@ -272,7 +272,7 @@ export const SPACE_MARINES_MODELS = [
       "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
     ] },
-  { key: "lieutenant-in-phobos-armour", name: "Lieutenant in Phobos Armour", points: 51, maxNumber: "1", profile: { move: "6\"", ws: 2, bs: 3, strength: 4, toughness: 4, wounds: 5, attacks: 4, ld: 8, save: 3 }, keywords: "Space Marines, Imperium, New CategoryLink, Infantry, Primaris, Grav-chute, Lieutenant, Phobos", wargear: "Master-crafted occulus bolt carbine", specialisms: [
+  { key: "lieutenant-in-phobos-armour", name: "Lieutenant in Phobos Armour", points: 51, maxNumber: "1", profile: { move: "6\"", ws: 2, bs: 3, strength: 4, toughness: 4, wounds: 5, attacks: 4, ld: 8, save: 3 }, keywords: "Space Marines, Imperium, Infantry, Primaris, Grav-chute, Lieutenant, Phobos", wargear: "Master-crafted occulus bolt carbine", specialisms: [
       "Ferocity",
       "Fortitude",
       "Leadership",
@@ -285,7 +285,7 @@ export const SPACE_MARINES_MODELS = [
       "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
     ] },
-  { key: "lieutenant-in-reiver-armour", name: "Lieutenant in Reiver Armour", points: 51, maxNumber: "1", profile: { move: "6\"", ws: 2, bs: 2, strength: 4, toughness: 4, wounds: 5, attacks: 4, ld: 8, save: 3 }, keywords: "Space Marines, New CategoryLink, Imperium, Infantry, Phobos, Primaris, Reiver, Lieutenant", wargear: "Master-crafted special issue bolt pistol", specialisms: [
+  { key: "lieutenant-in-reiver-armour", name: "Lieutenant in Reiver Armour", points: 51, maxNumber: "1", profile: { move: "6\"", ws: 2, bs: 2, strength: 4, toughness: 4, wounds: 5, attacks: 4, ld: 8, save: 3 }, keywords: "Space Marines, Imperium, Infantry, Phobos, Primaris, Reiver, Lieutenant", wargear: "Master-crafted special issue bolt pistol", specialisms: [
       "Ferocity",
       "Fortitude",
       "Leadership",
@@ -300,7 +300,7 @@ export const SPACE_MARINES_MODELS = [
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered.",
       "Terror Troops: Subtract 1 from the Leadership characteristic of models while they are within 3\" of any enemy REIVER models."
     ] },
-  { key: "primaris-captain", name: "Primaris Captain", points: 76, maxNumber: "1", profile: { move: "6\"", ws: 2, bs: 2, strength: 4, toughness: 4, wounds: 6, attacks: 5, ld: 9, save: 3 }, keywords: "Space Marines, Imperium, New CategoryLink, Infantry, Captain, Primaris", wargear: "Heavy bolt pistol, master-crafted power sword and relic shield; Master-crafted auto bolt rifle and bolt pistol; Master-crafted stalker bolt rifle and bolt pistol; Plasma pistol and power fist; Relic shield", specialisms: [
+  { key: "primaris-captain", name: "Primaris Captain", points: 76, maxNumber: "1", profile: { move: "6\"", ws: 2, bs: 2, strength: 4, toughness: 4, wounds: 6, attacks: 5, ld: 9, save: 3 }, keywords: "Space Marines, Imperium, Infantry, Captain, Primaris", wargear: "Heavy bolt pistol, master-crafted power sword and relic shield; Master-crafted auto bolt rifle and bolt pistol; Master-crafted stalker bolt rifle and bolt pistol; Plasma pistol and power fist; Relic shield", specialisms: [
       "Ferocity",
       "Fortitude",
       "Leadership",
@@ -314,7 +314,7 @@ export const SPACE_MARINES_MODELS = [
       "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
     ] },
-  { key: "primaris-chaplain", name: "Primaris Chaplain", points: 63, maxNumber: "1", profile: { move: "6\"", ws: 2, bs: 3, strength: 4, toughness: 4, wounds: 5, attacks: 4, ld: 9, save: 3 }, keywords: "Space Marines, Imperium, New CategoryLink, Infantry, Chaplain, Primaris", wargear: "", specialisms: [
+  { key: "primaris-chaplain", name: "Primaris Chaplain", points: 63, maxNumber: "1", profile: { move: "6\"", ws: 2, bs: 3, strength: 4, toughness: 4, wounds: 5, attacks: 4, ld: 9, save: 3 }, keywords: "Space Marines, Imperium, Infantry, Chaplain, Primaris", wargear: "", specialisms: [
       "Ferocity",
       "Fortitude",
       "Leadership",
@@ -325,7 +325,7 @@ export const SPACE_MARINES_MODELS = [
       "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
     ] },
-  { key: "primaris-librarian", name: "Primaris Librarian", points: 81, maxNumber: "1", profile: { move: "6\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 5, attacks: 4, ld: 9, save: 3 }, keywords: "Space Marines, Imperium, New CategoryLink, Infantry, Psyker, Librarian, Primaris", wargear: "", specialisms: [
+  { key: "primaris-librarian", name: "Primaris Librarian", points: 81, maxNumber: "1", profile: { move: "6\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 5, attacks: 4, ld: 9, save: 3 }, keywords: "Space Marines, Imperium, Infantry, Psyker, Librarian, Primaris", wargear: "", specialisms: [
       "Fortitude",
       "Melee",
       "Psyker",
@@ -335,7 +335,7 @@ export const SPACE_MARINES_MODELS = [
       "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
     ] },
-  { key: "primaris-lieutenant", name: "Primaris Lieutenant", points: 46, maxNumber: "1", profile: { move: "6\"", ws: 2, bs: 3, strength: 4, toughness: 4, wounds: 5, attacks: 4, ld: 8, save: 3 }, keywords: "Space Marines, Imperium, New CategoryLink, Infantry, Lieutenant, Primaris", wargear: "Master-crafted power axe; Neo-volkite pistol, master-crafted power sword and storm shield; Special-issue bolt carbine and master-crafted power axe", specialisms: [
+  { key: "primaris-lieutenant", name: "Primaris Lieutenant", points: 46, maxNumber: "1", profile: { move: "6\"", ws: 2, bs: 3, strength: 4, toughness: 4, wounds: 5, attacks: 4, ld: 8, save: 3 }, keywords: "Space Marines, Imperium, Infantry, Lieutenant, Primaris", wargear: "Master-crafted power axe; Neo-volkite pistol, master-crafted power sword and storm shield; Special-issue bolt carbine and master-crafted power axe", specialisms: [
       "Ferocity",
       "Fortitude",
       "Leadership",
@@ -363,6 +363,18 @@ export const SPACE_MARINES_MODELS = [
       "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
     ] },
+  { key: "space-wolf-terminator", name: "Space Wolf Terminator", points: 25, maxNumber: "-", profile: { move: "5\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 3, attacks: 2, ld: 8, save: 2 }, keywords: "Space Marines, Imperium, Infantry, Terminator, Space Wolves", wargear: "", specialisms: [], commander: false, abilities: [
+      "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
+    ] },
+  { key: "space-wolf-terminator-gunner", name: "Space Wolf Terminator Gunner", points: 26, maxNumber: "-", profile: { move: "5\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 3, attacks: 2, ld: 8, save: 2 }, keywords: "Space Marines, Imperium, Infantry, Terminator, Space Wolves", wargear: "", specialisms: [], commander: false, abilities: [
+      "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
+    ] },
+  { key: "space-wolf-terminator-sergeant", name: "Space Wolf Terminator Sergeant", points: 27, maxNumber: "-", profile: { move: "5\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 3, attacks: 2, ld: 8, save: 2 }, keywords: "Space Marines, Imperium, Infantry, Terminator, Space Wolves", wargear: "", specialisms: [], commander: false, abilities: [
+      "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
+    ] },
   { key: "sternguard-gunner", name: "Sternguard Gunner", points: 17, maxNumber: "2", profile: { move: "6\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 2, attacks: 2, ld: 8, save: 3 }, keywords: "Space Marines, Imperium, Infantry, Sternguard Veteran", wargear: "", specialisms: [], commander: false, abilities: [
       "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
@@ -380,6 +392,18 @@ export const SPACE_MARINES_MODELS = [
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
     ] },
   { key: "suppressor-sergeant", name: "Suppressor Sergeant", points: 30, maxNumber: "1", profile: { move: "12\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 2, attacks: 3, ld: 8, save: 3 }, keywords: "Space Marines, Imperium, Infantry, Fly, Phobos, Primaris, Grav-chute, Suppressor", wargear: "", specialisms: [], commander: false, abilities: [
+      "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
+    ] },
+  { key: "terminator", name: "Terminator", points: 25, maxNumber: "-", profile: { move: "5\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 3, attacks: 2, ld: 8, save: 2 }, keywords: "Space Marines, Imperium, Infantry, Terminator", wargear: "Pair of lightning claws; Thunder hammer and Storm shield", specialisms: [], commander: false, abilities: [
+      "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
+    ] },
+  { key: "terminator-gunner", name: "Terminator Gunner", points: 26, maxNumber: "-", profile: { move: "5\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 3, attacks: 2, ld: 8, save: 2 }, keywords: "Space Marines, Imperium, Infantry, Terminator", wargear: "", specialisms: [], commander: false, abilities: [
+      "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
+    ] },
+  { key: "terminator-sergeant", name: "Terminator Sergeant", points: 27, maxNumber: "-", profile: { move: "5\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 3, attacks: 2, ld: 8, save: 2 }, keywords: "Space Marines, Imperium, Infantry, Terminator", wargear: "Pair of lightning claws; Thunder hammer and Storm shield", specialisms: [], commander: false, abilities: [
       "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
       "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
     ] },

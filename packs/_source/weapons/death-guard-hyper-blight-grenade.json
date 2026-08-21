@@ -1,0 +1,37 @@
+{
+  "_key": "!items!Iz0HQ3sBURo3mvYv",
+  "_id": "Iz0HQ3sBURo3mvYv",
+  "name": "Hyper blight grenade",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Death Guard, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "6\"",
+    "weaponType": "grenade",
+    "attacks": "D6",
+    "strength": "4",
+    "ap": 0,
+    "damage": "2",
+    "abilities": "You can re-roll wound rolls of 1 for this weapon. Each wound roll of 6+ made for this weapon inflicts a mortal wound on the target in addition to any other damage."
+  },
+  "effects": [],
+  "folder": "ux2vKzuRofSnWRuf",
+  "sort": 30100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

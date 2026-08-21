@@ -1,0 +1,52 @@
+{
+  "_key": "!items!MNwlANcrKDA5C1iz",
+  "_id": "MNwlANcrKDA5C1iz",
+  "name": "Negavolt Cultist",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 9,
+    "source": "Servants of the Abyss, pg undefined",
+    "maxNumber": "-",
+    "faction": "Servants of the Abyss",
+    "keywords": "Servants of the Abyss, Chaos, Infantry, Negavolt Cultists",
+    "wargear": "Electro-goads",
+    "abilities": [
+      "Servants of the Abyss: You can re-roll failed Nerve tests for this model whilst it is within 6\" of a HERETIC ASTARTES model from your kill team."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Veteran",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 4,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 3,
+      "ld": 8,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "dAJE9GD0dejQZE3g",
+  "sort": 35400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

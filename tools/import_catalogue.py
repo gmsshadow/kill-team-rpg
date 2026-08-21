@@ -34,6 +34,11 @@ import xml.etree.ElementTree as ET
 
 NS = "{http://www.battlescribe.net/schema/catalogueSchema}"
 
+# The group holding a model's specialism options is named inconsistently across
+# catalogues. Missing the plural silently strips specialisms from a whole
+# faction, so both are matched.
+SPECIALISM_GROUP_NAMES = {"Specialism", "Specialisms"}
+
 # Type line to (weaponType, attacks). "Rapid Fire 1" -> ("rapidFire", "1")
 TYPE_MAP = {
     "assault": "assault",
@@ -107,7 +112,7 @@ def specialisms_from_group(node, shared=None):
     """
     shared = shared or {}
     for group in node.iter(f"{NS}selectionEntryGroup"):
-        if group.get("name") != "Specialism":
+        if group.get("name") not in SPECIALISM_GROUP_NAMES:
             continue
         names = {e.get("name") for e in group.iter(f"{NS}entryLink")}
         # Follow any link that resolves to a shared group.
@@ -123,7 +128,7 @@ def specialisms_from_group(node, shared=None):
     # The whole group may itself be a link on the model.
     for e in node.iter(f"{NS}entryLink"):
         target = shared.get(e.get("targetId"))
-        if target is not None and target.get("name") == "Specialism":
+        if target is not None and target.get("name") in SPECIALISM_GROUP_NAMES:
             names = {x.get("name") for x in target.iter(f"{NS}entryLink")}
             names |= {x.get("name") for x in target.iter(f"{NS}selectionEntry")}
             names.discard(None)
@@ -174,6 +179,35 @@ def load_linked_catalogues(path, root):
     return index
 
 
+def index_profiles(roots):
+    """Every profile across the given catalogues, keyed by id."""
+    out = {}
+    for r in roots:
+        for p in r.iter(f"{NS}profile"):
+            if p.get("id"):
+                out[p.get("id")] = p
+    return out
+
+
+def model_profile(entry, profiles_by_id):
+    """
+    A model's Model profile, whether inline or referenced.
+
+    Many models carry no inline profile and point at a shared one with an
+    infoLink instead. Requiring an inline profile drops those models from the
+    import without warning.
+    """
+    inline = next((p for p in entry.iter(f"{NS}profile")
+                   if p.get("typeName") == "Model"), None)
+    if inline is not None:
+        return inline
+    for link in entry.iter(f"{NS}infoLink"):
+        target = profiles_by_id.get(link.get("targetId"))
+        if target is not None and target.get("typeName") == "Model":
+            return target
+    return None
+
+
 def import_catalogue(path):
     root = ET.parse(path).getroot()
     faction = root.get("name")
@@ -182,6 +216,7 @@ def import_catalogue(path):
     # Weapon and ability profiles are searched across the linked catalogues as
     # well, because the models that use them are defined there.
     all_roots = [root] + linked_roots
+    profiles_by_id = index_profiles(all_roots)
 
     # Rank-and-file models carry their specialisms on a catalogue-level
     # entryLink rather than inside the model entry, so collect those by name
@@ -250,8 +285,7 @@ def import_catalogue(path):
 
     models, seen_models = [], set()
     for se, overlay in candidates:
-        profile = next((p for p in se.iter(f"{NS}profile")
-                        if p.get("typeName") == "Model"), None)
+        profile = model_profile(se, profiles_by_id)
         if profile is None:
             continue
         name = (overlay if overlay is not None else se).get("name") or se.get("name")
@@ -273,6 +307,11 @@ def import_catalogue(path):
             text = abilities.get(link.get("name"))
             if text:
                 model_abilities.append(f"{link.get('name')}: {text}")
+        if overlay is not None:
+            for link in overlay.iter(f"{NS}infoLink"):
+                text = abilities.get(link.get("name"))
+                if text and not any(a.startswith(link.get("name")) for a in model_abilities):
+                    model_abilities.append(f"{link.get('name')}: {text}")
 
         options = sorted({e.get("name") for e in se.iter(f"{NS}selectionEntry")
                           if e.get("type") == "upgrade" and e.get("name")})

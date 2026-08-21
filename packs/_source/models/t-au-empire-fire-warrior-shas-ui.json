@@ -1,0 +1,52 @@
+{
+  "_key": "!items!MbKLM7I1e5UlMlGr",
+  "_id": "MbKLM7I1e5UlMlGr",
+  "name": "Fire Warrior Shas'ui",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 8,
+    "source": "T'au Empire, pg undefined",
+    "maxNumber": "1",
+    "faction": "T'au Empire",
+    "keywords": "T'au Empire, Fire Warrior, Infantry",
+    "wargear": "",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [
+      "Comms",
+      "Medic",
+      "Scout",
+      "Sniper",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 5,
+      "bs": 4,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 2,
+      "ld": 7,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "mPKVSDA56tsrIx4F",
+  "sort": 37500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

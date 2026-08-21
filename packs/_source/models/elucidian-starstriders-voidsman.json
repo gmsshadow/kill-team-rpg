@@ -1,0 +1,51 @@
+{
+  "_key": "!items!2lsPAnsdsfm9g1Cr",
+  "_id": "2lsPAnsdsfm9g1Cr",
+  "name": "Voidsman",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 6,
+    "source": "Elucidian Starstriders, pg undefined",
+    "maxNumber": "3",
+    "faction": "Elucidian Starstriders",
+    "keywords": "Elucidian Starstriders, Infantry, Imperium, Voidsman",
+    "wargear": "Lasgun",
+    "abilities": [
+      "Loyal Retainer: Add 1 to the Leadership characteristic of this model whilst it is within 6\" of ELUCIA VHANE."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Demolitions",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 4,
+      "bs": 3,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 7,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "v0TGbMTklMPKJcFg",
+  "sort": 23600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

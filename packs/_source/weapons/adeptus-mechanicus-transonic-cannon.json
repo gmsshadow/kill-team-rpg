@@ -1,0 +1,37 @@
+{
+  "_key": "!items!GT2hcdk12tsBmTsB",
+  "_id": "GT2hcdk12tsBmTsB",
+  "name": "Transonic cannon",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 10,
+    "source": "Adeptus Mechanicus, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "8\"",
+    "weaponType": "assault",
+    "attacks": "D6",
+    "strength": "4",
+    "ap": -1,
+    "damage": "2",
+    "abilities": "This weapon automatically hits its target."
+  },
+  "effects": [],
+  "folder": "b09An29gloB2fENi",
+  "sort": 20200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

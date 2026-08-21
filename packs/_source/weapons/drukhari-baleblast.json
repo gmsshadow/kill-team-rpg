@@ -1,0 +1,37 @@
+{
+  "_key": "!items!x0rGtmJGRIHsBMvG",
+  "_id": "x0rGtmJGRIHsBMvG",
+  "name": "Baleblast",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Drukhari, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "18\"",
+    "weaponType": "assault",
+    "attacks": "2",
+    "strength": "4",
+    "ap": -1,
+    "damage": "1",
+    "abilities": "Each time you make a wound roll of 6+ for this weapon, the target suffers a mortal wound in addition to any other damage."
+  },
+  "effects": [],
+  "folder": "ZeTAJOve9kXS5sdW",
+  "sort": 41900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

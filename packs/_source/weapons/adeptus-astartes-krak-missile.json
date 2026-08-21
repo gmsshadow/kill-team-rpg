@@ -1,0 +1,37 @@
+{
+  "_key": "!items!gDgRMbIB03u9GjKZ",
+  "_id": "gDgRMbIB03u9GjKZ",
+  "name": "Krak missile",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adeptus Astartes, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "48\"",
+    "weaponType": "heavy",
+    "attacks": "1",
+    "strength": "8",
+    "ap": -2,
+    "damage": "D6",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "WngXm3Y7Qjy9sDAT",
+  "sort": 12500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

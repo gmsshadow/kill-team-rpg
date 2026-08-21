@@ -1,18 +1,18 @@
 {
-  "_key": "!folders!folderNeui6aaisY",
-  "_id": "folderNeui6aaisY",
+  "_key": "!folders!BMFWB0JStCdknIpI",
+  "_id": "BMFWB0JStCdknIpI",
   "name": "Necrons",
   "type": "Item",
   "description": "",
   "folder": null,
   "sorting": "a",
-  "sort": 100,
+  "sort": 1700,
   "color": "#c8501e",
   "flags": {},
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.12.0",
+    "systemVersion": "0.13.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

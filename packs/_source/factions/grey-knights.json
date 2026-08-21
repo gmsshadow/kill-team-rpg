@@ -1,6 +1,6 @@
 {
-  "_key": "!items!greyknigAsCO22M8",
-  "_id": "greyknigAsCO22M8",
+  "_key": "!items!K5yhmBGHqniFmxUx",
+  "_id": "K5yhmBGHqniFmxUx",
   "name": "Grey Knights",
   "type": "faction",
   "img": "icons/svg/statue.svg",
@@ -22,7 +22,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.12.0",
+    "systemVersion": "0.13.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

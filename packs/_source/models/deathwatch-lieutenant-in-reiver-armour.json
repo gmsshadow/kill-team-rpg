@@ -1,0 +1,100 @@
+{
+  "_key": "!items!ULEP6PIz4pyBGBOb",
+  "_id": "ULEP6PIz4pyBGBOb",
+  "name": "Lieutenant in Reiver Armour",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 51,
+    "source": "Deathwatch, pg undefined",
+    "maxNumber": "1",
+    "faction": "Deathwatch",
+    "keywords": "Deathwatch, Imperium, Infantry, Phobos, Primaris, Reiver, Lieutenant",
+    "wargear": "Master-crafted special issue bolt pistol",
+    "abilities": [
+      "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered.",
+      "Terror Troops: Enemy models must subtract 1 from their Leadership if they are within 3\" of any Reiver or Reiver Sergeant models."
+    ],
+    "rules": [
+      {
+        "type": "reroll",
+        "roll": "nerve",
+        "characteristic": null,
+        "when": "failed",
+        "value": 0,
+        "penalty": null,
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      },
+      {
+        "type": "ignorePenalty",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": "fleshWound",
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      },
+      {
+        "type": "modifier",
+        "roll": null,
+        "characteristic": "leadership",
+        "when": null,
+        "value": -1,
+        "penalty": null,
+        "phase": "any",
+        "scope": "enemy",
+        "range": 3,
+        "condition": null,
+        "note": ""
+      }
+    ],
+    "specialisms": [
+      "Ferocity",
+      "Fortitude",
+      "Leadership",
+      "Logistics",
+      "Melee",
+      "Shooting",
+      "Stealth",
+      "Strategist",
+      "Strength"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 2,
+      "bs": 2,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 5,
+      "attacks": 4,
+      "ld": 8,
+      "save": 3,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "sRUjWRON4HQfodYf",
+  "sort": 19500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

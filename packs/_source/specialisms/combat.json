@@ -1,6 +1,6 @@
 {
-  "_key": "!items!specialiGakOGMkA",
-  "_id": "specialiGakOGMkA",
+  "_key": "!items!dwXKVC7GrMz8VGLY",
+  "_id": "dwXKVC7GrMz8VGLY",
   "name": "Combat",
   "type": "specialism",
   "img": "icons/svg/upgrade.svg",
@@ -190,7 +190,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.12.0",
+    "systemVersion": "0.13.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

@@ -1,0 +1,37 @@
+{
+  "_key": "!items!sBcRkn0HITiXKt0H",
+  "_id": "sBcRkn0HITiXKt0H",
+  "name": "Krootox fists",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Kroot, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "User",
+    "ap": 0,
+    "damage": "2",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "GDmpE5uVSl63spMv",
+  "sort": 59000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

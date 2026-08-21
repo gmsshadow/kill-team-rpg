@@ -1,0 +1,54 @@
+{
+  "_key": "!items!GxqBmFaRQ9kh6FG3",
+  "_id": "GxqBmFaRQ9kh6FG3",
+  "name": "Wych",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 8,
+    "source": "Drukhari, pg undefined",
+    "maxNumber": "-",
+    "faction": "Drukhari",
+    "keywords": "Drukhari, Aeldari, Infantry, Wych, Wych Cult",
+    "wargear": "",
+    "abilities": [
+      "Dodge: This model has a 4+ invulnerable save in the Fight phase.",
+      "No Escape: Roll off if an INFANTRY model within 1\" of any enemy models with this ability would Fall Back. The model that would Fall Back can only do so if the player controlling it wins the roll-off."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Scout",
+      "Veteran",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "8\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 2,
+      "ld": 7,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "ZeTAJOve9kXS5sdW",
+  "sort": 22900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

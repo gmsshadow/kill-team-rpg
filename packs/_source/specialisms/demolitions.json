@@ -1,6 +1,6 @@
 {
-  "_key": "!items!specialioYgwKUsE",
-  "_id": "specialioYgwKUsE",
+  "_key": "!items!87QFw34lyHEZolMf",
+  "_id": "87QFw34lyHEZolMf",
   "name": "Demolitions",
   "type": "specialism",
   "img": "icons/svg/upgrade.svg",
@@ -203,7 +203,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.12.0",
+    "systemVersion": "0.13.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

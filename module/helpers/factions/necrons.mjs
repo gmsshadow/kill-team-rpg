@@ -42,10 +42,10 @@ export const NECRONS_WEAPONS = [
 ];
 
 export const NECRONS_MODELS = [
-  { key: "ankra-the-colossus", name: "Ankra the Colossus", points: 86, maxNumber: "1", profile: { move: "5\"", ws: 2, bs: 2, strength: 5, toughness: 6, wounds: 5, attacks: 3, ld: 10, save: 3 }, keywords: "Necrons, New CategoryLink, Infantry, Overlord, Level 1, Level 2, Level 3, Level 4", wargear: "Level 1 - Impenetrable; Level 2 - Bloodthirsty; Level 3 - Vengeful; Level 4 - Ancient Strategist; Voidscythe", specialisms: [], commander: false, abilities: [
+  { key: "ankra-the-colossus", name: "Ankra the Colossus", points: 86, maxNumber: "1", profile: { move: "5\"", ws: 2, bs: 2, strength: 5, toughness: 6, wounds: 5, attacks: 3, ld: 10, save: 3 }, keywords: "Necrons, Infantry, Overlord, Level 1, Level 2, Level 3, Level 4", wargear: "Level 1 - Impenetrable; Level 2 - Bloodthirsty; Level 3 - Vengeful; Level 4 - Ancient Strategist; Voidscythe", specialisms: [], commander: false, abilities: [
       "Living Metal: At the beginning of each battle round, this model recovers 1 wound lost earlier in the battle."
     ] },
-  { key: "chronomancer", name: "Chronomancer", points: 44, maxNumber: "1", profile: { move: "8\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 4, attacks: 1, ld: 10, save: 4 }, keywords: "Necrons, New CategoryLink, Infantry, Chronomancer", wargear: "Aeonstave; Chronotendrils; Entropic lance", specialisms: [
+  { key: "chronomancer", name: "Chronomancer", points: 44, maxNumber: "1", profile: { move: "8\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 4, attacks: 1, ld: 10, save: 4 }, keywords: "Necrons, Infantry, Chronomancer", wargear: "Aeonstave; Chronotendrils; Entropic lance", specialisms: [
       "Fortitude",
       "Logistics",
       "Melee",
@@ -102,7 +102,7 @@ export const NECRONS_MODELS = [
     ], commander: true, abilities: [
       "Living Metal: At the beginning of each battle round, this model recovers 1 wound lost earlier in the battle."
     ] },
-  { key: "plasmancer", name: "Plasmancer", points: 44, maxNumber: "1", profile: { move: "5\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 4, attacks: 1, ld: 10, save: 4 }, keywords: "Necrons, New CategoryLink, Infantry, Cryptek, Plasmancer", wargear: "Plasmic lance", specialisms: [
+  { key: "plasmancer", name: "Plasmancer", points: 44, maxNumber: "1", profile: { move: "5\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 4, attacks: 1, ld: 10, save: 4 }, keywords: "Necrons, Infantry, Cryptek, Plasmancer", wargear: "Plasmic lance", specialisms: [
       "Fortitude",
       "Logistics",
       "Melee",
@@ -112,7 +112,7 @@ export const NECRONS_MODELS = [
     ], commander: true, abilities: [
       "Living Metal: At the beginning of each battle round, this model recovers 1 wound lost earlier in the battle."
     ] },
-  { key: "psychomancer", name: "Psychomancer", points: 44, maxNumber: "1", profile: { move: "5\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 4, attacks: 1, ld: 10, save: 4 }, keywords: "Necrons, New CategoryLink, Infantry, Cryptek, Psychomancer", wargear: "Abyssal lance", specialisms: [
+  { key: "psychomancer", name: "Psychomancer", points: 44, maxNumber: "1", profile: { move: "5\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 4, attacks: 1, ld: 10, save: 4 }, keywords: "Necrons, Infantry, Cryptek, Psychomancer", wargear: "Abyssal lance", specialisms: [
       "Fortitude",
       "Logistics",
       "Melee",
@@ -122,7 +122,7 @@ export const NECRONS_MODELS = [
     ], commander: true, abilities: [
       "Living Metal: At the beginning of each battle round, this model recovers 1 wound lost earlier in the battle."
     ] },
-  { key: "royal-warden", name: "Royal Warden", points: 46, maxNumber: "1", profile: { move: "5\"", ws: 3, bs: 3, strength: 5, toughness: 5, wounds: 4, attacks: 3, ld: 10, save: 3 }, keywords: "Necrons, New CategoryLink, Infantry, Royal Warden", wargear: "Relic gauss blaster", specialisms: [
+  { key: "royal-warden", name: "Royal Warden", points: 46, maxNumber: "1", profile: { move: "5\"", ws: 3, bs: 3, strength: 5, toughness: 5, wounds: 4, attacks: 3, ld: 10, save: 3 }, keywords: "Necrons, Infantry, Royal Warden", wargear: "Relic gauss blaster", specialisms: [
       "Fortitude",
       "Leadership",
       "Logistics",
@@ -131,7 +131,7 @@ export const NECRONS_MODELS = [
     ], commander: true, abilities: [
       "Living Metal: At the beginning of each battle round, this model recovers 1 wound lost earlier in the battle."
     ] },
-  { key: "technomancer", name: "Technomancer", points: 44, maxNumber: "1", profile: { move: "5\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 4, attacks: 1, ld: 10, save: 4 }, keywords: "Necrons, New CategoryLink, Infantry, Cryptek, Technomancer, Fly", wargear: "Canoptek cloak", specialisms: [
+  { key: "technomancer", name: "Technomancer", points: 44, maxNumber: "1", profile: { move: "5\"", ws: 3, bs: 3, strength: 4, toughness: 4, wounds: 4, attacks: 1, ld: 10, save: 4 }, keywords: "Necrons, Infantry, Cryptek, Technomancer, Fly", wargear: "Canoptek cloak", specialisms: [
       "Fortitude",
       "Logistics",
       "Melee",

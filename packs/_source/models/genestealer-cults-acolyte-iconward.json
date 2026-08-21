@@ -1,0 +1,55 @@
+{
+  "_key": "!items!CxyXIXIhoPQLUVQR",
+  "_id": "CxyXIXIhoPQLUVQR",
+  "name": "Acolyte Iconward",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 18,
+    "source": "Genestealer Cults, pg undefined",
+    "maxNumber": "1",
+    "faction": "Genestealer Cults",
+    "keywords": "Genestealer Cults, Tyranids, Infantry, Commander, Acolyte Iconward",
+    "wargear": "",
+    "abilities": [
+      "Cult Ambush: After deployment but before the first battle round, roll a D6 for this model. On a 5+ this model can immediately move up to 6\".",
+      "Unquestioning Loyalty: Roll a D6 each time you use the Look Out, Sir! Commander Tactic on this model. On a 2+, you gain a Command Point."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Ferocity",
+      "Fortitude",
+      "Leadership",
+      "Melee",
+      "Stealth"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 4,
+      "toughness": 3,
+      "wounds": 4,
+      "attacks": 4,
+      "ld": 8,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "NIJ4DcraRsB8D410",
+  "sort": 25000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

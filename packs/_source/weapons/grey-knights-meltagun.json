@@ -1,0 +1,37 @@
+{
+  "_key": "!items!ZQpEj03mHsbaPYzU",
+  "_id": "ZQpEj03mHsbaPYzU",
+  "name": "Meltagun",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Grey Knights, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "assault",
+    "attacks": "1",
+    "strength": "8",
+    "ap": -4,
+    "damage": "D6",
+    "abilities": "If target is within half range of this weapon, roll two dice when inflicting damage with it and discard the lowest result."
+  },
+  "effects": [],
+  "folder": "oV6r2XiVQHif6Pix",
+  "sort": 52500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

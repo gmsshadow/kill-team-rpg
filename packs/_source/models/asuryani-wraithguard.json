@@ -1,0 +1,53 @@
+{
+  "_key": "!items!dIDyXYPSFuh2d2HK",
+  "_id": "dIDyXYPSFuh2d2HK",
+  "name": "Wraithguard",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 41,
+    "source": "Asuryani, pg undefined",
+    "maxNumber": "-",
+    "faction": "Asuryani",
+    "keywords": "Asuryani, Aeldari, Spirit Host, Infantry, Wraith Construct, Wraithguard",
+    "wargear": "D-scythe; Wraithcannon; Wraithguard fists",
+    "abilities": [
+      "Ancient Doom: You can re-roll failed hit rolls in the Fight phase for this model in a battle round in which it charges or is charged by a SLAANESH model. However, you must add 1 to Nerve tests for this model if it is within 3\" of any SLAANESH models.",
+      "Ghost Warrior: This model cannot gain experience."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Demolitions",
+      "Heavy",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "5\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 5,
+      "toughness": 6,
+      "wounds": 3,
+      "attacks": 1,
+      "ld": 9,
+      "save": 3,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "DKJAf438T2LABUhU",
+  "sort": 13100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

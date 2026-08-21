@@ -1,0 +1,37 @@
+{
+  "_key": "!items!M7E10XA3G309gfYP",
+  "_id": "M7E10XA3G309gfYP",
+  "name": "Webber",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 1,
+    "source": "Genestealer Cults, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "16\"",
+    "weaponType": "assault",
+    "attacks": "D3",
+    "strength": "4",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "When making a shooting attack with a web weapon, you can either use the Strength or Toughness characteristic of the target to determine the wound roll - whichever is lowest."
+  },
+  "effects": [],
+  "folder": "NIJ4DcraRsB8D410",
+  "sort": 49300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

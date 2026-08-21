@@ -1,0 +1,37 @@
+{
+  "_key": "!items!YBC9qlUfMfyj89KV",
+  "_id": "YBC9qlUfMfyj89KV",
+  "name": "Flesh Hooks",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Genestealer Cults, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "6\"",
+    "weaponType": "assault",
+    "attacks": "2",
+    "strength": "User",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "The weapon can be fired within 1\" of an enemy model, and can target enemy models within 1\" of friendly models."
+  },
+  "effects": [],
+  "folder": "NIJ4DcraRsB8D410",
+  "sort": 48000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

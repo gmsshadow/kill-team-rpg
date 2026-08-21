@@ -1,0 +1,46 @@
+{
+  "_key": "!items!H4xm3OdiH0pwl67U",
+  "_id": "H4xm3OdiH0pwl67U",
+  "name": "Severina Raine",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 20,
+    "source": "Astra Militarum, pg undefined",
+    "maxNumber": "1",
+    "faction": "Astra Militarum",
+    "keywords": "Astra Militarum, Commissar, Commander, Imperium, Officio Prefectus, Infantry, Severina Raine",
+    "wargear": "Evenfall; Penance",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 3,
+      "attacks": 3,
+      "ld": 8,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "QTsFQ70RmVG5i7gb",
+  "sort": 10700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

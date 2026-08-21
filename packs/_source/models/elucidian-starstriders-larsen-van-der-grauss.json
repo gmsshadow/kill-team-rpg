@@ -1,0 +1,48 @@
+{
+  "_key": "!items!UbEpATUbaJYNY7E7",
+  "_id": "UbEpATUbaJYNY7E7",
+  "name": "Larsen van der Grauss",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 22,
+    "source": "Elucidian Starstriders, pg undefined",
+    "maxNumber": "1",
+    "faction": "Elucidian Starstriders",
+    "keywords": "Elucidian Starstriders, Imperium, Infantry, Adeptus Mechanicus, Lectro-Maester, Mars, Tech-Priest",
+    "wargear": "Voltaic Pistol",
+    "abilities": [
+      "Specialist Retainer: This model is always a specialist, but this does not count towards the maximum number of specialists in your kill team."
+    ],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "6\"",
+      "ws": 4,
+      "bs": 4,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 2,
+      "attacks": 2,
+      "ld": 8,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "v0TGbMTklMPKJcFg",
+  "sort": 23400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

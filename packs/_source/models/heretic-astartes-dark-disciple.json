@@ -1,0 +1,46 @@
+{
+  "_key": "!items!WhCjK3wZy50Tq9mP",
+  "_id": "WhCjK3wZy50Tq9mP",
+  "name": "Dark Disciple",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 4,
+    "source": "Heretic Astartes, pg undefined",
+    "maxNumber": "2",
+    "faction": "Heretic Astartes",
+    "keywords": "Heretic Astartes, Chaos, Infantry, Dark Disciple",
+    "wargear": "",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "6\"",
+      "ws": 4,
+      "bs": 5,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 6,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "k5mzmPmXmHIhi54d",
+  "sort": 29600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

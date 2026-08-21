@@ -1,0 +1,37 @@
+{
+  "_key": "!items!MdunmvCVyTaXsXgp",
+  "_id": "MdunmvCVyTaXsXgp",
+  "name": "Bolt sniper rifle - Mortis round",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adepta Sororitas, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "36\"",
+    "weaponType": "heavy",
+    "attacks": "1",
+    "strength": "5",
+    "ap": -2,
+    "damage": "2",
+    "abilities": "If you make an unmodified wound roll of 6 for this weapon, it inflicts a mortal wound in addition to the normal damage."
+  },
+  "effects": [],
+  "folder": "CfklqBY3SVghw1i5",
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

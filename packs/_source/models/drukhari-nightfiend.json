@@ -1,0 +1,53 @@
+{
+  "_key": "!items!zkLUL6vA9kr4Rc3U",
+  "_id": "zkLUL6vA9kr4Rc3U",
+  "name": "Nightfiend",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 13,
+    "source": "Drukhari, pg undefined",
+    "maxNumber": "1",
+    "faction": "Drukhari",
+    "keywords": "Drukhari, Aeldari, Infantry, Mandrake",
+    "wargear": "Baleblast; Glimmersteel blade",
+    "abilities": [
+      "Shrouded from Sight: Subtract 1 from hit rolls for attacks that target this model. In addition, this model has a 5+ invulnerable save."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Scout",
+      "Veteran",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "8\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 4,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 4,
+      "ld": 8,
+      "save": 7,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "ZeTAJOve9kXS5sdW",
+  "sort": 22300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

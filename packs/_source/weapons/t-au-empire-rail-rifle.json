@@ -1,0 +1,37 @@
+{
+  "_key": "!items!ja9wNIHUbetYBu3W",
+  "_id": "ja9wNIHUbetYBu3W",
+  "name": "Rail rifle",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 5,
+    "source": "T'au Empire, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "30\"",
+    "weaponType": "rapidFire",
+    "attacks": "1",
+    "strength": "6",
+    "ap": -4,
+    "damage": "D3",
+    "abilities": "For each wound roll of 6+ made for this weapon, the target model suffers a mortal wound in addition to the normal damage."
+  },
+  "effects": [],
+  "folder": "mPKVSDA56tsrIx4F",
+  "sort": 69800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

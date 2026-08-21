@@ -1,0 +1,49 @@
+{
+  "_key": "!items!fgvEvGnq1ch8PS1k",
+  "_id": "fgvEvGnq1ch8PS1k",
+  "name": "Cultist Firebrand",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 70,
+    "source": "Servants of the Abyss, pg undefined",
+    "maxNumber": "1",
+    "faction": "Servants of the Abyss",
+    "keywords": "Servants of the Abyss, Chaos, Infantry, Cultist Firebrand",
+    "wargear": "Hellfire Torch; Laspistol",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [
+      "Ferocity",
+      "Strength"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 3,
+      "attacks": 3,
+      "ld": 6,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "dAJE9GD0dejQZE3g",
+  "sort": 35000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

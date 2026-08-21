@@ -1,0 +1,48 @@
+{
+  "_key": "!items!fiJ6TI5MfQ7ufMFU",
+  "_id": "fiJ6TI5MfQ7ufMFU",
+  "name": "Sanistasia Minst",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 17,
+    "source": "Elucidian Starstriders, pg undefined",
+    "maxNumber": "1",
+    "faction": "Elucidian Starstriders",
+    "keywords": "Elucidian Starstriders, Imperium, Infantry, Rejuvenat Adept",
+    "wargear": "Scalpel Claw",
+    "abilities": [
+      "Specialist Retainer: This model is always a specialist, but this does not count towards the maximum number of specialists in your kill team."
+    ],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "6\"",
+      "ws": 4,
+      "bs": 4,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 2,
+      "attacks": 2,
+      "ld": 7,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "v0TGbMTklMPKJcFg",
+  "sort": 23500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

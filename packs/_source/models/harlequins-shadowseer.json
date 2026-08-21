@@ -1,0 +1,52 @@
+{
+  "_key": "!items!srIZGxMLy52h0HiT",
+  "_id": "srIZGxMLy52h0HiT",
+  "name": "Shadowseer",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 65,
+    "source": "Harlequins, pg undefined",
+    "maxNumber": "1",
+    "faction": "Harlequins",
+    "keywords": "Harlequins, Aeldari, Infantry, Psyker, Shadowseer",
+    "wargear": "Hallucinogen grenade launcher; Miststave",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [
+      "Ferocity",
+      "Melee",
+      "Psyker",
+      "Shooting",
+      "Stealth"
+    ],
+    "profile": {
+      "move": "8\"",
+      "ws": 2,
+      "bs": 2,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 5,
+      "attacks": 3,
+      "ld": 9,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "vifkpcRuNotCZGNa",
+  "sort": 28400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

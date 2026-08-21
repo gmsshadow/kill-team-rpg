@@ -1,0 +1,37 @@
+{
+  "_key": "!items!8z41sJK9Yh6tWDG9",
+  "_id": "8z41sJK9Yh6tWDG9",
+  "name": "Synaptic disintegrator",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Necrons, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "36\"",
+    "weaponType": "heavy",
+    "attacks": "1",
+    "strength": "5",
+    "ap": -2,
+    "damage": "1",
+    "abilities": "A model firing a synaptic disintegrator does not suffer the penalty to hit rolls for the target being at long range. Each time you roll a wound roll of 6+ for this weapon, the target suffers a mortal wound in addition to any other damage."
+  },
+  "effects": [],
+  "folder": "BMFWB0JStCdknIpI",
+  "sort": 60300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

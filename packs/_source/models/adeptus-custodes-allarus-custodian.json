@@ -1,0 +1,55 @@
+{
+  "_key": "!items!8FwrgpWVoLiLM3cL",
+  "_id": "8FwrgpWVoLiLM3cL",
+  "name": "Allarus Custodian",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 67,
+    "source": "Adeptus Custodes, pg undefined",
+    "maxNumber": "-",
+    "faction": "Adeptus Custodes",
+    "keywords": "Adeptus Custodes, Imperium, Infantry, Terminator, Allarus Custodian",
+    "wargear": "Balistus grenade launcher",
+    "abilities": [
+      "Aegis of the Emperor: This model has a 5+ invulnerable save. In addition, roll a D6 each time a model with this ability suffers a mortal wound in the Psychic phase. On a 6 that mortal wound is ignored.",
+      "Superior Transhuman Physiology: Ignore the penalty to this model's hit rolls from flesh wounds."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Demolitions",
+      "Sniper",
+      "Veteran",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 2,
+      "bs": 2,
+      "strength": 5,
+      "toughness": 5,
+      "wounds": 4,
+      "attacks": 4,
+      "ld": 9,
+      "save": 2,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "bYb8xUNcXW7K3ypC",
+  "sort": 6600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

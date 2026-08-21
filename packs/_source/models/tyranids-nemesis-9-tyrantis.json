@@ -1,0 +1,49 @@
+{
+  "_key": "!items!IxKDOZMJ2DGj4fwV",
+  "_id": "IxKDOZMJ2DGj4fwV",
+  "name": "Nemesis 9 Tyrantis",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 131,
+    "source": "Tyranids, pg undefined",
+    "maxNumber": "1",
+    "faction": "Tyranids",
+    "keywords": "Tyranids, Commander, Infantry, Psyker, Synapse, Broodlord, Level 1, Level 2, Level 3, Level 4",
+    "wargear": "Level 1 - Voracious; Level 2 - Omnipresent Infamy; Level 3 - Feed on Minds; Level 4 - Sow Fear and Death",
+    "abilities": [
+      "Shadow in the Warp: Subract 1 from any psychic tests made for enemy PSKYERS within 18\" of a model with this ability. TYRANIDS PSYKERS are not affected.",
+      "Synapse: TYRANIDS models automatically pass Nerve tests while they are within 12\" of any friendly models with this ability."
+    ],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "8\"",
+      "ws": 2,
+      "bs": 4,
+      "strength": 5,
+      "toughness": 5,
+      "wounds": 6,
+      "attacks": 7,
+      "ld": 10,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "jkpkVm5sTQnYF4D2",
+  "sort": 40800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "_key": "!items!szYTE7C1sPAl61Qf",
+  "_id": "szYTE7C1sPAl61Qf",
+  "name": "Witchseeker",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 10,
+    "source": "Sisters of Silence, pg undefined",
+    "maxNumber": "-",
+    "faction": "Sisters of Silence",
+    "keywords": "Sisters of Silence, Imperium, Infantry, Witchseeker",
+    "wargear": "",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [
+      "Demolitions",
+      "Heavy",
+      "Scout",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "7\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 2,
+      "ld": 8,
+      "save": 3,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "YPKv4d2l2hS1GlA5",
+  "sort": 36500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

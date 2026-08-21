@@ -1,0 +1,37 @@
+{
+  "_key": "!items!0zuBc12tQxkZSx2h",
+  "_id": "0zuBc12tQxkZSx2h",
+  "name": "Electrostatic gauntlets - melee",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adeptus Mechanicus, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "5",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "Each unmodified hit roll of 6 made for an attack with this weapon scores 3 hits rather than 1."
+  },
+  "effects": [],
+  "folder": "b09An29gloB2fENi",
+  "sort": 20700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

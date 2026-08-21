@@ -1,0 +1,37 @@
+{
+  "_key": "!items!BIZYh89SHiFqbiL2",
+  "_id": "BIZYh89SHiFqbiL2",
+  "name": "Plasma gun - Supercharge",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Heretic Astartes, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "24\"",
+    "weaponType": "rapidFire",
+    "attacks": "1",
+    "strength": "8",
+    "ap": -3,
+    "damage": "2",
+    "abilities": "On an unmodified hit roll of 1, the bearer is slain after all of this weapon's shots have been resolved."
+  },
+  "effects": [],
+  "folder": "k5mzmPmXmHIhi54d",
+  "sort": 56800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

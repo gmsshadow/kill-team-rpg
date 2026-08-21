@@ -1,0 +1,53 @@
+{
+  "_key": "!items!Gzy5iHWfCPstodsb",
+  "_id": "Gzy5iHWfCPstodsb",
+  "name": "Guardsman Gunner",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 5,
+    "source": "Astra Militarum, pg undefined",
+    "maxNumber": "1",
+    "faction": "Astra Militarum",
+    "keywords": "Astra Militarum, Imperium, Infantry, Infantry Squad Guardsman",
+    "wargear": "",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [
+      "Demolitions",
+      "Heavy",
+      "Medic",
+      "Scout",
+      "Sniper",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 4,
+      "bs": 4,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 6,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "QTsFQ70RmVG5i7gb",
+  "sort": 9700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

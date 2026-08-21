@@ -1,0 +1,37 @@
+{
+  "_key": "!items!PChqvKVU98XulmlC",
+  "_id": "PChqvKVU98XulmlC",
+  "name": "Silencer sniper rifle",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Genestealer Cults, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "36\"",
+    "weaponType": "heavy",
+    "attacks": "1",
+    "strength": "4",
+    "ap": -1,
+    "damage": "D3",
+    "abilities": "A model firing this weapon does not suffer the penalty to its hit rolls for the target being at long range. If you roll a wound roll of 6+ for this weapon, it inflicts a mortal wound in addition to its normal damage. If a PSYKER loses any wounds as a result of this weapon's attacks, after all of this weapon's attacks have been resolved that model suffers Perils of the Warp."
+  },
+  "effects": [],
+  "folder": "NIJ4DcraRsB8D410",
+  "sort": 49100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

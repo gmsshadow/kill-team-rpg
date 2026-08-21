@@ -1,0 +1,46 @@
+{
+  "_key": "!items!jcjqxctC5ADOdeta",
+  "_id": "jcjqxctC5ADOdeta",
+  "name": "Eyestinger Swarm",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 5,
+    "source": "Gellerpox Infected, pg undefined",
+    "maxNumber": "4",
+    "faction": "Gellerpox Infected",
+    "keywords": "Gellerpox Infected, Chaos, Nurgle, Swarm, Fly, Mutoid Vermin, Eyestinger Swarm",
+    "wargear": "Spawning barb",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "10\"",
+      "ws": 4,
+      "bs": 4,
+      "strength": 2,
+      "toughness": 2,
+      "wounds": 1,
+      "attacks": 3,
+      "ld": 8,
+      "save": 7,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "xa5ETwzGr8PI5yz4",
+  "sort": 24000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

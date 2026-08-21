@@ -1,0 +1,68 @@
+{
+  "_key": "!items!chUpCJCbCxSP4DUt",
+  "_id": "chUpCJCbCxSP4DUt",
+  "name": "Greater Possessed",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 80,
+    "source": "Heretic Astartes, pg undefined",
+    "maxNumber": "1",
+    "faction": "Heretic Astartes",
+    "keywords": "Heretic Astartes, Chaos, Infantry, Daemon, Greater Possessed",
+    "wargear": "Daemonic mutations",
+    "abilities": [
+      "Death to the False Emperor: If a model with this ability makes an attack in the Fight phase which targets an IMPERIUM model, each time you roll a hit roll of 6+ you may make an additional attack with the same weapon against the same target. These attacks cannot themselves generate any further attacks.",
+      "Transhuman Physiology: Ignore the penalty to this model's hit rolls from one flesh wound it has suffered."
+    ],
+    "rules": [
+      {
+        "type": "ignorePenalty",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": "fleshWound",
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      }
+    ],
+    "specialisms": [
+      "Ferocity",
+      "Fortitude",
+      "Melee",
+      "Strength"
+    ],
+    "profile": {
+      "move": "7\"",
+      "ws": 4,
+      "bs": 3,
+      "strength": 5,
+      "toughness": 5,
+      "wounds": 5,
+      "attacks": 5,
+      "ld": 8,
+      "save": 3,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "k5mzmPmXmHIhi54d",
+  "sort": 29800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

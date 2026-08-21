@@ -1,0 +1,46 @@
+{
+  "_key": "!items!Jop2rkfG1w9S1wPA",
+  "_id": "Jop2rkfG1w9S1wPA",
+  "name": "Chaos Ogryn",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 50,
+    "source": "Servants of the Abyss, pg undefined",
+    "maxNumber": "1",
+    "faction": "Servants of the Abyss",
+    "keywords": "Servants of the Abyss, Chaos, Infantry, Chaos Ogryn, Ogryn",
+    "wargear": "Mutant Claw; Scavenged Maul",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 4,
+      "strength": 5,
+      "toughness": 5,
+      "wounds": 4,
+      "attacks": 4,
+      "ld": 8,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "dAJE9GD0dejQZE3g",
+  "sort": 34900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

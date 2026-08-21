@@ -1,0 +1,46 @@
+{
+  "_key": "!items!kTM5aJ8tyr2NwZid",
+  "_id": "kTM5aJ8tyr2NwZid",
+  "name": "Gretchin",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 3,
+    "source": "Orks, pg undefined",
+    "maxNumber": "-",
+    "faction": "Orks",
+    "keywords": "Orks, Infantry, Gretchin",
+    "wargear": "",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "5",
+      "ws": 5,
+      "bs": 4,
+      "strength": 2,
+      "toughness": 2,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 4,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "S7e90hmrUlQ3AXQr",
+  "sort": 33500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "_key": "!items!5anUTQLaxsNWjOfW",
+  "_id": "5anUTQLaxsNWjOfW",
+  "name": "Endurant",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 14,
+    "source": "Adepta Sororitas, pg undefined",
+    "maxNumber": "-",
+    "faction": "Adepta Sororitas",
+    "keywords": "Adepta Sororitas, Imperium, Infantry, Arco-Flagellant",
+    "wargear": "",
+    "abilities": [
+      "Zealot: You can re-roll hit rolls for attacks made with melee weapons by a model with this ability in any battle round in which it charged or was charged.",
+      "Berzerk Killing Machine: Each time a model with this ability loses a wound, roll a D6, on a 5+ the model does not lose that wound."
+    ],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "7\"",
+      "ws": 4,
+      "bs": 4,
+      "strength": 4,
+      "toughness": 3,
+      "wounds": 2,
+      "attacks": 3,
+      "ld": 7,
+      "save": 7,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "CfklqBY3SVghw1i5",
+  "sort": 500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

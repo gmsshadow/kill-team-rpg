@@ -1,6 +1,6 @@
 {
-  "_key": "!items!genesteaKyu0SCu0",
-  "_id": "genesteaKyu0SCu0",
+  "_key": "!items!VslK3itqF4fmtqZo",
+  "_id": "VslK3itqF4fmtqZo",
   "name": "Genestealer Cults",
   "type": "faction",
   "img": "icons/svg/statue.svg",
@@ -22,7 +22,7 @@
   "_stats": {
     "coreVersion": "14",
     "systemId": "kill-team-rpg",
-    "systemVersion": "0.12.0",
+    "systemVersion": "0.13.0",
     "createdTime": null,
     "modifiedTime": null,
     "lastModifiedBy": null

@@ -1,0 +1,51 @@
+{
+  "_key": "!items!DuLQ10DgTWj6Dmxu",
+  "_id": "DuLQ10DgTWj6Dmxu",
+  "name": "Chaos Cultist Champion",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 5,
+    "source": "Heretic Astartes, pg undefined",
+    "maxNumber": "1",
+    "faction": "Heretic Astartes",
+    "keywords": "Heretic Astartes, Chaos, Infantry, Chaos Cultist",
+    "wargear": "Shotgun",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Demolitions",
+      "Veteran",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 4,
+      "bs": 4,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 2,
+      "ld": 6,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "k5mzmPmXmHIhi54d",
+  "sort": 29000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

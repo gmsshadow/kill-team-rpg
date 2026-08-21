@@ -1,0 +1,37 @@
+{
+  "_key": "!items!WH43qhS9Wh6tCFon",
+  "_id": "WH43qhS9Wh6tCFon",
+  "name": "Heavy Rock Cutter",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 4,
+    "source": "Genestealer Cults, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "x2",
+    "ap": -4,
+    "damage": "2",
+    "abilities": "Roll a D6 each time a model suffers damage from this weapon; if you roll higher than the model's remaining number of Wounds, it is instantly taken out of action. When attacking with this weapon, you must subtract 1 from the hit roll."
+  },
+  "effects": [],
+  "folder": "NIJ4DcraRsB8D410",
+  "sort": 50100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

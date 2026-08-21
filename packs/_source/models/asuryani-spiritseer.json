@@ -1,0 +1,55 @@
+{
+  "_key": "!items!VIbaPGVkNi70pW18",
+  "_id": "VIbaPGVkNi70pW18",
+  "name": "Spiritseer",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 61,
+    "source": "Asuryani, pg undefined",
+    "maxNumber": "1",
+    "faction": "Asuryani",
+    "keywords": "Asuryani, Aeldari, Spirit Host, Infantry, Psyker, Spiritseer",
+    "wargear": "Witch staff",
+    "abilities": [
+      "Battle Focus: If this model moves or Advances in its Movement phase, weapons (excluding Heavy weapons) are used as if the model had remained stationary.",
+      "Ancient Doom: You can re-roll failed hit rolls in the Fight phase for this model in a battle round in which it charges or is charged by a SLAANESH model. However, you must add 1 to Nerve tests for this model if it is within 3\" of any SLAANESH models."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Leadership",
+      "Melee",
+      "Psyker",
+      "Stealth",
+      "Strategist"
+    ],
+    "profile": {
+      "move": "7\"",
+      "ws": 2,
+      "bs": 2,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 4,
+      "attacks": 2,
+      "ld": 8,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "DKJAf438T2LABUhU",
+  "sort": 12400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

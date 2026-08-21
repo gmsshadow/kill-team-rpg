@@ -1,0 +1,88 @@
+{
+  "_key": "!items!DG7aBgPIL83EVszo",
+  "_id": "DG7aBgPIL83EVszo",
+  "name": "Brother-Captain",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 100,
+    "source": "Grey Knights, pg undefined",
+    "maxNumber": "1",
+    "faction": "Grey Knights",
+    "keywords": "Grey Knights, Imperium, Adeptus Astartes, Infantry, Terminator, Brother-captain, Psyker",
+    "wargear": "Hammerhand",
+    "abilities": [
+      "And They Shall Know No Fear: You can re-roll failed Nerve tests for this model.",
+      "Transhuman Physiology: Ignore the penalty to this model’s hit rolls from one flesh wound it has suffered.",
+      "Daemon Hunters: If this model attacks any DAEMONS in the Fight phase, you can re-roll failed wound rolls for those attacks.",
+      "Rites of Banishment: When the model manifests the Psybolt psychic power it has a range of 12\". If Psybolt is successfully manifested, and the target model is a DAEMON, the target suffers D3 mortal wounds even if the result of the Psychic test was not 11+."
+    ],
+    "rules": [
+      {
+        "type": "reroll",
+        "roll": "nerve",
+        "characteristic": null,
+        "when": "failed",
+        "value": 0,
+        "penalty": null,
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      },
+      {
+        "type": "ignorePenalty",
+        "roll": null,
+        "characteristic": null,
+        "when": null,
+        "value": 0,
+        "penalty": "fleshWound",
+        "phase": "any",
+        "scope": "self",
+        "range": null,
+        "condition": null,
+        "note": ""
+      }
+    ],
+    "specialisms": [
+      "Ferocity",
+      "Fortitude",
+      "Leadership",
+      "Logistics",
+      "Melee",
+      "Psyker",
+      "Shooting",
+      "Strategist",
+      "Strength"
+    ],
+    "profile": {
+      "move": "5\"",
+      "ws": 2,
+      "bs": 2,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 6,
+      "attacks": 4,
+      "ld": 9,
+      "save": 2,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "oV6r2XiVQHif6Pix",
+  "sort": 27000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "_key": "!items!YFQZ8v6VUb2nQzi7",
+  "_id": "YFQZ8v6VUb2nQzi7",
+  "name": "Staff of light (ranged)",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Necrons, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "12\"",
+    "weaponType": "assault",
+    "attacks": "3",
+    "strength": "5",
+    "ap": -2,
+    "damage": "1",
+    "abilities": ""
+  },
+  "effects": [],
+  "folder": "BMFWB0JStCdknIpI",
+  "sort": 60200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

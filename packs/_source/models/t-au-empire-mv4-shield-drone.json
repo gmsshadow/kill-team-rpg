@@ -1,0 +1,46 @@
+{
+  "_key": "!items!orWjYNW3qNcRMt47",
+  "_id": "orWjYNW3qNcRMt47",
+  "name": "MV4 Shield Drone",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 7,
+    "source": "T'au Empire, pg undefined",
+    "maxNumber": "-",
+    "faction": "T'au Empire",
+    "keywords": "T'au Empire, Drone, Fly",
+    "wargear": "Shield generator",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "8\"",
+      "ws": 5,
+      "bs": 5,
+      "strength": 3,
+      "toughness": 4,
+      "wounds": 1,
+      "attacks": 1,
+      "ld": 6,
+      "save": 4,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "mPKVSDA56tsrIx4F",
+  "sort": 38100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

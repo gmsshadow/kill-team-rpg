@@ -1,0 +1,51 @@
+{
+  "_key": "!items!2BojotE9MtCN454X",
+  "_id": "2BojotE9MtCN454X",
+  "name": "Lictor",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 25,
+    "source": "Tyranids, pg undefined",
+    "maxNumber": "-",
+    "faction": "Tyranids",
+    "keywords": "Tyranids, Infantry, Lictor",
+    "wargear": "",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Comms",
+      "Scout",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "9\"",
+      "ws": 2,
+      "bs": 4,
+      "strength": 6,
+      "toughness": 4,
+      "wounds": 4,
+      "attacks": 3,
+      "ld": 9,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "jkpkVm5sTQnYF4D2",
+  "sort": 40700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

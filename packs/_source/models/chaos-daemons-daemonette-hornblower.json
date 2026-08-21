@@ -1,0 +1,54 @@
+{
+  "_key": "!items!pmb63QpoBElWbWBS",
+  "_id": "pmb63QpoBElWbWBS",
+  "name": "Daemonette Hornblower",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 8,
+    "source": "Chaos Daemons, pg undefined",
+    "maxNumber": "1",
+    "faction": "Chaos Daemons",
+    "keywords": "Chaos Daemons, Chaos, Slaanesh, Infantry, Daemon, Daemonette",
+    "wargear": "Instrument of Slaanesh",
+    "abilities": [
+      "Daemonic: This model has a 5+ invulnerable save.",
+      "Quicksilver Swiftness: A model with this ability can be chosen to fight in the Hammer of Wrath section of the Fight phase even if they have not charged in that battle round."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Comms",
+      "Scout",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "7\"",
+      "ws": 3,
+      "bs": 3,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 2,
+      "ld": 7,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "WjefwLG9g3iFYVGl",
+  "sort": 13800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

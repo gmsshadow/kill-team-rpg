@@ -1,0 +1,37 @@
+{
+  "_key": "!items!Sd0pkNWBe7gdGJwd",
+  "_id": "Sd0pkNWBe7gdGJwd",
+  "name": "Taser goad",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 1,
+    "source": "Adeptus Mechanicus, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "+2",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "Each hit roll of 6+ with this weapon causes 3 hits rather than 1."
+  },
+  "effects": [],
+  "folder": "b09An29gloB2fENi",
+  "sort": 21600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "_key": "!items!61GT418Lk1Ink3GX",
+  "_id": "61GT418Lk1Ink3GX",
+  "name": "Plasma cannon - Supercharge",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adepta Sororitas, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "36\"",
+    "weaponType": "heavy",
+    "attacks": "D3",
+    "strength": "8",
+    "ap": -3,
+    "damage": "2",
+    "abilities": "On an unmodified hit roll of 1, the beaer is taken out of action after all of this weapon's shots have been resolved."
+  },
+  "effects": [],
+  "folder": "CfklqBY3SVghw1i5",
+  "sort": 5200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

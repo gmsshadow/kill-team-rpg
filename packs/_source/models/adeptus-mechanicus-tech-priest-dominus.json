@@ -1,0 +1,53 @@
+{
+  "_key": "!items!DMpKbEPWJYv83g9a",
+  "_id": "DMpKbEPWJYv83g9a",
+  "name": "Tech-priest Dominus",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 130,
+    "source": "Adeptus Mechanicus, pg undefined",
+    "maxNumber": "1",
+    "faction": "Adeptus Mechanicus",
+    "keywords": "Adeptus Mechanicus, Imperium, Cult Mechanicus, Infantry, Tech-priest, Dominus",
+    "wargear": "Eradication ray; Macrostubber; Phosphor serpenta; Volkite blaster",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [
+      "Fortitude",
+      "Leadership",
+      "Logistics",
+      "Shooting",
+      "Strategist",
+      "Strength"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 2,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 5,
+      "attacks": 3,
+      "ld": 8,
+      "save": 2,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "b09An29gloB2fENi",
+  "sort": 8400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

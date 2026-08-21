@@ -1,0 +1,37 @@
+{
+  "_key": "!items!OZ4XmV6ZK5IR4vuP",
+  "_id": "OZ4XmV6ZK5IR4vuP",
+  "name": "Accelerator autocannon",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adepta Sororitas, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "48\"",
+    "weaponType": "heavy",
+    "attacks": "3",
+    "strength": "7",
+    "ap": -1,
+    "damage": "2",
+    "abilities": "If this weapon inflicts any damage on an enemy model, until the end of the battle round that model and enemy models within 2\" of that model cannot make shooting attacks."
+  },
+  "effects": [],
+  "folder": "CfklqBY3SVghw1i5",
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "_key": "!items!oNK3QrmlAnmzmt0f",
+  "_id": "oNK3QrmlAnmzmt0f",
+  "name": "Dartmask",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Elucidian Starstriders, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "9\"",
+    "weaponType": "pistol",
+    "attacks": "1",
+    "strength": "1",
+    "ap": -1,
+    "damage": "1",
+    "abilities": "This weapon wounds on a 2+."
+  },
+  "effects": [],
+  "folder": "v0TGbMTklMPKJcFg",
+  "sort": 45300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

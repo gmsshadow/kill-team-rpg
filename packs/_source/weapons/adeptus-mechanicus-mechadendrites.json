@@ -1,0 +1,37 @@
+{
+  "_key": "!items!Hyzuj07unQ10po9U",
+  "_id": "Hyzuj07unQ10po9U",
+  "name": "Mechadendrites",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Adeptus Mechanicus, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "Melee",
+    "weaponType": "melee",
+    "attacks": "1",
+    "strength": "User",
+    "ap": 0,
+    "damage": "1",
+    "abilities": "Each time the bearer fights, they may make D6 additional attacks with this weapon."
+  },
+  "effects": [],
+  "folder": "b09An29gloB2fENi",
+  "sort": 20900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

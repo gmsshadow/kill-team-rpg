@@ -1,0 +1,55 @@
+{
+  "_key": "!items!HiTwtadU1KJAR6lO",
+  "_id": "HiTwtadU1KJAR6lO",
+  "name": "Fulgurite Electro-priest",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 14,
+    "source": "Adeptus Mechanicus, pg undefined",
+    "maxNumber": "-",
+    "faction": "Adeptus Mechanicus",
+    "keywords": "Adeptus Mechanicus, Imperium, Cult Mechanicus, Infantry, Electro-priest, Fulgurite",
+    "wargear": "Electroleech stave",
+    "abilities": [
+      "Fanatical Devotion: Each time a model with this ability loses a wound, roll a D6; on a 5+ the model does not lose that wound.",
+      "Voltagheist Field: This model has a 5+ invulnerable save. When this model finishes a charge move within 1\" of an enemy model, pick an enemy model within 1\" and roll a D6. On a roll of 6 the enemy model suffers a mortal wound."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Medic",
+      "Scout",
+      "Veteran",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 3,
+      "bs": 4,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 2,
+      "ld": 8,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "b09An29gloB2fENi",
+  "sort": 7200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

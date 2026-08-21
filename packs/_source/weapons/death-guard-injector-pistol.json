@@ -1,0 +1,37 @@
+{
+  "_key": "!items!UnCle9YDsvsbUHcZ",
+  "_id": "UnCle9YDsvsbUHcZ",
+  "name": "Injector Pistol",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 0,
+    "source": "Death Guard, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "3\"",
+    "weaponType": "pistol",
+    "attacks": "1",
+    "strength": "4",
+    "ap": -1,
+    "damage": "D6",
+    "abilities": "You can re-roll wound rolls of 1 for this weapon."
+  },
+  "effects": [],
+  "folder": "ux2vKzuRofSnWRuf",
+  "sort": 30200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

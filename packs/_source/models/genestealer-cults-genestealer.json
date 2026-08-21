@@ -1,0 +1,50 @@
+{
+  "_key": "!items!wh2zElQxuRofM36x",
+  "_id": "wh2zElQxuRofM36x",
+  "name": "Genestealer",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 11,
+    "source": "Genestealer Cults, pg undefined",
+    "maxNumber": "-",
+    "faction": "Genestealer Cults",
+    "keywords": "Genestealer Cults, Infantry",
+    "wargear": "Extended Carapace; Flesh Hooks",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Scout",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "8\"",
+      "ws": 3,
+      "bs": 4,
+      "strength": 4,
+      "toughness": 4,
+      "wounds": 1,
+      "attacks": 3,
+      "ld": 9,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "NIJ4DcraRsB8D410",
+  "sort": 25600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

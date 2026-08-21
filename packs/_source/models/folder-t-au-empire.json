@@ -1,0 +1,20 @@
+{
+  "_key": "!folders!mPKVSDA56tsrIx4F",
+  "_id": "mPKVSDA56tsrIx4F",
+  "name": "T'au Empire",
+  "type": "Item",
+  "description": "",
+  "folder": null,
+  "sorting": "a",
+  "sort": 2100,
+  "color": "#c8501e",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "_key": "!items!re3UTcNwdUvyREDg",
+  "_id": "re3UTcNwdUvyREDg",
+  "name": "Raus",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 10,
+    "source": "Astra Militarum, pg undefined",
+    "maxNumber": "1",
+    "faction": "Astra Militarum",
+    "keywords": "Astra Militarum, Imperium, Militarum Auxilla, Infantry, Ratling, Raus",
+    "wargear": "Demolition charge",
+    "abilities": [
+      "The Ratling Twins: You can re-roll failed hit and wound rolls when shooting with Rein’s sniper rifle if the target is also visible to Raus.",
+      "Naturally Stealthy: When an opponent makes a hit roll for a shooting attack that targets Rein or Raus, and the target model is obscured, that hit roll suffers an additional -1 modifier.",
+      "Shoot Sharp and Scarper: Immediately after making a shooting attack with Rein or Raus (other than firing Overwatch), the firing model can move as if it were the Movement phase (though it cannot Advance as part of this move)."
+    ],
+    "rules": [],
+    "specialisms": [],
+    "profile": {
+      "move": "6\"",
+      "ws": 5,
+      "bs": 2,
+      "strength": 2,
+      "toughness": 2,
+      "wounds": 2,
+      "attacks": 1,
+      "ld": 6,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "QTsFQ70RmVG5i7gb",
+  "sort": 10200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

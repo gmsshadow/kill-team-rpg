@@ -1,0 +1,37 @@
+{
+  "_key": "!items!Jkzavsvgf0rWxU14",
+  "_id": "Jkzavsvgf0rWxU14",
+  "name": "Blight launcher",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "points": 7,
+    "source": "Death Guard, pg undefined",
+    "description": "",
+    "equipped": true,
+    "profileMode": "single",
+    "profiles": [],
+    "range": "24\"",
+    "weaponType": "assault",
+    "attacks": "2",
+    "strength": "6",
+    "ap": -2,
+    "damage": "D3",
+    "abilities": "You can re-roll wound rolls of 1 for this weapon."
+  },
+  "effects": [],
+  "folder": "ux2vKzuRofSnWRuf",
+  "sort": 29500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

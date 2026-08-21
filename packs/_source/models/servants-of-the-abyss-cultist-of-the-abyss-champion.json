@@ -1,0 +1,50 @@
+{
+  "_key": "!items!ev45QlOx8P8dMz4j",
+  "_id": "ev45QlOx8P8dMz4j",
+  "name": "Cultist of the Abyss Champion",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 6,
+    "source": "Servants of the Abyss, pg undefined",
+    "maxNumber": "1",
+    "faction": "Servants of the Abyss",
+    "keywords": "Servants of the Abyss, Chaos, Infantry, Cultists of the Abyss",
+    "wargear": "Chainsword; Stubcarbine",
+    "abilities": [],
+    "rules": [],
+    "specialisms": [
+      "Combat",
+      "Veteran",
+      "Zealot"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 4,
+      "bs": 4,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 2,
+      "ld": 7,
+      "save": 6,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "dAJE9GD0dejQZE3g",
+  "sort": 35200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

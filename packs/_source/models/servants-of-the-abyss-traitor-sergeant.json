@@ -1,0 +1,53 @@
+{
+  "_key": "!items!MPCTMtsVuPmzETOL",
+  "_id": "MPCTMtsVuPmzETOL",
+  "name": "Traitor Sergeant",
+  "type": "model",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "points": 5,
+    "source": "Servants of the Abyss, pg undefined",
+    "maxNumber": "1",
+    "faction": "Servants of the Abyss",
+    "keywords": "Servants of the Abyss, Chaos, Infantry, Traitor Guardsmen",
+    "wargear": "Chainsword; Laspistol",
+    "abilities": [
+      "Servants of the Abyss: You can re-roll failed Nerve tests for this model whilst it is within 6\" of a HERETIC ASTARTES model from your kill team."
+    ],
+    "rules": [],
+    "specialisms": [
+      "Demolitions",
+      "Scout",
+      "Sniper",
+      "Veteran"
+    ],
+    "profile": {
+      "move": "6\"",
+      "ws": 4,
+      "bs": 4,
+      "strength": 3,
+      "toughness": 3,
+      "wounds": 1,
+      "attacks": 2,
+      "ld": 7,
+      "save": 5,
+      "invulnerable": null
+    },
+    "description": ""
+  },
+  "effects": [],
+  "folder": "dAJE9GD0dejQZE3g",
+  "sort": 36000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14",
+    "systemId": "kill-team-rpg",
+    "systemVersion": "0.13.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}
