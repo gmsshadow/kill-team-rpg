@@ -51,6 +51,17 @@
       {{/if}}
     </div>
 
+    {{!-- Morale phase (pg 36) --}}
+    <div class="kt-bar">{{localize "KT.Morale.Phase"}}
+      {{#if system.broken}}<span class="kt-broken-flag">{{localize "KT.Broken"}}</span>{{/if}}
+    </div>
+    <div class="kt-cp-actions">
+      <button type="button" data-action="moralePhase">
+        <i class="fa-solid fa-face-flushed"></i> {{localize "KT.Morale.Run"}}
+      </button>
+    </div>
+    <p class="kt-hint">{{localize "KT.Morale.Hint"}}</p>
+
     {{!-- Battle-forged check (pg 62) --}}
     <div class="kt-bar">{{localize "KT.BattleForged"}}
       {{#if battleForged.ok}}<span class="kt-valid">{{localize "KT.Validate.Ok"}}</span>{{/if}}
@@ -74,7 +85,7 @@
         <input type="number" name="system.resources.intelligence" value="{{system.resources.intelligence}}"/></label>
       <label class="kt-resource"><span>{{localize "KT.Materiel"}}</span>
         <input type="number" name="system.resources.materiel" value="{{system.resources.materiel}}"/></label>
-      <label class="kt-resource"><span>{{localize "KT.Morale"}}</span>
+      <label class="kt-resource"><span>{{localize "KT.MoraleResource"}}</span>
         <input type="number" name="system.resources.morale" value="{{system.resources.morale}}"/></label>
       <label class="kt-resource"><span>{{localize "KT.Territory"}}</span>
         <input type="number" name="system.resources.territory" value="{{system.resources.territory}}"/></label>

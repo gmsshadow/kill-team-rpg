@@ -69,6 +69,12 @@ KT.closeCombatWeapon = {
   abilities: ""
 };
 
+/** Nerve test values (pg 36). */
+KT.nerve = {
+  // Other friendly models within this range each subtract 1 from a Nerve test.
+  supportRange: 2
+};
+
 KT.experienceBoxes = 12;
 KT.levelUpBoxes = [3, 7, 12];
 

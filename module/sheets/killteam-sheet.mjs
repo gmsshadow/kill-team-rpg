@@ -1,5 +1,6 @@
 import { KT, SYSTEM_ID } from "../helpers/config.mjs";
 import { attachDragDrop, getDragData, handledOnce } from "../helpers/drag-drop.mjs";
+import { runMoralePhase } from "../helpers/morale.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
@@ -18,6 +19,7 @@ export default class KTKillTeamSheet extends HandlebarsApplicationMixin(ActorShe
       removeMember: KTKillTeamSheet.#onRemoveMember,
       toggleMember: KTKillTeamSheet.#onToggleMember,
       rollInitiative: KTKillTeamSheet.#onRollInitiative,
+      moralePhase: KTKillTeamSheet.#onMoralePhase,
       generateCP: KTKillTeamSheet.#onGenerateCP,
       adjustCP: KTKillTeamSheet.#onAdjustCP
     }
@@ -134,6 +136,12 @@ export default class KTKillTeamSheet extends HandlebarsApplicationMixin(ActorShe
     if (!roster[index]) return;
     roster[index].inKillTeam = !roster[index].inKillTeam;
     await this.document.update({ "system.roster": roster });
+  }
+
+  /** Play the whole Morale phase for this kill team (pg 36). */
+  static async #onMoralePhase() {
+    await runMoralePhase(this.document);
+    this.render();
   }
 
   /**

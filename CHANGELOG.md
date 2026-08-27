@@ -3,6 +3,58 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.17.0
+
+The Morale phase (pg 36), played from one button on the roster.
+
+### Added
+- **Broken check.** Every model compromised breaks the team outright; more than half rolls 2D6
+  against the highest Leadership among the models still standing. Exactly half does not test, which
+  is the easy mistake. Once broken, the team stays broken.
+- **Shaken tokens are removed before Nerve tests**, in the printed order. Doing it the other way
+  round would leave models shaken permanently, since a model shaken this round would never recover.
+- **Nerve tests** for every model with a flesh wound, and every model if the team is broken. The
+  result fails when it exceeds Leadership, an unmodified 1 always passes, and the modifiers are
+  applied: +1 for each other friendly model shaken or out of action, -1 for each other friendly
+  model within 2".
+- The 2" support modifier is **measured from the canvas**. Models with no token are skipped rather
+  than guessed at, and the card says which.
+- The whole phase runs through the existing rules engine, so Bold and Fanatical pass automatically,
+  And They Shall Know No Fear re-rolls a failure, and the auras added in 0.15.0 apply: Seen It All
+  subtracts 1 for friends within 3", Tyrant adds 1 for enemies within 6".
+
+### Fixed
+- `KT.Morale` was a value and became a namespace, which would have broken every string in the
+  system. Caught by the localisation validator before shipping, and renamed to `KT.MoraleResource`.
+
+## 0.16.0
+
+Damage is applied properly (pg 31-33). This corrects a rules error, not just a missing feature.
+
+### Fixed
+- **A failed save went straight to an Injury roll, skipping damage entirely.** The rules reduce
+  wounds by the weapon's Damage, and an Injury roll is made only when a model reaches 0 wounds. A
+  two-wound Intercessor taking one point now drops to one wound with no Injury roll, where before
+  it faced one immediately. The error was invisible on one-wound models, so it would have played
+  correctly for Necrons and wrongly for Astartes in the same game.
+- **Further attacks against a model already reduced to 0 wounds are no longer resolved** (pg 32).
+  Damage is allocated one failed save at a time, and the card reports how many attacks went
+  unresolved.
+- **The Injury roll used a fresh roll of a random Damage characteristic.** Where a weapon does D6
+  damage, the Injury dice are the value actually rolled when inflicting it (pg 33) - a D6 that
+  rolled 2 gives 2 Injury dice, not a new D6. An explicit count is now carried through.
+
+### Added
+- An **Apply damage** button on the attack card, which subtracts the wounds, reports what is left,
+  and rolls the Injury only if the model reached 0. It checks ownership first and asks the GM
+  rather than failing silently, since an attacking player will not usually own the target.
+
+### Verified
+- Allocation tested against the worked example on pg 33: a three-wound model failing one save
+  against a Damage 3 weapon is reduced to 0 and rolls three Injury dice. Also checked across
+  one-wound and two-wound models, and for random damage where the second of two hits took the last
+  wound - the Injury dice follow that hit's value.
+
 ## 0.15.1
 
 ### Added

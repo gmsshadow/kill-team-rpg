@@ -1256,3 +1256,13 @@
   font-size: 0.75rem;
   color: #55504a;
 }
+
+/* Broken marker on the roster header. */
+.kill-team .kt-broken-flag {
+  float: right;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: #fff;
+  background: #8b1a1a;
+  padding: 0 0.45rem;
+}

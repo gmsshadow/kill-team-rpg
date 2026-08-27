@@ -19,7 +19,7 @@ export default class KillTeamData extends foundry.abstract.TypeDataModel {
       resources: new fields.SchemaField({
         intelligence: new fields.NumberField({ required: true, integer: true, initial: 8, label: "KT.Intelligence" }),
         materiel: new fields.NumberField({ required: true, integer: true, initial: 8, label: "KT.Materiel" }),
-        morale: new fields.NumberField({ required: true, integer: true, initial: 8, label: "KT.Morale" }),
+        morale: new fields.NumberField({ required: true, integer: true, initial: 8, label: "KT.MoraleResource" }),
         territory: new fields.NumberField({ required: true, integer: true, initial: 8, label: "KT.Territory" })
       }),
 
@@ -33,6 +33,9 @@ export default class KillTeamData extends foundry.abstract.TypeDataModel {
 
       // Command roster size: twenty for matched play, twelve to start a campaign.
       rosterLimit: new fields.NumberField({ required: true, integer: true, min: 0, initial: 20, label: "KT.RosterLimit" }),
+
+      /** Once a kill team is broken it stays broken for the rest of the game (pg 36). */
+      broken: new fields.BooleanField({ initial: false, label: "KT.Broken" }),
 
       roster: new fields.ArrayField(
         new fields.SchemaField({
