@@ -168,7 +168,9 @@ export function rulesFor(rules, { type, roll, characteristic: char = null, phase
     // A rule tied to a phase only fires in that phase.
     if (r.phase !== "any" && phase !== "any" && r.phase !== phase) return false;
     // Auras and conditionals are only applied when the caller confirms them.
-    if (r.condition && !active.has(r.condition)) return false;
+    // An aura's condition was already checked against the model projecting it,
+    // so re-checking it against the recipient would wrongly discard it.
+    if (r.condition && !r.fromAura && !active.has(r.condition)) return false;
     return true;
   });
 }

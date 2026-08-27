@@ -16,6 +16,7 @@ export default class KTOperativeSheet extends HandlebarsApplicationMixin(ActorSh
     form: { submitOnChange: true, closeOnSubmit: false },
     actions: {
       rollWeapon: KTOperativeSheet.#onRollWeapon,
+      rollCloseCombat: KTOperativeSheet.#onRollCloseCombat,
       createItem: KTOperativeSheet.#onCreateItem,
       editItem: KTOperativeSheet.#onEditItem,
       deleteItem: KTOperativeSheet.#onDeleteItem,
@@ -268,6 +269,29 @@ export default class KTOperativeSheet extends HandlebarsApplicationMixin(ActorSh
   static async #onRollWeapon(event, target) {
     const item = this.#getItem(target);
     if (item) await item.roll();
+  }
+
+  /**
+   * Attack with the close combat weapon every model is assumed to carry
+   * (pg 34). It is built as an unsaved Item so the normal attack sequence
+   * applies to it unchanged, and nothing is left behind on the actor.
+   */
+  static async #onRollCloseCombat() {
+    const weapon = new Item.implementation({
+      name: game.i18n.localize(KT.closeCombatWeapon.name),
+      type: "weapon",
+      img: "icons/svg/sword.svg",
+      system: {
+        range: KT.closeCombatWeapon.range,
+        weaponType: KT.closeCombatWeapon.weaponType,
+        attacks: KT.closeCombatWeapon.attacks,
+        strength: KT.closeCombatWeapon.strength,
+        ap: KT.closeCombatWeapon.ap,
+        damage: KT.closeCombatWeapon.damage,
+        points: 0
+      }
+    }, { parent: this.document });
+    await weapon.roll();
   }
 
   static async #onPostItem(event, target) {

@@ -1231,3 +1231,28 @@
   position: relative;
   box-shadow: inset 0 0 0 2px #c8501e;
 }
+
+/* Measured distance and warnings in the attack dialog. */
+.kt-measured {
+  margin: 0.3rem 0;
+  font-size: 0.85rem;
+  color: #55504a;
+}
+
+.kt-measured .kt-warn {
+  display: block;
+  color: #8b1a1a;
+}
+
+/* The close combat weapon every model carries: present on every datacard,
+   not an item, so it has no edit or delete controls. */
+.kill-team .kt-innate {
+  font-style: italic;
+  opacity: 0.9;
+  border-top: 1px dashed var(--kt-line, #b0aca4);
+}
+
+.kill-team .kt-innate .kt-weapon-abilities {
+  font-size: 0.75rem;
+  color: #55504a;
+}

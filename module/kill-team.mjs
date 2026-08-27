@@ -53,6 +53,7 @@ Hooks.once("init", function () {
     types: ["weapon", "ability", "wargear", "specialism"], makeDefault: true, label: "KT.Sheet.Item"
   });
 
+  registerSettings();
   registerHandlebarsHelpers();
   return preloadTemplates();
 });
@@ -68,6 +69,48 @@ function preloadTemplates() {
     `systems/${SYSTEM_ID}/templates/item/item-sheet.hbs`
   ]);
 }
+
+/* -------------------------------------------- */
+/*  Settings                                     */
+/* -------------------------------------------- */
+
+function registerSettings() {
+  game.settings.register(SYSTEM_ID, "autoMeasure", {
+    name: "KT.Settings.AutoMeasure",
+    hint: "KT.Settings.AutoMeasureHint",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: true
+  });
+
+  game.settings.register(SYSTEM_ID, "gridSize", {
+    name: "KT.Settings.GridSize",
+    hint: "KT.Settings.GridSizeHint",
+    scope: "world",
+    config: true,
+    type: Number,
+    default: 100
+  });
+}
+
+/**
+ * New scenes default to one inch per grid square at 100 pixels, so distances
+ * measured on the canvas match the ranges printed on a weapon profile without
+ * the GM configuring anything.
+ */
+Hooks.on("preCreateScene", (scene, data) => {
+  if (data.grid?.size || data.grid?.distance) return;   // respect an explicit choice
+  let size = 100;
+  try {
+    size = game.settings.get(SYSTEM_ID, "gridSize") || 100;
+  } catch (err) {
+    // Settings are unavailable during early world setup; the default stands.
+  }
+  scene.updateSource({
+    grid: { size, distance: 1, units: "in" }
+  });
+});
 
 function registerHandlebarsHelpers() {
   // 3 -> "3+", used for WS, BS and Sv throughout the datacard.

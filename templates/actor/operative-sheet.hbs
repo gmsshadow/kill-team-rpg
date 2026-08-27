@@ -98,9 +98,23 @@
         </div>
         {{/each}}
       {{/if}}
-      {{else}}
-      <div class="kt-row kt-empty">{{localize "KT.NoWeapons"}}</div>
       {{/each}}
+
+      {{!-- Every model can fight with this, armed or not (pg 34). It is derived
+            rather than an item, so it cannot be deleted and costs no points. --}}
+      <div class="kt-row kt-grid-weapon kt-innate">
+        <span class="kt-weapon-name">
+          <a data-action="rollCloseCombat" data-tooltip="{{localize 'KT.Roll.Attack'}}">
+            {{localize "KT.CloseCombatWeapon"}}</a>
+        </span>
+        <span>{{localize "KT.MeleeRange"}}</span>
+        <span>{{localize "KT.MeleeRange"}}</span>
+        <span>{{localize "KT.User"}}</span>
+        <span>0</span>
+        <span>1</span>
+        <span class="kt-weapon-abilities">{{localize "KT.InnateWeapon"}}</span>
+        <span class="kt-controls"></span>
+      </div>
     </div>
 
     {{!-- Abilities box --}}

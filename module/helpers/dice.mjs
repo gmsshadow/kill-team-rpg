@@ -1,6 +1,7 @@
 import { KT, SYSTEM_ID } from "./config.mjs";
 import { WeaponData } from "../data/items.mjs";
 import * as Rules from "../rules/vocabulary.mjs";
+import * as Measure from "./measure.mjs";
 
 const FormDataExtended = foundry.applications.ux?.FormDataExtended ?? globalThis.FormDataExtended;
 const DialogV2 = foundry.applications.api.DialogV2;
@@ -94,6 +95,14 @@ export async function promptAttack(actor, weapon) {
 async function promptProfileAttack(actor, weapon, profile, extraModifier = 0) {
   const system = weapon.system;
   const isMelee = profile.isMelee;
+
+  // Work out from the canvas what can be worked out, so the player only
+  // confirms rather than re-deriving. Melee has no range band, so only the
+  // shooting checks are used there.
+  const attackerToken = actor.getActiveTokens?.()[0] ?? null;
+  const targetToken = game.user.targets.first() ?? null;
+  const measured = Measure.measureAttack(attackerToken, targetToken, profile.range);
+  const auto = (value) => (value ? "checked" : "");
   const skill = isMelee ? actor.system.profile.ws : actor.system.profile.bs;
 
   // Default number of attacks: the weapon's profile, or the operative's
@@ -131,10 +140,10 @@ async function promptProfileAttack(actor, weapon, profile, extraModifier = 0) {
       </div>
       <fieldset class="kt-dialog-modifiers">
         <legend>${game.i18n.localize("KT.Dialog.Modifiers")}</legend>
-        <label><input type="checkbox" name="longRange"/> ${game.i18n.localize("KT.Modifier.LongRange")} (-1)</label>
-        <label><input type="checkbox" name="obscured"/> ${game.i18n.localize("KT.Modifier.Obscured")} (-1)</label>
+        <label><input type="checkbox" name="longRange" ${auto(!isMelee && measured.longRange)}/> ${game.i18n.localize("KT.Modifier.LongRange")} (-1)</label>
+        <label><input type="checkbox" name="obscured" ${auto(measured.obscured)}/> ${game.i18n.localize("KT.Modifier.Obscured")} (-1)</label>
         ${isMelee ? `<label><input type="checkbox" name="intervening"/> ${game.i18n.localize("KT.Modifier.Intervening")} (-1)</label>` : ""}
-        ${system.weaponType === "rapidFire" ? `<label><input type="checkbox" name="halfRange"/> ${game.i18n.localize("KT.Dialog.HalfRange")}</label>` : ""}
+        ${system.weaponType === "rapidFire" ? `<label><input type="checkbox" name="halfRange" ${auto(measured.halfRange)}/> ${game.i18n.localize("KT.Dialog.HalfRange")}</label>` : ""}
         ${system.weaponType === "heavy" ? `<label><input type="checkbox" name="moved"/> ${game.i18n.localize("KT.Dialog.MovedThisPhase")} (-1)</label>` : ""}
         ${system.weaponType === "assault" ? `<label><input type="checkbox" name="advanced" ${actor.system.status.advanced ? "checked" : ""}/> ${game.i18n.localize("KT.Dialog.Advanced")} (-1)</label>` : ""}
         ${isMelee ? "" : `<label><input type="checkbox" name="overwatch"/> ${game.i18n.localize("KT.Dialog.Overwatch")}</label>`}
@@ -142,6 +151,12 @@ async function promptProfileAttack(actor, weapon, profile, extraModifier = 0) {
           <input type="number" name="other" value="0" step="1"/>
         </label>
       </fieldset>
+      ${measured.distance === null ? "" : `<p class="kt-measured">
+        ${game.i18n.format("KT.Measured.Distance", { distance: measured.distance })}
+        ${measured.outOfRange ? `<strong class="kt-warn">${game.i18n.format("KT.Measured.OutOfRange",
+          { distance: measured.distance, range: profile.range })}</strong>` : ""}
+        ${measured.visible === false ? `<strong class="kt-warn">${game.i18n.localize("KT.Measured.NoLineOfSight")}</strong>` : ""}
+      </p>`}
       <p class="kt-dialog-note">${game.i18n.format("KT.Dialog.AutoModifiers", {
         value: actor.system.hitModifier
       })}</p>
@@ -231,7 +246,14 @@ export async function resolveAttack(actor, weapon, config) {
 
   /* --- Rules in play --- */
   // Everything the operative's items contribute, filtered per roll below.
-  const rules = Rules.collectRules(actor);
+  // The attacker's own rules, plus any reaching it from other models on the
+  // battlefield. Aura rules live on the model projecting them, so without this
+  // an ability like Paragon sits on the Leader's sheet and never reaches anyone.
+  const attackerToken = actor.getActiveTokens?.()[0] ?? null;
+  const rules = [
+    ...Rules.collectRules(actor),
+    ...(Measure.measurementEnabled() ? Measure.auraRules(attackerToken, Rules.collectRules) : [])
+  ];
   const phase = isMelee ? "fight" : "shooting";
   const rerollRolls = [];   // extra Roll objects, attached to the message below
 

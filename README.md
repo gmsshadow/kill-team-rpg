@@ -5,7 +5,7 @@ designed as the foundation for a fuller roleplaying system (character creation, 
 other Warhammer sources) that will be layered on later.
 
 - **System id:** `kill-team-rpg`
-- **Version:** 0.14.3
+- **Version:** 0.15.1
 - **Foundry:** v14 (ApplicationV2 sheets, `TypeDataModel` schemas, `documentTypes` in `system.json`).
   Minimum v13.
 
@@ -28,7 +28,7 @@ npm install --no-save @foundryvtt/foundryvtt-cli
 node tools/build-packs.mjs
 ```
 
-## What's in v0.14.3
+## What's in v0.15.1
 
 ### Documents
 

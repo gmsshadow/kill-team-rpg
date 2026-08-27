@@ -53,6 +53,22 @@ KT.specialisms = {
  * Experience track from the datacard: twelve boxes, with a level-up box
  * (drawn with an orange outline) at positions 3, 7 and 12.
  */
+/**
+ * Every model can fight with a close combat weapon, whether or not one is
+ * listed on its datasheet (pg 34). It is derived rather than added as an item
+ * so it cannot be deleted, costs no points, and is always available.
+ */
+KT.closeCombatWeapon = {
+  name: "KT.CloseCombatWeapon",
+  range: "Melee",
+  weaponType: "melee",
+  attacks: "1",
+  strength: "User",
+  ap: 0,
+  damage: "1",
+  abilities: ""
+};
+
 KT.experienceBoxes = 12;
 KT.levelUpBoxes = [3, 7, 12];
 

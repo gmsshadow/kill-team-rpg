@@ -286,5 +286,18 @@
   "KT.Condition.GrenadeWeapon": "with Grenade weapons",
   "KT.Condition.RandomDamage": "with random Damage",
   "KT.Condition.NoFactionInCommon": "against models with no Faction keyword in common",
-  "KT.Roll.Rerolled": "Re-rolled"
+  "KT.Roll.Rerolled": "Re-rolled",
+  "KT.Settings.AutoMeasure": "Measure range and visibility automatically",
+  "KT.Settings.AutoMeasureHint": "Work out long range and whether a target is obscured from the tokens on the canvas, and pre-tick the attack dialog. Turn off to set them by hand.",
+  "KT.Settings.GridSize": "Default grid size (pixels)",
+  "KT.Settings.GridSizeHint": "New scenes are created at this many pixels per grid square, with one square measuring one inch.",
+  "KT.Measured.Distance": "Measured {distance}\"",
+  "KT.Measured.OutOfRange": "Out of range: {distance}\" away, weapon reaches {range}\".",
+  "KT.Measured.NoLineOfSight": "No line of sight to the target.",
+  "KT.Measured.Auras": "Auras in range",
+  "KT.CloseCombatWeapon": "Close combat weapon",
+  "KT.MeleeRange": "Melee",
+  "KT.User": "User",
+  "KT.InnateWeapon": "Every model can fight with this (pg 34)",
+  "KT.Roll.Attack": "Attack with this weapon"
 }

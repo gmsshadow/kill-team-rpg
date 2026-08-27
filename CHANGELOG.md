@@ -3,6 +3,49 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.15.1
+
+### Added
+- **The close combat weapon every model is assumed to carry** (pg 34): Melee, S User, AP 0, D 1.
+  It appears on every datacard below the listed weapons and can be attacked with directly.
+
+  It is derived rather than added as an item, so it cannot be deleted, costs no points, and is
+  present on an operative that has no weapons at all - which was previously left with nothing to
+  fight with. Rolling it builds an unsaved weapon document, so the whole attack sequence, including
+  ability rules and re-rolls, applies to it unchanged and nothing is left behind on the actor.
+
+  Strength resolves from the wielder, so a Marine swings at S4 and a Flayed One at S4, while a
+  Commander with S5 gets S5 without any special handling.
+
+## 0.15.0
+
+Range and visibility are measured from the canvas.
+
+### Added
+- **`module/helpers/measure.mjs`.** Distances are measured base to base, as the book does (pg 16),
+  by subtracting both tokens' radii from the centre-to-centre distance. On a 1 inch grid that is
+  worth half an inch or more, which is often the difference between half range and long range.
+- **The attack dialog pre-fills itself.** Long range, obscured and the Rapid Fire half-range box
+  are ticked from the tokens' positions, and the measured distance is shown. Out of range and no
+  line of sight are called out in red rather than silently ignored - the roll is still allowed,
+  since the table may know better than the canvas.
+- **Obscured is derived from line of sight**, casting rays at the target's centre and the four
+  points of its base: all clear is visible, all blocked is no line of sight, anything between is
+  obscured (pg 30).
+- **Auras now work.** Rules with a scope and a range are collected from other models on the
+  battlefield, so Inspiring, Paragon, Vox Ghost and the rest finally reach their targets. Recorded
+  since 0.11.0, inert until now.
+- **New scenes default to 1 inch per square at 100 pixels**, configurable, so canvas distances
+  match printed weapon ranges without the GM setting anything up.
+- Two settings: automatic measurement can be turned off to go back to ticking boxes by hand, and
+  the default grid size is adjustable.
+
+### Notes
+- An aura's condition is checked against the model projecting it, not the recipient: a shaken
+  Leader stops inspiring, but the recipient being shaken is irrelevant.
+- Everything degrades safely. With no canvas, no token or no target, measurement returns nothing
+  and the dialog behaves as it did before.
+
 ## 0.14.3
 
 ### Fixed
