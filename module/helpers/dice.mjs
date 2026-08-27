@@ -414,12 +414,64 @@ export async function resolveAttack(actor, weapon, config) {
   });
 
   parts.push(`<p class="kt-summary">${summary}</p>`);
-  if (failedSaves > 0) {
-    // The Injury roll is made against the injured model. Prefer the targeted
-    // actor; otherwise the button falls back to whatever is targeted on click.
-    const targetActor = game.user.targets.first()?.actor;
+  /* --- Damage (pg 31-33) --- */
+  //
+  // Each failed save inflicts the weapon's Damage, and the model loses one
+  // wound per point. Only when a model is reduced to 0 wounds is an Injury roll
+  // made, so a two-wound model taking a single point simply drops to one wound.
+  // Once it reaches 0, any further attacks from this weapon against it are not
+  // resolved (pg 32), which is why this allocates one failed save at a time
+  // rather than summing them.
+  const targetActor = game.user.targets.first()?.actor ?? null;
+  let remaining = targetActor?.system?.wounds?.value ?? null;
+  const allocation = [];
+  let injuryDice = null;
+  let unresolved = 0;
+
+  for (let i = 0; i < failedSaves; i++) {
+    if (injuryDice !== null) { unresolved = failedSaves - i; break; }
+    const { total: inflicted, roll: damageRoll } = await evaluateValue(profile.damage);
+    if (damageRoll) rerollRolls.push(damageRoll);
+    const amount = Math.max(1, inflicted);
+    allocation.push(amount);
+    if (remaining === null) continue;      // no target: report only
+    remaining -= amount;
+    if (remaining <= 0) {
+      remaining = 0;
+      // The Damage characteristic of the attack that took the last wound
+      // decides how many Injury dice are rolled.
+      injuryDice = amount;
+    }
+  }
+
+  if (allocation.length) {
+    const total = allocation.reduce((a, b) => a + b, 0);
+    parts.push(`<div class="kt-result-row">
+      <span class="kt-result-label">${game.i18n.localize("KT.Roll.Damage")}</span>
+      <span class="kt-result-dice">${allocation.map(a => `<span class="kt-die">${a}</span>`).join("")}</span>
+      <span class="kt-result-note">${total}</span>
+    </div>`);
+  }
+
+  if (unresolved) {
+    parts.push(`<p class="kt-hint">${game.i18n.format("KT.Roll.Unresolved", { count: unresolved })}</p>`);
+  }
+
+  if (failedSaves > 0 && targetActor) {
+    if (remaining !== null && injuryDice === null) {
+      parts.push(`<p class="kt-summary">${game.i18n.format("KT.Roll.WoundsRemaining", {
+        name: targetActor.name, value: remaining, max: targetActor.system.wounds.max
+      })}</p>`);
+    }
+    // Writing to the target needs ownership, which an attacking player will not
+    // usually have, so the update is offered as a button anyone permitted can use.
+    parts.push(`<button type="button" class="kt-chat-button" data-kt-action="damage"
+      data-actor-uuid="${targetActor.uuid}" data-amount="${allocation.reduce((a, b) => a + b, 0)}"
+      data-injury-dice="${injuryDice ?? ""}">
+      <i class="fa-solid fa-heart-crack"></i> ${game.i18n.localize("KT.Roll.ApplyDamage")}</button>`);
+  } else if (failedSaves > 0) {
     parts.push(`<button type="button" class="kt-chat-button" data-kt-action="injury"
-      data-actor-uuid="${targetActor?.uuid ?? ""}" data-damage="${profile.damage}">
+      data-actor-uuid="" data-damage="${profile.damage}">
       <i class="fa-solid fa-skull"></i> ${game.i18n.localize("KT.Roll.InjuryRoll")}</button>`);
   }
 
@@ -442,9 +494,18 @@ export async function resolveAttack(actor, weapon, config) {
  * Injury roll: D6 (or one die per point of Damage) plus flesh wounds.
  * 4+ takes the model out of action, otherwise it suffers a flesh wound.
  */
-export async function rollInjury(actor, { damage = "1" } = {}) {
-  const { total: dice } = await evaluateValue(damage);
-  const count = Math.max(1, dice);
+export async function rollInjury(actor, { damage = "1", damageDice = null } = {}) {
+  // The number of Injury dice is the Damage characteristic of the attack that
+  // took the last wound. Where that was random, it is the value actually rolled
+  // when inflicting damage, not a fresh roll (pg 33), so an explicit count is
+  // preferred over re-evaluating the formula.
+  let count;
+  if (Number.isFinite(Number(damageDice)) && Number(damageDice) > 0) {
+    count = Math.floor(Number(damageDice));
+  } else {
+    const { total: dice } = await evaluateValue(damage);
+    count = Math.max(1, dice);
+  }
   const modifier = actor?.system?.injuryModifier ?? 0;
 
   const roll = new Roll(`${count}d6`);
@@ -567,14 +628,36 @@ export function activateChatListeners(html) {
   for (const button of root.querySelectorAll("[data-kt-action]")) {
     button.addEventListener("click", async event => {
       event.preventDefault();
-      const { ktAction, actorUuid, damage } = event.currentTarget.dataset;
-      if (ktAction !== "injury") return;
+      const { ktAction, actorUuid, damage, amount, injuryDice } = event.currentTarget.dataset;
       const actor = (actorUuid ? await fromUuid(actorUuid) : null)
         ?? game.user.targets.first()?.actor
         ?? canvas.tokens?.controlled[0]?.actor;
       if (!actor) return ui.notifications.warn(game.i18n.localize("KT.Warning.NoActor"));
+
+      if (ktAction === "damage") {
+        if (!actor.isOwner) {
+          return ui.notifications.warn(game.i18n.format("KT.Warning.NoPermission", { name: actor.name }));
+        }
+        const lost = Math.max(0, Number(amount) || 0);
+        const before = actor.system.wounds.value;
+        const after = Math.max(0, before - lost);
+        await actor.update({ "system.wounds.value": after });
+
+        await ChatMessage.create({
+          speaker: speakerFor(actor),
+          content: `<div class="kill-team chat-card"><p>${game.i18n.format("KT.Roll.DamageApplied", {
+            name: actor.name, lost, value: after, max: actor.system.wounds.max
+          })}</p></div>`
+        });
+
+        // An Injury roll follows only when the model has been reduced to 0.
+        if (after === 0) await rollInjury(actor, { damageDice: injuryDice || null, damage });
+        return;
+      }
+
+      if (ktAction !== "injury") return;
       // Injury rolls are made by the attacker, so anyone may click this.
-      await rollInjury(actor, { damage });
+      await rollInjury(actor, { damage, damageDice: injuryDice || null });
     });
   }
 }

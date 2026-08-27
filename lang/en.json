@@ -299,5 +299,10 @@
   "KT.MeleeRange": "Melee",
   "KT.User": "User",
   "KT.InnateWeapon": "Every model can fight with this (pg 34)",
-  "KT.Roll.Attack": "Attack with this weapon"
+  "KT.Roll.Attack": "Attack with this weapon",
+  "KT.Roll.ApplyDamage": "Apply damage",
+  "KT.Roll.DamageApplied": "{name} loses {lost} wound(s): {value}/{max} remaining.",
+  "KT.Roll.WoundsRemaining": "{name} is on {value}/{max} wounds.",
+  "KT.Roll.Unresolved": "{count} further attack(s) not resolved: the model was already reduced to 0 wounds.",
+  "KT.Warning.NoPermission": "You do not have permission to update {name}. Ask the GM to apply it."
 }
