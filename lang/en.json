@@ -320,5 +320,16 @@
   "KT.Morale.Steady": "steady",
   "KT.Morale.Shaken": "shaken",
   "KT.Morale.AutoPass": "passes automatically ({source})",
-  "KT.Morale.Unmeasured": "Some models have no token on the canvas, so the -1 for nearby friendly models could not be measured for them."
+  "KT.Morale.Unmeasured": "Some models have no token on the canvas, so the -1 for nearby friendly models could not be measured for them.",
+  "KT.Phase.Initiative": "Initiative phase",
+  "KT.Phase.Psychic": "Psychic phase",
+  "KT.Round.Number": "Battle round {round}",
+  "KT.Round.InitiativeRollOff": "Initiative roll-off",
+  "KT.Round.OrderApplies": "This order applies to every phase in the battle round.",
+  "KT.Round.StatusesCleared": "Readied, Advanced, Charged, Fell Back and Retreated cleared. Shaken is removed in the Morale phase.",
+  "KT.Round.NextPhase": "Next phase",
+  "KT.Round.PreviousPhase": "Previous phase",
+  "KT.Round.Friendly": "Friendly",
+  "KT.Round.Hostile": "Hostile",
+  "KT.Round.Neutral": "Neutral"
 }

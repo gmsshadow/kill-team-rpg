@@ -3,6 +3,30 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.18.0
+
+The battle round (pg 20), as a tracker rather than a warden.
+
+### Added
+- **Team initiative.** Kill Team rolls off once per side at the start of a round and applies that
+  order to every phase, where Foundry's tracker assumes one initiative per combatant. Rolling
+  initiative now rolls 2D6 once per token disposition and gives every model on that side the same
+  result, so the tracker orders sides rather than individuals. Ties are re-rolled, since the order
+  must be definite.
+- **A phase bar in the combat tracker**, stepping through Initiative, Movement, Psychic, Shooting,
+  Fight and Morale, announcing each in chat. Stepping past Morale begins the next round. It is
+  injected on render rather than replacing the tracker template, so a Foundry change to the tracker
+  cannot break the system.
+- **A new round clears the statuses that only lasted the last one**: Readied, Advanced, Charged,
+  Fell Back and Retreated. Shaken is deliberately not cleared here, because it is removed during
+  the Morale phase - clearing it in both places would let a model shrug off a failed Nerve test.
+
+### Deliberately not done
+- **No enforcement.** The tracker will not stop a model shooting after it Advanced, or charging
+  twice. Kill Team has enough exceptions - Assault weapons, FLY, Pistols in melee, Overwatch - that
+  a system policing them is wrong at the worst moment. The state is tracked and shown; the table
+  decides.
+
 ## 0.17.0
 
 The Morale phase (pg 36), played from one button on the roster.

@@ -4,6 +4,7 @@ import OperativeData from "./data/actor-operative.mjs";
 import KillTeamData from "./data/actor-killteam.mjs";
 import { WeaponData, AbilityData, WargearData, SpecialismData } from "./data/items.mjs";
 import FactionData from "./data/item-faction.mjs";
+import { KillTeamCombat, renderPhaseBar } from "./documents/combat.mjs";
 import ModelData from "./data/item-model.mjs";
 import { KTActor, KTItem } from "./documents/documents.mjs";
 import KTOperativeSheet from "./sheets/operative-sheet.mjs";
@@ -39,6 +40,7 @@ Hooks.once("init", function () {
   };
 
   // Kill Team rolls off with 2D6 in the Initiative phase.
+  CONFIG.Combat.documentClass = KillTeamCombat;
   CONFIG.Combat.initiative = { formula: "2d6", decimals: 0 };
 
   // Sheets
@@ -134,6 +136,10 @@ function registerHandlebarsHelpers() {
 /* -------------------------------------------- */
 
 // Bind the Injury roll button on attack chat cards.
+// The phase bar is injected on render rather than replacing the tracker
+// template, so a Foundry change to the tracker cannot break the system.
+Hooks.on("renderCombatTracker", renderPhaseBar);
+
 Hooks.on("renderChatMessageHTML", (message, html) => dice.activateChatListeners(html));
 
 // Clear per-round movement flags for every operative when a new round starts.
