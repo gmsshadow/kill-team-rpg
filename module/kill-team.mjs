@@ -140,6 +140,12 @@ function registerHandlebarsHelpers() {
 // template, so a Foundry change to the tracker cannot break the system.
 Hooks.on("renderCombatTracker", renderPhaseBar);
 
+// A phase change is stored as a flag, which Foundry does not treat as a reason
+// to redraw the tracker, so ask for one whenever ours changes.
+Hooks.on("updateCombat", (combat, changed) => {
+  if (foundry.utils.hasProperty(changed, `flags.${SYSTEM_ID}.phase`)) ui.combat?.render();
+});
+
 Hooks.on("renderChatMessageHTML", (message, html) => dice.activateChatListeners(html));
 
 // Clear per-round movement flags for every operative when a new round starts.

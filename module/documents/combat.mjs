@@ -106,7 +106,19 @@ export class KillTeamCombat extends Combat {
     return this.announcePhase();
   }
 
+  /**
+   * Redraw the tracker.
+   *
+   * Foundry only re-renders the tracker for changes it knows about - round,
+   * turn, whether the encounter is active. A flag change is invisible to it, so
+   * the phase bar would keep showing whatever it said when it was first drawn.
+   */
+  refreshTracker() {
+    ui.combat?.render();
+  }
+
   async announcePhase() {
+    this.refreshTracker();
     await ChatMessage.create({
       content: `<div class="kill-team chat-card"><p><strong>`
         + `${game.i18n.format("KT.Round.Number", { round: this.round })}</strong> &mdash; `
@@ -170,8 +182,20 @@ export function renderPhaseBar(app, html) {
   if (!combat || !(combat instanceof KillTeamCombat)) return;
 
   const root = html instanceof HTMLElement ? html : html?.[0];
-  const encounter = root?.querySelector(".combat-tracker-header, header.encounters, .encounters");
-  if (!encounter || root.querySelector(".kt-phase-bar")) return;
+  if (!root) return;
+
+  // If a bar is already present, update it in place. Returning early here was
+  // the bug: on a re-render that reused the element, the label never changed.
+  const existing = root.querySelector(".kt-phase-bar .kt-phase-name");
+  if (existing) {
+    existing.textContent = game.i18n.localize(combat.phase.label);
+    return;
+  }
+
+  const encounter = root.querySelector(
+    ".combat-tracker-header, header.encounters, .encounters, #combat-round, .combat-controls"
+  );
+  if (!encounter) return;
 
   const bar = document.createElement("div");
   bar.classList.add("kt-phase-bar");

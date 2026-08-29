@@ -3,6 +3,17 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.18.1
+
+### Fixed
+- **The phase bar always showed the Initiative phase.** Two causes, both needed fixing. The bar
+  returned early when one was already present, so a re-render that reused the element never
+  updated the label; it now rewrites the label in place. And a phase is stored as a flag, which
+  Foundry does not treat as a reason to redraw the tracker, so the tracker is now asked to
+  re-render explicitly when the phase changes.
+- Widened the selector the bar attaches to, since the tracker's header markup differs between
+  Foundry versions.
+
 ## 0.18.0
 
 The battle round (pg 20), as a tracker rather than a warden.
