@@ -206,13 +206,12 @@ export function renderPhaseBar(app, html) {
   const root = html instanceof HTMLElement ? html : html?.[0];
   if (!root) return;
 
-  // If a bar is already present, update it in place. Returning early here was
-  // the bug: on a re-render that reused the element, the label never changed.
-  const existing = root.querySelector(".kt-phase-bar .kt-phase-name");
-  if (existing) {
-    existing.textContent = game.i18n.localize(combat.phase.label);
-    return;
-  }
+  // Always rebuild rather than updating in place. Foundry re-renders the
+  // tracker in ways that can leave a previously inserted bar detached from the
+  // live document, and a detached bar is invisible but still matches a
+  // selector - which is how the buttons came to stop responding after rolling
+  // initiative. Clicks are handled by delegation, so rebuilding costs nothing.
+  root.querySelectorAll(".kt-phase-bar").forEach(el => el.remove());
 
   const encounter = root.querySelector(
     ".combat-tracker-header, header.encounters, .encounters, #combat-round, .combat-controls"
@@ -227,8 +226,28 @@ export function renderPhaseBar(app, html) {
     <span class="kt-phase-name">${game.i18n.localize(combat.phase.label)}</span>
     <a class="kt-phase-step" data-kt-phase="next" data-tooltip="${game.i18n.localize("KT.Round.NextPhase")}">
       <i class="fa-solid fa-caret-right"></i></a>`;
-
-  bar.querySelector('[data-kt-phase="prev"]').addEventListener("click", () => combat.previousPhase());
-  bar.querySelector('[data-kt-phase="next"]').addEventListener("click", () => combat.nextPhase());
   encounter.after(bar);
+}
+
+/**
+ * Handle phase clicks by delegation, bound once to the document.
+ *
+ * Binding to the bar itself ties the listener to a particular element, which
+ * does not survive the tracker being re-rendered and re-inserted. Listening at
+ * the document means it keeps working however often the tracker is redrawn.
+ */
+export function activatePhaseControls() {
+  document.addEventListener("click", async event => {
+    const control = event.target?.closest?.("[data-kt-phase]");
+    if (!control) return;
+    const combat = game.combat;
+    if (!combat || !(combat instanceof KillTeamCombat)) return;
+    event.preventDefault();
+
+    if (!game.user.isGM) {
+      return ui.notifications.warn(game.i18n.localize("KT.Round.GMOnly"));
+    }
+    if (control.dataset.ktPhase === "next") await combat.nextPhase();
+    else await combat.previousPhase();
+  });
 }

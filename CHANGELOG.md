@@ -3,6 +3,20 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.18.3
+
+### Fixed
+- **The phase buttons stopped responding after rolling initiative.** They were bound to the bar
+  element itself, and rolling initiative re-renders the tracker in a way that can leave the
+  previously inserted bar detached from the live document. The detached bar still matched the
+  selector, so the update path found it, updated a label nobody could see, and left the visible bar
+  without any listener - which is why reloading fixed it and starting a new encounter did not.
+
+  Clicks are now handled by delegation from a single listener bound once to the document, so they
+  keep working however often the tracker is redrawn, and the bar is rebuilt on each render rather
+  than updated in place.
+- Changing the phase is now limited to the GM, with a notice rather than a silent failure.
+
 ## 0.18.2
 
 ### Fixed

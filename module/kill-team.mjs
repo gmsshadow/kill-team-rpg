@@ -4,7 +4,7 @@ import OperativeData from "./data/actor-operative.mjs";
 import KillTeamData from "./data/actor-killteam.mjs";
 import { WeaponData, AbilityData, WargearData, SpecialismData } from "./data/items.mjs";
 import FactionData from "./data/item-faction.mjs";
-import { KillTeamCombat, renderPhaseBar } from "./documents/combat.mjs";
+import { KillTeamCombat, renderPhaseBar, activatePhaseControls } from "./documents/combat.mjs";
 import ModelData from "./data/item-model.mjs";
 import { KTActor, KTItem } from "./documents/documents.mjs";
 import KTOperativeSheet from "./sheets/operative-sheet.mjs";
@@ -139,6 +139,9 @@ function registerHandlebarsHelpers() {
 // The phase bar is injected on render rather than replacing the tracker
 // template, so a Foundry change to the tracker cannot break the system.
 Hooks.on("renderCombatTracker", renderPhaseBar);
+
+// Bound once, at the document, so it survives the tracker being redrawn.
+Hooks.once("ready", activatePhaseControls);
 
 // A phase change is stored as a flag, which Foundry does not treat as a reason
 // to redraw the tracker, so ask for one whenever ours changes.
