@@ -98,12 +98,83 @@ export class KillTeamCombat extends Combat {
     const next = this.phaseIndex + 1;
     if (next >= PHASES.length) return this.nextRound();
     await this.setFlag(SYSTEM_ID, "phase", next);
+    await this.resetActed(PHASES[next].key);
     return this.announcePhase();
   }
 
   async previousPhase() {
     await this.setFlag(SYSTEM_ID, "phase", Math.max(0, this.phaseIndex - 1));
     return this.announcePhase();
+  }
+
+  /* -------------------------------------------- */
+  /*  Activation                                   */
+  /* -------------------------------------------- */
+
+  /** Ids of combatants that have already acted in the current phase. */
+  get acted() {
+    return this.getFlag(SYSTEM_ID, `acted.${this.phase.key}`) ?? [];
+  }
+
+  hasActed(id) {
+    return this.acted.includes(id);
+  }
+
+  /** Mark a combatant as having acted, or clear it. */
+  async setActed(id, state = true) {
+    const current = new Set(this.acted);
+    if (state) current.add(id);
+    else current.delete(id);
+    await this.setFlag(SYSTEM_ID, `acted.${this.phase.key}`, [...current]);
+    this.refreshTracker();
+  }
+
+  /** Forget who has acted, for one phase or all of them. */
+  async resetActed(phaseKey = null) {
+    if (phaseKey) await this.setFlag(SYSTEM_ID, `acted.${phaseKey}`, []);
+    else await this.setFlag(SYSTEM_ID, "acted", {});
+    this.refreshTracker();
+  }
+
+  /**
+   * The order models act in during the current phase.
+   *
+   * Initiative decides the order of play, but two phases put a group in front
+   * of it: Readied models shoot before all others (pg 28), and models that
+   * charged fight before all others (pg 34). Those are ordered first here, so
+   * the list matches the sequence actually played rather than raw initiative.
+   */
+  get activationOrder() {
+    const phase = this.phase.key;
+    const entries = this.combatants.contents
+      .filter(c => c.actor)
+      .map(c => {
+        const status = c.actor.system?.status ?? {};
+        let priority = 1;
+        let note = null;
+        if (phase === "shooting" && status.readied) { priority = 0; note = "KT.Readied"; }
+        if (phase === "fight" && status.charged) { priority = 0; note = "KT.Charged"; }
+        return {
+          id: c.id,
+          name: c.name,
+          initiative: c.initiative ?? null,
+          acted: this.hasActed(c.id),
+          outOfAction: !!status.outOfAction,
+          shaken: !!status.shaken,
+          priority,
+          note
+        };
+      });
+
+    return entries.sort((a, b) =>
+      a.priority - b.priority
+      || (b.initiative ?? -Infinity) - (a.initiative ?? -Infinity)
+      || a.name.localeCompare(b.name));
+  }
+
+  /** Models still to act: not yet acted, and able to (pg 36 - shaken models cannot). */
+  get pending() {
+    return this.activationOrder.filter(e => !e.acted && !e.outOfAction && !e.shaken);
   }
 
   /**
@@ -153,6 +224,7 @@ export class KillTeamCombat extends Combat {
   async nextRound() {
     const result = await super.nextRound();
     await this.setFlag(SYSTEM_ID, "phase", 0);
+    await this.resetActed();
 
     // Foundry keeps initiative between rounds, so the roll button never comes
     // back. Kill Team rolls off again at the start of every battle round
@@ -211,22 +283,54 @@ export function renderPhaseBar(app, html) {
   // live document, and a detached bar is invisible but still matches a
   // selector - which is how the buttons came to stop responding after rolling
   // initiative. Clicks are handled by delegation, so rebuilding costs nothing.
-  root.querySelectorAll(".kt-phase-bar").forEach(el => el.remove());
+  root.querySelectorAll(".kt-phase-bar, .kt-activation").forEach(el => el.remove());
 
   const encounter = root.querySelector(
     ".combat-tracker-header, header.encounters, .encounters, #combat-round, .combat-controls"
   );
   if (!encounter) return;
 
+  const pending = combat.pending.length;
   const bar = document.createElement("div");
   bar.classList.add("kt-phase-bar");
   bar.innerHTML = `
     <a class="kt-phase-step" data-kt-phase="prev" data-tooltip="${game.i18n.localize("KT.Round.PreviousPhase")}">
       <i class="fa-solid fa-caret-left"></i></a>
     <span class="kt-phase-name">${game.i18n.localize(combat.phase.label)}</span>
-    <a class="kt-phase-step" data-kt-phase="next" data-tooltip="${game.i18n.localize("KT.Round.NextPhase")}">
+    <a class="kt-phase-step ${pending === 0 ? "is-ready" : ""}" data-kt-phase="next"
+       data-tooltip="${game.i18n.localize("KT.Round.NextPhase")}">
       <i class="fa-solid fa-caret-right"></i></a>`;
   encounter.after(bar);
+
+  // The Initiative phase has no activations to track.
+  if (combat.phase.key === "initiative") return;
+
+  const order = combat.activationOrder;
+  if (!order.length) return;
+
+  const panel = document.createElement("div");
+  panel.classList.add("kt-activation");
+  panel.innerHTML = `
+    <div class="kt-activation-head">
+      <span>${pending
+        ? game.i18n.format("KT.Round.Remaining", { count: pending })
+        : game.i18n.localize("KT.Round.AllActed")}</span>
+      <a data-kt-acted="reset" data-tooltip="${game.i18n.localize("KT.Round.ResetActed")}">
+        <i class="fa-solid fa-rotate-left"></i></a>
+    </div>
+    <ol class="kt-activation-list">
+      ${order.map(e => `
+        <li class="kt-activation-entry ${e.acted ? "is-acted" : ""} ${e.outOfAction || e.shaken ? "is-unable" : ""}"
+            data-kt-acted="${e.id}">
+          <span class="kt-init">${e.initiative ?? "-"}</span>
+          <span class="kt-activation-name">${e.name}</span>
+          ${e.note ? `<span class="kt-activation-note">${game.i18n.localize(e.note)}</span>` : ""}
+          ${e.outOfAction ? `<span class="kt-activation-note">${game.i18n.localize("KT.OutOfAction")}</span>`
+            : e.shaken ? `<span class="kt-activation-note">${game.i18n.localize("KT.Shaken")}</span>` : ""}
+          <i class="fa-solid ${e.acted ? "fa-square-check" : "fa-square"}"></i>
+        </li>`).join("")}
+    </ol>`;
+  bar.after(panel);
 }
 
 /**
@@ -249,5 +353,21 @@ export function activatePhaseControls() {
     }
     if (control.dataset.ktPhase === "next") await combat.nextPhase();
     else await combat.previousPhase();
+  });
+
+  // Marking a model as having acted, by the same delegation.
+  document.addEventListener("click", async event => {
+    const entry = event.target?.closest?.("[data-kt-acted]");
+    if (!entry) return;
+    const combat = game.combat;
+    if (!combat || !(combat instanceof KillTeamCombat)) return;
+    event.preventDefault();
+
+    if (!game.user.isGM) {
+      return ui.notifications.warn(game.i18n.localize("KT.Round.GMOnly"));
+    }
+    const id = entry.dataset.ktActed;
+    if (id === "reset") return combat.resetActed(combat.phase.key);
+    await combat.setActed(id, !combat.hasActed(id));
   });
 }

@@ -3,6 +3,31 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.19.0
+
+Activation tracking: who acts, in what order, and who is still waiting.
+
+### Added
+- **An activation list under the phase bar**, showing every model in the order it acts, with its
+  initiative. Clicking one marks it as having acted; clicking again clears it. The header counts
+  what is left, and the next-phase arrow turns green once nothing remains, without blocking you
+  from moving on early.
+- **The order is rules-aware, not just initiative.** Readied models shoot before all others
+  (pg 28) and models that charged fight before all others (pg 34), so those are listed first in
+  their phase. Verified: a Readied Sniper on initiative 5 is listed ahead of a Sergeant on 9 in
+  the Shooting phase, and behind it in the Fight phase.
+- **Models that cannot act are shown but not counted.** Shaken and out-of-action models are dimmed
+  and excluded from the remaining count, since a shaken model can do nothing until it recovers
+  (pg 36).
+- Activations clear when the phase changes and when a new round begins, and there is a reset
+  control for correcting a misclick.
+
+### Notes
+- Marking a model as acted is a record, not a restriction. Nothing stops a model acting twice, in
+  keeping with the tracker reporting rather than enforcing.
+- The Movement phase is a per-player sequence in the book rather than model by model. The list
+  still works there as a checklist of who has been moved.
+
 ## 0.18.3
 
 ### Fixed

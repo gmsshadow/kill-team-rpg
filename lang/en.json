@@ -333,5 +333,8 @@
   "KT.Round.Hostile": "Hostile",
   "KT.Round.Neutral": "Neutral",
   "KT.Round.RollOffAgain": "Initiative cleared: roll off again for this battle round.",
-  "KT.Round.GMOnly": "Only the GM can change the battle round phase."
+  "KT.Round.GMOnly": "Only the GM can change the battle round phase.",
+  "KT.Round.Remaining": "{count} still to act",
+  "KT.Round.AllActed": "All models have acted",
+  "KT.Round.ResetActed": "Clear who has acted in this phase"
 }

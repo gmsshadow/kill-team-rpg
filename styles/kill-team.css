@@ -1300,3 +1300,76 @@
 }
 
 .kt-phase-bar .kt-phase-step:hover { color: #fff; }
+
+/* Activation list under the phase bar. */
+.kt-activation {
+  background: #1c1c1c;
+  border-bottom: 1px solid #3a3a3a;
+  padding: 0.25rem 0.4rem 0.35rem;
+}
+
+.kt-activation-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #a8a29a;
+  padding-bottom: 0.2rem;
+}
+
+.kt-activation-head a { color: #c8501e; cursor: pointer; }
+
+.kt-activation-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 12rem;
+  overflow-y: auto;
+}
+
+.kt-activation-entry {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.15rem 0.25rem;
+  font-size: 0.8rem;
+  color: #dcdad4;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+}
+
+.kt-activation-entry:hover { background: rgba(200, 80, 30, 0.15); }
+
+/* Already acted: dimmed, so what remains is what stands out. */
+.kt-activation-entry.is-acted {
+  opacity: 0.45;
+  border-left-color: #c8501e;
+}
+
+/* Shaken or out of action: cannot act, so not counted as pending. */
+.kt-activation-entry.is-unable {
+  opacity: 0.4;
+  font-style: italic;
+  cursor: default;
+}
+
+.kt-activation-entry .kt-init {
+  min-width: 1.4rem;
+  text-align: center;
+  font-weight: 700;
+  color: #c8501e;
+}
+
+.kt-activation-entry .kt-activation-name { flex: 1; }
+
+.kt-activation-entry .kt-activation-note {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #a8a29a;
+}
+
+/* Next-phase arrow turns solid once nothing is left to act. */
+.kt-phase-bar .kt-phase-step.is-ready { color: #4caf50; }
