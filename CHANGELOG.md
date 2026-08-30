@@ -3,6 +3,25 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.20.0
+
+Declaring what a model does, which is what the rest of the round was waiting on.
+
+### Added
+- **Marking a model as acted in the Movement phase now asks what it did**: a normal move, Advance,
+  Charge, Ready, Fall Back, Retreat, or remain stationary. The declaration sets the status, and
+  Advance and Charge roll through the existing dice functions so the roll is posted as usual.
+- This closes a loop that was previously open. Readied and Fell Back were only reachable from the
+  datacard's status toggles, so the ordering rules that depend on them - Readied models shooting
+  first (pg 28), chargers fighting first (pg 34) - and the abilities that check them, such as
+  Sharpshooter's +1 while Readied, had no natural way to come into play.
+- Re-declaring clears the previous choice, so a model cannot end up both Readied and Advanced.
+
+### Fixed
+- `KT.Move` was a value and became a namespace, which would have discarded the entire language
+  file. Caught by the localisation validator before packaging and renamed to
+  `KT.MoveCharacteristic`. That is the third time this check has caught the same class of error.
+
 ## 0.19.0
 
 Activation tracking: who acts, in what order, and who is still waiting.

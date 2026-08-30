@@ -14,7 +14,7 @@
   "KT.PtsAbbr": "pts",
   "KT.ForceTotal": "Force",
   "KT.ForceLimit": "Force limit",
-  "KT.Move": "Move",
+  "KT.MoveCharacteristic": "Move",
   "KT.WeaponSkill": "Weapon Skill",
   "KT.BallisticSkill": "Ballistic Skill",
   "KT.Strength": "Strength",
@@ -336,5 +336,15 @@
   "KT.Round.GMOnly": "Only the GM can change the battle round phase.",
   "KT.Round.Remaining": "{count} still to act",
   "KT.Round.AllActed": "All models have acted",
-  "KT.Round.ResetActed": "Clear who has acted in this phase"
+  "KT.Round.ResetActed": "Clear who has acted in this phase",
+  "KT.Move.Title": "{name}: what does it do?",
+  "KT.Move.Confirm": "Declare",
+  "KT.Move.Normal": "Normal move",
+  "KT.Move.Advance": "Advance (roll a D6 and add it to Move)",
+  "KT.Move.Charge": "Charge (roll 2D6)",
+  "KT.Move.Ready": "Ready (shoots before others, +1 to hit for a Sharpshooter)",
+  "KT.Move.FallBack": "Fall Back (cannot shoot later this round unless it can FLY)",
+  "KT.Move.Retreat": "Retreat (a Reaction: cannot shoot or React later this round)",
+  "KT.Move.Stationary": "Remain stationary",
+  "KT.Move.Declared": "{name}: {move}."
 }

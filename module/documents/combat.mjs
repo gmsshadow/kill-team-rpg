@@ -1,4 +1,5 @@
 import { SYSTEM_ID, KT } from "../helpers/config.mjs";
+import * as dice from "../helpers/dice.mjs";
 
 /**
  * The battle round (pg 20).
@@ -255,6 +256,81 @@ export class KillTeamCombat extends Combat {
   }
 }
 
+/**
+ * The moves a model can make in the Movement phase (pg 21-24).
+ *
+ * Declaring one here is what sets the status the later phases read. Without it
+ * the Readied and Charged flags were only reachable from the datacard, so the
+ * ordering rules that depend on them - Readied models shooting first, chargers
+ * fighting first - never came into play.
+ */
+export const MOVES = [
+  { key: "normal", label: "KT.Move.Normal" },
+  { key: "advance", label: "KT.Move.Advance", rolls: true },
+  { key: "charge", label: "KT.Move.Charge", rolls: true },
+  { key: "ready", label: "KT.Move.Ready", status: "readied" },
+  { key: "fallBack", label: "KT.Move.FallBack", status: "fellBack" },
+  { key: "retreat", label: "KT.Move.Retreat", status: "retreated" },
+  { key: "stationary", label: "KT.Move.Stationary" }
+];
+
+/**
+ * Apply a declared move to an operative.
+ *
+ * Every movement status is cleared first, so changing a declaration does not
+ * leave the previous one set. Advance and charge are rolled through the normal
+ * dice functions, which set their own status and post the roll.
+ */
+export async function declareMove(actor, key) {
+  const move = MOVES.find(m => m.key === key);
+  if (!actor || !move) return;
+
+  await actor.update({
+    "system.status.readied": false,
+    "system.status.advanced": false,
+    "system.status.charged": false,
+    "system.status.fellBack": false,
+    "system.status.retreated": false
+  });
+
+  if (move.key === "advance") return dice.rollAdvance(actor);
+  if (move.key === "charge") return dice.rollCharge(actor);
+  if (move.status) {
+    await actor.update({ [`system.status.${move.status}`]: true });
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor }),
+      content: `<div class="kill-team chat-card"><p>${game.i18n.format("KT.Move.Declared", {
+        name: actor.name, move: game.i18n.localize(move.label)
+      })}</p></div>`
+    });
+  }
+}
+
+/** Ask which move a model is making, then apply it. */
+export async function promptMove(actor) {
+  const DialogV2 = foundry.applications.api.DialogV2;
+  const FormDataExtended = foundry.applications.ux?.FormDataExtended ?? globalThis.FormDataExtended;
+
+  const rows = MOVES.map((m, i) => `
+    <label class="kt-choice">
+      <input type="radio" name="move" value="${m.key}" ${i === 0 ? "checked" : ""}/>
+      <span>${game.i18n.localize(m.label)}</span>
+    </label>`).join("");
+
+  const data = await DialogV2.prompt({
+    window: { title: game.i18n.format("KT.Move.Title", { name: actor.name }) },
+    content: `<div class="kt-dialog kt-choices">${rows}</div>`,
+    ok: {
+      label: game.i18n.localize("KT.Move.Confirm"),
+      callback: (event, button) => new FormDataExtended(button.form).object
+    },
+    rejectClose: false
+  });
+  if (!data) return false;
+  await declareMove(actor, data.move);
+  return true;
+}
+
 /** A readable name for a token disposition. */
 function sideName(disposition) {
   const D = CONST.TOKEN_DISPOSITIONS;
@@ -368,6 +444,14 @@ export function activatePhaseControls() {
     }
     const id = entry.dataset.ktActed;
     if (id === "reset") return combat.resetActed(combat.phase.key);
-    await combat.setActed(id, !combat.hasActed(id));
+
+    const marking = !combat.hasActed(id);
+    // In the Movement phase, what a model did decides the statuses the later
+    // phases read, so ask rather than silently recording a bare activation.
+    if (marking && combat.phase.key === "movement") {
+      const actor = combat.combatants.get(id)?.actor;
+      if (actor && !(await promptMove(actor))) return;   // cancelled
+    }
+    await combat.setActed(id, marking);
   });
 }

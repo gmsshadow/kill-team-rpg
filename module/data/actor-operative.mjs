@@ -15,7 +15,7 @@ export default class OperativeData extends foundry.abstract.TypeDataModel {
       // The datacard profile row: NAME M WS BS S T W A Ld Sv
       profile: new fields.SchemaField({
         move: new fields.StringField({
-          required: true, blank: false, initial: "6\"", label: "KT.Move"
+          required: true, blank: false, initial: "6\"", label: "KT.MoveCharacteristic"
         }),
         ws: new fields.NumberField({
           required: true, integer: true, min: 1, max: 6, initial: 4, label: "KT.WeaponSkill"

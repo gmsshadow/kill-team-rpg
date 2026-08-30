@@ -21,7 +21,7 @@ export default class ModelData extends foundry.abstract.TypeDataModel {
       }),
 
       profile: new fields.SchemaField({
-        move: new fields.StringField({ required: true, initial: "6\"", label: "KT.Move" }),
+        move: new fields.StringField({ required: true, initial: "6\"", label: "KT.MoveCharacteristic" }),
         ws: new fields.NumberField({ required: true, integer: true, min: 1, max: 7, initial: 4, label: "KT.WeaponSkill" }),
         bs: new fields.NumberField({ required: true, integer: true, min: 1, max: 7, initial: 4, label: "KT.BallisticSkill" }),
         strength: new fields.NumberField({ required: true, integer: true, min: 1, initial: 3, label: "KT.Strength" }),
