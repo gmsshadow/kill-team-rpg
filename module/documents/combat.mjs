@@ -117,6 +117,22 @@ export class KillTeamCombat extends Combat {
     ui.combat?.render();
   }
 
+  /**
+   * Clear every combatant's initiative so the next roll-off can be made.
+   * Uses Foundry's resetAll where available, falling back to clearing the
+   * values directly.
+   */
+  async clearInitiative() {
+    try {
+      if (typeof this.resetAll === "function") return await this.resetAll();
+    } catch (err) {
+      // Fall through to the manual path below.
+    }
+    const updates = this.combatants.map(c => ({ _id: c.id, initiative: null }));
+    if (updates.length) await this.updateEmbeddedDocuments("Combatant", updates);
+    this.refreshTracker();
+  }
+
   async announcePhase() {
     this.refreshTracker();
     await ChatMessage.create({
@@ -138,6 +154,11 @@ export class KillTeamCombat extends Combat {
     const result = await super.nextRound();
     await this.setFlag(SYSTEM_ID, "phase", 0);
 
+    // Foundry keeps initiative between rounds, so the roll button never comes
+    // back. Kill Team rolls off again at the start of every battle round
+    // (pg 20), so it is cleared here to make the new roll-off possible.
+    await this.clearInitiative();
+
     const updates = [];
     for (const combatant of this.combatants) {
       const actor = combatant.actor;
@@ -155,7 +176,8 @@ export class KillTeamCombat extends Combat {
     await ChatMessage.create({
       content: `<div class="kill-team chat-card"><p><strong>`
         + `${game.i18n.format("KT.Round.Number", { round: this.round })}</strong></p>`
-        + `<p class="kt-hint">${game.i18n.localize("KT.Round.StatusesCleared")}</p></div>`
+        + `<p class="kt-hint">${game.i18n.localize("KT.Round.StatusesCleared")}</p>`
+      + `<p class="kt-hint">${game.i18n.localize("KT.Round.RollOffAgain")}</p></div>`
     });
     return result;
   }

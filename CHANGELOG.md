@@ -3,6 +3,14 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.18.2
+
+### Fixed
+- **Initiative could not be re-rolled on a new battle round.** Foundry keeps initiative between
+  rounds, so once every combatant had a value the roll button never returned. Kill Team rolls off
+  again at the start of every battle round (pg 20), so initiative is now cleared when the round
+  advances and the round announcement says so.
+
 ## 0.18.1
 
 ### Fixed

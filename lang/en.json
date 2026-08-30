@@ -331,5 +331,6 @@
   "KT.Round.PreviousPhase": "Previous phase",
   "KT.Round.Friendly": "Friendly",
   "KT.Round.Hostile": "Hostile",
-  "KT.Round.Neutral": "Neutral"
+  "KT.Round.Neutral": "Neutral",
+  "KT.Round.RollOffAgain": "Initiative cleared: roll off again for this battle round."
 }
