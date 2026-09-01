@@ -3,6 +3,29 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.21.0
+
+### Added
+- **Selecting a model in the activation list makes it the active combatant** and pans to its
+  token, selecting it if you own it. The tracker previously stayed pointed at whoever was top of
+  initiative for the whole round, so the highlighted model bore no relation to the one being played.
+
+### Changed
+- **The tracker's Next and Previous Turn controls now step phases.** Kill Team has no
+  per-combatant turns - a side acts, then the next, and the round advances by phase - so cycling
+  through combatants and rolling into a new round after the last one was wrong. Both controls are
+  remapped onto the phase sequence.
+- `download` points at the `main` branch archive again, at the maintainer's request, pending a
+  published release. See the note below.
+
+### Known issue
+- **The branch archive will not install through Foundry.** GitHub nests branch archives inside a
+  `kill-team-rpg-main/` folder, and Foundry expects `system.json` at the root of the download, so
+  it reports that the package did not contain the expected manifest. The URL at least resolves, so
+  it can be downloaded and unzipped by hand. Publishing a release with the workflow in
+  `.github/workflows/release.yml` produces a correctly-rooted zip and is the only thing that makes
+  in-app install and update work.
+
 ## 0.20.1
 
 ### Added

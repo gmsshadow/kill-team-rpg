@@ -94,6 +94,40 @@ export class KillTeamCombat extends Combat {
 
   /* -------------------------------------------- */
 
+  /**
+   * Kill Team has no per-combatant turns: a side acts, then the next side, and
+   * the round moves on by phase. The tracker's Next and Previous Turn controls
+   * are therefore remapped onto the phases, so the built-in buttons do the
+   * useful thing instead of cycling combatants and rolling into a new round
+   * after the last one.
+   */
+  async nextTurn() {
+    return this.nextPhase();
+  }
+
+  async previousTurn() {
+    return this.previousPhase();
+  }
+
+  /**
+   * Make a combatant the active one and bring its token into view.
+   *
+   * The tracker otherwise stays pointed at whoever is top of initiative for the
+   * whole round, so the highlighted model bears no relation to the one being
+   * played.
+   */
+  async activate(combatantId, { pan = true } = {}) {
+    const index = this.turns.findIndex(c => c.id === combatantId);
+    if (index >= 0 && this.turn !== index && game.user.isGM) {
+      await this.update({ turn: index });
+    }
+
+    const token = this.combatants.get(combatantId)?.token?.object;
+    if (!token) return;
+    if (token.isOwner) token.control({ releaseOthers: true });
+    if (pan) await canvas.animatePan({ x: token.center.x, y: token.center.y, duration: 250 });
+  }
+
   /** Move to the next phase, rolling into the next round after Morale. */
   async nextPhase() {
     const next = this.phaseIndex + 1;
@@ -481,6 +515,10 @@ export function activatePhaseControls() {
     }
     const id = entry.dataset.ktActed;
     if (id === "reset") return combat.resetActed(combat.phase.key);
+
+    // Bring the model into view and make it the active combatant, whether or
+    // not this click is marking it as acted.
+    await combat.activate(id);
 
     const marking = !combat.hasActed(id);
     // In the Movement phase, what a model did decides the statuses the later
