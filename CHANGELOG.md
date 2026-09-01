@@ -3,6 +3,21 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.21.1
+
+### Fixed
+- **Installing from the branch archive really is possible; the manifest error had a different
+  cause.** Foundry's installer looks inside the archive for a file whose name ends in
+  `system.json`. The T'au weapon "Smart missile system" produced the source file
+  `t-au-empire-smart-missile-system.json`, which sorts before the real manifest, so the installer
+  matched a weapon, failed to read it as a manifest, and reported that the package did not contain
+  one. Nothing to do with the archive being nested, which is why an otherwise identical repository
+  installed fine.
+
+  Source filenames ending in `system` or `module` now get a suffix. Verified against the archive
+  downloaded from GitHub: only `system.json` itself now matches, and the weapon still compiles into
+  the pack unchanged.
+
 ## 0.21.0
 
 ### Added

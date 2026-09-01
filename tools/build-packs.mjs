@@ -58,6 +58,20 @@ const packRoot = path.join(root, "packs");
  * alphabet. Deriving them from the faction key keeps ids stable across
  * rebuilds, so re-importing a pack updates entries instead of duplicating them.
  */
+/**
+ * A source filename that cannot be mistaken for a package manifest.
+ *
+ * Foundry's installer looks inside a downloaded archive for a file whose name
+ * ends in system.json. A weapon called "Smart missile system" produced
+ * t-au-empire-smart-missile-system.json, which sorts before the real manifest,
+ * so the installer picked up a weapon, failed to read it as a manifest, and
+ * reported that the package did not contain one. Any name ending in system or
+ * module is given a suffix to keep it clear of that check.
+ */
+function safeFileName(name) {
+  return /(system|module)$/i.test(name) ? `${name}-entry` : name;
+}
+
 /** Filename-safe form of a faction name. */
 function slugify(text) {
   return String(text).toLowerCase().replace(/\W+/g, "-").replace(/^-|-$/g, "");
@@ -294,7 +308,7 @@ async function buildPack(name, documents) {
 
 async function main() {
   await buildPack("factions", FACTIONS.map(faction => ({
-    file: faction.key,
+    file: safeFileName(faction.key),
     doc: factionDocument(faction)
   })));
 
@@ -309,7 +323,7 @@ async function main() {
   await buildPack("weapons", [
     ...weaponFolders.map(doc => ({ file: `folder-${doc.name.toLowerCase().replace(/\W+/g, "-")}`, doc })),
     ...allWeapons.map((entry, index) => ({
-      file: `${slugify(entry.faction)}-${entry.key}`,
+      file: safeFileName(`${slugify(entry.faction)}-${entry.key}`),
       doc: weaponDocument(entry, index, folderByFaction[entry.faction])
     }))
   ]);
@@ -328,13 +342,13 @@ async function main() {
   await buildPack("models", [
     ...modelFolders.map(doc => ({ file: `folder-${doc.name.toLowerCase().replace(/\W+/g, "-")}`, doc })),
     ...allModels.map((entry, index) => ({
-      file: `${slugify(entry.faction)}-${entry.key}`,
+      file: safeFileName(`${slugify(entry.faction)}-${entry.key}`),
       doc: modelDocument(entry, modelFolderByFaction[entry.faction], index)
     }))
   ]);
 
   await buildPack("specialisms", SPECIALISMS.map(specialism => ({
-    file: specialism.key,
+    file: safeFileName(specialism.key),
     doc: specialismDocument(specialism)
   })));
 
