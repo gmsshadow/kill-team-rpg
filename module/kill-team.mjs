@@ -4,7 +4,7 @@ import OperativeData from "./data/actor-operative.mjs";
 import KillTeamData from "./data/actor-killteam.mjs";
 import { WeaponData, AbilityData, WargearData, SpecialismData } from "./data/items.mjs";
 import FactionData from "./data/item-faction.mjs";
-import { KillTeamCombat, renderPhaseBar, activatePhaseControls } from "./documents/combat.mjs";
+import { KillTeamCombat, renderPhaseBar, activatePhaseControls, syncDefeated } from "./documents/combat.mjs";
 import ModelData from "./data/item-model.mjs";
 import { KTActor, KTItem } from "./documents/documents.mjs";
 import KTOperativeSheet from "./sheets/operative-sheet.mjs";
@@ -142,6 +142,10 @@ Hooks.on("renderCombatTracker", renderPhaseBar);
 
 // Bound once, at the document, so it survives the tracker being redrawn.
 Hooks.once("ready", activatePhaseControls);
+
+// Going out of action marks the model defeated in the tracker, however the
+// status was reached.
+Hooks.on("updateActor", (actor, changed) => syncDefeated(actor, changed));
 
 // A phase change is stored as a flag, which Foundry does not treat as a reason
 // to redraw the tracker, so ask for one whenever ours changes.

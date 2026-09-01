@@ -331,6 +331,43 @@ export async function promptMove(actor) {
   return true;
 }
 
+/**
+ * Keep the tracker in step with an operative going out of action.
+ *
+ * Driven by the status rather than by the Injury roll, so it holds however the
+ * status is reached: an Injury roll, Perils of the Warp, falling damage, or the
+ * GM ticking the box by hand. Clearing the status undoes it, which matters
+ * because an Injury roll can be undone with an undo.
+ *
+ * Only one client acts, otherwise every connected player would attempt the same
+ * update and all but the GM would fail on permissions.
+ */
+export async function syncDefeated(actor, changed) {
+  if (actor?.type !== "operative") return;
+  if (!foundry.utils.hasProperty(changed, "system.status.outOfAction")) return;
+  if (game.users.activeGM !== game.user) return;
+
+  const defeated = !!actor.system.status.outOfAction;
+
+  for (const combat of game.combats) {
+    const combatants = combat.combatants.filter(c => c.actorId === actor.id);
+    for (const combatant of combatants) {
+      if (combatant.defeated === defeated) continue;
+      await combatant.update({ defeated });
+    }
+  }
+
+  // The skull overlay on the token, matching what the tracker's own
+  // "Mark Defeated" control does.
+  try {
+    const status = CONFIG.specialStatusEffects?.DEFEATED ?? "dead";
+    await actor.toggleStatusEffect?.(status, { overlay: true, active: defeated });
+  } catch (err) {
+    // Older or newer cores may name this differently; the tracker flag is the
+    // part that matters and has already been set.
+  }
+}
+
 /** A readable name for a token disposition. */
 function sideName(disposition) {
   const D = CONST.TOKEN_DISPOSITIONS;

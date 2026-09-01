@@ -3,6 +3,18 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.20.1
+
+### Added
+- **A model taken out of action is marked defeated in the tracker**, with the skull overlay on its
+  token. Driven by the status rather than by the Injury roll, so it holds however the status is
+  reached: an Injury roll of 4+, a flesh wound with every box already marked, Perils of the Warp,
+  falling damage, or the GM ticking the box by hand.
+- Clearing the status reverses it, so undoing an Injury roll leaves the tracker correct rather than
+  stranding a model as permanently defeated.
+- Only the active GM performs the update, since every connected client sees the same change and all
+  but the GM would fail on permissions.
+
 ## 0.20.0
 
 Declaring what a model does, which is what the rest of the round was waiting on.
