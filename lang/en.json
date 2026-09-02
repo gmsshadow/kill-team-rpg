@@ -230,7 +230,7 @@
   "KT.MaxLevel": "Maximum level",
   "KT.EmptyAbilitySlot": "Choose an ability",
   "KT.NoAbilitiesYet": "No specialist abilities recorded. A specialist starts with the Level 1 ability from its tree.",
-  "KT.Tactics": "Tactics",
+  "KT.TacticsLabel": "Tactics",
   "KT.Info.SpecialismApplied": "Set {actor} to the {specialism} specialism.",
   "KT.SpecialismUnpopulated": "This specialism has no abilities recorded yet. Add them below, or from the core book.",
   "KT.AddTactic": "Add tactic",
@@ -346,5 +346,14 @@
   "KT.Move.FallBack": "Fall Back (cannot shoot later this round unless it can FLY)",
   "KT.Move.Retreat": "Retreat (a Reaction: cannot shoot or React later this round)",
   "KT.Move.Stationary": "Remain stationary",
-  "KT.Move.Declared": "{name}: {move}."
+  "KT.Move.Declared": "{name}: {move}.",
+  "KT.Tactics.Title": "Tactics",
+  "KT.Tactics.Core": "Core",
+  "KT.Tactics.Used": "Tactic used",
+  "KT.Tactics.Cost": "{cost} CP",
+  "KT.Tactics.LevelN": "Level {level}",
+  "KT.Tactics.None": "No Tactics available. A Battle-forged kill team always has the six core Tactics.",
+  "KT.Tactics.Shaken": "That specialist is shaken and cannot use its Tactics.",
+  "KT.Tactics.OutOfAction": "That specialist is out of action and cannot use its Tactics.",
+  "KT.CPAbbr": "CP"
 }

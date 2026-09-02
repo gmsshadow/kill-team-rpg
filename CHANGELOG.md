@@ -3,6 +3,28 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.22.0
+
+The Command Point economy. Command Points now have something to be spent on.
+
+### Added
+- **A Tactics panel on the kill team sheet**, listing everything the team can use right now with
+  its cost and a button to spend it. Using one deducts the Command Points, refuses if the pool is
+  short, and posts the Tactic's text to chat so the table can see what was played.
+- **The six core Tactics are built in** (pg 65), available to any Battle-forged kill team. They
+  were previously only created by the sample-data macro, which no longer adds them.
+- **Specialist Tactics resolve from the kill team's specialists**, each unlocking its specialism's
+  Tactics up to its own level. The definitions come from a world Specialism item where one exists,
+  otherwise the compendium.
+- **Availability is live, not static.** A Tactic whose specialist is shaken or out of action is
+  greyed out with the reason given rather than vanishing, so it is clear what has been lost
+  (pg 67). Where two specialists share a specialism, the Tactic stays usable while either can act.
+- The header counts how many Tactics the current pool can actually afford.
+
+### Fixed
+- `KT.Tactics` was a value and became a namespace, which would have discarded the language file.
+  Caught by the validator before packaging. Fourth time.
+
 ## 0.21.1
 
 ### Fixed

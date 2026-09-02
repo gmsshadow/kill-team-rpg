@@ -1373,3 +1373,77 @@
 
 /* Next-phase arrow turns solid once nothing is left to act. */
 .kt-phase-bar .kt-phase-step.is-ready { color: #4caf50; }
+
+/* ---------------------------------------------------------------------------
+   Tactics
+   --------------------------------------------------------------------------- */
+
+.kill-team .kt-tactic-count {
+  float: right;
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+.kill-team .kt-tactics {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 22rem;
+  overflow-y: auto;
+  background: var(--kt-paper, #dcdad4);
+}
+
+.kill-team .kt-tactic {
+  padding: 0.35rem 0.5rem;
+  border-bottom: 1px solid var(--kt-line, #b0aca4);
+}
+
+.kill-team .kt-tactic:last-child { border-bottom: none; }
+
+/* A Tactic whose specialist is shaken or out of action stays listed, so it is
+   clear what has been lost rather than silently disappearing. */
+.kill-team .kt-tactic.is-blocked { opacity: 0.5; }
+
+.kill-team .kt-tactic-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.kill-team .kt-tactic-name {
+  font-family: var(--kt-stencil);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+}
+
+.kill-team .kt-tactic-source {
+  flex: 1;
+  font-size: 0.7rem;
+  font-style: italic;
+  color: #55504a;
+}
+
+.kill-team .kt-tactic-head button {
+  flex: 0 0 auto;
+  min-width: 3.2rem;
+}
+
+.kill-team .kt-tactic-text {
+  margin: 0.2rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.kill-team .kt-tactic-blocked {
+  margin: 0.2rem 0 0;
+  font-size: 0.72rem;
+  font-style: italic;
+  color: #8b1a1a;
+}
+
+.kt-tactic-cost {
+  float: right;
+  font-weight: 700;
+  color: #c8501e;
+}

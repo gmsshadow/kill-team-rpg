@@ -51,6 +51,33 @@
       {{/if}}
     </div>
 
+    {{!-- Tactics (pg 64-67) --}}
+    <div class="kt-bar">{{localize "KT.Tactics.Title"}}
+      <span class="kt-tactic-count">{{affordable}} / {{tactics.length}}</span>
+    </div>
+    {{#if tactics.length}}
+    <ul class="kt-tactics">
+      {{#each tactics as |tactic|}}
+      <li class="kt-tactic {{#unless tactic.usable}}is-blocked{{/unless}}" data-tactic-key="{{tactic.key}}">
+        <div class="kt-tactic-head">
+          <span class="kt-tactic-name">{{tactic.name}}</span>
+          <span class="kt-tactic-source">{{tactic.source}}</span>
+          <button type="button" data-action="useTactic"
+                  {{#unless tactic.usable}}disabled{{/unless}}>
+            {{tactic.cost}} {{localize "KT.CPAbbr"}}
+          </button>
+        </div>
+        <p class="kt-tactic-text">{{tactic.description}}</p>
+        {{#unless tactic.usable}}
+        <p class="kt-tactic-blocked">{{localize tactic.reason}}</p>
+        {{/unless}}
+      </li>
+      {{/each}}
+    </ul>
+    {{else}}
+    <p class="kt-hint">{{localize "KT.Tactics.None"}}</p>
+    {{/if}}
+
     {{!-- Morale phase (pg 36) --}}
     <div class="kt-bar">{{localize "KT.Morale.Phase"}}
       {{#if system.broken}}<span class="kt-broken-flag">{{localize "KT.Broken"}}</span>{{/if}}

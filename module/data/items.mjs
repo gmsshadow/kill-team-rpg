@@ -245,7 +245,7 @@ export class SpecialismData extends foundry.abstract.TypeDataModel {
           level: new fields.NumberField({ required: true, integer: true, min: 0, max: 4, initial: 0, label: "KT.Level" }),
           description: new fields.StringField({ required: true, initial: "", label: "KT.Description" })
         }),
-        { initial: [], label: "KT.Tactics" }
+        { initial: [], label: "KT.TacticsLabel" }
       )
     };
   }

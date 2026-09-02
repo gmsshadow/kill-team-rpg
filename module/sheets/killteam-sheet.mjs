@@ -1,6 +1,7 @@
 import { KT, SYSTEM_ID } from "../helpers/config.mjs";
 import { attachDragDrop, getDragData, handledOnce } from "../helpers/drag-drop.mjs";
 import { runMoralePhase } from "../helpers/morale.mjs";
+import { availableTactics, useTactic } from "../helpers/tactics.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
@@ -20,6 +21,7 @@ export default class KTKillTeamSheet extends HandlebarsApplicationMixin(ActorShe
       toggleMember: KTKillTeamSheet.#onToggleMember,
       rollInitiative: KTKillTeamSheet.#onRollInitiative,
       moralePhase: KTKillTeamSheet.#onMoralePhase,
+      useTactic: KTKillTeamSheet.#onUseTactic,
       generateCP: KTKillTeamSheet.#onGenerateCP,
       adjustCP: KTKillTeamSheet.#onAdjustCP
     }
@@ -76,6 +78,10 @@ export default class KTKillTeamSheet extends HandlebarsApplicationMixin(ActorShe
       };
     });
 
+    // What the kill team can spend Command Points on right now. Resolved live
+    // because a specialist being shaken or taken out removes its Tactics.
+    const tactics = await availableTactics(this.document);
+
     const battleForged = system.battleForged;
     const roundCP = system.commandPointsForRound(true);
 
@@ -89,6 +95,8 @@ export default class KTKillTeamSheet extends HandlebarsApplicationMixin(ActorShe
       overLimit: system.force > system.forceLimit,
       guerrilla: system.guerrilla,
       battleForged,
+      tactics,
+      affordable: tactics.filter(t => t.usable && t.cost <= system.commandPoints.value).length,
       firstRoundCP: roundCP.gain,
       firstRoundBonus: roundCP.bonus,
       enrichedBackground: await TextEditorImpl.enrichHTML(system.background, { relativeTo: actor }),
@@ -136,6 +144,18 @@ export default class KTKillTeamSheet extends HandlebarsApplicationMixin(ActorShe
     if (!roster[index]) return;
     roster[index].inKillTeam = !roster[index].inKillTeam;
     await this.document.update({ "system.roster": roster });
+  }
+
+  /** Spend Command Points on a Tactic. */
+  static async #onUseTactic(event, target) {
+    const key = target.closest("[data-tactic-key]")?.dataset.tacticKey;
+    const tactics = await availableTactics(this.document);
+    const tactic = tactics.find(t => t.key === key);
+    if (!tactic) return;
+    if (!tactic.usable) {
+      return ui.notifications.warn(game.i18n.localize(tactic.reason));
+    }
+    if (await useTactic(this.document, tactic)) this.render();
   }
 
   /** Play the whole Morale phase for this kill team (pg 36). */
