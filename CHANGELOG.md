@@ -3,6 +3,19 @@
 All notable changes to this system are documented here. This project uses semantic versioning;
 bump the patch number in `system.json` on every rebuild.
 
+## 0.23.0
+
+### Added
+- **Command Points are generated automatically.** Beginning the encounter grants each kill team
+  1 Command Point plus the first-round bonus - one for each full 10 points its Force sits below
+  the highest Force in the battle - and every new battle round grants 1 more (pg 64). The bonus
+  applies to the first round only.
+- Kill teams are matched to the encounter by their rosters: a kill team is taking part if any of
+  its selected models has a combatant, so nothing needs configuring.
+- Only the active GM generates, otherwise every connected client would grant the same points again.
+- The manual buttons remain for corrections, or for playing without an encounter, and the sheet now
+  says so.
+
 ## 0.22.0
 
 The Command Point economy. Command Points now have something to be spent on.

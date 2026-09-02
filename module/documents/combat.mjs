@@ -128,6 +128,43 @@ export class KillTeamCombat extends Combat {
     if (pan) await canvas.animatePan({ x: token.center.x, y: token.center.y, duration: 250 });
   }
 
+  /**
+   * The kill teams taking part, found by matching combatants to rosters.
+   *
+   * An operative does not know which kill team it belongs to, so the lookup
+   * runs the other way: a kill team is in this battle if any of its selected
+   * models has a combatant.
+   */
+  get killTeams() {
+    const actorIds = new Set(this.combatants.map(c => c.actorId).filter(id => id));
+    return game.actors.filter(a =>
+      a.type === "killteam"
+      && a.system.selected.some(member => actorIds.has(member.id)));
+  }
+
+  /**
+   * Generate Command Points for the battle round (pg 64).
+   *
+   * One per round for every Battle-forged kill team, plus - in the first round
+   * only - one more for each full 10 points a team's Force sits below the
+   * highest in the battle. Only the active GM runs it, otherwise every client
+   * would generate the same points again.
+   */
+  async generateRoundCommandPoints({ first = false } = {}) {
+    if (game.users.activeGM !== game.user) return;
+    for (const killTeam of this.killTeams) {
+      await killTeam.system.generateCommandPoints(first);
+    }
+  }
+
+  /** Beginning the battle is the start of the first battle round. */
+  async startCombat() {
+    const result = await super.startCombat();
+    await this.setFlag(SYSTEM_ID, "phase", 0);
+    await this.generateRoundCommandPoints({ first: true });
+    return result;
+  }
+
   /** Move to the next phase, rolling into the next round after Morale. */
   async nextPhase() {
     const next = this.phaseIndex + 1;
@@ -265,6 +302,10 @@ export class KillTeamCombat extends Combat {
     // back. Kill Team rolls off again at the start of every battle round
     // (pg 20), so it is cleared here to make the new roll-off possible.
     await this.clearInitiative();
+
+    // A new battle round generates Command Points; the Force bonus applies to
+    // the first round only, which startCombat handles.
+    await this.generateRoundCommandPoints();
 
     const updates = [];
     for (const combatant of this.combatants) {

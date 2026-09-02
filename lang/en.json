@@ -355,5 +355,6 @@
   "KT.Tactics.None": "No Tactics available. A Battle-forged kill team always has the six core Tactics.",
   "KT.Tactics.Shaken": "That specialist is shaken and cannot use its Tactics.",
   "KT.Tactics.OutOfAction": "That specialist is out of action and cannot use its Tactics.",
-  "KT.CPAbbr": "CP"
+  "KT.CPAbbr": "CP",
+  "KT.CPAutomatic": "Command Points are generated automatically when the battle begins and at the start of each new round. These buttons are for corrections, or for play without an encounter."
 }
